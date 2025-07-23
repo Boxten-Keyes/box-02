@@ -13381,27 +13381,27 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ExploitFin/AquaMatrix
 ]], "LS")
 
 cscript("gazer chat bypasser", [[
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bchat%20bypasser%5D.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bchat%20stuffs%5D/music%23%5Bchat%20bypasser%5D.lua"))()
 ]], "LS")
 
 cscript("chat reverser", [[
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bchat%20reverser%5D.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bchat%20stuffs%5D/music%23%5Bchat%20reverser%5D.lua"))()
 ]], "LS")
 
 cscript("chat owoifier", [[
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bchat%20owoifier%5D.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bchat%20stuffs%5D/music%23%5Bchat%20owoifier%5D.lua"))()
 ]], "LS")
 
 cscript("player camlock", [[
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bchatgpt%20scripts%5D/music%23%5Bplayer%20camlock%5D.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bplayer%20camlock%5D.lua"))()
 ]], "LS")
 
 cscript("r15 fly tools", [[
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bchatgpt%20scripts%5D/music%23%5Br15%20fly%5D.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Br15%20fly%5D.lua"))()
 ]], "LS")
 
 cscript("r6 dances", [[
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bepik%20r6%20dances%5D/music%23%5Bloader%5D.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Br6%20dances%5D/music%23%5Bloader%5D.lua"))()
 ]], "LS")
 
 -------------------------------------------------------------------------------------------------------------------------------
