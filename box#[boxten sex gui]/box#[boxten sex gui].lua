@@ -410,7 +410,7 @@ function defaultcols()
 	box["default 1/2 color 2"] = Color3.fromHex("303db3")
 	box["default 1/2 color"] = Color3.fromHex("858585")
 	sdfont(Enum.Font.RobotoMono)
-	box["top bar"].Text = " uwusploit " .. box["emoticon"]
+	box["top bar"].Text = " [v".. box["version"] .."] uwusploit " .. box["emoticon"]
 	if donuttabreallyminimized then
 		box["donut tab top bar"].Text = " donut.lua >.<"
 	else
@@ -457,7 +457,7 @@ function grayscalecols()
 	box["default 1/2 color 2"] = grayscale(initialcols.half2)
 	box["default 1/2 color"] = grayscale(initialcols.half2)
 	sdfont(Enum.Font.RobotoMono)
-	box["top bar"].Text = " uwusploit " .. box["emoticon"]
+	box["top bar"].Text = " [v".. box["version"] .."] uwusploit " .. box["emoticon"]
 	if donuttabreallyminimized then
 		box["donut tab top bar"].Text = " donut.lua >.<"
 	else
@@ -504,7 +504,7 @@ function noxiouscols()
 	box["default 1/2 color 2"] = Color3.new(0.5, 0.5, 0.5)
 	box["default 1/2 color"] = Color3.new(0.5, 0.5, 0.5)
 	sdfont(Enum.Font.Nunito)
-	box["top bar"].Text = "  uwusploit " .. box["emoticon"]
+	box["top bar"].Text = "  [v".. box["version"] .."] uwusploit " .. box["emoticon"]
 	if donuttabreallyminimized then
 		box["donut tab top bar"].Text = "  donut.lua >.<"
 	else
@@ -551,7 +551,7 @@ function polariacols()
 	box["default 1/2 color 2"] = Color3.new(0.25, 0, 0.5)
 	box["default 1/2 color"] = Color3.new(0.5, 0.5, 0.5)
 	sdfont(Enum.Font.Arimo)
-	box["top bar"].Text = "  polaria reborn " .. box["emoticon"]
+	box["top bar"].Text = "  [v".. box["version"] .."] polaria reborn " .. box["emoticon"]
 	if donuttabreallyminimized then
 		box["donut tab top bar"].Text = "  donut.lua >.<"
 	else
@@ -598,7 +598,7 @@ function c00lcols()
 	box["default 1/2 color 2"] = Color3.new(0.5, 0, 0)
 	box["default 1/2 color"] = Color3.new(0.5, 0.5, 0.5)
 	sdfont(Enum.Font.SourceSans)
-	box["top bar"].Text = "   c00lgui reborn " .. box["emoticon"]
+	box["top bar"].Text = "   [v".. box["version"] .."] c00lgui reborn " .. box["emoticon"]
 	if donuttabreallyminimized then
 		box["donut tab top bar"].Text = "   donut.lua >.<"
 	else
@@ -673,7 +673,7 @@ function restorecols()
 	box["default text color"] = fadeStart.text
 	sdfont(Enum.Font.RobotoMono)
 
-	box["top bar"].Text = "    boxten sex gui " .. box["emoticon"]
+	box["top bar"].Text = "    [v".. box["version"] .."] boxten sex gui " .. box["emoticon"]
 
 	local tabs = {
 		{key = "donut", minimized = donuttabreallyminimized},
