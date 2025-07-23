@@ -1,56 +1,56 @@
 --[[---------------------------------------------------------------------------------------------------------------------------
-  __  __     __     __     __  __     ______     ______   __         ______     __     _______ 
- /\ \/\ \   /\ \  _ \ \   /\ \/\ \   /\  ___\   /\  __ \ /\ \       /\  __ \   /\ \   /\__  __\ 
- \ \ \_\ \  \ \ \/ ".\ \  \ \ \_\ \  \ \___  \  \ \  __/ \ \ \____  \ \ \/\ \  \ \ \  \/_/\ \_/ 
-  \ \_____\  \ \__/".~\_\  \ \_____\  \/\_____\  \ \_\    \ \_____\  \ \_____\  \ \_\    \ \_\ 
-   \/_____/   \/_/   \/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/   \/_/     \/_/ 
+  ______     ______     ______     __  __     __    
+ /\  __ \   /\  ___\   /\  ___\   /\ \/\ \   /\ \   
+ \ \  __<   \ \___  \  \ \ \__ \  \ \ \_\ \  \ \ \  
+  \ \_____\  \/\_____\  \ \_____\  \ \_____\  \ \_\ 
+   \/_____/   \/_____/   \/_____/   \/_____/   \/_/
                                                                                                        
    Made by Team Noxious, Team Occulence & Team Symphysis -- boxten sex gui [version 3]
    
 ---------------------------------------------------------------------------------------------------------------------------]]--
 
-if _G.uwuloaded == true then return end _G.uwuloaded = true
+if _G.boxtenloaded == true then return end _G.boxtenloaded = true
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-wait(0.2) uwu = {} uwu["test game"] = 118022198489171 -- uwu["test game"] = 134048189553580
+wait(0.2) box = {} box["test game"] = 118022198489171 -- box["test game"] = 134048189553580
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["version"] = "3"
-uwu["workspace"] = game.Workspace
-uwu["user input service"] = game:GetService("UserInputService")
-uwu["players"] = game:GetService("Players")
-uwu["local player"] = uwu["players"].LocalPlayer
-uwu["player gui"] = uwu["local player"]:FindFirstChildWhichIsA("PlayerGui")
-uwu["user input service"] = game:GetService("UserInputService")
-uwu["tween service"] = game:GetService("TweenService")
-uwu["http service"] = game:GetService("HttpService")
-uwu["marketplace service"] = game:GetService("MarketplaceService")
-uwu["run service"] = game:GetService("RunService")
-uwu["teleport service"] = game:GetService("TeleportService")
-uwu["starter gui"] = game:GetService("StarterGui")
-uwu["gui service"] = game:GetService("GuiService")
-uwu["lighting"] = game:GetService("Lighting")
-uwu["context action service"] = game:GetService("ContextActionService")
-uwu["network client"] = game:GetService("NetworkClient")
-uwu["replicated storage"] = game:GetService("ReplicatedStorage")
-uwu["group service"] = game:GetService("GroupService")
-uwu["pathfinding service"] = game:GetService("PathfindingService")
-uwu["sound service"] = game:GetService("SoundService")
-uwu["teams"] = game:GetService("Teams")
-uwu["starter player"] = game:GetService("StarterPlayer")
-uwu["insert service"] = game:GetService("InsertService")
-uwu["chat"] = game:GetService("Chat")
-uwu["proximity prompt service"] = game:GetService("ProximityPromptService")
-uwu["stats"] = game:GetService("Stats")
-uwu["material service"] = game:GetService("MaterialService")
-uwu["avatar editor service"] = game:GetService("AvatarEditorService")
-uwu["text chat service"] = game:GetService("TextChatService")
-uwu["unlocked"] = false
-uwu["is mobile?"] = game:GetService("UserInputService").TouchEnabled
+box["version"] = "3"
+box["workspace"] = game.Workspace
+box["user input service"] = game:GetService("UserInputService")
+box["players"] = game:GetService("Players")
+box["local player"] = box["players"].LocalPlayer
+box["player gui"] = box["local player"]:FindFirstChildWhichIsA("PlayerGui")
+box["user input service"] = game:GetService("UserInputService")
+box["tween service"] = game:GetService("TweenService")
+box["http service"] = game:GetService("HttpService")
+box["marketplace service"] = game:GetService("MarketplaceService")
+box["run service"] = game:GetService("RunService")
+box["teleport service"] = game:GetService("TeleportService")
+box["starter gui"] = game:GetService("StarterGui")
+box["gui service"] = game:GetService("GuiService")
+box["lighting"] = game:GetService("Lighting")
+box["context action service"] = game:GetService("ContextActionService")
+box["network client"] = game:GetService("NetworkClient")
+box["replicated storage"] = game:GetService("ReplicatedStorage")
+box["group service"] = game:GetService("GroupService")
+box["pathfinding service"] = game:GetService("PathfindingService")
+box["sound service"] = game:GetService("SoundService")
+box["teams"] = game:GetService("Teams")
+box["starter player"] = game:GetService("StarterPlayer")
+box["insert service"] = game:GetService("InsertService")
+box["chat"] = game:GetService("Chat")
+box["proximity prompt service"] = game:GetService("ProximityPromptService")
+box["stats"] = game:GetService("Stats")
+box["material service"] = game:GetService("MaterialService")
+box["avatar editor service"] = game:GetService("AvatarEditorService")
+box["text chat service"] = game:GetService("TextChatService")
+box["unlocked"] = false
+box["is mobile?"] = game:GetService("UserInputService").TouchEnabled
 
-uwu["local player"].OnTeleport:Connect(function(State)
+box["local player"].OnTeleport:Connect(function(State)
 	qtp = (syn and syn.queue_on_teleport) or queue_on_teleport or (fluxus and fluxus.queue_on_teleport)
 	qtp([[--]])
 end)
@@ -89,246 +89,246 @@ end
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["screen gui"] = Instance.new("ScreenGui")
-uwu["screen gui"].Name = "uwusploit![" .. grs3(50) .. "]"
-uwu["screen gui"].ResetOnSpawn = false
+box["screen gui"] = Instance.new("ScreenGui")
+box["screen gui"].Name = "uwusploit![" .. grs3(50) .. "]"
+box["screen gui"].ResetOnSpawn = false
 
-if game.PlaceId == uwu["test game"] then
-	uwu["screen gui"].Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+if game.PlaceId == box["test game"] then
+	box["screen gui"].Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 else
-	uwu["screen gui"].Parent = gethui and gethui() or game:GetService("CoreGui")
+	box["screen gui"].Parent = gethui and gethui() or game:GetService("CoreGui")
 end
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["donut tab top bar"] = Instance.new("TextLabel")
-uwu["donut tab top bar close button"] = Instance.new("TextButton")
-uwu["donut tab top bar minimize button"] = Instance.new("TextButton")
-uwu["donut tab top bar reposition button"] = Instance.new("TextButton")
-uwu["donut tab top bar"] = Instance.new("TextLabel")
-uwu["donut tab top bar close button"] = Instance.new("TextButton")
-uwu["donut tab top bar minimize button"] = Instance.new("TextButton")
-uwu["donut tab top bar reposition button"] = Instance.new("TextButton")
-uwu["donut tab main frame 1"] = Instance.new("Frame")
-uwu["donut tab block all"] = Instance.new("Frame")
-uwu["donut tab block main frame"] = Instance.new("Frame")
-uwu["donut"] = Instance.new("TextLabel")
+box["donut tab top bar"] = Instance.new("TextLabel")
+box["donut tab top bar close button"] = Instance.new("TextButton")
+box["donut tab top bar minimize button"] = Instance.new("TextButton")
+box["donut tab top bar reposition button"] = Instance.new("TextButton")
+box["donut tab top bar"] = Instance.new("TextLabel")
+box["donut tab top bar close button"] = Instance.new("TextButton")
+box["donut tab top bar minimize button"] = Instance.new("TextButton")
+box["donut tab top bar reposition button"] = Instance.new("TextButton")
+box["donut tab main frame 1"] = Instance.new("Frame")
+box["donut tab block all"] = Instance.new("Frame")
+box["donut tab block main frame"] = Instance.new("Frame")
+box["donut"] = Instance.new("TextLabel")
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["binary tab top bar"] = Instance.new("TextLabel")
-uwu["binary tab top bar close button"] = Instance.new("TextButton")
-uwu["binary tab top bar minimize button"] = Instance.new("TextButton")
-uwu["binary tab top bar reposition button"] = Instance.new("TextButton")
-uwu["binary tab top bar"] = Instance.new("TextLabel")
-uwu["binary tab top bar close button"] = Instance.new("TextButton")
-uwu["binary tab top bar minimize button"] = Instance.new("TextButton")
-uwu["binary tab top bar reposition button"] = Instance.new("TextButton")
-uwu["binary tab main frame 1"] = Instance.new("Frame")
-uwu["binary tab block all"] = Instance.new("Frame")
-uwu["binary tab block main frame"] = Instance.new("Frame")
-uwu["binary"] = Instance.new("TextLabel")
+box["binary tab top bar"] = Instance.new("TextLabel")
+box["binary tab top bar close button"] = Instance.new("TextButton")
+box["binary tab top bar minimize button"] = Instance.new("TextButton")
+box["binary tab top bar reposition button"] = Instance.new("TextButton")
+box["binary tab top bar"] = Instance.new("TextLabel")
+box["binary tab top bar close button"] = Instance.new("TextButton")
+box["binary tab top bar minimize button"] = Instance.new("TextButton")
+box["binary tab top bar reposition button"] = Instance.new("TextButton")
+box["binary tab main frame 1"] = Instance.new("Frame")
+box["binary tab block all"] = Instance.new("Frame")
+box["binary tab block main frame"] = Instance.new("Frame")
+box["binary"] = Instance.new("TextLabel")
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["video tab top bar"] = Instance.new("TextLabel")
-uwu["video tab top bar close button"] = Instance.new("TextButton")
-uwu["video tab top bar minimize button"] = Instance.new("TextButton")
-uwu["video tab top bar reposition button"] = Instance.new("TextButton")
-uwu["video tab top bar"] = Instance.new("TextLabel")
-uwu["video tab top bar close button"] = Instance.new("TextButton")
-uwu["video tab top bar minimize button"] = Instance.new("TextButton")
-uwu["video tab top bar reposition button"] = Instance.new("TextButton")
-uwu["video tab main frame 1"] = Instance.new("Frame")
-uwu["video tab block all"] = Instance.new("Frame")
-uwu["video tab block main frame"] = Instance.new("Frame")
-uwu["video"] = Instance.new("VideoFrame")
-uwu["video id textbox"] = Instance.new("TextBox")
+box["video tab top bar"] = Instance.new("TextLabel")
+box["video tab top bar close button"] = Instance.new("TextButton")
+box["video tab top bar minimize button"] = Instance.new("TextButton")
+box["video tab top bar reposition button"] = Instance.new("TextButton")
+box["video tab top bar"] = Instance.new("TextLabel")
+box["video tab top bar close button"] = Instance.new("TextButton")
+box["video tab top bar minimize button"] = Instance.new("TextButton")
+box["video tab top bar reposition button"] = Instance.new("TextButton")
+box["video tab main frame 1"] = Instance.new("Frame")
+box["video tab block all"] = Instance.new("Frame")
+box["video tab block main frame"] = Instance.new("Frame")
+box["video"] = Instance.new("VideoFrame")
+box["video id textbox"] = Instance.new("TextBox")
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["gaydar tab top bar"] = Instance.new("TextLabel")
-uwu["gaydar tab top bar close button"] = Instance.new("TextButton")
-uwu["gaydar tab top bar minimize button"] = Instance.new("TextButton")
-uwu["gaydar tab top bar reposition button"] = Instance.new("TextButton")
-uwu["gaydar tab top bar"] = Instance.new("TextLabel")
-uwu["gaydar tab top bar close button"] = Instance.new("TextButton")
-uwu["gaydar tab top bar minimize button"] = Instance.new("TextButton")
-uwu["gaydar tab top bar reposition button"] = Instance.new("TextButton")
-uwu["gaydar tab main frame 1"] = Instance.new("Frame")
-uwu["gaydar tab block all"] = Instance.new("Frame")
-uwu["gaydar tab block main frame"] = Instance.new("Frame")
-uwu["gaydar"] = Instance.new("ImageLabel")
-uwu["gaydar target"] = Instance.new("TextBox")
+box["gaydar tab top bar"] = Instance.new("TextLabel")
+box["gaydar tab top bar close button"] = Instance.new("TextButton")
+box["gaydar tab top bar minimize button"] = Instance.new("TextButton")
+box["gaydar tab top bar reposition button"] = Instance.new("TextButton")
+box["gaydar tab top bar"] = Instance.new("TextLabel")
+box["gaydar tab top bar close button"] = Instance.new("TextButton")
+box["gaydar tab top bar minimize button"] = Instance.new("TextButton")
+box["gaydar tab top bar reposition button"] = Instance.new("TextButton")
+box["gaydar tab main frame 1"] = Instance.new("Frame")
+box["gaydar tab block all"] = Instance.new("Frame")
+box["gaydar tab block main frame"] = Instance.new("Frame")
+box["gaydar"] = Instance.new("ImageLabel")
+box["gaydar target"] = Instance.new("TextBox")
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["headcanon generator tab top bar"] = Instance.new("TextLabel")
-uwu["headcanon generator tab top bar close button"] = Instance.new("TextButton")
-uwu["headcanon generator tab top bar minimize button"] = Instance.new("TextButton")
-uwu["headcanon generator tab top bar reposition button"] = Instance.new("TextButton")
-uwu["headcanon generator tab top bar"] = Instance.new("TextLabel")
-uwu["headcanon generator tab top bar close button"] = Instance.new("TextButton")
-uwu["headcanon generator tab top bar minimize button"] = Instance.new("TextButton")
-uwu["headcanon generator tab top bar reposition button"] = Instance.new("TextButton")
-uwu["headcanon generator tab main frame 1"] = Instance.new("Frame")
-uwu["headcanon generator tab block all"] = Instance.new("Frame")
-uwu["headcanon generator tab block main frame"] = Instance.new("Frame")
-uwu["headcanon generator output"] = Instance.new("TextLabel")
-uwu["headcanon generator input"] = Instance.new("TextBox")
-uwu["headcanon generator input 2"] = Instance.new("TextBox")
-uwu["generate headcanon"] = Instance.new("TextButton")
+box["headcanon generator tab top bar"] = Instance.new("TextLabel")
+box["headcanon generator tab top bar close button"] = Instance.new("TextButton")
+box["headcanon generator tab top bar minimize button"] = Instance.new("TextButton")
+box["headcanon generator tab top bar reposition button"] = Instance.new("TextButton")
+box["headcanon generator tab top bar"] = Instance.new("TextLabel")
+box["headcanon generator tab top bar close button"] = Instance.new("TextButton")
+box["headcanon generator tab top bar minimize button"] = Instance.new("TextButton")
+box["headcanon generator tab top bar reposition button"] = Instance.new("TextButton")
+box["headcanon generator tab main frame 1"] = Instance.new("Frame")
+box["headcanon generator tab block all"] = Instance.new("Frame")
+box["headcanon generator tab block main frame"] = Instance.new("Frame")
+box["headcanon generator output"] = Instance.new("TextLabel")
+box["headcanon generator input"] = Instance.new("TextBox")
+box["headcanon generator input 2"] = Instance.new("TextBox")
+box["generate headcanon"] = Instance.new("TextButton")
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["message reverser tab top bar"] = Instance.new("TextLabel")
-uwu["message reverser tab top bar close button"] = Instance.new("TextButton")
-uwu["message reverser tab top bar minimize button"] = Instance.new("TextButton")
-uwu["message reverser tab top bar reposition button"] = Instance.new("TextButton")
-uwu["message reverser tab top bar"] = Instance.new("TextLabel")
-uwu["message reverser tab top bar close button"] = Instance.new("TextButton")
-uwu["message reverser tab top bar minimize button"] = Instance.new("TextButton")
-uwu["message reverser tab top bar reposition button"] = Instance.new("TextButton")
-uwu["message reverser tab main frame 1"] = Instance.new("Frame")
-uwu["message reverser tab block all"] = Instance.new("Frame")
-uwu["message reverser tab block main frame"] = Instance.new("Frame")
-uwu["message reverser input"] = Instance.new("TextBox")
-uwu["reverse message"] = Instance.new("TextButton")
-uwu["clear message reverser input"] = Instance.new("TextButton")
+box["message reverser tab top bar"] = Instance.new("TextLabel")
+box["message reverser tab top bar close button"] = Instance.new("TextButton")
+box["message reverser tab top bar minimize button"] = Instance.new("TextButton")
+box["message reverser tab top bar reposition button"] = Instance.new("TextButton")
+box["message reverser tab top bar"] = Instance.new("TextLabel")
+box["message reverser tab top bar close button"] = Instance.new("TextButton")
+box["message reverser tab top bar minimize button"] = Instance.new("TextButton")
+box["message reverser tab top bar reposition button"] = Instance.new("TextButton")
+box["message reverser tab main frame 1"] = Instance.new("Frame")
+box["message reverser tab block all"] = Instance.new("Frame")
+box["message reverser tab block main frame"] = Instance.new("Frame")
+box["message reverser input"] = Instance.new("TextBox")
+box["reverse message"] = Instance.new("TextButton")
+box["clear message reverser input"] = Instance.new("TextButton")
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["noxsec encoder and decoder tab top bar"] = Instance.new("TextLabel")
-uwu["noxsec encoder and decoder tab top bar close button"] = Instance.new("TextButton")
-uwu["noxsec encoder and decoder tab top bar minimize button"] = Instance.new("TextButton")
-uwu["noxsec encoder and decoder tab top bar reposition button"] = Instance.new("TextButton")
-uwu["noxsec encoder and decoder tab top bar"] = Instance.new("TextLabel")
-uwu["noxsec encoder and decoder tab top bar close button"] = Instance.new("TextButton")
-uwu["noxsec encoder and decoder tab top bar minimize button"] = Instance.new("TextButton")
-uwu["noxsec encoder and decoder tab top bar reposition button"] = Instance.new("TextButton")
-uwu["noxsec encoder and decoder tab main frame 1"] = Instance.new("Frame")
-uwu["noxsec encoder and decoder tab block all"] = Instance.new("Frame")
-uwu["noxsec encoder and decoder tab block main frame"] = Instance.new("Frame")
-uwu["noxsec encoder and decoder input"] = Instance.new("TextBox")
-uwu["noxsec encode"] = Instance.new("TextButton")
-uwu["noxsec decode"] = Instance.new("TextButton")
-uwu["clear noxsec encoder and decoder input"] = Instance.new("TextButton")
-uwu["copy noxsec encoder and decoder input"] = Instance.new("TextButton")
+box["noxsec encoder and decoder tab top bar"] = Instance.new("TextLabel")
+box["noxsec encoder and decoder tab top bar close button"] = Instance.new("TextButton")
+box["noxsec encoder and decoder tab top bar minimize button"] = Instance.new("TextButton")
+box["noxsec encoder and decoder tab top bar reposition button"] = Instance.new("TextButton")
+box["noxsec encoder and decoder tab top bar"] = Instance.new("TextLabel")
+box["noxsec encoder and decoder tab top bar close button"] = Instance.new("TextButton")
+box["noxsec encoder and decoder tab top bar minimize button"] = Instance.new("TextButton")
+box["noxsec encoder and decoder tab top bar reposition button"] = Instance.new("TextButton")
+box["noxsec encoder and decoder tab main frame 1"] = Instance.new("Frame")
+box["noxsec encoder and decoder tab block all"] = Instance.new("Frame")
+box["noxsec encoder and decoder tab block main frame"] = Instance.new("Frame")
+box["noxsec encoder and decoder input"] = Instance.new("TextBox")
+box["noxsec encode"] = Instance.new("TextButton")
+box["noxsec decode"] = Instance.new("TextButton")
+box["clear noxsec encoder and decoder input"] = Instance.new("TextButton")
+box["copy noxsec encoder and decoder input"] = Instance.new("TextButton")
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["wm"] = Instance.new("TextLabel")
-uwu["sexy"] = Instance.new("ImageLabel")
-uwu["toggle interface visibility button"] = Instance.new("TextButton")
-uwu["top bar"] = Instance.new("TextLabel")
-uwu["top bar close button"] = Instance.new("TextButton")
-uwu["top bar minimize button"] = Instance.new("TextButton")
-uwu["top bar reposition button"] = Instance.new("TextButton")
+box["wm"] = Instance.new("TextLabel")
+box["sexy"] = Instance.new("ImageLabel")
+box["toggle interface visibility button"] = Instance.new("TextButton")
+box["top bar"] = Instance.new("TextLabel")
+box["top bar close button"] = Instance.new("TextButton")
+box["top bar minimize button"] = Instance.new("TextButton")
+box["top bar reposition button"] = Instance.new("TextButton")
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["block all"] = Instance.new("Frame")
-uwu["main frame 1"] = Instance.new("Frame")
-uwu["main frame 2"] = Instance.new("Frame")
-uwu["main frame 3"] = Instance.new("Frame")
-uwu["main frame 4"] = Instance.new("Frame")
-uwu["block main frame"] = Instance.new("Frame")
-uwu["password frame"] = Instance.new("Frame")
-uwu["password text"] = Instance.new("TextLabel")
-uwu["password box"] = Instance.new("TextBox")
-uwu["introduction"] = Instance.new("TextLabel")
-uwu["player information tab"] = Instance.new("TextButton")
-uwu["server information tab"] = Instance.new("TextButton")
-uwu["console output tab"] = Instance.new("TextButton")
-uwu["console label"] = Instance.new("TextLabel")
-uwu["output holder"] = Instance.new("Frame")
-uwu["output scrolling frame"] = Instance.new("ScrollingFrame")
-uwu["output textbox"] = Instance.new("TextBox")
-uwu["clear console button"] = Instance.new("TextButton")
-uwu["server information holder"] = Instance.new("TextLabel")
-uwu["information holder"] = Instance.new("TextLabel")
-uwu["information pfp"] = Instance.new("ImageLabel")
-uwu["script settings tab"] = Instance.new("TextButton")
-uwu["server settings tab"] = Instance.new("TextButton")
-uwu["server settings holder"] = Instance.new("Frame")
-uwu["change fps cap"] = Instance.new("TextLabel")
-uwu["change fps cap setting"] = Instance.new("TextButton")
-uwu["change fps cap textbox"] = Instance.new("TextBox")
-uwu["rejoin server"] = Instance.new("TextButton")
-uwu["leave game"] = Instance.new("TextButton")
-uwu["server hop"] = Instance.new("TextButton")
-uwu["auto rejoin toggle"] = Instance.new("TextLabel")
-uwu["toggle auto rejoin on"] = Instance.new("TextButton")
-uwu["toggle auto rejoin off"] = Instance.new("TextButton")
-uwu["script settings holder"] = Instance.new("Frame")
-uwu["current theme"] = Instance.new("TextLabel")
-uwu["change theme setting"] = Instance.new("TextButton")
-uwu["command prefix"] = Instance.new("TextLabel")
-uwu["change command prefix setting"] = Instance.new("TextButton")
-uwu["change command prefix textbox"] = Instance.new("TextBox")
-uwu["change click sound setting"] = Instance.new("TextLabel")
-uwu["change click sound"] = Instance.new("TextButton")
-uwu["change click sound textbox"] = Instance.new("TextBox")
-uwu["backdoor info"] = Instance.new("TextButton")
-uwu["backdoor info holder"] = Instance.new("TextLabel")
-uwu["scanning"] = Instance.new("TextButton")
-uwu["logs holder"] = Instance.new("Frame")
-uwu["logs label"] = Instance.new("TextLabel")
-uwu["logs scrolling frame"] = Instance.new("ScrollingFrame")
-uwu["logs textbox"] = Instance.new("TextBox")
-uwu["backdoor scan button"] = Instance.new("TextButton")
-uwu["credits"] = Instance.new("TextButton")
-uwu["credits holder"] = Instance.new("TextLabel")
-uwu["scripts tab"] = Instance.new("TextButton")
-uwu["button holder"] = Instance.new("Frame")
-uwu["next page"] = Instance.new("TextButton")
-uwu["previous page"] = Instance.new("TextButton")
-uwu["script search bar"] = Instance.new("TextBox")
-uwu["commands tab"] = Instance.new("TextButton")
-uwu["list of commands"] = Instance.new("ScrollingFrame")
-uwu["command bar"] = Instance.new("TextBox")
-uwu["execute command button"] = Instance.new("TextButton")
-uwu["asset ids tab"] = Instance.new("TextButton")
-uwu["asset id type indicator"] = Instance.new("TextLabel")
-uwu["asset id search bar"] = Instance.new("TextBox")
-uwu["switch asset id type button"] = Instance.new("TextButton")
-uwu["switch asset id type button 2"] = Instance.new("TextButton")
-uwu["asset image 1"] = Instance.new("ImageLabel")
-uwu["asset image name 1"] = Instance.new("TextLabel")
-uwu["asset image id 1"] = Instance.new("TextLabel")
-uwu["copy asset id 1 button"] = Instance.new("TextButton")
-uwu["asset image 2"] = Instance.new("ImageLabel")
-uwu["asset image name 2"] = Instance.new("TextLabel")
-uwu["asset image id 2"] = Instance.new("TextLabel")
-uwu["copy asset id 2 button"] = Instance.new("TextButton")
-uwu["asset image 3"] = Instance.new("ImageLabel")
-uwu["asset image name 3"] = Instance.new("TextLabel")
-uwu["asset image id 3"] = Instance.new("TextLabel")
-uwu["copy asset id 3 button"] = Instance.new("TextButton")
-uwu["next page 2 button"] = Instance.new("TextButton")
-uwu["previous page 2 button"] = Instance.new("TextButton")
-uwu["executor tab"] = Instance.new("TextButton")
-uwu["executor scrolling frame"] = Instance.new("ScrollingFrame")
-uwu["executor textbox"] = Instance.new("TextBox")
-uwu["execute button"] = Instance.new("TextButton")
-uwu["execute from client button"] = Instance.new("TextButton")
-uwu["clear button"] = Instance.new("TextButton")
-uwu["player information tab bottom cover"] = Instance.new("Frame")
-uwu["server information tab bottom cover"] = Instance.new("Frame")
-uwu["console output tab bottom cover"] = Instance.new("Frame")
-uwu["script settings tab bottom cover"] = Instance.new("Frame")
-uwu["server settings tab bottom cover"] = Instance.new("Frame")
-uwu["backdoor info bottom cover"] = Instance.new("Frame")
-uwu["scanning bottom cover"] = Instance.new("Frame")
-uwu["credits bottom cover"] = Instance.new("Frame")
-uwu["scripts tab bottom cover"] = Instance.new("Frame")
-uwu["commands tab bottom cover"] = Instance.new("Frame")
-uwu["asset ids tab bottom cover"] = Instance.new("Frame")
-uwu["executor tab bottom cover"] = Instance.new("Frame")
+box["block all"] = Instance.new("Frame")
+box["main frame 1"] = Instance.new("Frame")
+box["main frame 2"] = Instance.new("Frame")
+box["main frame 3"] = Instance.new("Frame")
+box["main frame 4"] = Instance.new("Frame")
+box["block main frame"] = Instance.new("Frame")
+box["password frame"] = Instance.new("Frame")
+box["password text"] = Instance.new("TextLabel")
+box["password box"] = Instance.new("TextBox")
+box["introduction"] = Instance.new("TextLabel")
+box["player information tab"] = Instance.new("TextButton")
+box["server information tab"] = Instance.new("TextButton")
+box["console output tab"] = Instance.new("TextButton")
+box["console label"] = Instance.new("TextLabel")
+box["output holder"] = Instance.new("Frame")
+box["output scrolling frame"] = Instance.new("ScrollingFrame")
+box["output textbox"] = Instance.new("TextBox")
+box["clear console button"] = Instance.new("TextButton")
+box["server information holder"] = Instance.new("TextLabel")
+box["information holder"] = Instance.new("TextLabel")
+box["information pfp"] = Instance.new("ImageLabel")
+box["script settings tab"] = Instance.new("TextButton")
+box["server settings tab"] = Instance.new("TextButton")
+box["server settings holder"] = Instance.new("Frame")
+box["change fps cap"] = Instance.new("TextLabel")
+box["change fps cap setting"] = Instance.new("TextButton")
+box["change fps cap textbox"] = Instance.new("TextBox")
+box["rejoin server"] = Instance.new("TextButton")
+box["leave game"] = Instance.new("TextButton")
+box["server hop"] = Instance.new("TextButton")
+box["auto rejoin toggle"] = Instance.new("TextLabel")
+box["toggle auto rejoin on"] = Instance.new("TextButton")
+box["toggle auto rejoin off"] = Instance.new("TextButton")
+box["script settings holder"] = Instance.new("Frame")
+box["current theme"] = Instance.new("TextLabel")
+box["change theme setting"] = Instance.new("TextButton")
+box["command prefix"] = Instance.new("TextLabel")
+box["change command prefix setting"] = Instance.new("TextButton")
+box["change command prefix textbox"] = Instance.new("TextBox")
+box["change click sound setting"] = Instance.new("TextLabel")
+box["change click sound"] = Instance.new("TextButton")
+box["change click sound textbox"] = Instance.new("TextBox")
+box["backdoor info"] = Instance.new("TextButton")
+box["backdoor info holder"] = Instance.new("TextLabel")
+box["scanning"] = Instance.new("TextButton")
+box["logs holder"] = Instance.new("Frame")
+box["logs label"] = Instance.new("TextLabel")
+box["logs scrolling frame"] = Instance.new("ScrollingFrame")
+box["logs textbox"] = Instance.new("TextBox")
+box["backdoor scan button"] = Instance.new("TextButton")
+box["credits"] = Instance.new("TextButton")
+box["credits holder"] = Instance.new("TextLabel")
+box["scripts tab"] = Instance.new("TextButton")
+box["button holder"] = Instance.new("Frame")
+box["next page"] = Instance.new("TextButton")
+box["previous page"] = Instance.new("TextButton")
+box["script search bar"] = Instance.new("TextBox")
+box["commands tab"] = Instance.new("TextButton")
+box["list of commands"] = Instance.new("ScrollingFrame")
+box["command bar"] = Instance.new("TextBox")
+box["execute command button"] = Instance.new("TextButton")
+box["asset ids tab"] = Instance.new("TextButton")
+box["asset id type indicator"] = Instance.new("TextLabel")
+box["asset id search bar"] = Instance.new("TextBox")
+box["switch asset id type button"] = Instance.new("TextButton")
+box["switch asset id type button 2"] = Instance.new("TextButton")
+box["asset image 1"] = Instance.new("ImageLabel")
+box["asset image name 1"] = Instance.new("TextLabel")
+box["asset image id 1"] = Instance.new("TextLabel")
+box["copy asset id 1 button"] = Instance.new("TextButton")
+box["asset image 2"] = Instance.new("ImageLabel")
+box["asset image name 2"] = Instance.new("TextLabel")
+box["asset image id 2"] = Instance.new("TextLabel")
+box["copy asset id 2 button"] = Instance.new("TextButton")
+box["asset image 3"] = Instance.new("ImageLabel")
+box["asset image name 3"] = Instance.new("TextLabel")
+box["asset image id 3"] = Instance.new("TextLabel")
+box["copy asset id 3 button"] = Instance.new("TextButton")
+box["next page 2 button"] = Instance.new("TextButton")
+box["previous page 2 button"] = Instance.new("TextButton")
+box["executor tab"] = Instance.new("TextButton")
+box["executor scrolling frame"] = Instance.new("ScrollingFrame")
+box["executor textbox"] = Instance.new("TextBox")
+box["execute button"] = Instance.new("TextButton")
+box["execute from client button"] = Instance.new("TextButton")
+box["clear button"] = Instance.new("TextButton")
+box["player information tab bottom cover"] = Instance.new("Frame")
+box["server information tab bottom cover"] = Instance.new("Frame")
+box["console output tab bottom cover"] = Instance.new("Frame")
+box["script settings tab bottom cover"] = Instance.new("Frame")
+box["server settings tab bottom cover"] = Instance.new("Frame")
+box["backdoor info bottom cover"] = Instance.new("Frame")
+box["scanning bottom cover"] = Instance.new("Frame")
+box["credits bottom cover"] = Instance.new("Frame")
+box["scripts tab bottom cover"] = Instance.new("Frame")
+box["commands tab bottom cover"] = Instance.new("Frame")
+box["asset ids tab bottom cover"] = Instance.new("Frame")
+box["executor tab bottom cover"] = Instance.new("Frame")
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["emoticon"] = "o.o"
+box["emoticon"] = "o.o"
 
 grayscaletheme = false
 noxioustheme = false
@@ -368,16 +368,16 @@ local initialcols = {
 }
 ]]
 
-uwu["default background color"] = initialcols.background
-uwu["default border color"] = initialcols.border
-uwu["default 1/2 color"] = initialcols.half
-uwu["default 1/2 color 2"] = initialcols.half2
-uwu["default text color"] = initialcols.text
-uwu["default text font"] = Enum.Font.RobotoMono
+box["default background color"] = initialcols.background
+box["default border color"] = initialcols.border
+box["default 1/2 color"] = initialcols.half
+box["default 1/2 color 2"] = initialcols.half2
+box["default text color"] = initialcols.text
+box["default text font"] = Enum.Font.RobotoMono
 
 function sdfont(font)
 	if typeof(font) == "EnumItem" and font.EnumType == Enum.Font then
-		uwu["default text font"] = font
+		box["default text font"] = font
 	end
 end
 
@@ -402,239 +402,243 @@ msgrevtabreallyminimized = false
 noxsectabreallyminimized = false
 
 function defaultcols()
-	uwu["sexy"].Visible = false
-	uwu["default background color"] = Color3.fromHex("252539")
-	uwu["default border color"] = Color3.fromHex("4051ED")
-	uwu["default text color"] = Color3.fromHex("ededed")
-	uwu["default 1/2 color 2"] = Color3.fromHex("303db3")
-	uwu["default 1/2 color"] = Color3.fromHex("858585")
+	dis() 
+	box["sexy"].Visible = false
+	box["default background color"] = Color3.fromHex("252539")
+	box["default border color"] = Color3.fromHex("4051ED")
+	box["default text color"] = Color3.fromHex("ededed")
+	box["default 1/2 color 2"] = Color3.fromHex("303db3")
+	box["default 1/2 color"] = Color3.fromHex("858585")
 	sdfont(Enum.Font.RobotoMono)
-	uwu["top bar"].Text = " uwusploit " .. uwu["emoticon"]
+	box["top bar"].Text = " uwusploit " .. box["emoticon"]
 	if donuttabreallyminimized then
-		uwu["donut tab top bar"].Text = " donut.lua >.<"
+		box["donut tab top bar"].Text = " donut.lua >.<"
 	else
-		uwu["donut tab top bar"].Text = " donut.lua o.o"
+		box["donut tab top bar"].Text = " donut.lua o.o"
 	end
 	if binarytabreallyminimized then
-		uwu["binary tab top bar"].Text = " binary.lua >.<"
+		box["binary tab top bar"].Text = " binary.lua >.<"
 	else
-		uwu["binary tab top bar"].Text = " binary.lua o.o"
+		box["binary tab top bar"].Text = " binary.lua o.o"
 	end
 	if hcgentabreallyminimized then
-		uwu["headcanon generator tab top bar"].Text = " headcanon generator.lua >.<"
+		box["headcanon generator tab top bar"].Text = " headcanon generator.lua >.<"
 	else
-		uwu["headcanon generator tab top bar"].Text = " headcanon generator.lua o.o"
+		box["headcanon generator tab top bar"].Text = " headcanon generator.lua o.o"
 	end
 	if gaydartabreallyminimized then
-		uwu["gaydar tab top bar"].Text = " gaydar.lua >.<"
+		box["gaydar tab top bar"].Text = " gaydar.lua >.<"
 	else
-		uwu["gaydar tab top bar"].Text = " gaydar.lua o.o"
+		box["gaydar tab top bar"].Text = " gaydar.lua o.o"
 	end
 	if videotabreallyminimized then
-		uwu["video tab top bar"].Text = " video.lua >.<"
+		box["video tab top bar"].Text = " video.lua >.<"
 	else
-		uwu["video tab top bar"].Text = " video.lua o.o"
+		box["video tab top bar"].Text = " video.lua o.o"
 	end
 	if msgrevtabreallyminimized then
-		uwu["message reverser tab top bar"].Text = " message reverser.lua >.<"
+		box["message reverser tab top bar"].Text = " message reverser.lua >.<"
 	else
-		uwu["message reverser tab top bar"].Text = " message reverser.lua o.o"
+		box["message reverser tab top bar"].Text = " message reverser.lua o.o"
 	end
 	if noxsectabreallyminimized then
-		uwu["noxsec encoder and decoder tab top bar"].Text = " noxsec encoder and decoder.lua >.<"
+		box["noxsec encoder and decoder tab top bar"].Text = " noxsec encoder and decoder.lua >.<"
 	else
-		uwu["noxsec encoder and decoder tab top bar"].Text = " noxsec encoder and decoder.lua o.o"
+		box["noxsec encoder and decoder tab top bar"].Text = " noxsec encoder and decoder.lua o.o"
 	end
 end
 
 function grayscalecols()
-	uwu["sexy"].Visible = false
-	uwu["default background color"] = grayscale(initialcols.background)
-	uwu["default border color"] = grayscale(initialcols.border)
-	uwu["default text color"] = grayscale(initialcols.border)
-	uwu["default 1/2 color 2"] = grayscale(initialcols.half2)
-	uwu["default 1/2 color"] = grayscale(initialcols.half2)
+	dis() 
+	box["sexy"].Visible = false
+	box["default background color"] = grayscale(initialcols.background)
+	box["default border color"] = grayscale(initialcols.border)
+	box["default text color"] = grayscale(initialcols.border)
+	box["default 1/2 color 2"] = grayscale(initialcols.half2)
+	box["default 1/2 color"] = grayscale(initialcols.half2)
 	sdfont(Enum.Font.RobotoMono)
-	uwu["top bar"].Text = " uwusploit " .. uwu["emoticon"]
+	box["top bar"].Text = " uwusploit " .. box["emoticon"]
 	if donuttabreallyminimized then
-		uwu["donut tab top bar"].Text = " donut.lua >.<"
+		box["donut tab top bar"].Text = " donut.lua >.<"
 	else
-		uwu["donut tab top bar"].Text = " donut.lua o.o"
+		box["donut tab top bar"].Text = " donut.lua o.o"
 	end
 	if binarytabreallyminimized then
-		uwu["binary tab top bar"].Text = " binary.lua >.<"
+		box["binary tab top bar"].Text = " binary.lua >.<"
 	else
-		uwu["binary tab top bar"].Text = " binary.lua o.o"
+		box["binary tab top bar"].Text = " binary.lua o.o"
 	end
 	if hcgentabreallyminimized then
-		uwu["headcanon generator tab top bar"].Text = " headcanon generator.lua >.<"
+		box["headcanon generator tab top bar"].Text = " headcanon generator.lua >.<"
 	else
-		uwu["headcanon generator tab top bar"].Text = " headcanon generator.lua o.o"
+		box["headcanon generator tab top bar"].Text = " headcanon generator.lua o.o"
 	end
 	if gaydartabreallyminimized then
-		uwu["gaydar tab top bar"].Text = " gaydar.lua >.<"
+		box["gaydar tab top bar"].Text = " gaydar.lua >.<"
 	else
-		uwu["gaydar tab top bar"].Text = " gaydar.lua o.o"
+		box["gaydar tab top bar"].Text = " gaydar.lua o.o"
 	end
 	if videotabreallyminimized then
-		uwu["video tab top bar"].Text = " video.lua >.<"
+		box["video tab top bar"].Text = " video.lua >.<"
 	else
-		uwu["video tab top bar"].Text = " video.lua o.o"
+		box["video tab top bar"].Text = " video.lua o.o"
 	end
 	if msgrevtabreallyminimized then
-		uwu["message reverser tab top bar"].Text = " message reverser.lua >.<"
+		box["message reverser tab top bar"].Text = " message reverser.lua >.<"
 	else
-		uwu["message reverser tab top bar"].Text = " message reverser.lua o.o"
+		box["message reverser tab top bar"].Text = " message reverser.lua o.o"
 	end
 	if noxsectabreallyminimized then
-		uwu["noxsec encoder and decoder tab top bar"].Text = " noxsec encoder and decoder.lua >.<"
+		box["noxsec encoder and decoder tab top bar"].Text = " noxsec encoder and decoder.lua >.<"
 	else
-		uwu["noxsec encoder and decoder tab top bar"].Text = " noxsec encoder and decoder.lua o.o"
+		box["noxsec encoder and decoder tab top bar"].Text = " noxsec encoder and decoder.lua o.o"
 	end
 end
 
 function noxiouscols()
-	uwu["sexy"].Visible = false
-	uwu["default background color"] = Color3.new(0, 0, 0)
-	uwu["default border color"] = Color3.new(1, 1, 1)
-	uwu["default text color"] = Color3.new(1, 1, 1)
-	uwu["default 1/2 color 2"] = Color3.new(0.5, 0.5, 0.5)
-	uwu["default 1/2 color"] = Color3.new(0.5, 0.5, 0.5)
+	dis() 
+	box["sexy"].Visible = false
+	box["default background color"] = Color3.new(0, 0, 0)
+	box["default border color"] = Color3.new(1, 1, 1)
+	box["default text color"] = Color3.new(1, 1, 1)
+	box["default 1/2 color 2"] = Color3.new(0.5, 0.5, 0.5)
+	box["default 1/2 color"] = Color3.new(0.5, 0.5, 0.5)
 	sdfont(Enum.Font.Nunito)
-	uwu["top bar"].Text = "  uwusploit " .. uwu["emoticon"]
+	box["top bar"].Text = "  uwusploit " .. box["emoticon"]
 	if donuttabreallyminimized then
-		uwu["donut tab top bar"].Text = "  donut.lua >.<"
+		box["donut tab top bar"].Text = "  donut.lua >.<"
 	else
-		uwu["donut tab top bar"].Text = "  donut.lua o.o"
+		box["donut tab top bar"].Text = "  donut.lua o.o"
 	end
 	if binarytabreallyminimized then
-		uwu["binary tab top bar"].Text = "  binary.lua >.<"
+		box["binary tab top bar"].Text = "  binary.lua >.<"
 	else
-		uwu["binary tab top bar"].Text = "  binary.lua o.o"
+		box["binary tab top bar"].Text = "  binary.lua o.o"
 	end
 	if hcgentabreallyminimized then
-		uwu["headcanon generator tab top bar"].Text = "  headcanon generator.lua >.<"
+		box["headcanon generator tab top bar"].Text = "  headcanon generator.lua >.<"
 	else
-		uwu["headcanon generator tab top bar"].Text = "  headcanon generator.lua o.o"
+		box["headcanon generator tab top bar"].Text = "  headcanon generator.lua o.o"
 	end
 	if gaydartabreallyminimized then
-		uwu["gaydar tab top bar"].Text = "  gaydar.lua >.<"
+		box["gaydar tab top bar"].Text = "  gaydar.lua >.<"
 	else
-		uwu["gaydar tab top bar"].Text = "  gaydar.lua o.o"
+		box["gaydar tab top bar"].Text = "  gaydar.lua o.o"
 	end
 	if videotabreallyminimized then
-		uwu["video tab top bar"].Text = "  video.lua >.<"
+		box["video tab top bar"].Text = "  video.lua >.<"
 	else
-		uwu["video tab top bar"].Text = "  video.lua o.o"
+		box["video tab top bar"].Text = "  video.lua o.o"
 	end
 	if msgrevtabreallyminimized then
-		uwu["message reverser tab top bar"].Text = "  message reverser.lua >.<"
+		box["message reverser tab top bar"].Text = "  message reverser.lua >.<"
 	else
-		uwu["message reverser tab top bar"].Text = "  message reverser.lua o.o"
+		box["message reverser tab top bar"].Text = "  message reverser.lua o.o"
 	end	
 	if noxsectabreallyminimized then
-		uwu["noxsec encoder and decoder tab top bar"].Text = "  noxsec encoder and decoder.lua >.<"
+		box["noxsec encoder and decoder tab top bar"].Text = "  noxsec encoder and decoder.lua >.<"
 	else
-		uwu["noxsec encoder and decoder tab top bar"].Text = "  noxsec encoder and decoder.lua o.o"
+		box["noxsec encoder and decoder tab top bar"].Text = "  noxsec encoder and decoder.lua o.o"
 	end
 end
 
 function polariacols()
-	uwu["sexy"].Visible = false
-	uwu["default background color"] = Color3.new(0, 0, 0)
-	uwu["default text color"] = Color3.new(1, 1, 1)
-	uwu["default border color"] = Color3.new(0.5, 0, 1)
-	uwu["default 1/2 color 2"] = Color3.new(0.25, 0, 0.5)
-	uwu["default 1/2 color"] = Color3.new(0.5, 0.5, 0.5)
+	dis() 
+	box["sexy"].Visible = false
+	box["default background color"] = Color3.new(0, 0, 0)
+	box["default text color"] = Color3.new(1, 1, 1)
+	box["default border color"] = Color3.new(0.5, 0, 1)
+	box["default 1/2 color 2"] = Color3.new(0.25, 0, 0.5)
+	box["default 1/2 color"] = Color3.new(0.5, 0.5, 0.5)
 	sdfont(Enum.Font.Arimo)
-	uwu["top bar"].Text = "  polaria reborn " .. uwu["emoticon"]
+	box["top bar"].Text = "  polaria reborn " .. box["emoticon"]
 	if donuttabreallyminimized then
-		uwu["donut tab top bar"].Text = "  donut.lua >.<"
+		box["donut tab top bar"].Text = "  donut.lua >.<"
 	else
-		uwu["donut tab top bar"].Text = "  donut.lua o.o"
+		box["donut tab top bar"].Text = "  donut.lua o.o"
 	end
 	if binarytabreallyminimized then
-		uwu["binary tab top bar"].Text = "  binary.lua >.<"
+		box["binary tab top bar"].Text = "  binary.lua >.<"
 	else
-		uwu["binary tab top bar"].Text = "  binary.lua o.o"
+		box["binary tab top bar"].Text = "  binary.lua o.o"
 	end
 	if hcgentabreallyminimized then
-		uwu["headcanon generator tab top bar"].Text = "  headcanon generator.lua >.<"
+		box["headcanon generator tab top bar"].Text = "  headcanon generator.lua >.<"
 	else
-		uwu["headcanon generator tab top bar"].Text = "  headcanon generator.lua o.o"
+		box["headcanon generator tab top bar"].Text = "  headcanon generator.lua o.o"
 	end
 	if gaydartabreallyminimized then
-		uwu["gaydar tab top bar"].Text = "  gaydar.lua >.<"
+		box["gaydar tab top bar"].Text = "  gaydar.lua >.<"
 	else
-		uwu["gaydar tab top bar"].Text = "  gaydar.lua o.o"
+		box["gaydar tab top bar"].Text = "  gaydar.lua o.o"
 	end
 	if videotabreallyminimized then
-		uwu["video tab top bar"].Text = "  video.lua >.<"
+		box["video tab top bar"].Text = "  video.lua >.<"
 	else
-		uwu["video tab top bar"].Text = "  video.lua o.o"
+		box["video tab top bar"].Text = "  video.lua o.o"
 	end
 	if msgrevtabreallyminimized then
-		uwu["message reverser tab top bar"].Text = "  message reverser.lua >.<"
+		box["message reverser tab top bar"].Text = "  message reverser.lua >.<"
 	else
-		uwu["message reverser tab top bar"].Text = "  message reverser.lua o.o"
+		box["message reverser tab top bar"].Text = "  message reverser.lua o.o"
 	end
 	if noxsectabreallyminimized then
-		uwu["noxsec encoder and decoder tab top bar"].Text = "  noxsec encoder and decoder.lua >.<"
+		box["noxsec encoder and decoder tab top bar"].Text = "  noxsec encoder and decoder.lua >.<"
 	else
-		uwu["noxsec encoder and decoder tab top bar"].Text = "  noxsec encoder and decoder.lua o.o"
+		box["noxsec encoder and decoder tab top bar"].Text = "  noxsec encoder and decoder.lua o.o"
 	end
 end
 
 function c00lcols()
-	uwu["sexy"].Visible = false
-	uwu["default background color"] = Color3.new(0, 0, 0)
-	uwu["default text color"] = Color3.new(1, 1, 1)
-	uwu["default border color"] = Color3.new(1, 0, 0)
-	uwu["default 1/2 color 2"] = Color3.new(0.5, 0, 0)
-	uwu["default 1/2 color"] = Color3.new(0.5, 0.5, 0.5)
+	dis() 
+	box["sexy"].Visible = false
+	box["default background color"] = Color3.new(0, 0, 0)
+	box["default text color"] = Color3.new(1, 1, 1)
+	box["default border color"] = Color3.new(1, 0, 0)
+	box["default 1/2 color 2"] = Color3.new(0.5, 0, 0)
+	box["default 1/2 color"] = Color3.new(0.5, 0.5, 0.5)
 	sdfont(Enum.Font.SourceSans)
-	uwu["top bar"].Text = "   c00lgui reborn " .. uwu["emoticon"]
+	box["top bar"].Text = "   c00lgui reborn " .. box["emoticon"]
 	if donuttabreallyminimized then
-		uwu["donut tab top bar"].Text = "   donut.lua >.<"
+		box["donut tab top bar"].Text = "   donut.lua >.<"
 	else
-		uwu["donut tab top bar"].Text = "   donut.lua o.o"
+		box["donut tab top bar"].Text = "   donut.lua o.o"
 	end
 	if binarytabreallyminimized then
-		uwu["binary tab top bar"].Text = "   binary.lua >.<"
+		box["binary tab top bar"].Text = "   binary.lua >.<"
 	else
-		uwu["binary tab top bar"].Text = "   binary.lua o.o"
+		box["binary tab top bar"].Text = "   binary.lua o.o"
 	end
 	if hcgentabreallyminimized then
-		uwu["headcanon generator tab top bar"].Text = "   headcanon generator.lua >.<"
+		box["headcanon generator tab top bar"].Text = "   headcanon generator.lua >.<"
 	else
-		uwu["headcanon generator tab top bar"].Text = "   headcanon generator.lua o.o"
+		box["headcanon generator tab top bar"].Text = "   headcanon generator.lua o.o"
 	end
 	if gaydartabreallyminimized then
-		uwu["gaydar tab top bar"].Text = "   gaydar.lua >.<"
+		box["gaydar tab top bar"].Text = "   gaydar.lua >.<"
 	else
-		uwu["gaydar tab top bar"].Text = "   gaydar.lua o.o"
+		box["gaydar tab top bar"].Text = "   gaydar.lua o.o"
 	end
 	if videotabreallyminimized then
-		uwu["video tab top bar"].Text = "   video.lua >.<"
+		box["video tab top bar"].Text = "   video.lua >.<"
 	else
-		uwu["video tab top bar"].Text = "   video.lua o.o"
+		box["video tab top bar"].Text = "   video.lua o.o"
 	end
 	if msgrevtabreallyminimized then
-		uwu["message reverser tab top bar"].Text = "   message reverser.lua >.<"
+		box["message reverser tab top bar"].Text = "   message reverser.lua >.<"
 	else
-		uwu["message reverser tab top bar"].Text = "   message reverser.lua o.o"
+		box["message reverser tab top bar"].Text = "   message reverser.lua o.o"
 	end
 	if noxsectabreallyminimized then
-		uwu["noxsec encoder and decoder tab top bar"].Text = "   noxsec encoder and decoder.lua >.<"
+		box["noxsec encoder and decoder tab top bar"].Text = "   noxsec encoder and decoder.lua >.<"
 	else
-		uwu["noxsec encoder and decoder tab top bar"].Text = "   noxsec encoder and decoder.lua o.o"
+		box["noxsec encoder and decoder tab top bar"].Text = "   noxsec encoder and decoder.lua o.o"
 	end
 end
 
 local fadeTimer = 0
-local fadeSpeed = 4 -- Lower = slower, higher = faster
+local fadeSpeed = 5
 
--- Purple → Cyan palette
 local fadeStart = {
 	background = Color3.fromHex("2e2539"),
 	border = Color3.fromHex("a948ab"),
@@ -646,33 +650,31 @@ local fadeStart = {
 local fadeEnd = {
 	background = Color3.fromHex("293c4d"),
 	border = Color3.fromHex("77ADD7"),
-	half = Color3.fromHex("858585"), -- stays the same
-	half2 = Color3.fromHex("4f738f"), -- stays the same
-	text = Color3.fromHex("ededed") -- stays the same
+	half = Color3.fromHex("858585"),
+	half2 = Color3.fromHex("4f738f"),
+	text = Color3.fromHex("ededed")
 }
 
 function restorecols()
-	uwu["sexy"].Visible = true
+	con() 
+	box["sexy"].Visible = true
 	
-	-- t will cycle between 0 and 1 and back smoothly
 	fadeTimer += fadeSpeed * task.wait()
-	local t = (math.sin(fadeTimer) + 1) / 2 -- produces a nice back-and-forth curve
+	local t = (math.sin(fadeTimer) + 1) / 2
 
-	-- Interpolated colors
 	local bgColor = fadeStart.background:Lerp(fadeEnd.background, t)
 	local borderColor = fadeStart.border:Lerp(fadeEnd.border, t)
 	local text2Color = fadeStart.half2:Lerp(fadeEnd.half2, t)
 
-	uwu["default background color"] = bgColor
-	uwu["default border color"] = borderColor
-	uwu["default 1/2 color"] = fadeStart.half
-	uwu["default 1/2 color 2"] = text2Color
-	uwu["default text color"] = fadeStart.text
+	box["default background color"] = bgColor
+	box["default border color"] = borderColor
+	box["default 1/2 color"] = fadeStart.half
+	box["default 1/2 color 2"] = text2Color
+	box["default text color"] = fadeStart.text
 	sdfont(Enum.Font.RobotoMono)
 
-	uwu["top bar"].Text = "    boxten sex gui " .. uwu["emoticon"]
+	box["top bar"].Text = "    boxten sex gui " .. box["emoticon"]
 
-	-- Tab labels
 	local tabs = {
 		{key = "donut", minimized = donuttabreallyminimized},
 		{key = "binary", minimized = binarytabreallyminimized},
@@ -685,21 +687,21 @@ function restorecols()
 	for _, tab in ipairs(tabs) do
 		local prefix = "   "
 		local suffix = tab.minimized and " >.<" or " o.o"
-		uwu[tab.key .. " tab top bar"].Text = prefix .. tab.key .. ".lua" .. suffix
+		box[tab.key .. " tab top bar"].Text = prefix .. tab.key .. ".lua" .. suffix
 	end
 end
 
-uwu["box theme connection"] = nil
+box["box theme connection"] = nil
 
 function dis()
-	if not uwu["box theme connection"] then return end
-	uwu["box theme connection"]:Disconnect()
-	uwu["box theme connection"] = nil
+	if not box["box theme connection"] then return end
+	box["box theme connection"]:Disconnect()
+	box["box theme connection"] = nil
 end
 
 function con()
-	if uwu["box theme connection"] then return end
-	uwu["box theme connection"] = game:GetService("RunService").RenderStepped:Connect(function()
+	if box["box theme connection"] then return end
+	box["box theme connection"] = game:GetService("RunService").RenderStepped:Connect(function()
 		if bstheme then restorecols() updcols()
 		end
 	end)
@@ -709,53 +711,53 @@ con()
 
 function applycurrenttheme()
 	if grayscaletheme then
-		grayscalecols() dis()
+		grayscalecols()
 	elseif noxioustheme then
-		noxiouscols() dis()
+		noxiouscols()
 	elseif c00ltheme then
-		c00lcols() dis()
+		c00lcols()
 	elseif polariatheme then
-		polariacols() dis()
+		polariacols()
 	elseif defaulttheme then
-		defaultcols() dis()
+		defaultcols()
 	else
-		restorecols() con()
+		restorecols()
 	end
 end
 
-local screenGui = uwu["screen gui"]
+local screenGui = box["screen gui"]
 
 function applycols(object)
 	if object:IsA("TextButton") or object:IsA("TextLabel") or object:IsA("Frame") or object:IsA("ScrollingFrame") or object:IsA("TextBox") or object:IsA("ImageLabel") or object:IsA("VideoFrame") then
-		object.BackgroundColor3 = uwu["default background color"]
-		object.BorderColor3 = uwu["default border color"]
+		object.BackgroundColor3 = box["default background color"]
+		object.BorderColor3 = box["default border color"]
 	end
 
 	if object:IsA("TextButton") or object:IsA("TextLabel") or object:IsA("TextBox") then
-		object.TextColor3 = uwu["default text color"]
-		object.Font = uwu["default text font"]
+		object.TextColor3 = box["default text color"]
+		object.Font = box["default text font"]
 	end
 
 	if object:IsA("TextBox") then
-		object.PlaceholderColor3 = uwu["default 1/2 color"]
+		object.PlaceholderColor3 = box["default 1/2 color"]
 	end
 
 	if object:IsA("TextLabel") and object.Name == "backdoor" then
-		object.TextColor3 = uwu["default background color"]
-		object.TextStrokeColor3 = uwu["default border color"]
+		object.TextColor3 = box["default background color"]
+		object.TextStrokeColor3 = box["default border color"]
 	end
 
 	if object:IsA("TextLabel") and object.Name == "fakebutton" or object.Name == "epico" then
-		object.TextColor3 = uwu["default 1/2 color"]
-		object.BorderColor3 = uwu["default 1/2 color 2"]
+		object.TextColor3 = box["default 1/2 color"]
+		object.BorderColor3 = box["default 1/2 color 2"]
 	end
 
 	if object:IsA("ImageLabel") and object.Name == "epicob" then
-		object.BorderColor3 = uwu["default 1/2 color 2"]
+		object.BorderColor3 = box["default 1/2 color 2"]
 	end
 
 	if object:IsA("TextLabel") and object.Name == "fakebuttonlabel" then
-		object.TextColor3 = uwu["default 1/2 color"]
+		object.TextColor3 = box["default 1/2 color"]
 	end
 
 	if object:IsA("TextLabel") and object.Name == "stay" then
@@ -763,36 +765,36 @@ function applycols(object)
 	end
 
 	if object:IsA("TextLabel") and object.Name == "fakebox" then
-		local txtlength = #uwu["password box"].Text
+		local txtlength = #box["password box"].Text
 
-		if uwu["typing"] == false then
+		if box["typing"] == false then
 			if txtlength == 0 then
-				object.TextColor3 = uwu["default 1/2 color"]
+				object.TextColor3 = box["default 1/2 color"]
 			else
-				object.TextColor3 = uwu["default text color"]
+				object.TextColor3 = box["default text color"]
 			end
 		else
 			if txtlength > 0 then
-				object.TextColor3 = uwu["default text color"]
+				object.TextColor3 = box["default text color"]
 			else
-				object.TextColor3 = uwu["default 1/2 color"]
+				object.TextColor3 = box["default 1/2 color"]
 			end
 		end
 	end
 
 	if object:IsA("ScrollingFrame") then
-		object.ScrollBarImageColor3 = uwu["default 1/2 color"]
+		object.ScrollBarImageColor3 = box["default 1/2 color"]
 	end
 
 	if object:IsA("ImageLabel") and object.Image == "rbxassetid://110126477790022" then
-		object.ImageColor3 = uwu["default text color"]
+		object.ImageColor3 = box["default text color"]
 	end
 
 	if object:IsA("Highlight") and object.Name == "unableesp" then		
 		if noxioustheme then 
-			object.FillColor = uwu["default background color"]
+			object.FillColor = box["default background color"]
 		else
-			object.FillColor = uwu["default border color"]
+			object.FillColor = box["default border color"]
 		end
 		object.OutlineColor = Color3.new(1, 1, 1)
 	end
@@ -801,9 +803,9 @@ function applycols(object)
 		local label = object:FindFirstChildOfClass("TextLabel")
 		if label then
 			if noxioustheme then
-				label.TextColor3 = uwu["default background color"]
+				label.TextColor3 = box["default background color"]
 			else
-				label.TextColor3 = uwu["default border color"]
+				label.TextColor3 = box["default border color"]
 			end
 		end
 	end
@@ -843,7 +845,7 @@ function repos(ui, t, w, h)
 	local frameHeight = h
 	local negative = 56
 
-	if ui ~= uwu["top bar"] then negative = 42 end
+	if ui ~= box["top bar"] then negative = 42 end
 
 	local centerX = (screenWidth - frameWidth) / 2
 	local centerY = (screenHeight - frameHeight) / 2 - negative
@@ -860,20 +862,20 @@ end
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["wm"].Name = "backdoor"
-uwu["wm"].Parent = uwu["screen gui"]
-uwu["wm"].Text = ""
-uwu["wm"].TextColor3 = uwu["default border color"]
-uwu["wm"].TextStrokeColor3 = uwu["default background color"]
-uwu["wm"].TextStrokeTransparency = 0
-uwu["wm"].BackgroundTransparency = 1
-uwu["wm"].Font = uwu["default text font"]
-uwu["wm"].TextSize = 17
-uwu["wm"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["wm"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["wm"].Size = UDim2.new(0, 200, 0, 30)
-uwu["wm"].ZIndex = 100000
-uwu["wm"].Visible = false
+box["wm"].Name = "backdoor"
+box["wm"].Parent = box["screen gui"]
+box["wm"].Text = ""
+box["wm"].TextColor3 = box["default border color"]
+box["wm"].TextStrokeColor3 = box["default background color"]
+box["wm"].TextStrokeTransparency = 0
+box["wm"].BackgroundTransparency = 1
+box["wm"].Font = box["default text font"]
+box["wm"].TextSize = 17
+box["wm"].TextXAlignment = Enum.TextXAlignment.Center
+box["wm"].TextYAlignment = Enum.TextYAlignment.Center
+box["wm"].Size = UDim2.new(0, 200, 0, 30)
+box["wm"].ZIndex = 100000
+box["wm"].Visible = false
 
 local notificationZ = 100000
 local activeNotifications = {}
@@ -891,7 +893,7 @@ function playSound(soundId)
 	local s = Instance.new("Sound")
 	s.SoundId = soundId
 	s.Volume = 1
-	s.Parent = uwu["local player"]
+	s.Parent = box["local player"]
 	s:Play()
 	game:GetService("Debris"):AddItem(s, 3)
 end
@@ -918,7 +920,7 @@ function processNextNotification()
 	isNotifying = true
 	local text = table.remove(pendingNotifications, 1)
 
-	local screenGui = uwu["screen gui"]
+	local screenGui = box["screen gui"]
 	local camera = workspace.CurrentCamera
 	local screenWidth = camera.ViewportSize.X
 	local screenHeight = camera.ViewportSize.Y
@@ -926,7 +928,7 @@ function processNextNotification()
 	local startX = (screenWidth - 200) / 2
 	local startY = -110
 
-	local label = uwu["wm"]:Clone()
+	local label = box["wm"]:Clone()
 	label.Text = "[ ]"
 	label.ZIndex = notificationZ
 	notificationZ += 1
@@ -948,7 +950,7 @@ function processNextNotification()
 			typeSound.SoundId = typingSounds[math.random(1, #typingSounds)]
 			typeSound.Volume = 0.6
 			typeSound.Name = "canttouchthis"
-			typeSound.Parent = uwu["local player"]
+			typeSound.Parent = box["local player"]
 			typeSound:Play()
 			game:GetService("Debris"):AddItem(typeSound, 2)
 
@@ -984,8 +986,8 @@ function processNextNotification()
 end
 
 function unablenotify(text)
-	if not uwu["wm"] then return end
-	uwu["wm"].Visible = true
+	if not box["wm"] then return end
+	box["wm"].Visible = true
 	table.insert(pendingNotifications, text)
 	if not isNotifying then
 		processNextNotification()
@@ -994,57 +996,57 @@ end
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["click sound"] = Instance.new"Sound"
-uwu["click sound"].SoundId = "rbxassetid://226892749"
-uwu["click sound"].Parent = uwu["local player"]
-uwu["click sound"].Name = "canttouchthis"
-uwu["click sound"].Volume = 0.4
+box["click sound"] = Instance.new"Sound"
+box["click sound"].SoundId = "rbxassetid://226892749"
+box["click sound"].Parent = box["local player"]
+box["click sound"].Name = "canttouchthis"
+box["click sound"].Volume = 0.4
 
-uwu["startup"] = Instance.new"Sound"
-uwu["startup"].SoundId = "rbxassetid://8503529653"
-uwu["startup"].Parent = uwu["local player"]
-uwu["startup"].Volume = 0
-uwu["startup"].TimePosition = 0
+box["startup"] = Instance.new"Sound"
+box["startup"].SoundId = "rbxassetid://8503529653"
+box["startup"].Parent = box["local player"]
+box["startup"].Volume = 0
+box["startup"].TimePosition = 0
 
 function playclicksound()
 	updcols()
-	local newSound = uwu["click sound"]:Clone()
-	newSound.Parent = uwu["click sound"].Parent
+	local newSound = box["click sound"]:Clone()
+	newSound.Parent = box["click sound"].Parent
 	newSound:Play()
 	task.spawn(updcols)
 	newSound.Ended:Connect(function() newSound:Destroy() end)
 	task.spawn(updcols)
 end
 
-uwu["startup"]:Play()
-uwu["startup"]:Stop()
+box["startup"]:Play()
+box["startup"]:Stop()
 wait(0.1)
-uwu["startup"].Volume = 3.5
+box["startup"].Volume = 3.5
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["toggle interface visibility button"].Size = UDim2.new(0, 48, 0, 48)
-uwu["toggle interface visibility button"].Position = UDim2.new(0, 0, 10, 0)
+box["toggle interface visibility button"].Size = UDim2.new(0, 48, 0, 48)
+box["toggle interface visibility button"].Position = UDim2.new(0, 0, 10, 0)
 
-uwu["toggle interface visibility button"].BackgroundColor3 = uwu["default background color"]
+box["toggle interface visibility button"].BackgroundColor3 = box["default background color"]
 
-uwu["toggle interface visibility button"].BorderColor3 = uwu["default border color"]
-uwu["toggle interface visibility button"].BorderSizePixel = 1
+box["toggle interface visibility button"].BorderColor3 = box["default border color"]
+box["toggle interface visibility button"].BorderSizePixel = 1
 
-uwu["toggle interface visibility button"].TextColor3 = uwu["default border color"]
-uwu["toggle interface visibility button"].Font = Enum.Font.RobotoMono
-uwu["toggle interface visibility button"].TextSize = 20
-uwu["toggle interface visibility button"].TextScaled = false
-uwu["toggle interface visibility button"].Text = ">.<"
-uwu["toggle interface visibility button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["toggle interface visibility button"].TextYAlignment = Enum.TextYAlignment.Center
+box["toggle interface visibility button"].TextColor3 = box["default border color"]
+box["toggle interface visibility button"].Font = Enum.Font.RobotoMono
+box["toggle interface visibility button"].TextSize = 20
+box["toggle interface visibility button"].TextScaled = false
+box["toggle interface visibility button"].Text = ">.<"
+box["toggle interface visibility button"].TextXAlignment = Enum.TextXAlignment.Center
+box["toggle interface visibility button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["toggle interface visibility button text padding"] = Instance.new("UIPadding")
-uwu["toggle interface visibility button text padding"].PaddingTop = UDim.new(0, 0)
-uwu["toggle interface visibility button text padding"].Parent = uwu["toggle interface visibility button"]
+box["toggle interface visibility button text padding"] = Instance.new("UIPadding")
+box["toggle interface visibility button text padding"].PaddingTop = UDim.new(0, 0)
+box["toggle interface visibility button text padding"].Parent = box["toggle interface visibility button"]
 
-uwu["toggle interface visibility button"].Parent = uwu["screen gui"]
-uwu["toggle interface visibility button"].ZIndex = 6969
+box["toggle interface visibility button"].Parent = box["screen gui"]
+box["toggle interface visibility button"].ZIndex = 6969
 
 -------------------------------------------------------------------------------------------------------------------------------
 
@@ -1058,33 +1060,33 @@ function movebutton()
 	local topMargin = 20
 	local centerY = topMargin
 
-	uwu["toggle interface visibility button"].Position = UDim2.new(0, centerX, 0, centerY - 150)
+	box["toggle interface visibility button"].Position = UDim2.new(0, centerX, 0, centerY - 150)
 
 	local offsetY = 150
 	local targetPosition = UDim2.new(0, centerX, 0, centerY - offsetY)
 
 	local tweenInfoUp = TweenInfo.new(0, Enum.EasingStyle.Back, Enum.EasingDirection.Out, 0, false, 0)
 
-	local tweenUp = uwu["tween service"]:Create(uwu["toggle interface visibility button"], tweenInfoUp, {Position = targetPosition})
+	local tweenUp = box["tween service"]:Create(box["toggle interface visibility button"], tweenInfoUp, {Position = targetPosition})
 
 	local function moveButtonBack()
 		local tweenInfoDown = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, false, 0)
 
-		local tweenDown = uwu["tween service"]:Create(uwu["toggle interface visibility button"], tweenInfoDown, {Position = UDim2.new(0, centerX, 0, centerY)})
+		local tweenDown = box["tween service"]:Create(box["toggle interface visibility button"], tweenInfoDown, {Position = UDim2.new(0, centerX, 0, centerY)})
 
 		tweenDown:Play()
 	end
 
-	uwu["toggle interface visibility button"].Visible = true
+	box["toggle interface visibility button"].Visible = true
 	tweenUp:Play()
-	spawn(function() uwu["startup"]:Play() end)
+	spawn(function() box["startup"]:Play() end)
 
 	tweenUp.Completed:Wait()
 	moveButtonBack()
 end
 
 function dragbutton()
-	local frame = uwu["toggle interface visibility button"]
+	local frame = box["toggle interface visibility button"]
 	local dragToggle 	
 	local dragSpeed = 0.25
 	local dragStart 	
@@ -1094,7 +1096,7 @@ function dragbutton()
 		local delta = input.Position - dragStart
 		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
 			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-		uwu["tween service"]:Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+		box["tween service"]:Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
 	end
 
 	frame.InputBegan:Connect(function(input)
@@ -1110,7 +1112,7 @@ function dragbutton()
 		end
 	end)
 
-	uwu["user input service"].InputChanged:Connect(function(input)
+	box["user input service"].InputChanged:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
 			if dragToggle then
 				updatebuttoninput(input)
@@ -1149,15 +1151,15 @@ local buttonConfigs = {
 			if not canpress2 then return end
 			playclicksound()
 			if minimized == false then
-				if uwu["unlocked"] == true then
-					uwu["password frame"].Visible = false
+				if box["unlocked"] == true then
+					box["password frame"].Visible = false
 				else
-					uwu["password frame"].Visible = true
+					box["password frame"].Visible = true
 				end
-				uwu["main frame 1"].Visible = false
-				uwu["main frame 2"].Visible = false
-				uwu["main frame 3"].Visible = false
-				uwu["main frame 4"].Visible = true
+				box["main frame 1"].Visible = false
+				box["main frame 2"].Visible = false
+				box["main frame 3"].Visible = false
+				box["main frame 4"].Visible = true
 				lastVisibleFrame = "main frame 4"
 				task.spawn(updcols)
 			end
@@ -1169,15 +1171,15 @@ local buttonConfigs = {
 			if not canpress2 then return end
 			playclicksound()
 			if minimized == false then
-				if uwu["unlocked"] == true then
-					uwu["password frame"].Visible = false
+				if box["unlocked"] == true then
+					box["password frame"].Visible = false
 				else
-					uwu["password frame"].Visible = true
+					box["password frame"].Visible = true
 				end
-				uwu["main frame 1"].Visible = false
-				uwu["main frame 2"].Visible = true
-				uwu["main frame 3"].Visible = false
-				uwu["main frame 4"].Visible = false
+				box["main frame 1"].Visible = false
+				box["main frame 2"].Visible = true
+				box["main frame 3"].Visible = false
+				box["main frame 4"].Visible = false
 				lastVisibleFrame = "main frame 2"
 				task.spawn(updcols)
 			end
@@ -1189,15 +1191,15 @@ local buttonConfigs = {
 			if not canpress2 then return end
 			playclicksound()
 			if minimized == false then
-				if uwu["unlocked"] == true then
-					uwu["password frame"].Visible = false
+				if box["unlocked"] == true then
+					box["password frame"].Visible = false
 				else
-					uwu["password frame"].Visible = true
+					box["password frame"].Visible = true
 				end
-				uwu["main frame 1"].Visible = true
-				uwu["main frame 2"].Visible = false
-				uwu["main frame 3"].Visible = false
-				uwu["main frame 4"].Visible = false
+				box["main frame 1"].Visible = true
+				box["main frame 2"].Visible = false
+				box["main frame 3"].Visible = false
+				box["main frame 4"].Visible = false
 				lastVisibleFrame = "main frame 1"
 				task.spawn(updcols)
 			end
@@ -1209,15 +1211,15 @@ local buttonConfigs = {
 			if not canpress2 then return end
 			playclicksound()
 			if minimized == false then
-				if uwu["unlocked"] == true then
-					uwu["password frame"].Visible = false
+				if box["unlocked"] == true then
+					box["password frame"].Visible = false
 				else
-					uwu["password frame"].Visible = true
+					box["password frame"].Visible = true
 				end
-				uwu["main frame 1"].Visible = false
-				uwu["main frame 2"].Visible = false
-				uwu["main frame 3"].Visible = true
-				uwu["main frame 4"].Visible = false
+				box["main frame 1"].Visible = false
+				box["main frame 2"].Visible = false
+				box["main frame 3"].Visible = true
+				box["main frame 4"].Visible = false
 				lastVisibleFrame = "main frame 3"
 				task.spawn(updcols)
 			end
@@ -1234,22 +1236,22 @@ function getRandomRotation()
 end
 
 for name, config in pairs(buttonConfigs) do
-	uwu[name] = Instance.new("TextButton")
-	local smallButton = uwu[name]
+	box[name] = Instance.new("TextButton")
+	local smallButton = box[name]
 	smallButton.Size = UDim2.new(0, 30, 0, 30)
 	smallButton.Position = UDim2.new(0.5, -15, 0.5, -15)
-	smallButton.BackgroundColor3 = uwu["default background color"]
-	smallButton.BorderColor3 = uwu["default border color"]
+	smallButton.BackgroundColor3 = box["default background color"]
+	smallButton.BorderColor3 = box["default border color"]
 	smallButton.BorderSizePixel = 1
 	smallButton.Text = config.text
-	smallButton.TextColor3 = uwu["default border color"]
+	smallButton.TextColor3 = box["default border color"]
 	smallButton.Font = Enum.Font.RobotoMono
 	smallButton.TextSize = 16
 	smallButton.TextScaled = false
 	smallButton.TextXAlignment = Enum.TextXAlignment.Center
 	smallButton.TextYAlignment = Enum.TextYAlignment.Center
 	smallButton.ZIndex = 6968
-	smallButton.Parent = uwu["toggle interface visibility button"]
+	smallButton.Parent = box["toggle interface visibility button"]
 	smallButton.Visible = false
 
 	originalPositions[name] = smallButton.Position
@@ -1264,7 +1266,7 @@ end
 
 function tweenPositionAndRotation(object, targetPosition, targetRotation, duration)
 	local tweenInfo = TweenInfo.new(duration, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut)
-	local tween = uwu["tween service"]:Create(object, tweenInfo, {Position = targetPosition, Rotation = targetRotation})
+	local tween = box["tween service"]:Create(object, tweenInfo, {Position = targetPosition, Rotation = targetRotation})
 	tween:Play()
 	return tween
 end
@@ -1290,7 +1292,7 @@ local hideOffsets = {
 	["small button bottom"] = UDim2.new(0, 0, 0, -50)
 }
 
-uwu["toggle interface visibility button"].MouseButton1Click:Connect(function()
+box["toggle interface visibility button"].MouseButton1Click:Connect(function()
 	spawn(updcols)
 
 	if not canpress then return end
@@ -1298,9 +1300,9 @@ uwu["toggle interface visibility button"].MouseButton1Click:Connect(function()
 	playclicksound()
 
 	toggleLoop(false)
-	local topBar = uwu["top bar"]
-	local blockAll = uwu["block all"]
-	local screenGui = uwu["screen gui"]
+	local topBar = box["top bar"]
+	local blockAll = box["block all"]
+	local screenGui = box["screen gui"]
 
 	if topBar.Visible == false then
 		canpress = false
@@ -1309,8 +1311,8 @@ uwu["toggle interface visibility button"].MouseButton1Click:Connect(function()
 		blockAll.Parent = screenGui
 		blockAll.Position = topBar.Position
 		blockAll.Size = UDim2.new(0, 401, 0, 0)
-		blockAll.BackgroundColor3 = uwu["default background color"]
-		blockAll.BorderColor3 = uwu["default border color"]
+		blockAll.BackgroundColor3 = box["default background color"]
+		blockAll.BorderColor3 = box["default border color"]
 		blockAll.BorderSizePixel = 1
 		blockAll.ZIndex = 58
 		blockAll.Visible = true
@@ -1318,11 +1320,11 @@ uwu["toggle interface visibility button"].MouseButton1Click:Connect(function()
 
 		spawn(function()
 			if minimized == true then
-				expandTween = uwu["tween service"]:Create(blockAll, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {
+				expandTween = box["tween service"]:Create(blockAll, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {
 					Size = UDim2.new(0, 401, 0, 26)
 				})
 			else
-				expandTween = uwu["tween service"]:Create(blockAll, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {
+				expandTween = box["tween service"]:Create(blockAll, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {
 					Size = UDim2.new(0, 401, 0, 276)
 				})
 			end
@@ -1331,7 +1333,7 @@ uwu["toggle interface visibility button"].MouseButton1Click:Connect(function()
 
 			topBar.Visible = true
 
-			fadeTween = uwu["tween service"]:Create(blockAll, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {
+			fadeTween = box["tween service"]:Create(blockAll, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {
 				BackgroundTransparency = 1
 			})
 			fadeTween:Play()
@@ -1339,7 +1341,7 @@ uwu["toggle interface visibility button"].MouseButton1Click:Connect(function()
 
 			blockAll.Visible = false
 			if scanning == false then
-				uwu["toggle interface visibility button"].Text = ">.<"
+				box["toggle interface visibility button"].Text = ">.<"
 				toggleLoop(true)
 			end
 			canpress = true
@@ -1347,11 +1349,11 @@ uwu["toggle interface visibility button"].MouseButton1Click:Connect(function()
 		end)
 
 		spawn(function()
-			if not uwu["unlocked"] then return end
+			if not box["unlocked"] then return end
 			if minimized then return end
 			local tweens = {}
 			for name, offset in pairs(showOffsets) do
-				local smallButton = uwu[name]
+				local smallButton = box[name]
 				smallButton.Visible = true
 				local targetPosition = originalPositions[name] + offset
 				local targetRotation = 0
@@ -1377,7 +1379,7 @@ uwu["toggle interface visibility button"].MouseButton1Click:Connect(function()
 			blockAll.BackgroundTransparency = 1
 			blockAll.Visible = true
 
-			local fadeInTween = uwu["tween service"]:Create(blockAll, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {
+			local fadeInTween = box["tween service"]:Create(blockAll, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {
 				BackgroundTransparency = 0
 			})
 			fadeInTween:Play()
@@ -1385,7 +1387,7 @@ uwu["toggle interface visibility button"].MouseButton1Click:Connect(function()
 
 			topBar.Visible = false
 
-			local shrinkTween = uwu["tween service"]:Create(blockAll, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {
+			local shrinkTween = box["tween service"]:Create(blockAll, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {
 				Size = UDim2.new(0, 401, 0, 0)
 			})
 			shrinkTween:Play()
@@ -1395,13 +1397,13 @@ uwu["toggle interface visibility button"].MouseButton1Click:Connect(function()
 			canpress = true
 			canpress2 = true
 			if scanning == false then
-				uwu["toggle interface visibility button"].Text = "o.o"
+				box["toggle interface visibility button"].Text = "o.o"
 				toggleLoop(true)
 			end
 		end)
 
 		spawn(function()
-			if not uwu["unlocked"] then return end
+			if not box["unlocked"] then return end
 			if minimized then return end
 			for name, _ in pairs(showOffsets) do
 				randomRotations[name] = getRandomRotation()
@@ -1409,7 +1411,7 @@ uwu["toggle interface visibility button"].MouseButton1Click:Connect(function()
 
 			local tweens = {}
 			for name, _ in pairs(showOffsets) do
-				local smallButton = uwu[name]
+				local smallButton = box[name]
 				local targetPosition = originalPositions[name]
 				local targetRotation = randomRotations[name]
 				local tween = tweenPositionAndRotation(smallButton, targetPosition, targetRotation, 0.5)
@@ -1425,19 +1427,19 @@ uwu["toggle interface visibility button"].MouseButton1Click:Connect(function()
 	end
 end)
 
-uwu["block all"]:GetPropertyChangedSignal("Visible"):Connect(function()
-	if uwu["block all"].Visible then
-		uwu["block all"].Position = uwu["top bar"].Position
+box["block all"]:GetPropertyChangedSignal("Visible"):Connect(function()
+	if box["block all"].Visible then
+		box["block all"].Position = box["top bar"].Position
 	end
 end)
 
 function rotateButtons(direction)
 	if not canpress2 then return end
-	if not uwu["top bar"].Visible then return end
+	if not box["top bar"].Visible then return end
 
 	function tweenPositionAndRotation(object, targetPosition, targetRotation, duration)
 		local tweenInfo = TweenInfo.new(duration, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
-		local tween = uwu["tween service"]:Create(object, tweenInfo, {Position = targetPosition, Rotation = targetRotation})
+		local tween = box["tween service"]:Create(object, tweenInfo, {Position = targetPosition, Rotation = targetRotation})
 		tween:Play()
 		return tween
 	end
@@ -1453,7 +1455,7 @@ function rotateButtons(direction)
 
 	local tweens = {}
 	for name, targetName in pairs(cycle) do
-		local button = uwu[name]
+		local button = box[name]
 		local tween = tweenPositionAndRotation(button, targetPositions[name], 0, 0.5)
 		table.insert(tweens, tween)
 	end
@@ -1475,14 +1477,14 @@ function rotateButtons(direction)
 	end
 end
 
-uwu["user input service"].InputBegan:Connect(function(input)
+box["user input service"].InputBegan:Connect(function(input)
 	if input.UserInputType == Enum.UserInputType.Keyboard then
 		if input.KeyCode == Enum.KeyCode.RightBracket then
-			if uwu["toggle interface visibility button"].Text == ">.<" then return end
+			if box["toggle interface visibility button"].Text == ">.<" then return end
 			if canpress == false then return end
 			coroutine.wrap(rotateButtons)("clockwise")
 		elseif input.KeyCode == Enum.KeyCode.LeftBracket then
-			if uwu["toggle interface visibility button"].Text == ">.<" then return end
+			if box["toggle interface visibility button"].Text == ">.<" then return end
 			if canpress == false then return end
 			coroutine.wrap(rotateButtons)("counter")
 		end
@@ -1491,39 +1493,39 @@ end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["top bar"].Size = UDim2.new(0, 401, 0, 26)
-uwu["top bar"].BackgroundColor3 = uwu["default background color"]
+box["top bar"].Size = UDim2.new(0, 401, 0, 26)
+box["top bar"].BackgroundColor3 = box["default background color"]
 
-uwu["top bar"].BorderColor3 = uwu["default border color"]
-uwu["top bar"].BorderSizePixel = 1
+box["top bar"].BorderColor3 = box["default border color"]
+box["top bar"].BorderSizePixel = 1
 
-uwu["top bar"].TextColor3 = uwu["default border color"]
-uwu["top bar"].Font = Enum.Font.RobotoMono
-uwu["top bar"].TextSize = 15
-uwu["top bar"].TextScaled = false
-uwu["top bar"].TextXAlignment = Enum.TextXAlignment.Left
-uwu["top bar"].TextYAlignment = Enum.TextYAlignment.Center
+box["top bar"].TextColor3 = box["default border color"]
+box["top bar"].Font = Enum.Font.RobotoMono
+box["top bar"].TextSize = 15
+box["top bar"].TextScaled = false
+box["top bar"].TextXAlignment = Enum.TextXAlignment.Left
+box["top bar"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["top bar text padding"] = Instance.new("UIPadding")
-uwu["top bar text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["top bar text padding"].PaddingRight = UDim.new(0, 0)
-uwu["top bar text padding"].Parent = uwu["top bar"]
+box["top bar text padding"] = Instance.new("UIPadding")
+box["top bar text padding"].PaddingLeft = UDim.new(0, 0)
+box["top bar text padding"].PaddingRight = UDim.new(0, 0)
+box["top bar text padding"].Parent = box["top bar"]
 
-uwu["top bar"].Parent = uwu["screen gui"]
-uwu["top bar"].ZIndex = 19
-uwu["top bar"].Visible = false
+box["top bar"].Parent = box["screen gui"]
+box["top bar"].ZIndex = 19
+box["top bar"].Visible = false
 
-uwu["sexy"].Size = UDim2.new(0, 21, 0, 23)
-uwu["sexy"].Position = UDim2.new(0, 3, 0, 3)
-uwu["sexy"].Image = "rbxassetid://91985523170507"
-uwu["sexy"].BackgroundTransparency = 1
-uwu["sexy"].BorderSizePixel = 0
-uwu["sexy"].Parent = uwu["top bar"]
-uwu["sexy"].ZIndex = 20
-uwu["sexy"].Visible = true
+box["sexy"].Size = UDim2.new(0, 21, 0, 23)
+box["sexy"].Position = UDim2.new(0, 3, 0, 3)
+box["sexy"].Image = "rbxassetid://91985523170507"
+box["sexy"].BackgroundTransparency = 1
+box["sexy"].BorderSizePixel = 0
+box["sexy"].Parent = box["top bar"]
+box["sexy"].ZIndex = 20
+box["sexy"].Visible = true
 
 function dragtopbar()
-	local frame = uwu["top bar"]
+	local frame = box["top bar"]
 	local dragToggle 	
 	local dragSpeed = 0.25
 	local dragStart 	
@@ -1533,7 +1535,7 @@ function dragtopbar()
 		local delta = input.Position - dragStart
 		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
 			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-		uwu["tween service"]:Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+		box["tween service"]:Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
 	end
 
 	frame.InputBegan:Connect(function(input)
@@ -1549,7 +1551,7 @@ function dragtopbar()
 		end
 	end)
 
-	uwu["user input service"].InputChanged:Connect(function(input)
+	box["user input service"].InputChanged:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
 			if dragToggle then
 				updatebuttoninput(input)
@@ -1562,32 +1564,32 @@ dragtopbar()
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["donut tab top bar"].Size = UDim2.new(0, 276, 0, 26)
+box["donut tab top bar"].Size = UDim2.new(0, 276, 0, 26)
 
-uwu["donut tab top bar"].BackgroundColor3 = uwu["default background color"]
+box["donut tab top bar"].BackgroundColor3 = box["default background color"]
 
-uwu["donut tab top bar"].BorderColor3 = uwu["default border color"]
-uwu["donut tab top bar"].BorderSizePixel = 1
+box["donut tab top bar"].BorderColor3 = box["default border color"]
+box["donut tab top bar"].BorderSizePixel = 1
 
-uwu["donut tab top bar"].TextColor3 = uwu["default border color"]
-uwu["donut tab top bar"].Font = Enum.Font.RobotoMono
-uwu["donut tab top bar"].TextSize = 15
-uwu["donut tab top bar"].TextScaled = false
-uwu["donut tab top bar"].Text = " donut.lua o.o"
-uwu["donut tab top bar"].TextXAlignment = Enum.TextXAlignment.Left
-uwu["donut tab top bar"].TextYAlignment = Enum.TextYAlignment.Center
+box["donut tab top bar"].TextColor3 = box["default border color"]
+box["donut tab top bar"].Font = Enum.Font.RobotoMono
+box["donut tab top bar"].TextSize = 15
+box["donut tab top bar"].TextScaled = false
+box["donut tab top bar"].Text = " donut.lua o.o"
+box["donut tab top bar"].TextXAlignment = Enum.TextXAlignment.Left
+box["donut tab top bar"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["donut top bar text padding"] = Instance.new("UIPadding")
-uwu["donut top bar text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["donut top bar text padding"].PaddingRight = UDim.new(0, 0)
-uwu["donut top bar text padding"].Parent = uwu["donut tab top bar"]
+box["donut top bar text padding"] = Instance.new("UIPadding")
+box["donut top bar text padding"].PaddingLeft = UDim.new(0, 0)
+box["donut top bar text padding"].PaddingRight = UDim.new(0, 0)
+box["donut top bar text padding"].Parent = box["donut tab top bar"]
 
-uwu["donut tab top bar"].Parent = uwu["screen gui"]
-uwu["donut tab top bar"].ZIndex = 110
-uwu["donut tab top bar"].Visible = false
+box["donut tab top bar"].Parent = box["screen gui"]
+box["donut tab top bar"].ZIndex = 110
+box["donut tab top bar"].Visible = false
 
 function dragdonuttabtopbar()
-	local frame = uwu["donut tab top bar"]
+	local frame = box["donut tab top bar"]
 	local dragToggle 	
 	local dragSpeed = 0.25
 	local dragStart 	
@@ -1597,7 +1599,7 @@ function dragdonuttabtopbar()
 		local delta = input.Position - dragStart
 		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
 			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-		uwu["tween service"]:Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+		box["tween service"]:Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
 	end
 
 	frame.InputBegan:Connect(function(input)
@@ -1613,7 +1615,7 @@ function dragdonuttabtopbar()
 		end
 	end)
 
-	uwu["user input service"].InputChanged:Connect(function(input)
+	box["user input service"].InputChanged:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
 			if dragToggle then
 				updatebuttoninput(input)
@@ -1626,30 +1628,30 @@ dragdonuttabtopbar()
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["donut tab top bar close button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["donut tab top bar close button"].Position = UDim2.new(0, 254, 0, 4.7)
+box["donut tab top bar close button"].Size = UDim2.new(0, 18, 0, 18)
+box["donut tab top bar close button"].Position = UDim2.new(0, 254, 0, 4.7)
 
-uwu["donut tab top bar close button"].BackgroundColor3 = uwu["default background color"]
+box["donut tab top bar close button"].BackgroundColor3 = box["default background color"]
 
-uwu["donut tab top bar close button"].BorderColor3 = uwu["default border color"]
-uwu["donut tab top bar close button"].BorderSizePixel = 1
+box["donut tab top bar close button"].BorderColor3 = box["default border color"]
+box["donut tab top bar close button"].BorderSizePixel = 1
 
-uwu["donut tab top bar close button"].TextColor3 = uwu["default border color"]
-uwu["donut tab top bar close button"].Font = Enum.Font.RobotoMono
-uwu["donut tab top bar close button"].TextSize = 16
-uwu["donut tab top bar close button"].TextScaled = false
-uwu["donut tab top bar close button"].Text = "X"
-uwu["donut tab top bar close button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["donut tab top bar close button"].TextYAlignment = Enum.TextYAlignment.Center
+box["donut tab top bar close button"].TextColor3 = box["default border color"]
+box["donut tab top bar close button"].Font = Enum.Font.RobotoMono
+box["donut tab top bar close button"].TextSize = 16
+box["donut tab top bar close button"].TextScaled = false
+box["donut tab top bar close button"].Text = "X"
+box["donut tab top bar close button"].TextXAlignment = Enum.TextXAlignment.Center
+box["donut tab top bar close button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["donut tab top bar close button"].Parent = uwu["donut tab top bar"]
-uwu["donut tab top bar close button"].ZIndex = 111
+box["donut tab top bar close button"].Parent = box["donut tab top bar"]
+box["donut tab top bar close button"].ZIndex = 111
 
-uwu["donut tab top bar close button text padding"] = Instance.new("UIPadding")
-uwu["donut tab top bar close button text padding"].PaddingTop = UDim.new(0, -1)
-uwu["donut tab top bar close button text padding"].Parent = uwu["donut tab top bar close button"]
+box["donut tab top bar close button text padding"] = Instance.new("UIPadding")
+box["donut tab top bar close button text padding"].PaddingTop = UDim.new(0, -1)
+box["donut tab top bar close button text padding"].Parent = box["donut tab top bar close button"]
 
-uwu["donut tab top bar close button"].MouseButton1Click:Connect(function()
+box["donut tab top bar close button"].MouseButton1Click:Connect(function()
 	if not donuttabcanminimize then return end
 	if donutrunning then
 		donutrunning:Disconnect()
@@ -1658,40 +1660,40 @@ uwu["donut tab top bar close button"].MouseButton1Click:Connect(function()
 	donuttabopen = false
 	donuttabminimized = false
 	playclicksound()
-	uwu["donut tab top bar"].Visible = false
-	repos(uwu["donut tab top bar"], 0, 276, 260 + 26)
+	box["donut tab top bar"].Visible = false
+	repos(box["donut tab top bar"], 0, 276, 260 + 26)
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["donut tab top bar minimize button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["donut tab top bar minimize button"].Position = UDim2.new(0, 230, 0, 4.7)
+box["donut tab top bar minimize button"].Size = UDim2.new(0, 18, 0, 18)
+box["donut tab top bar minimize button"].Position = UDim2.new(0, 230, 0, 4.7)
 
-uwu["donut tab top bar minimize button"].BackgroundColor3 = uwu["default background color"]
+box["donut tab top bar minimize button"].BackgroundColor3 = box["default background color"]
 
-uwu["donut tab top bar minimize button"].BorderColor3 = uwu["default border color"]
-uwu["donut tab top bar minimize button"].BorderSizePixel = 1
+box["donut tab top bar minimize button"].BorderColor3 = box["default border color"]
+box["donut tab top bar minimize button"].BorderSizePixel = 1
 
-uwu["donut tab top bar minimize button"].TextColor3 = uwu["default border color"]
-uwu["donut tab top bar minimize button"].Font = Enum.Font.RobotoMono
-uwu["donut tab top bar minimize button"].TextSize = 16
-uwu["donut tab top bar minimize button"].TextScaled = false
-uwu["donut tab top bar minimize button"].Visible = true
-uwu["donut tab top bar minimize button"].Text = "-"
-uwu["donut tab top bar minimize button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["donut tab top bar minimize button"].TextYAlignment = Enum.TextYAlignment.Center
+box["donut tab top bar minimize button"].TextColor3 = box["default border color"]
+box["donut tab top bar minimize button"].Font = Enum.Font.RobotoMono
+box["donut tab top bar minimize button"].TextSize = 16
+box["donut tab top bar minimize button"].TextScaled = false
+box["donut tab top bar minimize button"].Visible = true
+box["donut tab top bar minimize button"].Text = "-"
+box["donut tab top bar minimize button"].TextXAlignment = Enum.TextXAlignment.Center
+box["donut tab top bar minimize button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["donut tab top bar minimize button"].Parent = uwu["donut tab top bar"]
-uwu["donut tab top bar minimize button"].ZIndex = 111
+box["donut tab top bar minimize button"].Parent = box["donut tab top bar"]
+box["donut tab top bar minimize button"].ZIndex = 111
 
-uwu["donut tab top bar minimize button text padding"] = Instance.new("UIPadding")
-uwu["donut tab top bar minimize button text padding"].PaddingTop = UDim.new(0, -2)
-uwu["donut tab top bar minimize button text padding"].Parent = uwu["donut tab top bar minimize button"]
+box["donut tab top bar minimize button text padding"] = Instance.new("UIPadding")
+box["donut tab top bar minimize button text padding"].PaddingTop = UDim.new(0, -2)
+box["donut tab top bar minimize button text padding"].Parent = box["donut tab top bar minimize button"]
 
 donuttabminimized = false
 donuttabcanminimize = true
 
-uwu["donut tab top bar minimize button"].MouseButton1Click:Connect(function()
+box["donut tab top bar minimize button"].MouseButton1Click:Connect(function()
 	if not donuttabcanminimize then return end
 	spawn(playclicksound)
 	donuttabcanminimize = false
@@ -1699,15 +1701,15 @@ uwu["donut tab top bar minimize button"].MouseButton1Click:Connect(function()
 	donuttabminimized = not donuttabminimized
 
 	if donuttabminimized then
-		uwu["donut tab top bar minimize button"].Text = "+"
-		uwu["donut tab block main frame"].Visible = true
+		box["donut tab top bar minimize button"].Text = "+"
+		box["donut tab block main frame"].Visible = true
 
-		local fadeTween = fade(uwu["donut tab block main frame"], 0, 0.2)
+		local fadeTween = fade(box["donut tab block main frame"], 0, 0.2)
 		fadeTween.Completed:Wait()
-		uwu["donut tab main frame 1"].Visible = false
+		box["donut tab main frame 1"].Visible = false
 
 		local tween = tweenSizePosition(
-			uwu["donut tab block main frame"],
+			box["donut tab block main frame"],
 			UDim2.new(0, 276, 0, 0),
 			UDim2.new(0, 0, 1, 1),
 			0.5
@@ -1715,26 +1717,26 @@ uwu["donut tab top bar minimize button"].MouseButton1Click:Connect(function()
 		tween.Completed:Wait()
 
 		donuttabreallyminimized = true
-		uwu["donut tab block main frame"].Visible = false
+		box["donut tab block main frame"].Visible = false
 		updcols()
 	else
-		uwu["donut tab top bar minimize button"].Text = "-"
-		uwu["donut tab block main frame"].Visible = true
+		box["donut tab top bar minimize button"].Text = "-"
+		box["donut tab block main frame"].Visible = true
 
 		local tween = tweenSizePosition(
-			uwu["donut tab block main frame"],
+			box["donut tab block main frame"],
 			UDim2.new(0, 276, 0, 233),
 			UDim2.new(0, 0, 1, 1),
 			0.5
 		)
 		tween.Completed:Wait()
-		uwu["donut tab main frame 1"].Visible = true
+		box["donut tab main frame 1"].Visible = true
 
-		local fadeTween = fade(uwu["donut tab block main frame"], 1, 0.2)
+		local fadeTween = fade(box["donut tab block main frame"], 1, 0.2)
 		fadeTween.Completed:Wait()
 
 		donuttabreallyminimized = false
-		uwu["donut tab block main frame"].Visible = false
+		box["donut tab block main frame"].Visible = false
 		updcols()
 	end
 
@@ -1743,131 +1745,131 @@ end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["donut tab top bar reposition button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["donut tab top bar reposition button"].Position = UDim2.new(0, 206, 0, 4.7)
+box["donut tab top bar reposition button"].Size = UDim2.new(0, 18, 0, 18)
+box["donut tab top bar reposition button"].Position = UDim2.new(0, 206, 0, 4.7)
 
-uwu["donut tab top bar reposition button"].BackgroundColor3 = uwu["default background color"]
+box["donut tab top bar reposition button"].BackgroundColor3 = box["default background color"]
 
-uwu["donut tab top bar reposition button"].BorderColor3 = uwu["default border color"]
-uwu["donut tab top bar reposition button"].BorderSizePixel = 1
+box["donut tab top bar reposition button"].BorderColor3 = box["default border color"]
+box["donut tab top bar reposition button"].BorderSizePixel = 1
 
-uwu["donut tab top bar reposition button"].TextColor3 = uwu["default border color"]
-uwu["donut tab top bar reposition button"].Font = Enum.Font.RobotoMono
-uwu["donut tab top bar reposition button"].TextSize = 16
-uwu["donut tab top bar reposition button"].TextScaled = false
-uwu["donut tab top bar reposition button"].Text = "R"
-uwu["donut tab top bar reposition button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["donut tab top bar reposition button"].TextYAlignment = Enum.TextYAlignment.Center
+box["donut tab top bar reposition button"].TextColor3 = box["default border color"]
+box["donut tab top bar reposition button"].Font = Enum.Font.RobotoMono
+box["donut tab top bar reposition button"].TextSize = 16
+box["donut tab top bar reposition button"].TextScaled = false
+box["donut tab top bar reposition button"].Text = "R"
+box["donut tab top bar reposition button"].TextXAlignment = Enum.TextXAlignment.Center
+box["donut tab top bar reposition button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["donut tab top bar reposition button"].Parent = uwu["donut tab top bar"]
-uwu["donut tab top bar reposition button"].ZIndex = 111
+box["donut tab top bar reposition button"].Parent = box["donut tab top bar"]
+box["donut tab top bar reposition button"].ZIndex = 111
 
-uwu["donut tab top bar reposition button text padding"] = Instance.new("UIPadding")
-uwu["donut tab top bar reposition button text padding"].PaddingTop = UDim.new(0, -1)
-uwu["donut tab top bar reposition button text padding"].Parent = uwu["donut tab top bar reposition button"]
+box["donut tab top bar reposition button text padding"] = Instance.new("UIPadding")
+box["donut tab top bar reposition button text padding"].PaddingTop = UDim.new(0, -1)
+box["donut tab top bar reposition button text padding"].Parent = box["donut tab top bar reposition button"]
 
-uwu["donut tab top bar reposition button"].MouseButton1Click:Connect(function()
+box["donut tab top bar reposition button"].MouseButton1Click:Connect(function()
 	playclicksound()
-	repos(uwu["donut tab top bar"], 0.5, 276, 260 + 26)
+	repos(box["donut tab top bar"], 0.5, 276, 260 + 26)
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["donut tab main frame 1"].Size = UDim2.new(0, 276, 0, 234)
-uwu["donut tab main frame 1"].Position = UDim2.new(0, 0, 1, 0)
+box["donut tab main frame 1"].Size = UDim2.new(0, 276, 0, 234)
+box["donut tab main frame 1"].Position = UDim2.new(0, 0, 1, 0)
 
-uwu["donut tab main frame 1"].BackgroundColor3 = uwu["default background color"]
+box["donut tab main frame 1"].BackgroundColor3 = box["default background color"]
 
-uwu["donut tab main frame 1"].BorderColor3 = uwu["default border color"]
-uwu["donut tab main frame 1"].BorderSizePixel = 1
+box["donut tab main frame 1"].BorderColor3 = box["default border color"]
+box["donut tab main frame 1"].BorderSizePixel = 1
 
-uwu["donut tab main frame 1"].Parent = uwu["donut tab top bar"]
-uwu["donut tab main frame 1"].ZIndex = 109
+box["donut tab main frame 1"].Parent = box["donut tab top bar"]
+box["donut tab main frame 1"].ZIndex = 109
 
-uwu["donut"].Size = UDim2.new(0, 268, 0, 225)
-uwu["donut"].Position = UDim2.new(0, 4, 0, 5)
+box["donut"].Size = UDim2.new(0, 268, 0, 225)
+box["donut"].Position = UDim2.new(0, 4, 0, 5)
 
-uwu["donut"].BackgroundColor3 = uwu["default background color"]
+box["donut"].BackgroundColor3 = box["default background color"]
 
-uwu["donut"].BorderColor3 = uwu["default border color"]
-uwu["donut"].BorderSizePixel = 1
+box["donut"].BorderColor3 = box["default border color"]
+box["donut"].BorderSizePixel = 1
 
-uwu["donut"].Parent = uwu["donut tab main frame 1"]
-uwu["donut"].ZIndex = 110
+box["donut"].Parent = box["donut tab main frame 1"]
+box["donut"].ZIndex = 110
 
-uwu["donut"].Font = Enum.Font.RobotoMono
-uwu["donut"].TextColor3 = Color3.new(1, 1, 1)
-uwu["donut"].TextSize = 9
-uwu["donut"].TextWrapped = true
-uwu["donut"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["donut"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["donut"].Text = ""
-uwu["donut"].Name = "stay"
+box["donut"].Font = Enum.Font.RobotoMono
+box["donut"].TextColor3 = Color3.new(1, 1, 1)
+box["donut"].TextSize = 9
+box["donut"].TextWrapped = true
+box["donut"].TextXAlignment = Enum.TextXAlignment.Center
+box["donut"].TextYAlignment = Enum.TextYAlignment.Center
+box["donut"].Text = ""
+box["donut"].Name = "stay"
 
-if uwu["is mobile?"] then
-	uwu["donut"].TextSize = 7
+if box["is mobile?"] then
+	box["donut"].TextSize = 7
 else
-	uwu["donut"].TextSize = 9
+	box["donut"].TextSize = 9
 end
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["donut tab block main frame"].Size = UDim2.new(0, 276, 0, 233)
-uwu["donut tab block main frame"].Position = UDim2.new(0, 0, 1, 1)
+box["donut tab block main frame"].Size = UDim2.new(0, 276, 0, 233)
+box["donut tab block main frame"].Position = UDim2.new(0, 0, 1, 1)
 
-uwu["donut tab block main frame"].BackgroundColor3 = uwu["default background color"]
+box["donut tab block main frame"].BackgroundColor3 = box["default background color"]
 
-uwu["donut tab block main frame"].BorderColor3 = uwu["default border color"]
-uwu["donut tab block main frame"].BorderSizePixel = 1
-uwu["donut tab block main frame"].BackgroundTransparency = 1
+box["donut tab block main frame"].BorderColor3 = box["default border color"]
+box["donut tab block main frame"].BorderSizePixel = 1
+box["donut tab block main frame"].BackgroundTransparency = 1
 
-uwu["donut tab block main frame"].Parent = uwu["donut tab top bar"]
-uwu["donut tab block main frame"].ZIndex = 110
-uwu["donut tab block main frame"].Visible = false
-
--------------------------------------------------------------------------------------------------------------------------------
-
-uwu["donut tab block all"].Size = UDim2.new(0, 276, 0, 260)
-uwu["donut tab block all"].Position = UDim2.new(0, 0, 0, 0)
-
-uwu["donut tab block all"].BackgroundColor3 = uwu["default background color"]
-
-uwu["donut tab block all"].BorderColor3 = uwu["default border color"]
-uwu["donut tab block all"].BorderSizePixel = 1
-uwu["donut tab block all"].BackgroundTransparency = 0
-
-uwu["donut tab block all"].Parent = uwu["donut tab top bar"]
-uwu["donut tab block all"].ZIndex = 111
-uwu["donut tab block all"].Visible = true
+box["donut tab block main frame"].Parent = box["donut tab top bar"]
+box["donut tab block main frame"].ZIndex = 110
+box["donut tab block main frame"].Visible = false
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["binary tab top bar"].Size = UDim2.new(0, 246, 0, 26)
+box["donut tab block all"].Size = UDim2.new(0, 276, 0, 260)
+box["donut tab block all"].Position = UDim2.new(0, 0, 0, 0)
 
-uwu["binary tab top bar"].BackgroundColor3 = uwu["default background color"]
+box["donut tab block all"].BackgroundColor3 = box["default background color"]
 
-uwu["binary tab top bar"].BorderColor3 = uwu["default border color"]
-uwu["binary tab top bar"].BorderSizePixel = 1
+box["donut tab block all"].BorderColor3 = box["default border color"]
+box["donut tab block all"].BorderSizePixel = 1
+box["donut tab block all"].BackgroundTransparency = 0
 
-uwu["binary tab top bar"].TextColor3 = uwu["default border color"]
-uwu["binary tab top bar"].Font = Enum.Font.RobotoMono
-uwu["binary tab top bar"].TextSize = 15
-uwu["binary tab top bar"].TextScaled = false
-uwu["binary tab top bar"].Text = " binary.lua o.o"
-uwu["binary tab top bar"].TextXAlignment = Enum.TextXAlignment.Left
-uwu["binary tab top bar"].TextYAlignment = Enum.TextYAlignment.Center
+box["donut tab block all"].Parent = box["donut tab top bar"]
+box["donut tab block all"].ZIndex = 111
+box["donut tab block all"].Visible = true
 
-uwu["binary top bar text padding"] = Instance.new("UIPadding")
-uwu["binary top bar text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["binary top bar text padding"].PaddingRight = UDim.new(0, 0)
-uwu["binary top bar text padding"].Parent = uwu["binary tab top bar"]
+-------------------------------------------------------------------------------------------------------------------------------
 
-uwu["binary tab top bar"].Parent = uwu["screen gui"]
-uwu["binary tab top bar"].ZIndex = 113
-uwu["binary tab top bar"].Visible = false
+box["binary tab top bar"].Size = UDim2.new(0, 246, 0, 26)
+
+box["binary tab top bar"].BackgroundColor3 = box["default background color"]
+
+box["binary tab top bar"].BorderColor3 = box["default border color"]
+box["binary tab top bar"].BorderSizePixel = 1
+
+box["binary tab top bar"].TextColor3 = box["default border color"]
+box["binary tab top bar"].Font = Enum.Font.RobotoMono
+box["binary tab top bar"].TextSize = 15
+box["binary tab top bar"].TextScaled = false
+box["binary tab top bar"].Text = " binary.lua o.o"
+box["binary tab top bar"].TextXAlignment = Enum.TextXAlignment.Left
+box["binary tab top bar"].TextYAlignment = Enum.TextYAlignment.Center
+
+box["binary top bar text padding"] = Instance.new("UIPadding")
+box["binary top bar text padding"].PaddingLeft = UDim.new(0, 0)
+box["binary top bar text padding"].PaddingRight = UDim.new(0, 0)
+box["binary top bar text padding"].Parent = box["binary tab top bar"]
+
+box["binary tab top bar"].Parent = box["screen gui"]
+box["binary tab top bar"].ZIndex = 113
+box["binary tab top bar"].Visible = false
 
 function dragbinarytabtopbar()
-	local frame = uwu["binary tab top bar"]
+	local frame = box["binary tab top bar"]
 	local dragToggle 	
 	local dragSpeed = 0.25
 	local dragStart 	
@@ -1877,7 +1879,7 @@ function dragbinarytabtopbar()
 		local delta = input.Position - dragStart
 		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
 			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-		uwu["tween service"]:Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+		box["tween service"]:Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
 	end
 
 	frame.InputBegan:Connect(function(input)
@@ -1893,7 +1895,7 @@ function dragbinarytabtopbar()
 		end
 	end)
 
-	uwu["user input service"].InputChanged:Connect(function(input)
+	box["user input service"].InputChanged:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
 			if dragToggle then
 				updatebuttoninput(input)
@@ -1906,30 +1908,30 @@ dragbinarytabtopbar()
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["binary tab top bar close button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["binary tab top bar close button"].Position = UDim2.new(0, 224, 0, 4.7)
+box["binary tab top bar close button"].Size = UDim2.new(0, 18, 0, 18)
+box["binary tab top bar close button"].Position = UDim2.new(0, 224, 0, 4.7)
 
-uwu["binary tab top bar close button"].BackgroundColor3 = uwu["default background color"]
+box["binary tab top bar close button"].BackgroundColor3 = box["default background color"]
 
-uwu["binary tab top bar close button"].BorderColor3 = uwu["default border color"]
-uwu["binary tab top bar close button"].BorderSizePixel = 1
+box["binary tab top bar close button"].BorderColor3 = box["default border color"]
+box["binary tab top bar close button"].BorderSizePixel = 1
 
-uwu["binary tab top bar close button"].TextColor3 = uwu["default border color"]
-uwu["binary tab top bar close button"].Font = Enum.Font.RobotoMono
-uwu["binary tab top bar close button"].TextSize = 16
-uwu["binary tab top bar close button"].TextScaled = false
-uwu["binary tab top bar close button"].Text = "X"
-uwu["binary tab top bar close button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["binary tab top bar close button"].TextYAlignment = Enum.TextYAlignment.Center
+box["binary tab top bar close button"].TextColor3 = box["default border color"]
+box["binary tab top bar close button"].Font = Enum.Font.RobotoMono
+box["binary tab top bar close button"].TextSize = 16
+box["binary tab top bar close button"].TextScaled = false
+box["binary tab top bar close button"].Text = "X"
+box["binary tab top bar close button"].TextXAlignment = Enum.TextXAlignment.Center
+box["binary tab top bar close button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["binary tab top bar close button"].Parent = uwu["binary tab top bar"]
-uwu["binary tab top bar close button"].ZIndex = 114
+box["binary tab top bar close button"].Parent = box["binary tab top bar"]
+box["binary tab top bar close button"].ZIndex = 114
 
-uwu["binary tab top bar close button text padding"] = Instance.new("UIPadding")
-uwu["binary tab top bar close button text padding"].PaddingTop = UDim.new(0, -1)
-uwu["binary tab top bar close button text padding"].Parent = uwu["binary tab top bar close button"]
+box["binary tab top bar close button text padding"] = Instance.new("UIPadding")
+box["binary tab top bar close button text padding"].PaddingTop = UDim.new(0, -1)
+box["binary tab top bar close button text padding"].Parent = box["binary tab top bar close button"]
 
-uwu["binary tab top bar close button"].MouseButton1Click:Connect(function()
+box["binary tab top bar close button"].MouseButton1Click:Connect(function()
 	if not binarytabcanminimize then return end
 	if binaryrunning then
 		binaryrunning:Disconnect()
@@ -1938,40 +1940,40 @@ uwu["binary tab top bar close button"].MouseButton1Click:Connect(function()
 	binarytabopen = false
 	binarytabminimized = false
 	playclicksound()
-	uwu["binary tab top bar"].Visible = false
-	repos(uwu["binary tab top bar"], 0, 246, 230 + 26)
+	box["binary tab top bar"].Visible = false
+	repos(box["binary tab top bar"], 0, 246, 230 + 26)
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["binary tab top bar minimize button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["binary tab top bar minimize button"].Position = UDim2.new(0, 200, 0, 4.7)
+box["binary tab top bar minimize button"].Size = UDim2.new(0, 18, 0, 18)
+box["binary tab top bar minimize button"].Position = UDim2.new(0, 200, 0, 4.7)
 
-uwu["binary tab top bar minimize button"].BackgroundColor3 = uwu["default background color"]
+box["binary tab top bar minimize button"].BackgroundColor3 = box["default background color"]
 
-uwu["binary tab top bar minimize button"].BorderColor3 = uwu["default border color"]
-uwu["binary tab top bar minimize button"].BorderSizePixel = 1
+box["binary tab top bar minimize button"].BorderColor3 = box["default border color"]
+box["binary tab top bar minimize button"].BorderSizePixel = 1
 
-uwu["binary tab top bar minimize button"].TextColor3 = uwu["default border color"]
-uwu["binary tab top bar minimize button"].Font = Enum.Font.RobotoMono
-uwu["binary tab top bar minimize button"].TextSize = 16
-uwu["binary tab top bar minimize button"].TextScaled = false
-uwu["binary tab top bar minimize button"].Visible = true
-uwu["binary tab top bar minimize button"].Text = "-"
-uwu["binary tab top bar minimize button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["binary tab top bar minimize button"].TextYAlignment = Enum.TextYAlignment.Center
+box["binary tab top bar minimize button"].TextColor3 = box["default border color"]
+box["binary tab top bar minimize button"].Font = Enum.Font.RobotoMono
+box["binary tab top bar minimize button"].TextSize = 16
+box["binary tab top bar minimize button"].TextScaled = false
+box["binary tab top bar minimize button"].Visible = true
+box["binary tab top bar minimize button"].Text = "-"
+box["binary tab top bar minimize button"].TextXAlignment = Enum.TextXAlignment.Center
+box["binary tab top bar minimize button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["binary tab top bar minimize button"].Parent = uwu["binary tab top bar"]
-uwu["binary tab top bar minimize button"].ZIndex = 114
+box["binary tab top bar minimize button"].Parent = box["binary tab top bar"]
+box["binary tab top bar minimize button"].ZIndex = 114
 
-uwu["binary tab top bar minimize button text padding"] = Instance.new("UIPadding")
-uwu["binary tab top bar minimize button text padding"].PaddingTop = UDim.new(0, -2)
-uwu["binary tab top bar minimize button text padding"].Parent = uwu["binary tab top bar minimize button"]
+box["binary tab top bar minimize button text padding"] = Instance.new("UIPadding")
+box["binary tab top bar minimize button text padding"].PaddingTop = UDim.new(0, -2)
+box["binary tab top bar minimize button text padding"].Parent = box["binary tab top bar minimize button"]
 
 binarytabminimized = false
 binarytabcanminimize = true
 
-uwu["binary tab top bar minimize button"].MouseButton1Click:Connect(function()
+box["binary tab top bar minimize button"].MouseButton1Click:Connect(function()
 	if not binarytabcanminimize then return end
 	spawn(playclicksound)
 	binarytabcanminimize = false
@@ -1979,15 +1981,15 @@ uwu["binary tab top bar minimize button"].MouseButton1Click:Connect(function()
 	binarytabminimized = not binarytabminimized
 
 	if binarytabminimized then
-		uwu["binary tab top bar minimize button"].Text = "+"
-		uwu["binary tab block main frame"].Visible = true
+		box["binary tab top bar minimize button"].Text = "+"
+		box["binary tab block main frame"].Visible = true
 
-		local fadeTween = fade(uwu["binary tab block main frame"], 0, 0.2)
+		local fadeTween = fade(box["binary tab block main frame"], 0, 0.2)
 		fadeTween.Completed:Wait()
-		uwu["binary tab main frame 1"].Visible = false
+		box["binary tab main frame 1"].Visible = false
 
 		local tween = tweenSizePosition(
-			uwu["binary tab block main frame"],
+			box["binary tab block main frame"],
 			UDim2.new(0, 246, 0, 0),
 			UDim2.new(0, 0, 1, 1),
 			0.5
@@ -1995,26 +1997,26 @@ uwu["binary tab top bar minimize button"].MouseButton1Click:Connect(function()
 		tween.Completed:Wait()
 
 		binarytabreallyminimized = true
-		uwu["binary tab block main frame"].Visible = false
+		box["binary tab block main frame"].Visible = false
 		updcols()
 	else
-		uwu["binary tab top bar minimize button"].Text = "-"
-		uwu["binary tab block main frame"].Visible = true
+		box["binary tab top bar minimize button"].Text = "-"
+		box["binary tab block main frame"].Visible = true
 
 		local tween = tweenSizePosition(
-			uwu["binary tab block main frame"],
+			box["binary tab block main frame"],
 			UDim2.new(0, 246, 0, 203),
 			UDim2.new(0, 0, 1, 1),
 			0.5
 		)
 		tween.Completed:Wait()
-		uwu["binary tab main frame 1"].Visible = true
+		box["binary tab main frame 1"].Visible = true
 
-		local fadeTween = fade(uwu["binary tab block main frame"], 1, 0.2)
+		local fadeTween = fade(box["binary tab block main frame"], 1, 0.2)
 		fadeTween.Completed:Wait()
 
 		binarytabreallyminimized = false
-		uwu["binary tab block main frame"].Visible = false
+		box["binary tab block main frame"].Visible = false
 		updcols()
 	end
 
@@ -2023,70 +2025,70 @@ end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["binary tab top bar reposition button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["binary tab top bar reposition button"].Position = UDim2.new(0, 176, 0, 4.7)
+box["binary tab top bar reposition button"].Size = UDim2.new(0, 18, 0, 18)
+box["binary tab top bar reposition button"].Position = UDim2.new(0, 176, 0, 4.7)
 
-uwu["binary tab top bar reposition button"].BackgroundColor3 = uwu["default background color"]
+box["binary tab top bar reposition button"].BackgroundColor3 = box["default background color"]
 
-uwu["binary tab top bar reposition button"].BorderColor3 = uwu["default border color"]
-uwu["binary tab top bar reposition button"].BorderSizePixel = 1
+box["binary tab top bar reposition button"].BorderColor3 = box["default border color"]
+box["binary tab top bar reposition button"].BorderSizePixel = 1
 
-uwu["binary tab top bar reposition button"].TextColor3 = uwu["default border color"]
-uwu["binary tab top bar reposition button"].Font = Enum.Font.RobotoMono
-uwu["binary tab top bar reposition button"].TextSize = 16
-uwu["binary tab top bar reposition button"].TextScaled = false
-uwu["binary tab top bar reposition button"].Text = "R"
-uwu["binary tab top bar reposition button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["binary tab top bar reposition button"].TextYAlignment = Enum.TextYAlignment.Center
+box["binary tab top bar reposition button"].TextColor3 = box["default border color"]
+box["binary tab top bar reposition button"].Font = Enum.Font.RobotoMono
+box["binary tab top bar reposition button"].TextSize = 16
+box["binary tab top bar reposition button"].TextScaled = false
+box["binary tab top bar reposition button"].Text = "R"
+box["binary tab top bar reposition button"].TextXAlignment = Enum.TextXAlignment.Center
+box["binary tab top bar reposition button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["binary tab top bar reposition button"].Parent = uwu["binary tab top bar"]
-uwu["binary tab top bar reposition button"].ZIndex = 114
+box["binary tab top bar reposition button"].Parent = box["binary tab top bar"]
+box["binary tab top bar reposition button"].ZIndex = 114
 
-uwu["binary tab top bar reposition button text padding"] = Instance.new("UIPadding")
-uwu["binary tab top bar reposition button text padding"].PaddingTop = UDim.new(0, -1)
-uwu["binary tab top bar reposition button text padding"].Parent = uwu["binary tab top bar reposition button"]
+box["binary tab top bar reposition button text padding"] = Instance.new("UIPadding")
+box["binary tab top bar reposition button text padding"].PaddingTop = UDim.new(0, -1)
+box["binary tab top bar reposition button text padding"].Parent = box["binary tab top bar reposition button"]
 
-uwu["binary tab top bar reposition button"].MouseButton1Click:Connect(function()
+box["binary tab top bar reposition button"].MouseButton1Click:Connect(function()
 	playclicksound()
-	repos(uwu["binary tab top bar"], 0.5, 246, 230 + 26)
+	repos(box["binary tab top bar"], 0.5, 246, 230 + 26)
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["binary tab main frame 1"].Size = UDim2.new(0, 246, 0, 204)
-uwu["binary tab main frame 1"].Position = UDim2.new(0, 0, 1, 0)
+box["binary tab main frame 1"].Size = UDim2.new(0, 246, 0, 204)
+box["binary tab main frame 1"].Position = UDim2.new(0, 0, 1, 0)
 
-uwu["binary tab main frame 1"].BackgroundColor3 = uwu["default background color"]
+box["binary tab main frame 1"].BackgroundColor3 = box["default background color"]
 
-uwu["binary tab main frame 1"].BorderColor3 = uwu["default border color"]
-uwu["binary tab main frame 1"].BorderSizePixel = 1
+box["binary tab main frame 1"].BorderColor3 = box["default border color"]
+box["binary tab main frame 1"].BorderSizePixel = 1
 
-uwu["binary tab main frame 1"].Parent = uwu["binary tab top bar"]
-uwu["binary tab main frame 1"].ZIndex = 112
+box["binary tab main frame 1"].Parent = box["binary tab top bar"]
+box["binary tab main frame 1"].ZIndex = 112
 
-uwu["binary"].Size = UDim2.new(0, 238, 0, 195)
-uwu["binary"].Position = UDim2.new(0, 4, 0, 5)
+box["binary"].Size = UDim2.new(0, 238, 0, 195)
+box["binary"].Position = UDim2.new(0, 4, 0, 5)
 
-uwu["binary"].BackgroundColor3 = uwu["default background color"]
+box["binary"].BackgroundColor3 = box["default background color"]
 
-uwu["binary"].BorderColor3 = uwu["default border color"]
-uwu["binary"].BorderSizePixel = 1
+box["binary"].BorderColor3 = box["default border color"]
+box["binary"].BorderSizePixel = 1
 
-uwu["binary"].Parent = uwu["binary tab main frame 1"]
-uwu["binary"].ZIndex = 113
+box["binary"].Parent = box["binary tab main frame 1"]
+box["binary"].ZIndex = 113
 
-uwu["binary"].Font = Enum.Font.RobotoMono
-uwu["binary"].TextColor3 = Color3.new(1, 1, 1)
-uwu["binary"].TextSize = 15
-uwu["binary"].TextWrapped = true
-uwu["binary"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["binary"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["binary"].ClipsDescendants = true
-uwu["binary"].Name = "stay"
+box["binary"].Font = Enum.Font.RobotoMono
+box["binary"].TextColor3 = Color3.new(1, 1, 1)
+box["binary"].TextSize = 15
+box["binary"].TextWrapped = true
+box["binary"].TextXAlignment = Enum.TextXAlignment.Center
+box["binary"].TextYAlignment = Enum.TextYAlignment.Center
+box["binary"].ClipsDescendants = true
+box["binary"].Name = "stay"
 
-uwu["binary text padding"] = Instance.new("UIPadding")
-uwu["binary text padding"].PaddingBottom = UDim.new(0, 0)
-uwu["binary text padding"].Parent = uwu["binary"]
+box["binary text padding"] = Instance.new("UIPadding")
+box["binary text padding"].PaddingBottom = UDim.new(0, 0)
+box["binary text padding"].Parent = box["binary"]
 
 function grcl()
 	local lines = {}
@@ -2105,67 +2107,67 @@ function grcl2()
 end
 
 function changebinary()
-	uwu["binary"].Text = grcl2()
+	box["binary"].Text = grcl2()
 end
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["binary tab block main frame"].Size = UDim2.new(0, 276, 0, 233)
-uwu["binary tab block main frame"].Position = UDim2.new(0, 0, 1, 1)
+box["binary tab block main frame"].Size = UDim2.new(0, 276, 0, 233)
+box["binary tab block main frame"].Position = UDim2.new(0, 0, 1, 1)
 
-uwu["binary tab block main frame"].BackgroundColor3 = uwu["default background color"]
+box["binary tab block main frame"].BackgroundColor3 = box["default background color"]
 
-uwu["binary tab block main frame"].BorderColor3 = uwu["default border color"]
-uwu["binary tab block main frame"].BorderSizePixel = 1
-uwu["binary tab block main frame"].BackgroundTransparency = 1
+box["binary tab block main frame"].BorderColor3 = box["default border color"]
+box["binary tab block main frame"].BorderSizePixel = 1
+box["binary tab block main frame"].BackgroundTransparency = 1
 
-uwu["binary tab block main frame"].Parent = uwu["binary tab top bar"]
-uwu["binary tab block main frame"].ZIndex = 113
-uwu["binary tab block main frame"].Visible = false
-
--------------------------------------------------------------------------------------------------------------------------------
-
-uwu["binary tab block all"].Size = UDim2.new(0, 276, 0, 260)
-uwu["binary tab block all"].Position = UDim2.new(0, 0, 0, 0)
-
-uwu["binary tab block all"].BackgroundColor3 = uwu["default background color"]
-
-uwu["binary tab block all"].BorderColor3 = uwu["default border color"]
-uwu["binary tab block all"].BorderSizePixel = 1
-uwu["binary tab block all"].BackgroundTransparency = 0
-
-uwu["binary tab block all"].Parent = uwu["binary tab top bar"]
-uwu["binary tab block all"].ZIndex = 114
-uwu["binary tab block all"].Visible = true
+box["binary tab block main frame"].Parent = box["binary tab top bar"]
+box["binary tab block main frame"].ZIndex = 113
+box["binary tab block main frame"].Visible = false
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["video tab top bar"].Size = UDim2.new(0, 208, 0, 26)
+box["binary tab block all"].Size = UDim2.new(0, 276, 0, 260)
+box["binary tab block all"].Position = UDim2.new(0, 0, 0, 0)
 
-uwu["video tab top bar"].BackgroundColor3 = uwu["default background color"]
+box["binary tab block all"].BackgroundColor3 = box["default background color"]
 
-uwu["video tab top bar"].BorderColor3 = uwu["default border color"]
-uwu["video tab top bar"].BorderSizePixel = 1
+box["binary tab block all"].BorderColor3 = box["default border color"]
+box["binary tab block all"].BorderSizePixel = 1
+box["binary tab block all"].BackgroundTransparency = 0
 
-uwu["video tab top bar"].TextColor3 = uwu["default border color"]
-uwu["video tab top bar"].Font = Enum.Font.RobotoMono
-uwu["video tab top bar"].TextSize = 15
-uwu["video tab top bar"].TextScaled = false
-uwu["video tab top bar"].Text = " video.lua o.o"
-uwu["video tab top bar"].TextXAlignment = Enum.TextXAlignment.Left
-uwu["video tab top bar"].TextYAlignment = Enum.TextYAlignment.Center
+box["binary tab block all"].Parent = box["binary tab top bar"]
+box["binary tab block all"].ZIndex = 114
+box["binary tab block all"].Visible = true
 
-uwu["video top bar text padding"] = Instance.new("UIPadding")
-uwu["video top bar text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["video top bar text padding"].PaddingRight = UDim.new(0, 0)
-uwu["video top bar text padding"].Parent = uwu["video tab top bar"]
+-------------------------------------------------------------------------------------------------------------------------------
 
-uwu["video tab top bar"].Parent = uwu["screen gui"]
-uwu["video tab top bar"].ZIndex = 413
-uwu["video tab top bar"].Visible = false
+box["video tab top bar"].Size = UDim2.new(0, 208, 0, 26)
+
+box["video tab top bar"].BackgroundColor3 = box["default background color"]
+
+box["video tab top bar"].BorderColor3 = box["default border color"]
+box["video tab top bar"].BorderSizePixel = 1
+
+box["video tab top bar"].TextColor3 = box["default border color"]
+box["video tab top bar"].Font = Enum.Font.RobotoMono
+box["video tab top bar"].TextSize = 15
+box["video tab top bar"].TextScaled = false
+box["video tab top bar"].Text = " video.lua o.o"
+box["video tab top bar"].TextXAlignment = Enum.TextXAlignment.Left
+box["video tab top bar"].TextYAlignment = Enum.TextYAlignment.Center
+
+box["video top bar text padding"] = Instance.new("UIPadding")
+box["video top bar text padding"].PaddingLeft = UDim.new(0, 0)
+box["video top bar text padding"].PaddingRight = UDim.new(0, 0)
+box["video top bar text padding"].Parent = box["video tab top bar"]
+
+box["video tab top bar"].Parent = box["screen gui"]
+box["video tab top bar"].ZIndex = 413
+box["video tab top bar"].Visible = false
 
 function dragvideotabtopbar()
-	local frame = uwu["video tab top bar"]
+	local frame = box["video tab top bar"]
 	local dragToggle 	
 	local dragSpeed = 0.25
 	local dragStart 	
@@ -2175,7 +2177,7 @@ function dragvideotabtopbar()
 		local delta = input.Position - dragStart
 		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
 			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-		uwu["tween service"]:Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+		box["tween service"]:Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
 	end
 
 	frame.InputBegan:Connect(function(input)
@@ -2191,7 +2193,7 @@ function dragvideotabtopbar()
 		end
 	end)
 
-	uwu["user input service"].InputChanged:Connect(function(input)
+	box["user input service"].InputChanged:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
 			if dragToggle then
 				updatebuttoninput(input)
@@ -2204,68 +2206,68 @@ dragvideotabtopbar()
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["video tab top bar close button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["video tab top bar close button"].Position = UDim2.new(0, 186, 0, 4.7)
+box["video tab top bar close button"].Size = UDim2.new(0, 18, 0, 18)
+box["video tab top bar close button"].Position = UDim2.new(0, 186, 0, 4.7)
 
-uwu["video tab top bar close button"].BackgroundColor3 = uwu["default background color"]
+box["video tab top bar close button"].BackgroundColor3 = box["default background color"]
 
-uwu["video tab top bar close button"].BorderColor3 = uwu["default border color"]
-uwu["video tab top bar close button"].BorderSizePixel = 1
+box["video tab top bar close button"].BorderColor3 = box["default border color"]
+box["video tab top bar close button"].BorderSizePixel = 1
 
-uwu["video tab top bar close button"].TextColor3 = uwu["default border color"]
-uwu["video tab top bar close button"].Font = Enum.Font.RobotoMono
-uwu["video tab top bar close button"].TextSize = 16
-uwu["video tab top bar close button"].TextScaled = false
-uwu["video tab top bar close button"].Text = "X"
-uwu["video tab top bar close button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["video tab top bar close button"].TextYAlignment = Enum.TextYAlignment.Center
+box["video tab top bar close button"].TextColor3 = box["default border color"]
+box["video tab top bar close button"].Font = Enum.Font.RobotoMono
+box["video tab top bar close button"].TextSize = 16
+box["video tab top bar close button"].TextScaled = false
+box["video tab top bar close button"].Text = "X"
+box["video tab top bar close button"].TextXAlignment = Enum.TextXAlignment.Center
+box["video tab top bar close button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["video tab top bar close button"].Parent = uwu["video tab top bar"]
-uwu["video tab top bar close button"].ZIndex = 414
+box["video tab top bar close button"].Parent = box["video tab top bar"]
+box["video tab top bar close button"].ZIndex = 414
 
-uwu["video tab top bar close button text padding"] = Instance.new("UIPadding")
-uwu["video tab top bar close button text padding"].PaddingTop = UDim.new(0, -1)
-uwu["video tab top bar close button text padding"].Parent = uwu["video tab top bar close button"]
+box["video tab top bar close button text padding"] = Instance.new("UIPadding")
+box["video tab top bar close button text padding"].PaddingTop = UDim.new(0, -1)
+box["video tab top bar close button text padding"].Parent = box["video tab top bar close button"]
 
-uwu["video tab top bar close button"].MouseButton1Click:Connect(function()
+box["video tab top bar close button"].MouseButton1Click:Connect(function()
 	if not videotabcanminimize then return end
 	videotabopen = false
 	videotabminimized = false
 	playclicksound()
-	uwu["video tab top bar"].Visible = false
-	repos(uwu["video tab top bar"], 0, 208, 315 + 26)
+	box["video tab top bar"].Visible = false
+	repos(box["video tab top bar"], 0, 208, 315 + 26)
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["video tab top bar minimize button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["video tab top bar minimize button"].Position = UDim2.new(0, 162, 0, 4.7)
+box["video tab top bar minimize button"].Size = UDim2.new(0, 18, 0, 18)
+box["video tab top bar minimize button"].Position = UDim2.new(0, 162, 0, 4.7)
 
-uwu["video tab top bar minimize button"].BackgroundColor3 = uwu["default background color"]
+box["video tab top bar minimize button"].BackgroundColor3 = box["default background color"]
 
-uwu["video tab top bar minimize button"].BorderColor3 = uwu["default border color"]
-uwu["video tab top bar minimize button"].BorderSizePixel = 1
+box["video tab top bar minimize button"].BorderColor3 = box["default border color"]
+box["video tab top bar minimize button"].BorderSizePixel = 1
 
-uwu["video tab top bar minimize button"].TextColor3 = uwu["default border color"]
-uwu["video tab top bar minimize button"].Font = Enum.Font.RobotoMono
-uwu["video tab top bar minimize button"].TextSize = 16
-uwu["video tab top bar minimize button"].TextScaled = false
-uwu["video tab top bar minimize button"].Visible = true
-uwu["video tab top bar minimize button"].Text = "-"
-uwu["video tab top bar minimize button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["video tab top bar minimize button"].TextYAlignment = Enum.TextYAlignment.Center
+box["video tab top bar minimize button"].TextColor3 = box["default border color"]
+box["video tab top bar minimize button"].Font = Enum.Font.RobotoMono
+box["video tab top bar minimize button"].TextSize = 16
+box["video tab top bar minimize button"].TextScaled = false
+box["video tab top bar minimize button"].Visible = true
+box["video tab top bar minimize button"].Text = "-"
+box["video tab top bar minimize button"].TextXAlignment = Enum.TextXAlignment.Center
+box["video tab top bar minimize button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["video tab top bar minimize button"].Parent = uwu["video tab top bar"]
-uwu["video tab top bar minimize button"].ZIndex = 414
+box["video tab top bar minimize button"].Parent = box["video tab top bar"]
+box["video tab top bar minimize button"].ZIndex = 414
 
-uwu["video tab top bar minimize button text padding"] = Instance.new("UIPadding")
-uwu["video tab top bar minimize button text padding"].PaddingTop = UDim.new(0, -2)
-uwu["video tab top bar minimize button text padding"].Parent = uwu["video tab top bar minimize button"]
+box["video tab top bar minimize button text padding"] = Instance.new("UIPadding")
+box["video tab top bar minimize button text padding"].PaddingTop = UDim.new(0, -2)
+box["video tab top bar minimize button text padding"].Parent = box["video tab top bar minimize button"]
 
 videotabminimized = false
 videotabcanminimize = true
 
-uwu["video tab top bar minimize button"].MouseButton1Click:Connect(function()
+box["video tab top bar minimize button"].MouseButton1Click:Connect(function()
 	if not videotabcanminimize then return end
 	spawn(playclicksound)
 	videotabcanminimize = false
@@ -2273,15 +2275,15 @@ uwu["video tab top bar minimize button"].MouseButton1Click:Connect(function()
 	videotabminimized = not videotabminimized
 
 	if videotabminimized then
-		uwu["video tab top bar minimize button"].Text = "+"
-		uwu["video tab block main frame"].Visible = true
+		box["video tab top bar minimize button"].Text = "+"
+		box["video tab block main frame"].Visible = true
 
-		local fadeTween = fade(uwu["video tab block main frame"], 0, 0.2)
+		local fadeTween = fade(box["video tab block main frame"], 0, 0.2)
 		fadeTween.Completed:Wait()
-		uwu["video tab main frame 1"].Visible = false
+		box["video tab main frame 1"].Visible = false
 
 		local tween = tweenSizePosition(
-			uwu["video tab block main frame"],
+			box["video tab block main frame"],
 			UDim2.new(0, 208, 0, 0),
 			UDim2.new(0, 0, 1, 1),
 			0.5
@@ -2289,26 +2291,26 @@ uwu["video tab top bar minimize button"].MouseButton1Click:Connect(function()
 		tween.Completed:Wait()
 
 		videotabreallyminimized = true
-		uwu["video tab block main frame"].Visible = false
+		box["video tab block main frame"].Visible = false
 		updcols()
 	else
-		uwu["video tab top bar minimize button"].Text = "-"
-		uwu["video tab block main frame"].Visible = true
+		box["video tab top bar minimize button"].Text = "-"
+		box["video tab block main frame"].Visible = true
 
 		local tween = tweenSizePosition(
-			uwu["video tab block main frame"],
+			box["video tab block main frame"],
 			UDim2.new(0, 208, 0, 288),
 			UDim2.new(0, 0, 1, 1),
 			0.5
 		)
 		tween.Completed:Wait()
-		uwu["video tab main frame 1"].Visible = true
+		box["video tab main frame 1"].Visible = true
 
-		local fadeTween = fade(uwu["video tab block main frame"], 1, 0.2)
+		local fadeTween = fade(box["video tab block main frame"], 1, 0.2)
 		fadeTween.Completed:Wait()
 
 		videotabreallyminimized = false
-		uwu["video tab block main frame"].Visible = false
+		box["video tab block main frame"].Visible = false
 		updcols()
 	end
 
@@ -2317,156 +2319,156 @@ end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["video tab top bar reposition button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["video tab top bar reposition button"].Position = UDim2.new(0, 138, 0, 4.7)
+box["video tab top bar reposition button"].Size = UDim2.new(0, 18, 0, 18)
+box["video tab top bar reposition button"].Position = UDim2.new(0, 138, 0, 4.7)
 
-uwu["video tab top bar reposition button"].BackgroundColor3 = uwu["default background color"]
+box["video tab top bar reposition button"].BackgroundColor3 = box["default background color"]
 
-uwu["video tab top bar reposition button"].BorderColor3 = uwu["default border color"]
-uwu["video tab top bar reposition button"].BorderSizePixel = 1
+box["video tab top bar reposition button"].BorderColor3 = box["default border color"]
+box["video tab top bar reposition button"].BorderSizePixel = 1
 
-uwu["video tab top bar reposition button"].TextColor3 = uwu["default border color"]
-uwu["video tab top bar reposition button"].Font = Enum.Font.RobotoMono
-uwu["video tab top bar reposition button"].TextSize = 16
-uwu["video tab top bar reposition button"].TextScaled = false
-uwu["video tab top bar reposition button"].Text = "R"
-uwu["video tab top bar reposition button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["video tab top bar reposition button"].TextYAlignment = Enum.TextYAlignment.Center
+box["video tab top bar reposition button"].TextColor3 = box["default border color"]
+box["video tab top bar reposition button"].Font = Enum.Font.RobotoMono
+box["video tab top bar reposition button"].TextSize = 16
+box["video tab top bar reposition button"].TextScaled = false
+box["video tab top bar reposition button"].Text = "R"
+box["video tab top bar reposition button"].TextXAlignment = Enum.TextXAlignment.Center
+box["video tab top bar reposition button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["video tab top bar reposition button"].Parent = uwu["video tab top bar"]
-uwu["video tab top bar reposition button"].ZIndex = 414
+box["video tab top bar reposition button"].Parent = box["video tab top bar"]
+box["video tab top bar reposition button"].ZIndex = 414
 
-uwu["video tab top bar reposition button text padding"] = Instance.new("UIPadding")
-uwu["video tab top bar reposition button text padding"].PaddingTop = UDim.new(0, -1)
-uwu["video tab top bar reposition button text padding"].Parent = uwu["video tab top bar reposition button"]
+box["video tab top bar reposition button text padding"] = Instance.new("UIPadding")
+box["video tab top bar reposition button text padding"].PaddingTop = UDim.new(0, -1)
+box["video tab top bar reposition button text padding"].Parent = box["video tab top bar reposition button"]
 
-uwu["video tab top bar reposition button"].MouseButton1Click:Connect(function()
+box["video tab top bar reposition button"].MouseButton1Click:Connect(function()
 	playclicksound()
-	repos(uwu["video tab top bar"], 0.5, 208, 315 + 26)
+	repos(box["video tab top bar"], 0.5, 208, 315 + 26)
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["video tab main frame 1"].Size = UDim2.new(0, 208, 0, 289)
-uwu["video tab main frame 1"].Position = UDim2.new(0, 0, 1, 0)
+box["video tab main frame 1"].Size = UDim2.new(0, 208, 0, 289)
+box["video tab main frame 1"].Position = UDim2.new(0, 0, 1, 0)
 
-uwu["video tab main frame 1"].BackgroundColor3 = uwu["default background color"]
+box["video tab main frame 1"].BackgroundColor3 = box["default background color"]
 
-uwu["video tab main frame 1"].BorderColor3 = uwu["default border color"]
-uwu["video tab main frame 1"].BorderSizePixel = 1
+box["video tab main frame 1"].BorderColor3 = box["default border color"]
+box["video tab main frame 1"].BorderSizePixel = 1
 
-uwu["video tab main frame 1"].Parent = uwu["video tab top bar"]
-uwu["video tab main frame 1"].ZIndex = 412
+box["video tab main frame 1"].Parent = box["video tab top bar"]
+box["video tab main frame 1"].ZIndex = 412
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["video id textbox"].Size = UDim2.new(0, 200, 0, 35)
-uwu["video id textbox"].Position = UDim2.new(0, 4, 0, 210)
-uwu["video id textbox"].BackgroundColor3 = uwu["default background color"]
-uwu["video id textbox"].BorderColor3 = uwu["default border color"]
-uwu["video id textbox"].BorderSizePixel = 1
-uwu["video id textbox"].Parent = uwu["video tab main frame 1"]
-uwu["video id textbox"].Font = Enum.Font.RobotoMono
-uwu["video id textbox"].TextColor3 = Color3.new(1, 1, 1)
-uwu["video id textbox"].Text = ""
-uwu["video id textbox"].PlaceholderText = "enter videoframe ID"
-uwu["video id textbox"].PlaceholderColor3 = uwu["default 1/2 color"]
-uwu["video id textbox"].TextSize = 15
-uwu["video id textbox"].TextWrapped = true
-uwu["video id textbox"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["video id textbox"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["video id textbox"].ClipsDescendants = true
-uwu["video id textbox"].ZIndex = 413
+box["video id textbox"].Size = UDim2.new(0, 200, 0, 35)
+box["video id textbox"].Position = UDim2.new(0, 4, 0, 210)
+box["video id textbox"].BackgroundColor3 = box["default background color"]
+box["video id textbox"].BorderColor3 = box["default border color"]
+box["video id textbox"].BorderSizePixel = 1
+box["video id textbox"].Parent = box["video tab main frame 1"]
+box["video id textbox"].Font = Enum.Font.RobotoMono
+box["video id textbox"].TextColor3 = Color3.new(1, 1, 1)
+box["video id textbox"].Text = ""
+box["video id textbox"].PlaceholderText = "enter videoframe ID"
+box["video id textbox"].PlaceholderColor3 = box["default 1/2 color"]
+box["video id textbox"].TextSize = 15
+box["video id textbox"].TextWrapped = true
+box["video id textbox"].TextXAlignment = Enum.TextXAlignment.Center
+box["video id textbox"].TextYAlignment = Enum.TextYAlignment.Center
+box["video id textbox"].ClipsDescendants = true
+box["video id textbox"].ZIndex = 413
 
-uwu["video id enter"] = Instance.new("TextButton")
-uwu["video id enter"].Size = UDim2.new(0, 200, 0, 35)
-uwu["video id enter"].Position = UDim2.new(0, 4, 0, 250)
-uwu["video id enter"].BackgroundColor3 = uwu["default background color"]
-uwu["video id enter"].BorderColor3 = uwu["default border color"]
-uwu["video id enter"].BorderSizePixel = 1
-uwu["video id enter"].Parent = uwu["video tab main frame 1"]
-uwu["video id enter"].Font = Enum.Font.RobotoMono
-uwu["video id enter"].TextColor3 = Color3.new(1, 1, 1)
-uwu["video id enter"].Text = "set video"
-uwu["video id enter"].TextSize = 15
-uwu["video id enter"].TextWrapped = true
-uwu["video id enter"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["video id enter"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["video id enter"].ClipsDescendants = true
-uwu["video id enter"].ZIndex = 413
+box["video id enter"] = Instance.new("TextButton")
+box["video id enter"].Size = UDim2.new(0, 200, 0, 35)
+box["video id enter"].Position = UDim2.new(0, 4, 0, 250)
+box["video id enter"].BackgroundColor3 = box["default background color"]
+box["video id enter"].BorderColor3 = box["default border color"]
+box["video id enter"].BorderSizePixel = 1
+box["video id enter"].Parent = box["video tab main frame 1"]
+box["video id enter"].Font = Enum.Font.RobotoMono
+box["video id enter"].TextColor3 = Color3.new(1, 1, 1)
+box["video id enter"].Text = "set video"
+box["video id enter"].TextSize = 15
+box["video id enter"].TextWrapped = true
+box["video id enter"].TextXAlignment = Enum.TextXAlignment.Center
+box["video id enter"].TextYAlignment = Enum.TextYAlignment.Center
+box["video id enter"].ClipsDescendants = true
+box["video id enter"].ZIndex = 413
 
-uwu["video id enter"].MouseButton1Click:Connect(function()
+box["video id enter"].MouseButton1Click:Connect(function()
 	spawn(playclicksound)
-	uwu["video"].Video = "rbxassetid://" .. uwu["video id textbox"].Text
-	uwu["video"].Looped = true
-	uwu["video"]:Play()
+	box["video"].Video = "rbxassetid://" .. box["video id textbox"].Text
+	box["video"].Looped = true
+	box["video"]:Play()
 end)
 
-uwu["video"].Size = UDim2.new(0, 200, 0, 200)
-uwu["video"].Position = UDim2.new(0, 4, 0, 5)
-uwu["video"].BackgroundColor3 = uwu["default background color"]
-uwu["video"].BorderColor3 = uwu["default border color"]
-uwu["video"].BorderSizePixel = 1
-uwu["video"].Parent = uwu["video tab main frame 1"]
-uwu["video"].ZIndex = 413
+box["video"].Size = UDim2.new(0, 200, 0, 200)
+box["video"].Position = UDim2.new(0, 4, 0, 5)
+box["video"].BackgroundColor3 = box["default background color"]
+box["video"].BorderColor3 = box["default border color"]
+box["video"].BorderSizePixel = 1
+box["video"].Parent = box["video tab main frame 1"]
+box["video"].ZIndex = 413
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["video tab block main frame"].Size = UDim2.new(0, 208, 0, 288)
-uwu["video tab block main frame"].Position = UDim2.new(0, 0, 1, 1)
+box["video tab block main frame"].Size = UDim2.new(0, 208, 0, 288)
+box["video tab block main frame"].Position = UDim2.new(0, 0, 1, 1)
 
-uwu["video tab block main frame"].BackgroundColor3 = uwu["default background color"]
+box["video tab block main frame"].BackgroundColor3 = box["default background color"]
 
-uwu["video tab block main frame"].BorderColor3 = uwu["default border color"]
-uwu["video tab block main frame"].BorderSizePixel = 1
-uwu["video tab block main frame"].BackgroundTransparency = 1
+box["video tab block main frame"].BorderColor3 = box["default border color"]
+box["video tab block main frame"].BorderSizePixel = 1
+box["video tab block main frame"].BackgroundTransparency = 1
 
-uwu["video tab block main frame"].Parent = uwu["video tab top bar"]
-uwu["video tab block main frame"].ZIndex = 413
-uwu["video tab block main frame"].Visible = false
-
--------------------------------------------------------------------------------------------------------------------------------
-
-uwu["video tab block all"].Size = UDim2.new(0, 238, 0, 315)
-uwu["video tab block all"].Position = UDim2.new(0, 0, 0, 0)
-
-uwu["video tab block all"].BackgroundColor3 = uwu["default background color"]
-
-uwu["video tab block all"].BorderColor3 = uwu["default border color"]
-uwu["video tab block all"].BorderSizePixel = 1
-uwu["video tab block all"].BackgroundTransparency = 0
-
-uwu["video tab block all"].Parent = uwu["video tab top bar"]
-uwu["video tab block all"].ZIndex = 414
-uwu["video tab block all"].Visible = true
+box["video tab block main frame"].Parent = box["video tab top bar"]
+box["video tab block main frame"].ZIndex = 413
+box["video tab block main frame"].Visible = false
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["gaydar tab top bar"].Size = UDim2.new(0, 376, 0, 26)
-uwu["gaydar tab top bar"].BackgroundColor3 = uwu["default background color"]
+box["video tab block all"].Size = UDim2.new(0, 238, 0, 315)
+box["video tab block all"].Position = UDim2.new(0, 0, 0, 0)
 
-uwu["gaydar tab top bar"].BorderColor3 = uwu["default border color"]
-uwu["gaydar tab top bar"].BorderSizePixel = 1
+box["video tab block all"].BackgroundColor3 = box["default background color"]
 
-uwu["gaydar tab top bar"].TextColor3 = uwu["default border color"]
-uwu["gaydar tab top bar"].Font = Enum.Font.RobotoMono
-uwu["gaydar tab top bar"].TextSize = 15
-uwu["gaydar tab top bar"].TextScaled = false
-uwu["gaydar tab top bar"].Text = " gaydar.lua o.o"
-uwu["gaydar tab top bar"].TextXAlignment = Enum.TextXAlignment.Left
-uwu["gaydar tab top bar"].TextYAlignment = Enum.TextYAlignment.Center
+box["video tab block all"].BorderColor3 = box["default border color"]
+box["video tab block all"].BorderSizePixel = 1
+box["video tab block all"].BackgroundTransparency = 0
 
-uwu["gaydar top bar text padding"] = Instance.new("UIPadding")
-uwu["gaydar top bar text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["gaydar top bar text padding"].PaddingRight = UDim.new(0, 0)
-uwu["gaydar top bar text padding"].Parent = uwu["gaydar tab top bar"]
+box["video tab block all"].Parent = box["video tab top bar"]
+box["video tab block all"].ZIndex = 414
+box["video tab block all"].Visible = true
 
-uwu["gaydar tab top bar"].Parent = uwu["screen gui"]
-uwu["gaydar tab top bar"].ZIndex = 313
-uwu["gaydar tab top bar"].Visible = false
+-------------------------------------------------------------------------------------------------------------------------------
+
+box["gaydar tab top bar"].Size = UDim2.new(0, 376, 0, 26)
+box["gaydar tab top bar"].BackgroundColor3 = box["default background color"]
+
+box["gaydar tab top bar"].BorderColor3 = box["default border color"]
+box["gaydar tab top bar"].BorderSizePixel = 1
+
+box["gaydar tab top bar"].TextColor3 = box["default border color"]
+box["gaydar tab top bar"].Font = Enum.Font.RobotoMono
+box["gaydar tab top bar"].TextSize = 15
+box["gaydar tab top bar"].TextScaled = false
+box["gaydar tab top bar"].Text = " gaydar.lua o.o"
+box["gaydar tab top bar"].TextXAlignment = Enum.TextXAlignment.Left
+box["gaydar tab top bar"].TextYAlignment = Enum.TextYAlignment.Center
+
+box["gaydar top bar text padding"] = Instance.new("UIPadding")
+box["gaydar top bar text padding"].PaddingLeft = UDim.new(0, 0)
+box["gaydar top bar text padding"].PaddingRight = UDim.new(0, 0)
+box["gaydar top bar text padding"].Parent = box["gaydar tab top bar"]
+
+box["gaydar tab top bar"].Parent = box["screen gui"]
+box["gaydar tab top bar"].ZIndex = 313
+box["gaydar tab top bar"].Visible = false
 
 function draggaydartabtopbar()
-	local frame = uwu["gaydar tab top bar"]
+	local frame = box["gaydar tab top bar"]
 	local dragToggle 	
 	local dragSpeed = 0.25
 	local dragStart 	
@@ -2476,7 +2478,7 @@ function draggaydartabtopbar()
 		local delta = input.Position - dragStart
 		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
 			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-		uwu["tween service"]:Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+		box["tween service"]:Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
 	end
 
 	frame.InputBegan:Connect(function(input)
@@ -2492,7 +2494,7 @@ function draggaydartabtopbar()
 		end
 	end)
 
-	uwu["user input service"].InputChanged:Connect(function(input)
+	box["user input service"].InputChanged:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
 			if dragToggle then
 				updatebuttoninput(input)
@@ -2505,68 +2507,68 @@ draggaydartabtopbar()
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["gaydar tab top bar close button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["gaydar tab top bar close button"].Position = UDim2.new(0, 354, 0, 4.7)
+box["gaydar tab top bar close button"].Size = UDim2.new(0, 18, 0, 18)
+box["gaydar tab top bar close button"].Position = UDim2.new(0, 354, 0, 4.7)
 
-uwu["gaydar tab top bar close button"].BackgroundColor3 = uwu["default background color"]
+box["gaydar tab top bar close button"].BackgroundColor3 = box["default background color"]
 
-uwu["gaydar tab top bar close button"].BorderColor3 = uwu["default border color"]
-uwu["gaydar tab top bar close button"].BorderSizePixel = 1
+box["gaydar tab top bar close button"].BorderColor3 = box["default border color"]
+box["gaydar tab top bar close button"].BorderSizePixel = 1
 
-uwu["gaydar tab top bar close button"].TextColor3 = uwu["default border color"]
-uwu["gaydar tab top bar close button"].Font = Enum.Font.RobotoMono
-uwu["gaydar tab top bar close button"].TextSize = 16
-uwu["gaydar tab top bar close button"].TextScaled = false
-uwu["gaydar tab top bar close button"].Text = "X"
-uwu["gaydar tab top bar close button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["gaydar tab top bar close button"].TextYAlignment = Enum.TextYAlignment.Center
+box["gaydar tab top bar close button"].TextColor3 = box["default border color"]
+box["gaydar tab top bar close button"].Font = Enum.Font.RobotoMono
+box["gaydar tab top bar close button"].TextSize = 16
+box["gaydar tab top bar close button"].TextScaled = false
+box["gaydar tab top bar close button"].Text = "X"
+box["gaydar tab top bar close button"].TextXAlignment = Enum.TextXAlignment.Center
+box["gaydar tab top bar close button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["gaydar tab top bar close button"].Parent = uwu["gaydar tab top bar"]
-uwu["gaydar tab top bar close button"].ZIndex = 314
+box["gaydar tab top bar close button"].Parent = box["gaydar tab top bar"]
+box["gaydar tab top bar close button"].ZIndex = 314
 
-uwu["gaydar tab top bar close button text padding"] = Instance.new("UIPadding")
-uwu["gaydar tab top bar close button text padding"].PaddingTop = UDim.new(0, -1)
-uwu["gaydar tab top bar close button text padding"].Parent = uwu["gaydar tab top bar close button"]
+box["gaydar tab top bar close button text padding"] = Instance.new("UIPadding")
+box["gaydar tab top bar close button text padding"].PaddingTop = UDim.new(0, -1)
+box["gaydar tab top bar close button text padding"].Parent = box["gaydar tab top bar close button"]
 
-uwu["gaydar tab top bar close button"].MouseButton1Click:Connect(function()
+box["gaydar tab top bar close button"].MouseButton1Click:Connect(function()
 	if not gaydartabcanminimize then return end
 	gaydartabopen = false
 	gaydartabminimized = false
 	playclicksound()
-	uwu["gaydar tab top bar"].Visible = false
-	repos(uwu["gaydar tab top bar"], 0, 376, 230 + 26)
+	box["gaydar tab top bar"].Visible = false
+	repos(box["gaydar tab top bar"], 0, 376, 230 + 26)
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["gaydar tab top bar minimize button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["gaydar tab top bar minimize button"].Position = UDim2.new(0, 330, 0, 4.7)
+box["gaydar tab top bar minimize button"].Size = UDim2.new(0, 18, 0, 18)
+box["gaydar tab top bar minimize button"].Position = UDim2.new(0, 330, 0, 4.7)
 
-uwu["gaydar tab top bar minimize button"].BackgroundColor3 = uwu["default background color"]
+box["gaydar tab top bar minimize button"].BackgroundColor3 = box["default background color"]
 
-uwu["gaydar tab top bar minimize button"].BorderColor3 = uwu["default border color"]
-uwu["gaydar tab top bar minimize button"].BorderSizePixel = 1
+box["gaydar tab top bar minimize button"].BorderColor3 = box["default border color"]
+box["gaydar tab top bar minimize button"].BorderSizePixel = 1
 
-uwu["gaydar tab top bar minimize button"].TextColor3 = uwu["default border color"]
-uwu["gaydar tab top bar minimize button"].Font = Enum.Font.RobotoMono
-uwu["gaydar tab top bar minimize button"].TextSize = 16
-uwu["gaydar tab top bar minimize button"].TextScaled = false
-uwu["gaydar tab top bar minimize button"].Visible = true
-uwu["gaydar tab top bar minimize button"].Text = "-"
-uwu["gaydar tab top bar minimize button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["gaydar tab top bar minimize button"].TextYAlignment = Enum.TextYAlignment.Center
+box["gaydar tab top bar minimize button"].TextColor3 = box["default border color"]
+box["gaydar tab top bar minimize button"].Font = Enum.Font.RobotoMono
+box["gaydar tab top bar minimize button"].TextSize = 16
+box["gaydar tab top bar minimize button"].TextScaled = false
+box["gaydar tab top bar minimize button"].Visible = true
+box["gaydar tab top bar minimize button"].Text = "-"
+box["gaydar tab top bar minimize button"].TextXAlignment = Enum.TextXAlignment.Center
+box["gaydar tab top bar minimize button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["gaydar tab top bar minimize button"].Parent = uwu["gaydar tab top bar"]
-uwu["gaydar tab top bar minimize button"].ZIndex = 314
+box["gaydar tab top bar minimize button"].Parent = box["gaydar tab top bar"]
+box["gaydar tab top bar minimize button"].ZIndex = 314
 
-uwu["gaydar tab top bar minimize button text padding"] = Instance.new("UIPadding")
-uwu["gaydar tab top bar minimize button text padding"].PaddingTop = UDim.new(0, -2)
-uwu["gaydar tab top bar minimize button text padding"].Parent = uwu["gaydar tab top bar minimize button"]
+box["gaydar tab top bar minimize button text padding"] = Instance.new("UIPadding")
+box["gaydar tab top bar minimize button text padding"].PaddingTop = UDim.new(0, -2)
+box["gaydar tab top bar minimize button text padding"].Parent = box["gaydar tab top bar minimize button"]
 
 gaydartabminimized = false
 gaydartabcanminimize = true
 
-uwu["gaydar tab top bar minimize button"].MouseButton1Click:Connect(function()
+box["gaydar tab top bar minimize button"].MouseButton1Click:Connect(function()
 	if not gaydartabcanminimize then return end
 	spawn(playclicksound)
 	gaydartabcanminimize = false
@@ -2574,15 +2576,15 @@ uwu["gaydar tab top bar minimize button"].MouseButton1Click:Connect(function()
 	gaydartabminimized = not gaydartabminimized
 
 	if gaydartabminimized then
-		uwu["gaydar tab top bar minimize button"].Text = "+"
-		uwu["gaydar tab block main frame"].Visible = true
+		box["gaydar tab top bar minimize button"].Text = "+"
+		box["gaydar tab block main frame"].Visible = true
 
-		local fadeTween = fade(uwu["gaydar tab block main frame"], 0, 0.2)
+		local fadeTween = fade(box["gaydar tab block main frame"], 0, 0.2)
 		fadeTween.Completed:Wait()
-		uwu["gaydar tab main frame 1"].Visible = false
+		box["gaydar tab main frame 1"].Visible = false
 
 		local tween = tweenSizePosition(
-			uwu["gaydar tab block main frame"],
+			box["gaydar tab block main frame"],
 			UDim2.new(0, 376, 0, 0),
 			UDim2.new(0, 0, 1, 1),
 			0.5
@@ -2590,26 +2592,26 @@ uwu["gaydar tab top bar minimize button"].MouseButton1Click:Connect(function()
 		tween.Completed:Wait()
 
 		gaydartabreallyminimized = true
-		uwu["gaydar tab block main frame"].Visible = false
+		box["gaydar tab block main frame"].Visible = false
 		updcols()
 	else
-		uwu["gaydar tab top bar minimize button"].Text = "-"
-		uwu["gaydar tab block main frame"].Visible = true
+		box["gaydar tab top bar minimize button"].Text = "-"
+		box["gaydar tab block main frame"].Visible = true
 
 		local tween = tweenSizePosition(
-			uwu["gaydar tab block main frame"],
+			box["gaydar tab block main frame"],
 			UDim2.new(0, 376, 0, 203),
 			UDim2.new(0, 0, 1, 1),
 			0.5
 		)
 		tween.Completed:Wait()
-		uwu["gaydar tab main frame 1"].Visible = true
+		box["gaydar tab main frame 1"].Visible = true
 
-		local fadeTween = fade(uwu["gaydar tab block main frame"], 1, 0.2)
+		local fadeTween = fade(box["gaydar tab block main frame"], 1, 0.2)
 		fadeTween.Completed:Wait()
 
 		gaydartabreallyminimized = false
-		uwu["gaydar tab block main frame"].Visible = false
+		box["gaydar tab block main frame"].Visible = false
 		updcols()
 	end
 
@@ -2618,130 +2620,130 @@ end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["gaydar tab top bar reposition button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["gaydar tab top bar reposition button"].Position = UDim2.new(0, 306, 0, 4.7)
+box["gaydar tab top bar reposition button"].Size = UDim2.new(0, 18, 0, 18)
+box["gaydar tab top bar reposition button"].Position = UDim2.new(0, 306, 0, 4.7)
 
-uwu["gaydar tab top bar reposition button"].BackgroundColor3 = uwu["default background color"]
+box["gaydar tab top bar reposition button"].BackgroundColor3 = box["default background color"]
 
-uwu["gaydar tab top bar reposition button"].BorderColor3 = uwu["default border color"]
-uwu["gaydar tab top bar reposition button"].BorderSizePixel = 1
+box["gaydar tab top bar reposition button"].BorderColor3 = box["default border color"]
+box["gaydar tab top bar reposition button"].BorderSizePixel = 1
 
-uwu["gaydar tab top bar reposition button"].TextColor3 = uwu["default border color"]
-uwu["gaydar tab top bar reposition button"].Font = Enum.Font.RobotoMono
-uwu["gaydar tab top bar reposition button"].TextSize = 16
-uwu["gaydar tab top bar reposition button"].TextScaled = false
-uwu["gaydar tab top bar reposition button"].Text = "R"
-uwu["gaydar tab top bar reposition button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["gaydar tab top bar reposition button"].TextYAlignment = Enum.TextYAlignment.Center
+box["gaydar tab top bar reposition button"].TextColor3 = box["default border color"]
+box["gaydar tab top bar reposition button"].Font = Enum.Font.RobotoMono
+box["gaydar tab top bar reposition button"].TextSize = 16
+box["gaydar tab top bar reposition button"].TextScaled = false
+box["gaydar tab top bar reposition button"].Text = "R"
+box["gaydar tab top bar reposition button"].TextXAlignment = Enum.TextXAlignment.Center
+box["gaydar tab top bar reposition button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["gaydar tab top bar reposition button"].Parent = uwu["gaydar tab top bar"]
-uwu["gaydar tab top bar reposition button"].ZIndex = 314
+box["gaydar tab top bar reposition button"].Parent = box["gaydar tab top bar"]
+box["gaydar tab top bar reposition button"].ZIndex = 314
 
-uwu["gaydar tab top bar reposition button text padding"] = Instance.new("UIPadding")
-uwu["gaydar tab top bar reposition button text padding"].PaddingTop = UDim.new(0, -1)
-uwu["gaydar tab top bar reposition button text padding"].Parent = uwu["gaydar tab top bar reposition button"]
+box["gaydar tab top bar reposition button text padding"] = Instance.new("UIPadding")
+box["gaydar tab top bar reposition button text padding"].PaddingTop = UDim.new(0, -1)
+box["gaydar tab top bar reposition button text padding"].Parent = box["gaydar tab top bar reposition button"]
 
-uwu["gaydar tab top bar reposition button"].MouseButton1Click:Connect(function()
+box["gaydar tab top bar reposition button"].MouseButton1Click:Connect(function()
 	playclicksound()
-	repos(uwu["gaydar tab top bar"], 0.5, 376, 230 + 26)
+	repos(box["gaydar tab top bar"], 0.5, 376, 230 + 26)
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["gaydar tab main frame 1"].Size = UDim2.new(0, 376, 0, 204)
-uwu["gaydar tab main frame 1"].Position = UDim2.new(0, 0, 1, 0)
+box["gaydar tab main frame 1"].Size = UDim2.new(0, 376, 0, 204)
+box["gaydar tab main frame 1"].Position = UDim2.new(0, 0, 1, 0)
 
-uwu["gaydar tab main frame 1"].BackgroundColor3 = uwu["default background color"]
+box["gaydar tab main frame 1"].BackgroundColor3 = box["default background color"]
 
-uwu["gaydar tab main frame 1"].BorderColor3 = uwu["default border color"]
-uwu["gaydar tab main frame 1"].BorderSizePixel = 1
+box["gaydar tab main frame 1"].BorderColor3 = box["default border color"]
+box["gaydar tab main frame 1"].BorderSizePixel = 1
 
-uwu["gaydar tab main frame 1"].Parent = uwu["gaydar tab top bar"]
-uwu["gaydar tab main frame 1"].ZIndex = 312
+box["gaydar tab main frame 1"].Parent = box["gaydar tab top bar"]
+box["gaydar tab main frame 1"].ZIndex = 312
 
-uwu["gaydar"].Size = UDim2.new(0, 89, 0, 89)
-uwu["gaydar"].Position = UDim2.new(0, 283, 0, 5)
-uwu["gaydar"].BackgroundColor3 = uwu["default background color"]
-uwu["gaydar"].BorderColor3 = uwu["default border color"]
-uwu["gaydar"].BorderSizePixel = 1
-uwu["gaydar"].Parent = uwu["gaydar tab main frame 1"]
-uwu["gaydar"].ZIndex = 313
+box["gaydar"].Size = UDim2.new(0, 89, 0, 89)
+box["gaydar"].Position = UDim2.new(0, 283, 0, 5)
+box["gaydar"].BackgroundColor3 = box["default background color"]
+box["gaydar"].BorderColor3 = box["default border color"]
+box["gaydar"].BorderSizePixel = 1
+box["gaydar"].Parent = box["gaydar tab main frame 1"]
+box["gaydar"].ZIndex = 313
 
-uwu["gaydar scan"] = Instance.new("TextButton")
-uwu["gaydar scan"].Size = UDim2.new(0, 368, 0, 48)
-uwu["gaydar scan"].Position = UDim2.new(0, 4, 0, 152)
-uwu["gaydar scan"].BackgroundColor3 = uwu["default background color"]
-uwu["gaydar scan"].BorderColor3 = uwu["default border color"]
-uwu["gaydar scan"].BorderSizePixel = 1
-uwu["gaydar scan"].Parent = uwu["gaydar tab main frame 1"]
-uwu["gaydar scan"].ZIndex = 313
+box["gaydar scan"] = Instance.new("TextButton")
+box["gaydar scan"].Size = UDim2.new(0, 368, 0, 48)
+box["gaydar scan"].Position = UDim2.new(0, 4, 0, 152)
+box["gaydar scan"].BackgroundColor3 = box["default background color"]
+box["gaydar scan"].BorderColor3 = box["default border color"]
+box["gaydar scan"].BorderSizePixel = 1
+box["gaydar scan"].Parent = box["gaydar tab main frame 1"]
+box["gaydar scan"].ZIndex = 313
 
-uwu["gaydar scan"].Font = Enum.Font.RobotoMono
-uwu["gaydar scan"].TextColor3 = Color3.new(1, 1, 1)
-uwu["gaydar scan"].Text = "scan target"
-uwu["gaydar scan"].TextSize = 15
-uwu["gaydar scan"].TextWrapped = true
-uwu["gaydar scan"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["gaydar scan"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["gaydar scan"].ClipsDescendants = true
+box["gaydar scan"].Font = Enum.Font.RobotoMono
+box["gaydar scan"].TextColor3 = Color3.new(1, 1, 1)
+box["gaydar scan"].Text = "scan target"
+box["gaydar scan"].TextSize = 15
+box["gaydar scan"].TextWrapped = true
+box["gaydar scan"].TextXAlignment = Enum.TextXAlignment.Center
+box["gaydar scan"].TextYAlignment = Enum.TextYAlignment.Center
+box["gaydar scan"].ClipsDescendants = true
 
-uwu["gaydar scan text padding"] = Instance.new("UIPadding")
-uwu["gaydar scan text padding"].PaddingBottom = UDim.new(0, 0)
-uwu["gaydar scan text padding"].Parent = uwu["gaydar scan"]
+box["gaydar scan text padding"] = Instance.new("UIPadding")
+box["gaydar scan text padding"].PaddingBottom = UDim.new(0, 0)
+box["gaydar scan text padding"].Parent = box["gaydar scan"]
 
-uwu["gaydar target"].Size = UDim2.new(0, 368, 0, 48)
-uwu["gaydar target"].Position = UDim2.new(0, 4, 0, 99)
-uwu["gaydar target"].BackgroundColor3 = uwu["default background color"]
-uwu["gaydar target"].BorderColor3 = uwu["default border color"]
-uwu["gaydar target"].BorderSizePixel = 1
-uwu["gaydar target"].Parent = uwu["gaydar tab main frame 1"]
-uwu["gaydar target"].ZIndex = 313
+box["gaydar target"].Size = UDim2.new(0, 368, 0, 48)
+box["gaydar target"].Position = UDim2.new(0, 4, 0, 99)
+box["gaydar target"].BackgroundColor3 = box["default background color"]
+box["gaydar target"].BorderColor3 = box["default border color"]
+box["gaydar target"].BorderSizePixel = 1
+box["gaydar target"].Parent = box["gaydar tab main frame 1"]
+box["gaydar target"].ZIndex = 313
 
-uwu["gaydar target"].Font = Enum.Font.RobotoMono
-uwu["gaydar target"].TextColor3 = Color3.new(1, 1, 1)
-uwu["gaydar target"].Text = ""
-uwu["gaydar target"].PlaceholderText = "enter user"
-uwu["gaydar target"].PlaceholderColor3 = uwu["default 1/2 color"]
-uwu["gaydar target"].TextSize = 15
-uwu["gaydar target"].TextWrapped = true
-uwu["gaydar target"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["gaydar target"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["gaydar target"].ClipsDescendants = true
+box["gaydar target"].Font = Enum.Font.RobotoMono
+box["gaydar target"].TextColor3 = Color3.new(1, 1, 1)
+box["gaydar target"].Text = ""
+box["gaydar target"].PlaceholderText = "enter user"
+box["gaydar target"].PlaceholderColor3 = box["default 1/2 color"]
+box["gaydar target"].TextSize = 15
+box["gaydar target"].TextWrapped = true
+box["gaydar target"].TextXAlignment = Enum.TextXAlignment.Center
+box["gaydar target"].TextYAlignment = Enum.TextYAlignment.Center
+box["gaydar target"].ClipsDescendants = true
 
 spawn(function()
-	uwu["gaydar target"]:GetPropertyChangedSignal("Text"):Connect(function()
-		if #uwu["gaydar target"].Text > 20 then
-			uwu["gaydar target"].Text = string.sub(uwu["gaydar target"].Text, 1, 20)
+	box["gaydar target"]:GetPropertyChangedSignal("Text"):Connect(function()
+		if #box["gaydar target"].Text > 20 then
+			box["gaydar target"].Text = string.sub(box["gaydar target"].Text, 1, 20)
 		end
 	end)
 end)
 
-uwu["gaydar target text padding"] = Instance.new("UIPadding")
-uwu["gaydar target text padding"].PaddingBottom = UDim.new(0, 0)
-uwu["gaydar target text padding"].Parent = uwu["gaydar scan"]
+box["gaydar target text padding"] = Instance.new("UIPadding")
+box["gaydar target text padding"].PaddingBottom = UDim.new(0, 0)
+box["gaydar target text padding"].Parent = box["gaydar scan"]
 
-uwu["gaydar info"] = Instance.new("TextLabel")
-uwu["gaydar info"].Size = UDim2.new(0, 274, 0, 89)
-uwu["gaydar info"].Position = UDim2.new(0, 4, 0, 5)
-uwu["gaydar info"].BackgroundColor3 = uwu["default background color"]
-uwu["gaydar info"].BorderColor3 = uwu["default border color"]
-uwu["gaydar info"].BorderSizePixel = 1
-uwu["gaydar info"].Parent = uwu["gaydar tab main frame 1"]
-uwu["gaydar info"].ZIndex = 313
+box["gaydar info"] = Instance.new("TextLabel")
+box["gaydar info"].Size = UDim2.new(0, 274, 0, 89)
+box["gaydar info"].Position = UDim2.new(0, 4, 0, 5)
+box["gaydar info"].BackgroundColor3 = box["default background color"]
+box["gaydar info"].BorderColor3 = box["default border color"]
+box["gaydar info"].BorderSizePixel = 1
+box["gaydar info"].Parent = box["gaydar tab main frame 1"]
+box["gaydar info"].ZIndex = 313
 
-uwu["gaydar info"].Font = Enum.Font.RobotoMono
-uwu["gaydar info"].TextColor3 = Color3.new(1, 1, 1)
-uwu["gaydar info"].Text = "target: n/a\nuser: n/a\n\ngayness: n/a\naccuracy: n/a"
-uwu["gaydar info"].TextSize = 15
-uwu["gaydar info"].TextWrapped = true
-uwu["gaydar info"].TextXAlignment = Enum.TextXAlignment.Left
-uwu["gaydar info"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["gaydar info"].ClipsDescendants = true
+box["gaydar info"].Font = Enum.Font.RobotoMono
+box["gaydar info"].TextColor3 = Color3.new(1, 1, 1)
+box["gaydar info"].Text = "target: n/a\nuser: n/a\n\ngayness: n/a\naccuracy: n/a"
+box["gaydar info"].TextSize = 15
+box["gaydar info"].TextWrapped = true
+box["gaydar info"].TextXAlignment = Enum.TextXAlignment.Left
+box["gaydar info"].TextYAlignment = Enum.TextYAlignment.Center
+box["gaydar info"].ClipsDescendants = true
 
-uwu["gaydar info text padding"] = Instance.new("UIPadding")
-uwu["gaydar info text padding"].PaddingBottom = UDim.new(0, 2)
-uwu["gaydar info text padding"].PaddingLeft = UDim.new(0, 5)
-uwu["gaydar info text padding"].Parent = uwu["gaydar info"]
+box["gaydar info text padding"] = Instance.new("UIPadding")
+box["gaydar info text padding"].PaddingBottom = UDim.new(0, 2)
+box["gaydar info text padding"].PaddingLeft = UDim.new(0, 5)
+box["gaydar info text padding"].Parent = box["gaydar info"]
 
 -------------------------------------------------------------------------------------------------------------------------------
 
@@ -2752,11 +2754,11 @@ local targetuserinfo = {
 	thumbnail = nil
 }
 
-uwu["gaydar target"].FocusLost:Connect(function()
-	local username = uwu["gaydar target"].Text:match("^%s*(.-)%s*$")
+box["gaydar target"].FocusLost:Connect(function()
+	local username = box["gaydar target"].Text:match("^%s*(.-)%s*$")
 	if username == "" then
 		cangaydarscan = true
-		uwu["gaydar info"].Text = "target: n/a\nuser: n/a\n\ngayness: n/a\naccuracy: n/a"
+		box["gaydar info"].Text = "target: n/a\nuser: n/a\n\ngayness: n/a\naccuracy: n/a"
 		targetuserinfo = {
 			username = nil,
 			displayName = nil,
@@ -2771,7 +2773,7 @@ uwu["gaydar target"].FocusLost:Connect(function()
 	end)
 
 	if not success then
-		uwu["gaydar info"].Text = string.format("target: %s\nuser: %s\n\ngayness: n/a\naccuracy: n/a", username)
+		box["gaydar info"].Text = string.format("target: %s\nuser: %s\n\ngayness: n/a\naccuracy: n/a", username)
 		targetuserinfo = {
 			username = username,
 			displayName = nil,
@@ -2795,8 +2797,8 @@ uwu["gaydar target"].FocusLost:Connect(function()
 		return game:GetService("Players"):GetUserThumbnailAsync(userId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size150x150)
 	end)
 
-	if success and uwu["gaydar"]:IsA("ImageLabel") then
-		uwu["gaydar"].Image = thumbnail
+	if success and box["gaydar"]:IsA("ImageLabel") then
+		box["gaydar"].Image = thumbnail
 	end
 
 	targetuserinfo = {
@@ -2806,7 +2808,7 @@ uwu["gaydar target"].FocusLost:Connect(function()
 		thumbnail = thumbnail
 	}
 
-	uwu["gaydar info"].Text = string.format("target: %s\nuser: %s\n\ngayness: n/a\naccuracy: n/a", username, displayName)
+	box["gaydar info"].Text = string.format("target: %s\nuser: %s\n\ngayness: n/a\naccuracy: n/a", username, displayName)
 end)
 
 cangaydarscan = true
@@ -2821,12 +2823,12 @@ function scanTarget()
 
 	local scan = Instance.new("Sound")
 	scan.SoundId = "rbxassetid://8503529653"
-	scan.Parent = uwu["local player"]
+	scan.Parent = box["local player"]
 	scan.Name = "canttouchthis"
 	scan.Volume = 1
 	scan:Play()
 
-	uwu["gaydar info"].Text = string.format("target: %s\nuser: %s\n\ngayness: scanning...\naccuracy: scanning...", 
+	box["gaydar info"].Text = string.format("target: %s\nuser: %s\n\ngayness: scanning...\naccuracy: scanning...", 
 		targetuserinfo.username, 
 		targetuserinfo.displayName or targetuserinfo.username
 	)
@@ -2835,7 +2837,7 @@ function scanTarget()
 	task.delay(scanTime, function()
 		local yay = Instance.new("Sound")
 		yay.SoundId = "rbxassetid://8458409341"
-		yay.Parent = uwu["local player"]
+		yay.Parent = box["local player"]
 		yay.Name = "canttouchthis"
 		yay.Volume = 1
 		yay:Play()
@@ -2843,7 +2845,7 @@ function scanTarget()
 		local gayness = math.random(0, 100)
 		local accuracy = math.random(60, 100)
 
-		uwu["gaydar info"].Text = string.format(
+		box["gaydar info"].Text = string.format(
 			"target: %s\nuser: %s\n\ngayness: %d%%\naccuracy: %d%%",
 			targetuserinfo.username,
 			targetuserinfo.displayName or targetuserinfo.username,
@@ -2855,66 +2857,66 @@ function scanTarget()
 	end)
 end
 
-uwu["gaydar scan"].MouseButton1Click:Connect(scanTarget)
+box["gaydar scan"].MouseButton1Click:Connect(scanTarget)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["gaydar tab block main frame"].Size = UDim2.new(0, 376, 0, 203)
-uwu["gaydar tab block main frame"].Position = UDim2.new(0, 0, 1, 1)
+box["gaydar tab block main frame"].Size = UDim2.new(0, 376, 0, 203)
+box["gaydar tab block main frame"].Position = UDim2.new(0, 0, 1, 1)
 
-uwu["gaydar tab block main frame"].BackgroundColor3 = uwu["default background color"]
+box["gaydar tab block main frame"].BackgroundColor3 = box["default background color"]
 
-uwu["gaydar tab block main frame"].BorderColor3 = uwu["default border color"]
-uwu["gaydar tab block main frame"].BorderSizePixel = 1
-uwu["gaydar tab block main frame"].BackgroundTransparency = 1
+box["gaydar tab block main frame"].BorderColor3 = box["default border color"]
+box["gaydar tab block main frame"].BorderSizePixel = 1
+box["gaydar tab block main frame"].BackgroundTransparency = 1
 
-uwu["gaydar tab block main frame"].Parent = uwu["gaydar tab top bar"]
-uwu["gaydar tab block main frame"].ZIndex = 314
-uwu["gaydar tab block main frame"].Visible = false
-
--------------------------------------------------------------------------------------------------------------------------------
-
-uwu["gaydar tab block all"].Size = UDim2.new(0, 376, 0, 230)
-uwu["gaydar tab block all"].Position = UDim2.new(0, 0, 0, 0)
-
-uwu["gaydar tab block all"].BackgroundColor3 = uwu["default background color"]
-
-uwu["gaydar tab block all"].BorderColor3 = uwu["default border color"]
-uwu["gaydar tab block all"].BorderSizePixel = 1
-uwu["gaydar tab block all"].BackgroundTransparency = 0
-
-uwu["gaydar tab block all"].Parent = uwu["gaydar tab top bar"]
-uwu["gaydar tab block all"].ZIndex = 315
-uwu["gaydar tab block all"].Visible = false
+box["gaydar tab block main frame"].Parent = box["gaydar tab top bar"]
+box["gaydar tab block main frame"].ZIndex = 314
+box["gaydar tab block main frame"].Visible = false
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["headcanon generator tab top bar"].Size = UDim2.new(0, 446, 0, 26)
+box["gaydar tab block all"].Size = UDim2.new(0, 376, 0, 230)
+box["gaydar tab block all"].Position = UDim2.new(0, 0, 0, 0)
 
-uwu["headcanon generator tab top bar"].BackgroundColor3 = uwu["default background color"]
+box["gaydar tab block all"].BackgroundColor3 = box["default background color"]
 
-uwu["headcanon generator tab top bar"].BorderColor3 = uwu["default border color"]
-uwu["headcanon generator tab top bar"].BorderSizePixel = 1
+box["gaydar tab block all"].BorderColor3 = box["default border color"]
+box["gaydar tab block all"].BorderSizePixel = 1
+box["gaydar tab block all"].BackgroundTransparency = 0
 
-uwu["headcanon generator tab top bar"].TextColor3 = uwu["default border color"]
-uwu["headcanon generator tab top bar"].Font = Enum.Font.RobotoMono
-uwu["headcanon generator tab top bar"].TextSize = 15
-uwu["headcanon generator tab top bar"].TextScaled = false
-uwu["headcanon generator tab top bar"].Text = " headcanon generator.lua o.o"
-uwu["headcanon generator tab top bar"].TextXAlignment = Enum.TextXAlignment.Left
-uwu["headcanon generator tab top bar"].TextYAlignment = Enum.TextYAlignment.Center
+box["gaydar tab block all"].Parent = box["gaydar tab top bar"]
+box["gaydar tab block all"].ZIndex = 315
+box["gaydar tab block all"].Visible = false
 
-uwu["headcanon generator top bar text padding"] = Instance.new("UIPadding")
-uwu["headcanon generator top bar text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["headcanon generator top bar text padding"].PaddingRight = UDim.new(0, 0)
-uwu["headcanon generator top bar text padding"].Parent = uwu["headcanon generator tab top bar"]
+-------------------------------------------------------------------------------------------------------------------------------
 
-uwu["headcanon generator tab top bar"].Parent = uwu["screen gui"]
-uwu["headcanon generator tab top bar"].ZIndex = 203
-uwu["headcanon generator tab top bar"].Visible = false
+box["headcanon generator tab top bar"].Size = UDim2.new(0, 446, 0, 26)
+
+box["headcanon generator tab top bar"].BackgroundColor3 = box["default background color"]
+
+box["headcanon generator tab top bar"].BorderColor3 = box["default border color"]
+box["headcanon generator tab top bar"].BorderSizePixel = 1
+
+box["headcanon generator tab top bar"].TextColor3 = box["default border color"]
+box["headcanon generator tab top bar"].Font = Enum.Font.RobotoMono
+box["headcanon generator tab top bar"].TextSize = 15
+box["headcanon generator tab top bar"].TextScaled = false
+box["headcanon generator tab top bar"].Text = " headcanon generator.lua o.o"
+box["headcanon generator tab top bar"].TextXAlignment = Enum.TextXAlignment.Left
+box["headcanon generator tab top bar"].TextYAlignment = Enum.TextYAlignment.Center
+
+box["headcanon generator top bar text padding"] = Instance.new("UIPadding")
+box["headcanon generator top bar text padding"].PaddingLeft = UDim.new(0, 0)
+box["headcanon generator top bar text padding"].PaddingRight = UDim.new(0, 0)
+box["headcanon generator top bar text padding"].Parent = box["headcanon generator tab top bar"]
+
+box["headcanon generator tab top bar"].Parent = box["screen gui"]
+box["headcanon generator tab top bar"].ZIndex = 203
+box["headcanon generator tab top bar"].Visible = false
 
 function draghcgentabtopbar()
-	local frame = uwu["headcanon generator tab top bar"]
+	local frame = box["headcanon generator tab top bar"]
 	local dragToggle 	
 	local dragSpeed = 0.25
 	local dragStart 	
@@ -2924,7 +2926,7 @@ function draghcgentabtopbar()
 		local delta = input.Position - dragStart
 		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
 			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-		uwu["tween service"]:Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+		box["tween service"]:Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
 	end
 
 	frame.InputBegan:Connect(function(input)
@@ -2940,7 +2942,7 @@ function draghcgentabtopbar()
 		end
 	end)
 
-	uwu["user input service"].InputChanged:Connect(function(input)
+	box["user input service"].InputChanged:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
 			if dragToggle then
 				updatebuttoninput(input)
@@ -2953,68 +2955,68 @@ draghcgentabtopbar()
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["headcanon generator tab top bar close button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["headcanon generator tab top bar close button"].Position = UDim2.new(0, 424, 0, 4.7)
+box["headcanon generator tab top bar close button"].Size = UDim2.new(0, 18, 0, 18)
+box["headcanon generator tab top bar close button"].Position = UDim2.new(0, 424, 0, 4.7)
 
-uwu["headcanon generator tab top bar close button"].BackgroundColor3 = uwu["default background color"]
+box["headcanon generator tab top bar close button"].BackgroundColor3 = box["default background color"]
 
-uwu["headcanon generator tab top bar close button"].BorderColor3 = uwu["default border color"]
-uwu["headcanon generator tab top bar close button"].BorderSizePixel = 1
+box["headcanon generator tab top bar close button"].BorderColor3 = box["default border color"]
+box["headcanon generator tab top bar close button"].BorderSizePixel = 1
 
-uwu["headcanon generator tab top bar close button"].TextColor3 = uwu["default border color"]
-uwu["headcanon generator tab top bar close button"].Font = Enum.Font.RobotoMono
-uwu["headcanon generator tab top bar close button"].TextSize = 16
-uwu["headcanon generator tab top bar close button"].TextScaled = false
-uwu["headcanon generator tab top bar close button"].Text = "X"
-uwu["headcanon generator tab top bar close button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["headcanon generator tab top bar close button"].TextYAlignment = Enum.TextYAlignment.Center
+box["headcanon generator tab top bar close button"].TextColor3 = box["default border color"]
+box["headcanon generator tab top bar close button"].Font = Enum.Font.RobotoMono
+box["headcanon generator tab top bar close button"].TextSize = 16
+box["headcanon generator tab top bar close button"].TextScaled = false
+box["headcanon generator tab top bar close button"].Text = "X"
+box["headcanon generator tab top bar close button"].TextXAlignment = Enum.TextXAlignment.Center
+box["headcanon generator tab top bar close button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["headcanon generator tab top bar close button"].Parent = uwu["headcanon generator tab top bar"]
-uwu["headcanon generator tab top bar close button"].ZIndex = 204
+box["headcanon generator tab top bar close button"].Parent = box["headcanon generator tab top bar"]
+box["headcanon generator tab top bar close button"].ZIndex = 204
 
-uwu["headcanon generator tab top bar close button text padding"] = Instance.new("UIPadding")
-uwu["headcanon generator tab top bar close button text padding"].PaddingTop = UDim.new(0, -1)
-uwu["headcanon generator tab top bar close button text padding"].Parent = uwu["headcanon generator tab top bar close button"]
+box["headcanon generator tab top bar close button text padding"] = Instance.new("UIPadding")
+box["headcanon generator tab top bar close button text padding"].PaddingTop = UDim.new(0, -1)
+box["headcanon generator tab top bar close button text padding"].Parent = box["headcanon generator tab top bar close button"]
 
-uwu["headcanon generator tab top bar close button"].MouseButton1Click:Connect(function()
+box["headcanon generator tab top bar close button"].MouseButton1Click:Connect(function()
 	if not hcgentabcanminimize then return end
 	hcgentabopen = false
 	hcgentabminimized = false
 	playclicksound()
-	uwu["headcanon generator tab top bar"].Visible = false
-	repos(uwu["headcanon generator tab top bar"], 0, 446, 168 + 26)
+	box["headcanon generator tab top bar"].Visible = false
+	repos(box["headcanon generator tab top bar"], 0, 446, 168 + 26)
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["headcanon generator tab top bar minimize button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["headcanon generator tab top bar minimize button"].Position = UDim2.new(0, 400, 0, 4.7)
+box["headcanon generator tab top bar minimize button"].Size = UDim2.new(0, 18, 0, 18)
+box["headcanon generator tab top bar minimize button"].Position = UDim2.new(0, 400, 0, 4.7)
 
-uwu["headcanon generator tab top bar minimize button"].BackgroundColor3 = uwu["default background color"]
+box["headcanon generator tab top bar minimize button"].BackgroundColor3 = box["default background color"]
 
-uwu["headcanon generator tab top bar minimize button"].BorderColor3 = uwu["default border color"]
-uwu["headcanon generator tab top bar minimize button"].BorderSizePixel = 1
+box["headcanon generator tab top bar minimize button"].BorderColor3 = box["default border color"]
+box["headcanon generator tab top bar minimize button"].BorderSizePixel = 1
 
-uwu["headcanon generator tab top bar minimize button"].TextColor3 = uwu["default border color"]
-uwu["headcanon generator tab top bar minimize button"].Font = Enum.Font.RobotoMono
-uwu["headcanon generator tab top bar minimize button"].TextSize = 16
-uwu["headcanon generator tab top bar minimize button"].TextScaled = false
-uwu["headcanon generator tab top bar minimize button"].Visible = true
-uwu["headcanon generator tab top bar minimize button"].Text = "-"
-uwu["headcanon generator tab top bar minimize button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["headcanon generator tab top bar minimize button"].TextYAlignment = Enum.TextYAlignment.Center
+box["headcanon generator tab top bar minimize button"].TextColor3 = box["default border color"]
+box["headcanon generator tab top bar minimize button"].Font = Enum.Font.RobotoMono
+box["headcanon generator tab top bar minimize button"].TextSize = 16
+box["headcanon generator tab top bar minimize button"].TextScaled = false
+box["headcanon generator tab top bar minimize button"].Visible = true
+box["headcanon generator tab top bar minimize button"].Text = "-"
+box["headcanon generator tab top bar minimize button"].TextXAlignment = Enum.TextXAlignment.Center
+box["headcanon generator tab top bar minimize button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["headcanon generator tab top bar minimize button"].Parent = uwu["headcanon generator tab top bar"]
-uwu["headcanon generator tab top bar minimize button"].ZIndex = 204
+box["headcanon generator tab top bar minimize button"].Parent = box["headcanon generator tab top bar"]
+box["headcanon generator tab top bar minimize button"].ZIndex = 204
 
-uwu["headcanon generator tab top bar minimize button text padding"] = Instance.new("UIPadding")
-uwu["headcanon generator tab top bar minimize button text padding"].PaddingTop = UDim.new(0, -2)
-uwu["headcanon generator tab top bar minimize button text padding"].Parent = uwu["headcanon generator tab top bar minimize button"]
+box["headcanon generator tab top bar minimize button text padding"] = Instance.new("UIPadding")
+box["headcanon generator tab top bar minimize button text padding"].PaddingTop = UDim.new(0, -2)
+box["headcanon generator tab top bar minimize button text padding"].Parent = box["headcanon generator tab top bar minimize button"]
 
 hcgentabminimized = false
 hcgentabcanminimize = true
 
-uwu["headcanon generator tab top bar minimize button"].MouseButton1Click:Connect(function()
+box["headcanon generator tab top bar minimize button"].MouseButton1Click:Connect(function()
 	if not hcgentabcanminimize then return end
 	spawn(playclicksound)
 	hcgentabcanminimize = false
@@ -3022,15 +3024,15 @@ uwu["headcanon generator tab top bar minimize button"].MouseButton1Click:Connect
 	hcgentabminimized = not hcgentabminimized
 
 	if hcgentabminimized then
-		uwu["headcanon generator tab top bar minimize button"].Text = "+"
-		uwu["headcanon generator tab block main frame"].Visible = true
+		box["headcanon generator tab top bar minimize button"].Text = "+"
+		box["headcanon generator tab block main frame"].Visible = true
 
-		local fadeTween = fade(uwu["headcanon generator tab block main frame"], 0, 0.2)
+		local fadeTween = fade(box["headcanon generator tab block main frame"], 0, 0.2)
 		fadeTween.Completed:Wait()
-		uwu["headcanon generator tab main frame 1"].Visible = false
+		box["headcanon generator tab main frame 1"].Visible = false
 
 		local tween = tweenSizePosition(
-			uwu["headcanon generator tab block main frame"],
+			box["headcanon generator tab block main frame"],
 			UDim2.new(0, 446, 0, 0),
 			UDim2.new(0, 0, 1, 1),
 			0.5
@@ -3038,26 +3040,26 @@ uwu["headcanon generator tab top bar minimize button"].MouseButton1Click:Connect
 		tween.Completed:Wait()
 
 		hcgentabreallyminimized = true
-		uwu["headcanon generator tab block main frame"].Visible = false
+		box["headcanon generator tab block main frame"].Visible = false
 		updcols()
 	else
-		uwu["headcanon generator tab top bar minimize button"].Text = "-"
-		uwu["headcanon generator tab block main frame"].Visible = true
+		box["headcanon generator tab top bar minimize button"].Text = "-"
+		box["headcanon generator tab block main frame"].Visible = true
 
 		local tween = tweenSizePosition(
-			uwu["headcanon generator tab block main frame"],
+			box["headcanon generator tab block main frame"],
 			UDim2.new(0, 446, 0, 141),
 			UDim2.new(0, 0, 1, 1),
 			0.5
 		)
 		tween.Completed:Wait()
-		uwu["headcanon generator tab main frame 1"].Visible = true
+		box["headcanon generator tab main frame 1"].Visible = true
 
-		local fadeTween = fade(uwu["headcanon generator tab block main frame"], 1, 0.2)
+		local fadeTween = fade(box["headcanon generator tab block main frame"], 1, 0.2)
 		fadeTween.Completed:Wait()
 
 		hcgentabreallyminimized = false
-		uwu["headcanon generator tab block main frame"].Visible = false
+		box["headcanon generator tab block main frame"].Visible = false
 		updcols()
 	end
 
@@ -3066,154 +3068,154 @@ end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["headcanon generator tab top bar reposition button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["headcanon generator tab top bar reposition button"].Position = UDim2.new(0, 376, 0, 4.7)
+box["headcanon generator tab top bar reposition button"].Size = UDim2.new(0, 18, 0, 18)
+box["headcanon generator tab top bar reposition button"].Position = UDim2.new(0, 376, 0, 4.7)
 
-uwu["headcanon generator tab top bar reposition button"].BackgroundColor3 = uwu["default background color"]
+box["headcanon generator tab top bar reposition button"].BackgroundColor3 = box["default background color"]
 
-uwu["headcanon generator tab top bar reposition button"].BorderColor3 = uwu["default border color"]
-uwu["headcanon generator tab top bar reposition button"].BorderSizePixel = 1
+box["headcanon generator tab top bar reposition button"].BorderColor3 = box["default border color"]
+box["headcanon generator tab top bar reposition button"].BorderSizePixel = 1
 
-uwu["headcanon generator tab top bar reposition button"].TextColor3 = uwu["default border color"]
-uwu["headcanon generator tab top bar reposition button"].Font = Enum.Font.RobotoMono
-uwu["headcanon generator tab top bar reposition button"].TextSize = 16
-uwu["headcanon generator tab top bar reposition button"].TextScaled = false
-uwu["headcanon generator tab top bar reposition button"].Text = "R"
-uwu["headcanon generator tab top bar reposition button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["headcanon generator tab top bar reposition button"].TextYAlignment = Enum.TextYAlignment.Center
+box["headcanon generator tab top bar reposition button"].TextColor3 = box["default border color"]
+box["headcanon generator tab top bar reposition button"].Font = Enum.Font.RobotoMono
+box["headcanon generator tab top bar reposition button"].TextSize = 16
+box["headcanon generator tab top bar reposition button"].TextScaled = false
+box["headcanon generator tab top bar reposition button"].Text = "R"
+box["headcanon generator tab top bar reposition button"].TextXAlignment = Enum.TextXAlignment.Center
+box["headcanon generator tab top bar reposition button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["headcanon generator tab top bar reposition button"].Parent = uwu["headcanon generator tab top bar"]
-uwu["headcanon generator tab top bar reposition button"].ZIndex = 204
+box["headcanon generator tab top bar reposition button"].Parent = box["headcanon generator tab top bar"]
+box["headcanon generator tab top bar reposition button"].ZIndex = 204
 
-uwu["headcanon generator tab top bar reposition button text padding"] = Instance.new("UIPadding")
-uwu["headcanon generator tab top bar reposition button text padding"].PaddingTop = UDim.new(0, -1)
-uwu["headcanon generator tab top bar reposition button text padding"].Parent = uwu["headcanon generator tab top bar reposition button"]
+box["headcanon generator tab top bar reposition button text padding"] = Instance.new("UIPadding")
+box["headcanon generator tab top bar reposition button text padding"].PaddingTop = UDim.new(0, -1)
+box["headcanon generator tab top bar reposition button text padding"].Parent = box["headcanon generator tab top bar reposition button"]
 
-uwu["headcanon generator tab top bar reposition button"].MouseButton1Click:Connect(function()
+box["headcanon generator tab top bar reposition button"].MouseButton1Click:Connect(function()
 	playclicksound()
-	repos(uwu["headcanon generator tab top bar"], 0.5, 446, 168 + 26)
+	repos(box["headcanon generator tab top bar"], 0.5, 446, 168 + 26)
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["headcanon generator tab main frame 1"].Size = UDim2.new(0, 446, 0, 142)
-uwu["headcanon generator tab main frame 1"].Position = UDim2.new(0, 0, 1, 0)
+box["headcanon generator tab main frame 1"].Size = UDim2.new(0, 446, 0, 142)
+box["headcanon generator tab main frame 1"].Position = UDim2.new(0, 0, 1, 0)
 
-uwu["headcanon generator tab main frame 1"].BackgroundColor3 = uwu["default background color"]
+box["headcanon generator tab main frame 1"].BackgroundColor3 = box["default background color"]
 
-uwu["headcanon generator tab main frame 1"].BorderColor3 = uwu["default border color"]
-uwu["headcanon generator tab main frame 1"].BorderSizePixel = 1
+box["headcanon generator tab main frame 1"].BorderColor3 = box["default border color"]
+box["headcanon generator tab main frame 1"].BorderSizePixel = 1
 
-uwu["headcanon generator tab main frame 1"].Parent = uwu["headcanon generator tab top bar"]
-uwu["headcanon generator tab main frame 1"].ZIndex = 202
+box["headcanon generator tab main frame 1"].Parent = box["headcanon generator tab top bar"]
+box["headcanon generator tab main frame 1"].ZIndex = 202
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["headcanon generator output"].Size = UDim2.new(0, 438, 0, 41)
-uwu["headcanon generator output"].Position = UDim2.new(0, 4, 0, 5)
+box["headcanon generator output"].Size = UDim2.new(0, 438, 0, 41)
+box["headcanon generator output"].Position = UDim2.new(0, 4, 0, 5)
 
-uwu["headcanon generator output"].BackgroundColor3 = uwu["default background color"]
+box["headcanon generator output"].BackgroundColor3 = box["default background color"]
 
-uwu["headcanon generator output"].BorderColor3 = uwu["default border color"]
-uwu["headcanon generator output"].BorderSizePixel = 0
+box["headcanon generator output"].BorderColor3 = box["default border color"]
+box["headcanon generator output"].BorderSizePixel = 0
 
-uwu["headcanon generator output"].Parent = uwu["headcanon generator tab main frame 1"]
-uwu["headcanon generator output"].ZIndex = 203
+box["headcanon generator output"].Parent = box["headcanon generator tab main frame 1"]
+box["headcanon generator output"].ZIndex = 203
 
-uwu["headcanon generator output"].Font = Enum.Font.RobotoMono
-uwu["headcanon generator output"].TextColor3 = Color3.new(1, 1, 1)
-uwu["headcanon generator output"].TextSize = 15
-uwu["headcanon generator output"].Text = "..."
-uwu["headcanon generator output"].TextWrapped = true
-uwu["headcanon generator output"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["headcanon generator output"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["headcanon generator output"].ClipsDescendants = true
+box["headcanon generator output"].Font = Enum.Font.RobotoMono
+box["headcanon generator output"].TextColor3 = Color3.new(1, 1, 1)
+box["headcanon generator output"].TextSize = 15
+box["headcanon generator output"].Text = "..."
+box["headcanon generator output"].TextWrapped = true
+box["headcanon generator output"].TextXAlignment = Enum.TextXAlignment.Center
+box["headcanon generator output"].TextYAlignment = Enum.TextYAlignment.Center
+box["headcanon generator output"].ClipsDescendants = true
 
-uwu["headcanon generator output text padding"] = Instance.new("UIPadding")
-uwu["headcanon generator output text padding"].PaddingLeft = UDim.new(0, 7)
-uwu["headcanon generator output text padding"].PaddingRight = UDim.new(0, 7)
-uwu["headcanon generator output text padding"].Parent = uwu["headcanon generator output"]
+box["headcanon generator output text padding"] = Instance.new("UIPadding")
+box["headcanon generator output text padding"].PaddingLeft = UDim.new(0, 7)
+box["headcanon generator output text padding"].PaddingRight = UDim.new(0, 7)
+box["headcanon generator output text padding"].Parent = box["headcanon generator output"]
 
-uwu["headcanon generator input"].Size = UDim2.new(0, 216, 0, 41)
-uwu["headcanon generator input"].Position = UDim2.new(0, 4, 0, 51)
+box["headcanon generator input"].Size = UDim2.new(0, 216, 0, 41)
+box["headcanon generator input"].Position = UDim2.new(0, 4, 0, 51)
 
-uwu["headcanon generator input"].BackgroundColor3 = uwu["default background color"]
+box["headcanon generator input"].BackgroundColor3 = box["default background color"]
 
-uwu["headcanon generator input"].BorderColor3 = uwu["default border color"]
-uwu["headcanon generator input"].BorderSizePixel = 1
+box["headcanon generator input"].BorderColor3 = box["default border color"]
+box["headcanon generator input"].BorderSizePixel = 1
 
-uwu["headcanon generator input"].Parent = uwu["headcanon generator tab main frame 1"]
-uwu["headcanon generator input"].ZIndex = 203
+box["headcanon generator input"].Parent = box["headcanon generator tab main frame 1"]
+box["headcanon generator input"].ZIndex = 203
 
-uwu["headcanon generator input"].Font = Enum.Font.RobotoMono
-uwu["headcanon generator input"].TextColor3 = Color3.new(1, 1, 1)
-uwu["headcanon generator input"].TextSize = 15
-uwu["headcanon generator input"].Text = ""
-uwu["headcanon generator input"].PlaceholderText = "character name"
-uwu["headcanon generator input"].PlaceholderColor3 = uwu["default 1/2 color"]
-uwu["headcanon generator input"].TextWrapped = true
-uwu["headcanon generator input"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["headcanon generator input"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["headcanon generator input"].ClipsDescendants = true
-uwu["headcanon generator input"].Name = "stay"
+box["headcanon generator input"].Font = Enum.Font.RobotoMono
+box["headcanon generator input"].TextColor3 = Color3.new(1, 1, 1)
+box["headcanon generator input"].TextSize = 15
+box["headcanon generator input"].Text = ""
+box["headcanon generator input"].PlaceholderText = "character name"
+box["headcanon generator input"].PlaceholderColor3 = box["default 1/2 color"]
+box["headcanon generator input"].TextWrapped = true
+box["headcanon generator input"].TextXAlignment = Enum.TextXAlignment.Center
+box["headcanon generator input"].TextYAlignment = Enum.TextYAlignment.Center
+box["headcanon generator input"].ClipsDescendants = true
+box["headcanon generator input"].Name = "stay"
 
-uwu["headcanon generator input text padding"] = Instance.new("UIPadding")
-uwu["headcanon generator input text padding"].PaddingLeft = UDim.new(0, 5)
-uwu["headcanon generator input text padding"].PaddingRight = UDim.new(0, 5)
-uwu["headcanon generator input text padding"].Parent = uwu["headcanon generator input"]
+box["headcanon generator input text padding"] = Instance.new("UIPadding")
+box["headcanon generator input text padding"].PaddingLeft = UDim.new(0, 5)
+box["headcanon generator input text padding"].PaddingRight = UDim.new(0, 5)
+box["headcanon generator input text padding"].Parent = box["headcanon generator input"]
 
-uwu["headcanon generator input 2"].Size = UDim2.new(0, 217, 0, 41)
-uwu["headcanon generator input 2"].Position = UDim2.new(0, 225, 0, 51)
+box["headcanon generator input 2"].Size = UDim2.new(0, 217, 0, 41)
+box["headcanon generator input 2"].Position = UDim2.new(0, 225, 0, 51)
 
-uwu["headcanon generator input 2"].BackgroundColor3 = uwu["default background color"]
+box["headcanon generator input 2"].BackgroundColor3 = box["default background color"]
 
-uwu["headcanon generator input 2"].BorderColor3 = uwu["default border color"]
-uwu["headcanon generator input 2"].BorderSizePixel = 1
+box["headcanon generator input 2"].BorderColor3 = box["default border color"]
+box["headcanon generator input 2"].BorderSizePixel = 1
 
-uwu["headcanon generator input 2"].Parent = uwu["headcanon generator tab main frame 1"]
-uwu["headcanon generator input 2"].ZIndex = 203
+box["headcanon generator input 2"].Parent = box["headcanon generator tab main frame 1"]
+box["headcanon generator input 2"].ZIndex = 203
 
-uwu["headcanon generator input 2"].Font = Enum.Font.RobotoMono
-uwu["headcanon generator input 2"].TextColor3 = Color3.new(1, 1, 1)
-uwu["headcanon generator input 2"].TextSize = 15
-uwu["headcanon generator input 2"].Text = ""
-uwu["headcanon generator input 2"].PlaceholderText = "character name 2 (optional)"
-uwu["headcanon generator input 2"].PlaceholderColor3 = uwu["default 1/2 color"]
-uwu["headcanon generator input 2"].TextWrapped = true
-uwu["headcanon generator input 2"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["headcanon generator input 2"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["headcanon generator input 2"].ClipsDescendants = true
-uwu["headcanon generator input 2"].Name = "stay"
+box["headcanon generator input 2"].Font = Enum.Font.RobotoMono
+box["headcanon generator input 2"].TextColor3 = Color3.new(1, 1, 1)
+box["headcanon generator input 2"].TextSize = 15
+box["headcanon generator input 2"].Text = ""
+box["headcanon generator input 2"].PlaceholderText = "character name 2 (optional)"
+box["headcanon generator input 2"].PlaceholderColor3 = box["default 1/2 color"]
+box["headcanon generator input 2"].TextWrapped = true
+box["headcanon generator input 2"].TextXAlignment = Enum.TextXAlignment.Center
+box["headcanon generator input 2"].TextYAlignment = Enum.TextYAlignment.Center
+box["headcanon generator input 2"].ClipsDescendants = true
+box["headcanon generator input 2"].Name = "stay"
 
-uwu["headcanon generator input 2 text padding"] = Instance.new("UIPadding")
-uwu["headcanon generator input 2 text padding"].PaddingLeft = UDim.new(0, 5)
-uwu["headcanon generator input 2 text padding"].PaddingRight = UDim.new(0, 5)
-uwu["headcanon generator input 2 text padding"].Parent = uwu["headcanon generator input 2"]
+box["headcanon generator input 2 text padding"] = Instance.new("UIPadding")
+box["headcanon generator input 2 text padding"].PaddingLeft = UDim.new(0, 5)
+box["headcanon generator input 2 text padding"].PaddingRight = UDim.new(0, 5)
+box["headcanon generator input 2 text padding"].Parent = box["headcanon generator input 2"]
 
-uwu["generate headcanon"].Size = UDim2.new(0, 438, 0, 41)
-uwu["generate headcanon"].Position = UDim2.new(0, 4, 0, 97)
+box["generate headcanon"].Size = UDim2.new(0, 438, 0, 41)
+box["generate headcanon"].Position = UDim2.new(0, 4, 0, 97)
 
-uwu["generate headcanon"].BackgroundColor3 = uwu["default background color"]
+box["generate headcanon"].BackgroundColor3 = box["default background color"]
 
-uwu["generate headcanon"].BorderColor3 = uwu["default border color"]
-uwu["generate headcanon"].BorderSizePixel = 1
+box["generate headcanon"].BorderColor3 = box["default border color"]
+box["generate headcanon"].BorderSizePixel = 1
 
-uwu["generate headcanon"].Parent = uwu["headcanon generator tab main frame 1"]
-uwu["generate headcanon"].ZIndex = 203
+box["generate headcanon"].Parent = box["headcanon generator tab main frame 1"]
+box["generate headcanon"].ZIndex = 203
 
-uwu["generate headcanon"].Font = Enum.Font.RobotoMono
-uwu["generate headcanon"].TextColor3 = Color3.new(1, 1, 1)
-uwu["generate headcanon"].TextSize = 15
-uwu["generate headcanon"].Text = "generate headcanon"
-uwu["generate headcanon"].TextWrapped = true
-uwu["generate headcanon"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["generate headcanon"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["generate headcanon"].ClipsDescendants = true
-uwu["generate headcanon"].Name = "stay"
+box["generate headcanon"].Font = Enum.Font.RobotoMono
+box["generate headcanon"].TextColor3 = Color3.new(1, 1, 1)
+box["generate headcanon"].TextSize = 15
+box["generate headcanon"].Text = "generate headcanon"
+box["generate headcanon"].TextWrapped = true
+box["generate headcanon"].TextXAlignment = Enum.TextXAlignment.Center
+box["generate headcanon"].TextYAlignment = Enum.TextYAlignment.Center
+box["generate headcanon"].ClipsDescendants = true
+box["generate headcanon"].Name = "stay"
 
-uwu["generate headcanon text padding"] = Instance.new("UIPadding")
-uwu["generate headcanon text padding"].PaddingBottom = UDim.new(0, 0)
-uwu["generate headcanon text padding"].Parent = uwu["generate headcanon"]
+box["generate headcanon text padding"] = Instance.new("UIPadding")
+box["generate headcanon text padding"].PaddingBottom = UDim.new(0, 0)
+box["generate headcanon text padding"].Parent = box["generate headcanon"]
 
 local hcs_one = {
 	"%s talks to plants when no one is watching.",
@@ -3739,11 +3741,11 @@ function ghc(name1, name2)
 	end
 end
 
-uwu["generate headcanon"].MouseButton1Click:Connect(function()
+box["generate headcanon"].MouseButton1Click:Connect(function()
 	playclicksound()
-	local name1 = uwu["headcanon generator input"].Text
-	local name2 = uwu["headcanon generator input 2"].Text
-	local outputBox = uwu["headcanon generator output"]
+	local name1 = box["headcanon generator input"].Text
+	local name2 = box["headcanon generator input 2"].Text
+	local outputBox = box["headcanon generator output"]
 
 	if name1 and name1:match("%S") then
 		local result = ghc(name1, name2)
@@ -3755,62 +3757,62 @@ end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["headcanon generator tab block main frame"].Size = UDim2.new(0, 476, 0, 168)
-uwu["headcanon generator tab block main frame"].Position = UDim2.new(0, 0, 1, 1)
+box["headcanon generator tab block main frame"].Size = UDim2.new(0, 476, 0, 168)
+box["headcanon generator tab block main frame"].Position = UDim2.new(0, 0, 1, 1)
 
-uwu["headcanon generator tab block main frame"].BackgroundColor3 = uwu["default background color"]
+box["headcanon generator tab block main frame"].BackgroundColor3 = box["default background color"]
 
-uwu["headcanon generator tab block main frame"].BorderColor3 = uwu["default border color"]
-uwu["headcanon generator tab block main frame"].BorderSizePixel = 1
-uwu["headcanon generator tab block main frame"].BackgroundTransparency = 1
+box["headcanon generator tab block main frame"].BorderColor3 = box["default border color"]
+box["headcanon generator tab block main frame"].BorderSizePixel = 1
+box["headcanon generator tab block main frame"].BackgroundTransparency = 1
 
-uwu["headcanon generator tab block main frame"].Parent = uwu["headcanon generator tab top bar"]
-uwu["headcanon generator tab block main frame"].ZIndex = 204
-uwu["headcanon generator tab block main frame"].Visible = false
-
--------------------------------------------------------------------------------------------------------------------------------
-
-uwu["headcanon generator tab block all"].Size = UDim2.new(0, 446, 0, 170)
-uwu["headcanon generator tab block all"].Position = UDim2.new(0, 0, 0, 0)
-
-uwu["headcanon generator tab block all"].BackgroundColor3 = uwu["default background color"]
-
-uwu["headcanon generator tab block all"].BorderColor3 = uwu["default border color"]
-uwu["headcanon generator tab block all"].BorderSizePixel = 1
-uwu["headcanon generator tab block all"].BackgroundTransparency = 0
-
-uwu["headcanon generator tab block all"].Parent = uwu["headcanon generator tab top bar"]
-uwu["headcanon generator tab block all"].ZIndex = 205
-uwu["headcanon generator tab block all"].Visible = false
+box["headcanon generator tab block main frame"].Parent = box["headcanon generator tab top bar"]
+box["headcanon generator tab block main frame"].ZIndex = 204
+box["headcanon generator tab block main frame"].Visible = false
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["message reverser tab top bar"].Size = UDim2.new(0, 345, 0, 26)
+box["headcanon generator tab block all"].Size = UDim2.new(0, 446, 0, 170)
+box["headcanon generator tab block all"].Position = UDim2.new(0, 0, 0, 0)
 
-uwu["message reverser tab top bar"].BackgroundColor3 = uwu["default background color"]
+box["headcanon generator tab block all"].BackgroundColor3 = box["default background color"]
 
-uwu["message reverser tab top bar"].BorderColor3 = uwu["default border color"]
-uwu["message reverser tab top bar"].BorderSizePixel = 1
+box["headcanon generator tab block all"].BorderColor3 = box["default border color"]
+box["headcanon generator tab block all"].BorderSizePixel = 1
+box["headcanon generator tab block all"].BackgroundTransparency = 0
 
-uwu["message reverser tab top bar"].TextColor3 = uwu["default border color"]
-uwu["message reverser tab top bar"].Font = Enum.Font.RobotoMono
-uwu["message reverser tab top bar"].TextSize = 15
-uwu["message reverser tab top bar"].TextScaled = false
-uwu["message reverser tab top bar"].Text = " message reverser.lua o.o"
-uwu["message reverser tab top bar"].TextXAlignment = Enum.TextXAlignment.Left
-uwu["message reverser tab top bar"].TextYAlignment = Enum.TextYAlignment.Center
+box["headcanon generator tab block all"].Parent = box["headcanon generator tab top bar"]
+box["headcanon generator tab block all"].ZIndex = 205
+box["headcanon generator tab block all"].Visible = false
 
-uwu["message reverser top bar text padding"] = Instance.new("UIPadding")
-uwu["message reverser top bar text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["message reverser top bar text padding"].PaddingRight = UDim.new(0, 0)
-uwu["message reverser top bar text padding"].Parent = uwu["message reverser tab top bar"]
+-------------------------------------------------------------------------------------------------------------------------------
 
-uwu["message reverser tab top bar"].Parent = uwu["screen gui"]
-uwu["message reverser tab top bar"].ZIndex = 703
-uwu["message reverser tab top bar"].Visible = false
+box["message reverser tab top bar"].Size = UDim2.new(0, 345, 0, 26)
+
+box["message reverser tab top bar"].BackgroundColor3 = box["default background color"]
+
+box["message reverser tab top bar"].BorderColor3 = box["default border color"]
+box["message reverser tab top bar"].BorderSizePixel = 1
+
+box["message reverser tab top bar"].TextColor3 = box["default border color"]
+box["message reverser tab top bar"].Font = Enum.Font.RobotoMono
+box["message reverser tab top bar"].TextSize = 15
+box["message reverser tab top bar"].TextScaled = false
+box["message reverser tab top bar"].Text = " message reverser.lua o.o"
+box["message reverser tab top bar"].TextXAlignment = Enum.TextXAlignment.Left
+box["message reverser tab top bar"].TextYAlignment = Enum.TextYAlignment.Center
+
+box["message reverser top bar text padding"] = Instance.new("UIPadding")
+box["message reverser top bar text padding"].PaddingLeft = UDim.new(0, 0)
+box["message reverser top bar text padding"].PaddingRight = UDim.new(0, 0)
+box["message reverser top bar text padding"].Parent = box["message reverser tab top bar"]
+
+box["message reverser tab top bar"].Parent = box["screen gui"]
+box["message reverser tab top bar"].ZIndex = 703
+box["message reverser tab top bar"].Visible = false
 
 function dragmsgrevtabtopbar()
-	local frame = uwu["message reverser tab top bar"]
+	local frame = box["message reverser tab top bar"]
 	local dragToggle 	
 	local dragSpeed = 0.25
 	local dragStart 	
@@ -3820,7 +3822,7 @@ function dragmsgrevtabtopbar()
 		local delta = input.Position - dragStart
 		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
 			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-		uwu["tween service"]:Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+		box["tween service"]:Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
 	end
 
 	frame.InputBegan:Connect(function(input)
@@ -3836,7 +3838,7 @@ function dragmsgrevtabtopbar()
 		end
 	end)
 
-	uwu["user input service"].InputChanged:Connect(function(input)
+	box["user input service"].InputChanged:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
 			if dragToggle then
 				updatebuttoninput(input)
@@ -3849,68 +3851,68 @@ dragmsgrevtabtopbar()
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["message reverser tab top bar close button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["message reverser tab top bar close button"].Position = UDim2.new(0, 323, 0, 4.7)
+box["message reverser tab top bar close button"].Size = UDim2.new(0, 18, 0, 18)
+box["message reverser tab top bar close button"].Position = UDim2.new(0, 323, 0, 4.7)
 
-uwu["message reverser tab top bar close button"].BackgroundColor3 = uwu["default background color"]
+box["message reverser tab top bar close button"].BackgroundColor3 = box["default background color"]
 
-uwu["message reverser tab top bar close button"].BorderColor3 = uwu["default border color"]
-uwu["message reverser tab top bar close button"].BorderSizePixel = 1
+box["message reverser tab top bar close button"].BorderColor3 = box["default border color"]
+box["message reverser tab top bar close button"].BorderSizePixel = 1
 
-uwu["message reverser tab top bar close button"].TextColor3 = uwu["default border color"]
-uwu["message reverser tab top bar close button"].Font = Enum.Font.RobotoMono
-uwu["message reverser tab top bar close button"].TextSize = 16
-uwu["message reverser tab top bar close button"].TextScaled = false
-uwu["message reverser tab top bar close button"].Text = "X"
-uwu["message reverser tab top bar close button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["message reverser tab top bar close button"].TextYAlignment = Enum.TextYAlignment.Center
+box["message reverser tab top bar close button"].TextColor3 = box["default border color"]
+box["message reverser tab top bar close button"].Font = Enum.Font.RobotoMono
+box["message reverser tab top bar close button"].TextSize = 16
+box["message reverser tab top bar close button"].TextScaled = false
+box["message reverser tab top bar close button"].Text = "X"
+box["message reverser tab top bar close button"].TextXAlignment = Enum.TextXAlignment.Center
+box["message reverser tab top bar close button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["message reverser tab top bar close button"].Parent = uwu["message reverser tab top bar"]
-uwu["message reverser tab top bar close button"].ZIndex = 704
+box["message reverser tab top bar close button"].Parent = box["message reverser tab top bar"]
+box["message reverser tab top bar close button"].ZIndex = 704
 
-uwu["message reverser tab top bar close button text padding"] = Instance.new("UIPadding")
-uwu["message reverser tab top bar close button text padding"].PaddingTop = UDim.new(0, -1)
-uwu["message reverser tab top bar close button text padding"].Parent = uwu["message reverser tab top bar close button"]
+box["message reverser tab top bar close button text padding"] = Instance.new("UIPadding")
+box["message reverser tab top bar close button text padding"].PaddingTop = UDim.new(0, -1)
+box["message reverser tab top bar close button text padding"].Parent = box["message reverser tab top bar close button"]
 
-uwu["message reverser tab top bar close button"].MouseButton1Click:Connect(function()
+box["message reverser tab top bar close button"].MouseButton1Click:Connect(function()
 	if not msgrevcanminimize then return end
 	msgrevtabopen = false
 	msgrevtabminimized = false
 	playclicksound()
-	uwu["message reverser tab top bar"].Visible = false
-	repos(uwu["message reverser tab top bar"], 0, 345, 168 + 26)
+	box["message reverser tab top bar"].Visible = false
+	repos(box["message reverser tab top bar"], 0, 345, 168 + 26)
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["message reverser tab top bar minimize button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["message reverser tab top bar minimize button"].Position = UDim2.new(0, 299, 0, 4.7)
+box["message reverser tab top bar minimize button"].Size = UDim2.new(0, 18, 0, 18)
+box["message reverser tab top bar minimize button"].Position = UDim2.new(0, 299, 0, 4.7)
 
-uwu["message reverser tab top bar minimize button"].BackgroundColor3 = uwu["default background color"]
+box["message reverser tab top bar minimize button"].BackgroundColor3 = box["default background color"]
 
-uwu["message reverser tab top bar minimize button"].BorderColor3 = uwu["default border color"]
-uwu["message reverser tab top bar minimize button"].BorderSizePixel = 1
+box["message reverser tab top bar minimize button"].BorderColor3 = box["default border color"]
+box["message reverser tab top bar minimize button"].BorderSizePixel = 1
 
-uwu["message reverser tab top bar minimize button"].TextColor3 = uwu["default border color"]
-uwu["message reverser tab top bar minimize button"].Font = Enum.Font.RobotoMono
-uwu["message reverser tab top bar minimize button"].TextSize = 16
-uwu["message reverser tab top bar minimize button"].TextScaled = false
-uwu["message reverser tab top bar minimize button"].Visible = true
-uwu["message reverser tab top bar minimize button"].Text = "-"
-uwu["message reverser tab top bar minimize button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["message reverser tab top bar minimize button"].TextYAlignment = Enum.TextYAlignment.Center
+box["message reverser tab top bar minimize button"].TextColor3 = box["default border color"]
+box["message reverser tab top bar minimize button"].Font = Enum.Font.RobotoMono
+box["message reverser tab top bar minimize button"].TextSize = 16
+box["message reverser tab top bar minimize button"].TextScaled = false
+box["message reverser tab top bar minimize button"].Visible = true
+box["message reverser tab top bar minimize button"].Text = "-"
+box["message reverser tab top bar minimize button"].TextXAlignment = Enum.TextXAlignment.Center
+box["message reverser tab top bar minimize button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["message reverser tab top bar minimize button"].Parent = uwu["message reverser tab top bar"]
-uwu["message reverser tab top bar minimize button"].ZIndex = 704
+box["message reverser tab top bar minimize button"].Parent = box["message reverser tab top bar"]
+box["message reverser tab top bar minimize button"].ZIndex = 704
 
-uwu["message reverser tab top bar minimize button text padding"] = Instance.new("UIPadding")
-uwu["message reverser tab top bar minimize button text padding"].PaddingTop = UDim.new(0, -2)
-uwu["message reverser tab top bar minimize button text padding"].Parent = uwu["message reverser tab top bar minimize button"]
+box["message reverser tab top bar minimize button text padding"] = Instance.new("UIPadding")
+box["message reverser tab top bar minimize button text padding"].PaddingTop = UDim.new(0, -2)
+box["message reverser tab top bar minimize button text padding"].Parent = box["message reverser tab top bar minimize button"]
 
 msgrevtabminimized = false
 msgrevcanminimize = true
 
-uwu["message reverser tab top bar minimize button"].MouseButton1Click:Connect(function()
+box["message reverser tab top bar minimize button"].MouseButton1Click:Connect(function()
 	if not msgrevcanminimize then return end
 	spawn(playclicksound)
 	msgrevcanminimize = false
@@ -3918,15 +3920,15 @@ uwu["message reverser tab top bar minimize button"].MouseButton1Click:Connect(fu
 	msgrevtabminimized = not msgrevtabminimized
 
 	if msgrevtabminimized then
-		uwu["message reverser tab top bar minimize button"].Text = "+"
-		uwu["message reverser tab block main frame"].Visible = true
+		box["message reverser tab top bar minimize button"].Text = "+"
+		box["message reverser tab block main frame"].Visible = true
 
-		local fadeTween = fade(uwu["message reverser tab block main frame"], 0, 0.2)
+		local fadeTween = fade(box["message reverser tab block main frame"], 0, 0.2)
 		fadeTween.Completed:Wait()
-		uwu["message reverser tab main frame 1"].Visible = false
+		box["message reverser tab main frame 1"].Visible = false
 
 		local tween = tweenSizePosition(
-			uwu["message reverser tab block main frame"],
+			box["message reverser tab block main frame"],
 			UDim2.new(0, 345, 0, 0),
 			UDim2.new(0, 0, 1, 1),
 			0.5
@@ -3934,26 +3936,26 @@ uwu["message reverser tab top bar minimize button"].MouseButton1Click:Connect(fu
 		tween.Completed:Wait()
 
 		msgrevtabreallyminimized = true
-		uwu["message reverser tab block main frame"].Visible = false
+		box["message reverser tab block main frame"].Visible = false
 		updcols()
 	else
-		uwu["message reverser tab top bar minimize button"].Text = "-"
-		uwu["message reverser tab block main frame"].Visible = true
+		box["message reverser tab top bar minimize button"].Text = "-"
+		box["message reverser tab block main frame"].Visible = true
 
 		local tween = tweenSizePosition(
-			uwu["message reverser tab block main frame"],
+			box["message reverser tab block main frame"],
 			UDim2.new(0, 345, 0, 141),
 			UDim2.new(0, 0, 1, 1),
 			0.5
 		)
 		tween.Completed:Wait()
-		uwu["message reverser tab main frame 1"].Visible = true
+		box["message reverser tab main frame 1"].Visible = true
 
-		local fadeTween = fade(uwu["message reverser tab block main frame"], 1, 0.2)
+		local fadeTween = fade(box["message reverser tab block main frame"], 1, 0.2)
 		fadeTween.Completed:Wait()
 
 		msgrevtabreallyminimized = false
-		uwu["message reverser tab block main frame"].Visible = false
+		box["message reverser tab block main frame"].Visible = false
 		updcols()
 	end
 
@@ -3962,180 +3964,180 @@ end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["message reverser tab top bar reposition button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["message reverser tab top bar reposition button"].Position = UDim2.new(0, 275, 0, 4.7)
+box["message reverser tab top bar reposition button"].Size = UDim2.new(0, 18, 0, 18)
+box["message reverser tab top bar reposition button"].Position = UDim2.new(0, 275, 0, 4.7)
 
-uwu["message reverser tab top bar reposition button"].BackgroundColor3 = uwu["default background color"]
+box["message reverser tab top bar reposition button"].BackgroundColor3 = box["default background color"]
 
-uwu["message reverser tab top bar reposition button"].BorderColor3 = uwu["default border color"]
-uwu["message reverser tab top bar reposition button"].BorderSizePixel = 1
+box["message reverser tab top bar reposition button"].BorderColor3 = box["default border color"]
+box["message reverser tab top bar reposition button"].BorderSizePixel = 1
 
-uwu["message reverser tab top bar reposition button"].TextColor3 = uwu["default border color"]
-uwu["message reverser tab top bar reposition button"].Font = Enum.Font.RobotoMono
-uwu["message reverser tab top bar reposition button"].TextSize = 16
-uwu["message reverser tab top bar reposition button"].TextScaled = false
-uwu["message reverser tab top bar reposition button"].Text = "R"
-uwu["message reverser tab top bar reposition button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["message reverser tab top bar reposition button"].TextYAlignment = Enum.TextYAlignment.Center
+box["message reverser tab top bar reposition button"].TextColor3 = box["default border color"]
+box["message reverser tab top bar reposition button"].Font = Enum.Font.RobotoMono
+box["message reverser tab top bar reposition button"].TextSize = 16
+box["message reverser tab top bar reposition button"].TextScaled = false
+box["message reverser tab top bar reposition button"].Text = "R"
+box["message reverser tab top bar reposition button"].TextXAlignment = Enum.TextXAlignment.Center
+box["message reverser tab top bar reposition button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["message reverser tab top bar reposition button"].Parent = uwu["message reverser tab top bar"]
-uwu["message reverser tab top bar reposition button"].ZIndex = 704
+box["message reverser tab top bar reposition button"].Parent = box["message reverser tab top bar"]
+box["message reverser tab top bar reposition button"].ZIndex = 704
 
-uwu["message reverser tab top bar reposition button text padding"] = Instance.new("UIPadding")
-uwu["message reverser tab top bar reposition button text padding"].PaddingTop = UDim.new(0, -1)
-uwu["message reverser tab top bar reposition button text padding"].Parent = uwu["message reverser tab top bar reposition button"]
+box["message reverser tab top bar reposition button text padding"] = Instance.new("UIPadding")
+box["message reverser tab top bar reposition button text padding"].PaddingTop = UDim.new(0, -1)
+box["message reverser tab top bar reposition button text padding"].Parent = box["message reverser tab top bar reposition button"]
 
-uwu["message reverser tab top bar reposition button"].MouseButton1Click:Connect(function()
+box["message reverser tab top bar reposition button"].MouseButton1Click:Connect(function()
 	playclicksound()
-	repos(uwu["message reverser tab top bar"], 0.5, 345, 168 + 26)
+	repos(box["message reverser tab top bar"], 0.5, 345, 168 + 26)
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["message reverser tab main frame 1"].Size = UDim2.new(0, 345, 0, 142)
-uwu["message reverser tab main frame 1"].Position = UDim2.new(0, 0, 1, 0)
+box["message reverser tab main frame 1"].Size = UDim2.new(0, 345, 0, 142)
+box["message reverser tab main frame 1"].Position = UDim2.new(0, 0, 1, 0)
 
-uwu["message reverser tab main frame 1"].BackgroundColor3 = uwu["default background color"]
+box["message reverser tab main frame 1"].BackgroundColor3 = box["default background color"]
 
-uwu["message reverser tab main frame 1"].BorderColor3 = uwu["default border color"]
-uwu["message reverser tab main frame 1"].BorderSizePixel = 1
+box["message reverser tab main frame 1"].BorderColor3 = box["default border color"]
+box["message reverser tab main frame 1"].BorderSizePixel = 1
 
-uwu["message reverser tab main frame 1"].Parent = uwu["message reverser tab top bar"]
-uwu["message reverser tab main frame 1"].ZIndex = 702
+box["message reverser tab main frame 1"].Parent = box["message reverser tab top bar"]
+box["message reverser tab main frame 1"].ZIndex = 702
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["message reverser input"].Size = UDim2.new(0, 337, 0, 87)
-uwu["message reverser input"].Position = UDim2.new(0, 4, 0, 5)
+box["message reverser input"].Size = UDim2.new(0, 337, 0, 87)
+box["message reverser input"].Position = UDim2.new(0, 4, 0, 5)
 
-uwu["message reverser input"].BackgroundColor3 = uwu["default background color"]
+box["message reverser input"].BackgroundColor3 = box["default background color"]
 
-uwu["message reverser input"].BorderColor3 = uwu["default border color"]
-uwu["message reverser input"].BorderSizePixel = 1
+box["message reverser input"].BorderColor3 = box["default border color"]
+box["message reverser input"].BorderSizePixel = 1
 
-uwu["message reverser input"].Parent = uwu["message reverser tab main frame 1"]
-uwu["message reverser input"].ZIndex = 703
+box["message reverser input"].Parent = box["message reverser tab main frame 1"]
+box["message reverser input"].ZIndex = 703
 
-uwu["message reverser input"].Font = Enum.Font.RobotoMono
-uwu["message reverser input"].TextColor3 = Color3.new(1, 1, 1)
-uwu["message reverser input"].TextSize = 15
-uwu["message reverser input"].Text = ""
-uwu["message reverser input"].PlaceholderText = "input message"
-uwu["message reverser input"].PlaceholderColor3 = uwu["default 1/2 color"]
-uwu["message reverser input"].TextWrapped = true
-uwu["message reverser input"].TextXAlignment = Enum.TextXAlignment.Left
-uwu["message reverser input"].TextYAlignment = Enum.TextYAlignment.Top
-uwu["message reverser input"].ClipsDescendants = true
+box["message reverser input"].Font = Enum.Font.RobotoMono
+box["message reverser input"].TextColor3 = Color3.new(1, 1, 1)
+box["message reverser input"].TextSize = 15
+box["message reverser input"].Text = ""
+box["message reverser input"].PlaceholderText = "input message"
+box["message reverser input"].PlaceholderColor3 = box["default 1/2 color"]
+box["message reverser input"].TextWrapped = true
+box["message reverser input"].TextXAlignment = Enum.TextXAlignment.Left
+box["message reverser input"].TextYAlignment = Enum.TextYAlignment.Top
+box["message reverser input"].ClipsDescendants = true
 
-uwu["message reverser input max chars"] = 200
+box["message reverser input max chars"] = 200
 
-uwu["message reverser input"]:GetPropertyChangedSignal("Text"):Connect(function()
-	local inputBox = uwu["message reverser input"]
-	local maxChars = uwu["message reverser input max chars"]
+box["message reverser input"]:GetPropertyChangedSignal("Text"):Connect(function()
+	local inputBox = box["message reverser input"]
+	local maxChars = box["message reverser input max chars"]
 
 	if #inputBox.Text > maxChars then
 		inputBox.Text = inputBox.Text:sub(1, maxChars)
 	end
 end)
 
-uwu["message reverser input text padding"] = Instance.new("UIPadding")
-uwu["message reverser input text padding"].PaddingBottom = UDim.new(0, 4)
-uwu["message reverser input text padding"].PaddingLeft = UDim.new(0, 4)
-uwu["message reverser input text padding"].PaddingRight = UDim.new(0, 4)
-uwu["message reverser input text padding"].PaddingTop = UDim.new(0, 4)
-uwu["message reverser input text padding"].Parent = uwu["message reverser input"]
+box["message reverser input text padding"] = Instance.new("UIPadding")
+box["message reverser input text padding"].PaddingBottom = UDim.new(0, 4)
+box["message reverser input text padding"].PaddingLeft = UDim.new(0, 4)
+box["message reverser input text padding"].PaddingRight = UDim.new(0, 4)
+box["message reverser input text padding"].PaddingTop = UDim.new(0, 4)
+box["message reverser input text padding"].Parent = box["message reverser input"]
 
-uwu["reverse message"].Size = UDim2.new(0, 166, 0, 41)
-uwu["reverse message"].Position = UDim2.new(0, 4, 0, 97)
+box["reverse message"].Size = UDim2.new(0, 166, 0, 41)
+box["reverse message"].Position = UDim2.new(0, 4, 0, 97)
 
-uwu["reverse message"].BackgroundColor3 = uwu["default background color"]
+box["reverse message"].BackgroundColor3 = box["default background color"]
 
-uwu["reverse message"].BorderColor3 = uwu["default border color"]
-uwu["reverse message"].BorderSizePixel = 1
+box["reverse message"].BorderColor3 = box["default border color"]
+box["reverse message"].BorderSizePixel = 1
 
-uwu["reverse message"].Parent = uwu["message reverser tab main frame 1"]
-uwu["reverse message"].ZIndex = 703
+box["reverse message"].Parent = box["message reverser tab main frame 1"]
+box["reverse message"].ZIndex = 703
 
-uwu["reverse message"].Font = Enum.Font.RobotoMono
-uwu["reverse message"].TextColor3 = Color3.new(1, 1, 1)
-uwu["reverse message"].TextSize = 15
-uwu["reverse message"].Text = "send reversed"
-uwu["reverse message"].TextWrapped = true
-uwu["reverse message"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["reverse message"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["reverse message"].ClipsDescendants = true
+box["reverse message"].Font = Enum.Font.RobotoMono
+box["reverse message"].TextColor3 = Color3.new(1, 1, 1)
+box["reverse message"].TextSize = 15
+box["reverse message"].Text = "send reversed"
+box["reverse message"].TextWrapped = true
+box["reverse message"].TextXAlignment = Enum.TextXAlignment.Center
+box["reverse message"].TextYAlignment = Enum.TextYAlignment.Center
+box["reverse message"].ClipsDescendants = true
 
-uwu["reverse message text padding"] = Instance.new("UIPadding")
-uwu["reverse message text padding"].PaddingBottom = UDim.new(0, 0)
-uwu["reverse message text padding"].Parent = uwu["reverse message"]
+box["reverse message text padding"] = Instance.new("UIPadding")
+box["reverse message text padding"].PaddingBottom = UDim.new(0, 0)
+box["reverse message text padding"].Parent = box["reverse message"]
 
-uwu["clear message reverser input"].Size = UDim2.new(0, 166, 0, 41)
-uwu["clear message reverser input"].Position = UDim2.new(0, 175, 0, 97)
+box["clear message reverser input"].Size = UDim2.new(0, 166, 0, 41)
+box["clear message reverser input"].Position = UDim2.new(0, 175, 0, 97)
 
-uwu["clear message reverser input"].BackgroundColor3 = uwu["default background color"]
+box["clear message reverser input"].BackgroundColor3 = box["default background color"]
 
-uwu["clear message reverser input"].BorderColor3 = uwu["default border color"]
-uwu["clear message reverser input"].BorderSizePixel = 1
+box["clear message reverser input"].BorderColor3 = box["default border color"]
+box["clear message reverser input"].BorderSizePixel = 1
 
-uwu["clear message reverser input"].Parent = uwu["message reverser tab main frame 1"]
-uwu["clear message reverser input"].ZIndex = 703
+box["clear message reverser input"].Parent = box["message reverser tab main frame 1"]
+box["clear message reverser input"].ZIndex = 703
 
-uwu["clear message reverser input"].Font = Enum.Font.RobotoMono
-uwu["clear message reverser input"].TextColor3 = Color3.new(1, 1, 1)
-uwu["clear message reverser input"].TextSize = 15
-uwu["clear message reverser input"].Text = "clear"
-uwu["clear message reverser input"].TextWrapped = true
-uwu["clear message reverser input"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["clear message reverser input"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["clear message reverser input"].ClipsDescendants = true
+box["clear message reverser input"].Font = Enum.Font.RobotoMono
+box["clear message reverser input"].TextColor3 = Color3.new(1, 1, 1)
+box["clear message reverser input"].TextSize = 15
+box["clear message reverser input"].Text = "clear"
+box["clear message reverser input"].TextWrapped = true
+box["clear message reverser input"].TextXAlignment = Enum.TextXAlignment.Center
+box["clear message reverser input"].TextYAlignment = Enum.TextYAlignment.Center
+box["clear message reverser input"].ClipsDescendants = true
 
-uwu["clear message reverser input text padding"] = Instance.new("UIPadding")
-uwu["clear message reverser input text padding"].PaddingBottom = UDim.new(0, 0)
-uwu["clear message reverser input text padding"].Parent = uwu["clear message reverser input"]
+box["clear message reverser input text padding"] = Instance.new("UIPadding")
+box["clear message reverser input text padding"].PaddingBottom = UDim.new(0, 0)
+box["clear message reverser input text padding"].Parent = box["clear message reverser input"]
 
-uwu["clear message reverser input"].MouseButton1Click:Connect(function()
+box["clear message reverser input"].MouseButton1Click:Connect(function()
 	playclicksound()
-	uwu["message reverser input"].Text = ""
+	box["message reverser input"].Text = ""
 end)
 
-uwu["reverse message"].MouseButton1Click:Connect(function()
+box["reverse message"].MouseButton1Click:Connect(function()
 	playclicksound()
-	local inputBox = uwu["message reverser input"]
+	local inputBox = box["message reverser input"]
 	local reversedText = inputBox.Text:reverse()
 
 	if reversedText == "" then return end
 
-	if uwu["text chat service"].ChatVersion == Enum.ChatVersion.TextChatService then
-		local textChannel = uwu["text chat service"]:FindFirstChild("TextChannels")
+	if box["text chat service"].ChatVersion == Enum.ChatVersion.TextChatService then
+		local textChannel = box["text chat service"]:FindFirstChild("TextChannels")
 		if textChannel and textChannel:FindFirstChild("RBXGeneral") then
 			textChannel.RBXGeneral:SendAsync(reversedText)
 		end
 	else
-		local chatEvent = uwu["replicated storage"]:FindFirstChild("DefaultChatSystemChatEvents")
+		local chatEvent = box["replicated storage"]:FindFirstChild("DefaultChatSystemChatEvents")
 		if chatEvent and chatEvent:FindFirstChild("SayMessageRequest") then
 			chatEvent.SayMessageRequest:FireServer(reversedText, "All")
 		end
 	end
 end)
 
-uwu["message reverser input"].FocusLost:Connect(function(enterPressed)
+box["message reverser input"].FocusLost:Connect(function(enterPressed)
 	if enterPressed then
-		local inputBox = uwu["message reverser input"]
+		local inputBox = box["message reverser input"]
 		local reversedText = inputBox.Text:reverse()
 
 		if reversedText == "" then return end
 
-		if uwu["text chat service"].ChatVersion == Enum.ChatVersion.TextChatService then
-			local textChannel = uwu["text chat service"]:FindFirstChild("TextChannels")
+		if box["text chat service"].ChatVersion == Enum.ChatVersion.TextChatService then
+			local textChannel = box["text chat service"]:FindFirstChild("TextChannels")
 			if textChannel and textChannel:FindFirstChild("RBXGeneral") then
 				textChannel.RBXGeneral:SendAsync(reversedText)
-				uwu["message reverser input"].Text = ""
+				box["message reverser input"].Text = ""
 			end
 		else
-			local chatEvent = uwu["replicated storage"]:FindFirstChild("DefaultChatSystemChatEvents")
+			local chatEvent = box["replicated storage"]:FindFirstChild("DefaultChatSystemChatEvents")
 			if chatEvent and chatEvent:FindFirstChild("SayMessageRequest") then
 				chatEvent.SayMessageRequest:FireServer(reversedText, "All")
-				uwu["message reverser input"].Text = ""
+				box["message reverser input"].Text = ""
 			end
 		end
 	end
@@ -4143,62 +4145,62 @@ end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["message reverser tab block main frame"].Size = UDim2.new(0, 375, 0, 168)
-uwu["message reverser tab block main frame"].Position = UDim2.new(0, 0, 1, 1)
+box["message reverser tab block main frame"].Size = UDim2.new(0, 375, 0, 168)
+box["message reverser tab block main frame"].Position = UDim2.new(0, 0, 1, 1)
 
-uwu["message reverser tab block main frame"].BackgroundColor3 = uwu["default background color"]
+box["message reverser tab block main frame"].BackgroundColor3 = box["default background color"]
 
-uwu["message reverser tab block main frame"].BorderColor3 = uwu["default border color"]
-uwu["message reverser tab block main frame"].BorderSizePixel = 1
-uwu["message reverser tab block main frame"].BackgroundTransparency = 1
+box["message reverser tab block main frame"].BorderColor3 = box["default border color"]
+box["message reverser tab block main frame"].BorderSizePixel = 1
+box["message reverser tab block main frame"].BackgroundTransparency = 1
 
-uwu["message reverser tab block main frame"].Parent = uwu["message reverser tab top bar"]
-uwu["message reverser tab block main frame"].ZIndex = 704
-uwu["message reverser tab block main frame"].Visible = false
-
--------------------------------------------------------------------------------------------------------------------------------
-
-uwu["message reverser tab block all"].Size = UDim2.new(0, 345, 0, 170)
-uwu["message reverser tab block all"].Position = UDim2.new(0, 0, 0, 0)
-
-uwu["message reverser tab block all"].BackgroundColor3 = uwu["default background color"]
-
-uwu["message reverser tab block all"].BorderColor3 = uwu["default border color"]
-uwu["message reverser tab block all"].BorderSizePixel = 1
-uwu["message reverser tab block all"].BackgroundTransparency = 0
-
-uwu["message reverser tab block all"].Parent = uwu["message reverser tab top bar"]
-uwu["message reverser tab block all"].ZIndex = 705
-uwu["message reverser tab block all"].Visible = false
+box["message reverser tab block main frame"].Parent = box["message reverser tab top bar"]
+box["message reverser tab block main frame"].ZIndex = 704
+box["message reverser tab block main frame"].Visible = false
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["noxsec encoder and decoder tab top bar"].Size = UDim2.new(0, 545, 0, 26)
+box["message reverser tab block all"].Size = UDim2.new(0, 345, 0, 170)
+box["message reverser tab block all"].Position = UDim2.new(0, 0, 0, 0)
 
-uwu["noxsec encoder and decoder tab top bar"].BackgroundColor3 = uwu["default background color"]
+box["message reverser tab block all"].BackgroundColor3 = box["default background color"]
 
-uwu["noxsec encoder and decoder tab top bar"].BorderColor3 = uwu["default border color"]
-uwu["noxsec encoder and decoder tab top bar"].BorderSizePixel = 1
+box["message reverser tab block all"].BorderColor3 = box["default border color"]
+box["message reverser tab block all"].BorderSizePixel = 1
+box["message reverser tab block all"].BackgroundTransparency = 0
 
-uwu["noxsec encoder and decoder tab top bar"].TextColor3 = uwu["default border color"]
-uwu["noxsec encoder and decoder tab top bar"].Font = Enum.Font.RobotoMono
-uwu["noxsec encoder and decoder tab top bar"].TextSize = 15
-uwu["noxsec encoder and decoder tab top bar"].TextScaled = false
-uwu["noxsec encoder and decoder tab top bar"].Text = " noxsec encoder and decoder.lua o.o"
-uwu["noxsec encoder and decoder tab top bar"].TextXAlignment = Enum.TextXAlignment.Left
-uwu["noxsec encoder and decoder tab top bar"].TextYAlignment = Enum.TextYAlignment.Center
+box["message reverser tab block all"].Parent = box["message reverser tab top bar"]
+box["message reverser tab block all"].ZIndex = 705
+box["message reverser tab block all"].Visible = false
 
-uwu["noxsec encoder and decoder top bar text padding"] = Instance.new("UIPadding")
-uwu["noxsec encoder and decoder top bar text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["noxsec encoder and decoder top bar text padding"].PaddingRight = UDim.new(0, 0)
-uwu["noxsec encoder and decoder top bar text padding"].Parent = uwu["noxsec encoder and decoder tab top bar"]
+-------------------------------------------------------------------------------------------------------------------------------
 
-uwu["noxsec encoder and decoder tab top bar"].Parent = uwu["screen gui"]
-uwu["noxsec encoder and decoder tab top bar"].ZIndex = 803
-uwu["noxsec encoder and decoder tab top bar"].Visible = false
+box["noxsec encoder and decoder tab top bar"].Size = UDim2.new(0, 545, 0, 26)
+
+box["noxsec encoder and decoder tab top bar"].BackgroundColor3 = box["default background color"]
+
+box["noxsec encoder and decoder tab top bar"].BorderColor3 = box["default border color"]
+box["noxsec encoder and decoder tab top bar"].BorderSizePixel = 1
+
+box["noxsec encoder and decoder tab top bar"].TextColor3 = box["default border color"]
+box["noxsec encoder and decoder tab top bar"].Font = Enum.Font.RobotoMono
+box["noxsec encoder and decoder tab top bar"].TextSize = 15
+box["noxsec encoder and decoder tab top bar"].TextScaled = false
+box["noxsec encoder and decoder tab top bar"].Text = " noxsec encoder and decoder.lua o.o"
+box["noxsec encoder and decoder tab top bar"].TextXAlignment = Enum.TextXAlignment.Left
+box["noxsec encoder and decoder tab top bar"].TextYAlignment = Enum.TextYAlignment.Center
+
+box["noxsec encoder and decoder top bar text padding"] = Instance.new("UIPadding")
+box["noxsec encoder and decoder top bar text padding"].PaddingLeft = UDim.new(0, 0)
+box["noxsec encoder and decoder top bar text padding"].PaddingRight = UDim.new(0, 0)
+box["noxsec encoder and decoder top bar text padding"].Parent = box["noxsec encoder and decoder tab top bar"]
+
+box["noxsec encoder and decoder tab top bar"].Parent = box["screen gui"]
+box["noxsec encoder and decoder tab top bar"].ZIndex = 803
+box["noxsec encoder and decoder tab top bar"].Visible = false
 
 function dragnoxsectabtopbar()
-	local frame = uwu["noxsec encoder and decoder tab top bar"]
+	local frame = box["noxsec encoder and decoder tab top bar"]
 	local dragToggle 	
 	local dragSpeed = 0.25
 	local dragStart 	
@@ -4208,7 +4210,7 @@ function dragnoxsectabtopbar()
 		local delta = input.Position - dragStart
 		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
 			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-		uwu["tween service"]:Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+		box["tween service"]:Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
 	end
 
 	frame.InputBegan:Connect(function(input)
@@ -4224,7 +4226,7 @@ function dragnoxsectabtopbar()
 		end
 	end)
 
-	uwu["user input service"].InputChanged:Connect(function(input)
+	box["user input service"].InputChanged:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
 			if dragToggle then
 				updatebuttoninput(input)
@@ -4237,68 +4239,68 @@ dragnoxsectabtopbar()
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["noxsec encoder and decoder tab top bar close button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["noxsec encoder and decoder tab top bar close button"].Position = UDim2.new(0, 523, 0, 4.7)
+box["noxsec encoder and decoder tab top bar close button"].Size = UDim2.new(0, 18, 0, 18)
+box["noxsec encoder and decoder tab top bar close button"].Position = UDim2.new(0, 523, 0, 4.7)
 
-uwu["noxsec encoder and decoder tab top bar close button"].BackgroundColor3 = uwu["default background color"]
+box["noxsec encoder and decoder tab top bar close button"].BackgroundColor3 = box["default background color"]
 
-uwu["noxsec encoder and decoder tab top bar close button"].BorderColor3 = uwu["default border color"]
-uwu["noxsec encoder and decoder tab top bar close button"].BorderSizePixel = 1
+box["noxsec encoder and decoder tab top bar close button"].BorderColor3 = box["default border color"]
+box["noxsec encoder and decoder tab top bar close button"].BorderSizePixel = 1
 
-uwu["noxsec encoder and decoder tab top bar close button"].TextColor3 = uwu["default border color"]
-uwu["noxsec encoder and decoder tab top bar close button"].Font = Enum.Font.RobotoMono
-uwu["noxsec encoder and decoder tab top bar close button"].TextSize = 16
-uwu["noxsec encoder and decoder tab top bar close button"].TextScaled = false
-uwu["noxsec encoder and decoder tab top bar close button"].Text = "X"
-uwu["noxsec encoder and decoder tab top bar close button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["noxsec encoder and decoder tab top bar close button"].TextYAlignment = Enum.TextYAlignment.Center
+box["noxsec encoder and decoder tab top bar close button"].TextColor3 = box["default border color"]
+box["noxsec encoder and decoder tab top bar close button"].Font = Enum.Font.RobotoMono
+box["noxsec encoder and decoder tab top bar close button"].TextSize = 16
+box["noxsec encoder and decoder tab top bar close button"].TextScaled = false
+box["noxsec encoder and decoder tab top bar close button"].Text = "X"
+box["noxsec encoder and decoder tab top bar close button"].TextXAlignment = Enum.TextXAlignment.Center
+box["noxsec encoder and decoder tab top bar close button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["noxsec encoder and decoder tab top bar close button"].Parent = uwu["noxsec encoder and decoder tab top bar"]
-uwu["noxsec encoder and decoder tab top bar close button"].ZIndex = 804
+box["noxsec encoder and decoder tab top bar close button"].Parent = box["noxsec encoder and decoder tab top bar"]
+box["noxsec encoder and decoder tab top bar close button"].ZIndex = 804
 
-uwu["noxsec encoder and decoder tab top bar close button text padding"] = Instance.new("UIPadding")
-uwu["noxsec encoder and decoder tab top bar close button text padding"].PaddingTop = UDim.new(0, -1)
-uwu["noxsec encoder and decoder tab top bar close button text padding"].Parent = uwu["noxsec encoder and decoder tab top bar close button"]
+box["noxsec encoder and decoder tab top bar close button text padding"] = Instance.new("UIPadding")
+box["noxsec encoder and decoder tab top bar close button text padding"].PaddingTop = UDim.new(0, -1)
+box["noxsec encoder and decoder tab top bar close button text padding"].Parent = box["noxsec encoder and decoder tab top bar close button"]
 
-uwu["noxsec encoder and decoder tab top bar close button"].MouseButton1Click:Connect(function()
+box["noxsec encoder and decoder tab top bar close button"].MouseButton1Click:Connect(function()
 	if not noxseccanminimize then return end
 	noxsectabopen = false
 	noxsectabminimized = false
 	playclicksound()
-	uwu["noxsec encoder and decoder tab top bar"].Visible = false
-	repos(uwu["noxsec encoder and decoder tab top bar"], 0, 545, 268 + 26)
+	box["noxsec encoder and decoder tab top bar"].Visible = false
+	repos(box["noxsec encoder and decoder tab top bar"], 0, 545, 268 + 26)
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["noxsec encoder and decoder tab top bar minimize button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["noxsec encoder and decoder tab top bar minimize button"].Position = UDim2.new(0, 499, 0, 4.7)
+box["noxsec encoder and decoder tab top bar minimize button"].Size = UDim2.new(0, 18, 0, 18)
+box["noxsec encoder and decoder tab top bar minimize button"].Position = UDim2.new(0, 499, 0, 4.7)
 
-uwu["noxsec encoder and decoder tab top bar minimize button"].BackgroundColor3 = uwu["default background color"]
+box["noxsec encoder and decoder tab top bar minimize button"].BackgroundColor3 = box["default background color"]
 
-uwu["noxsec encoder and decoder tab top bar minimize button"].BorderColor3 = uwu["default border color"]
-uwu["noxsec encoder and decoder tab top bar minimize button"].BorderSizePixel = 1
+box["noxsec encoder and decoder tab top bar minimize button"].BorderColor3 = box["default border color"]
+box["noxsec encoder and decoder tab top bar minimize button"].BorderSizePixel = 1
 
-uwu["noxsec encoder and decoder tab top bar minimize button"].TextColor3 = uwu["default border color"]
-uwu["noxsec encoder and decoder tab top bar minimize button"].Font = Enum.Font.RobotoMono
-uwu["noxsec encoder and decoder tab top bar minimize button"].TextSize = 16
-uwu["noxsec encoder and decoder tab top bar minimize button"].TextScaled = false
-uwu["noxsec encoder and decoder tab top bar minimize button"].Visible = true
-uwu["noxsec encoder and decoder tab top bar minimize button"].Text = "-"
-uwu["noxsec encoder and decoder tab top bar minimize button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["noxsec encoder and decoder tab top bar minimize button"].TextYAlignment = Enum.TextYAlignment.Center
+box["noxsec encoder and decoder tab top bar minimize button"].TextColor3 = box["default border color"]
+box["noxsec encoder and decoder tab top bar minimize button"].Font = Enum.Font.RobotoMono
+box["noxsec encoder and decoder tab top bar minimize button"].TextSize = 16
+box["noxsec encoder and decoder tab top bar minimize button"].TextScaled = false
+box["noxsec encoder and decoder tab top bar minimize button"].Visible = true
+box["noxsec encoder and decoder tab top bar minimize button"].Text = "-"
+box["noxsec encoder and decoder tab top bar minimize button"].TextXAlignment = Enum.TextXAlignment.Center
+box["noxsec encoder and decoder tab top bar minimize button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["noxsec encoder and decoder tab top bar minimize button"].Parent = uwu["noxsec encoder and decoder tab top bar"]
-uwu["noxsec encoder and decoder tab top bar minimize button"].ZIndex = 804
+box["noxsec encoder and decoder tab top bar minimize button"].Parent = box["noxsec encoder and decoder tab top bar"]
+box["noxsec encoder and decoder tab top bar minimize button"].ZIndex = 804
 
-uwu["noxsec encoder and decoder tab top bar minimize button text padding"] = Instance.new("UIPadding")
-uwu["noxsec encoder and decoder tab top bar minimize button text padding"].PaddingTop = UDim.new(0, -2)
-uwu["noxsec encoder and decoder tab top bar minimize button text padding"].Parent = uwu["noxsec encoder and decoder tab top bar minimize button"]
+box["noxsec encoder and decoder tab top bar minimize button text padding"] = Instance.new("UIPadding")
+box["noxsec encoder and decoder tab top bar minimize button text padding"].PaddingTop = UDim.new(0, -2)
+box["noxsec encoder and decoder tab top bar minimize button text padding"].Parent = box["noxsec encoder and decoder tab top bar minimize button"]
 
 noxsectabminimized = false
 noxseccanminimize = true
 
-uwu["noxsec encoder and decoder tab top bar minimize button"].MouseButton1Click:Connect(function()
+box["noxsec encoder and decoder tab top bar minimize button"].MouseButton1Click:Connect(function()
 	if not noxseccanminimize then return end
 	spawn(playclicksound)
 	noxseccanminimize = false
@@ -4306,15 +4308,15 @@ uwu["noxsec encoder and decoder tab top bar minimize button"].MouseButton1Click:
 	noxsectabminimized = not noxsectabminimized
 
 	if noxsectabminimized then
-		uwu["noxsec encoder and decoder tab top bar minimize button"].Text = "+"
-		uwu["noxsec encoder and decoder tab block main frame"].Visible = true
+		box["noxsec encoder and decoder tab top bar minimize button"].Text = "+"
+		box["noxsec encoder and decoder tab block main frame"].Visible = true
 
-		local fadeTween = fade(uwu["noxsec encoder and decoder tab block main frame"], 0, 0.2)
+		local fadeTween = fade(box["noxsec encoder and decoder tab block main frame"], 0, 0.2)
 		fadeTween.Completed:Wait()
-		uwu["noxsec encoder and decoder tab main frame 1"].Visible = false
+		box["noxsec encoder and decoder tab main frame 1"].Visible = false
 
 		local tween = tweenSizePosition(
-			uwu["noxsec encoder and decoder tab block main frame"],
+			box["noxsec encoder and decoder tab block main frame"],
 			UDim2.new(0, 545, 0, 0),
 			UDim2.new(0, 0, 1, 1),
 			0.5
@@ -4322,26 +4324,26 @@ uwu["noxsec encoder and decoder tab top bar minimize button"].MouseButton1Click:
 		tween.Completed:Wait()
 
 		noxsectabreallyminimized = true
-		uwu["noxsec encoder and decoder tab block main frame"].Visible = false
+		box["noxsec encoder and decoder tab block main frame"].Visible = false
 		updcols()
 	else
-		uwu["noxsec encoder and decoder tab top bar minimize button"].Text = "-"
-		uwu["noxsec encoder and decoder tab block main frame"].Visible = true
+		box["noxsec encoder and decoder tab top bar minimize button"].Text = "-"
+		box["noxsec encoder and decoder tab block main frame"].Visible = true
 
 		local tween = tweenSizePosition(
-			uwu["noxsec encoder and decoder tab block main frame"],
+			box["noxsec encoder and decoder tab block main frame"],
 			UDim2.new(0, 545, 0, 241),
 			UDim2.new(0, 0, 1, 1),
 			0.5
 		)
 		tween.Completed:Wait()
-		uwu["noxsec encoder and decoder tab main frame 1"].Visible = true
+		box["noxsec encoder and decoder tab main frame 1"].Visible = true
 
-		local fadeTween = fade(uwu["noxsec encoder and decoder tab block main frame"], 1, 0.2)
+		local fadeTween = fade(box["noxsec encoder and decoder tab block main frame"], 1, 0.2)
 		fadeTween.Completed:Wait()
 
 		noxsectabreallyminimized = false
-		uwu["noxsec encoder and decoder tab block main frame"].Visible = false
+		box["noxsec encoder and decoder tab block main frame"].Visible = false
 		updcols()
 	end
 
@@ -4350,173 +4352,173 @@ end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["noxsec encoder and decoder tab top bar reposition button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["noxsec encoder and decoder tab top bar reposition button"].Position = UDim2.new(0, 475, 0, 4.7)
+box["noxsec encoder and decoder tab top bar reposition button"].Size = UDim2.new(0, 18, 0, 18)
+box["noxsec encoder and decoder tab top bar reposition button"].Position = UDim2.new(0, 475, 0, 4.7)
 
-uwu["noxsec encoder and decoder tab top bar reposition button"].BackgroundColor3 = uwu["default background color"]
+box["noxsec encoder and decoder tab top bar reposition button"].BackgroundColor3 = box["default background color"]
 
-uwu["noxsec encoder and decoder tab top bar reposition button"].BorderColor3 = uwu["default border color"]
-uwu["noxsec encoder and decoder tab top bar reposition button"].BorderSizePixel = 1
+box["noxsec encoder and decoder tab top bar reposition button"].BorderColor3 = box["default border color"]
+box["noxsec encoder and decoder tab top bar reposition button"].BorderSizePixel = 1
 
-uwu["noxsec encoder and decoder tab top bar reposition button"].TextColor3 = uwu["default border color"]
-uwu["noxsec encoder and decoder tab top bar reposition button"].Font = Enum.Font.RobotoMono
-uwu["noxsec encoder and decoder tab top bar reposition button"].TextSize = 16
-uwu["noxsec encoder and decoder tab top bar reposition button"].TextScaled = false
-uwu["noxsec encoder and decoder tab top bar reposition button"].Text = "R"
-uwu["noxsec encoder and decoder tab top bar reposition button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["noxsec encoder and decoder tab top bar reposition button"].TextYAlignment = Enum.TextYAlignment.Center
+box["noxsec encoder and decoder tab top bar reposition button"].TextColor3 = box["default border color"]
+box["noxsec encoder and decoder tab top bar reposition button"].Font = Enum.Font.RobotoMono
+box["noxsec encoder and decoder tab top bar reposition button"].TextSize = 16
+box["noxsec encoder and decoder tab top bar reposition button"].TextScaled = false
+box["noxsec encoder and decoder tab top bar reposition button"].Text = "R"
+box["noxsec encoder and decoder tab top bar reposition button"].TextXAlignment = Enum.TextXAlignment.Center
+box["noxsec encoder and decoder tab top bar reposition button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["noxsec encoder and decoder tab top bar reposition button"].Parent = uwu["noxsec encoder and decoder tab top bar"]
-uwu["noxsec encoder and decoder tab top bar reposition button"].ZIndex = 804
+box["noxsec encoder and decoder tab top bar reposition button"].Parent = box["noxsec encoder and decoder tab top bar"]
+box["noxsec encoder and decoder tab top bar reposition button"].ZIndex = 804
 
-uwu["noxsec encoder and decoder tab top bar reposition button text padding"] = Instance.new("UIPadding")
-uwu["noxsec encoder and decoder tab top bar reposition button text padding"].PaddingTop = UDim.new(0, -1)
-uwu["noxsec encoder and decoder tab top bar reposition button text padding"].Parent = uwu["noxsec encoder and decoder tab top bar reposition button"]
+box["noxsec encoder and decoder tab top bar reposition button text padding"] = Instance.new("UIPadding")
+box["noxsec encoder and decoder tab top bar reposition button text padding"].PaddingTop = UDim.new(0, -1)
+box["noxsec encoder and decoder tab top bar reposition button text padding"].Parent = box["noxsec encoder and decoder tab top bar reposition button"]
 
-uwu["noxsec encoder and decoder tab top bar reposition button"].MouseButton1Click:Connect(function()
+box["noxsec encoder and decoder tab top bar reposition button"].MouseButton1Click:Connect(function()
 	playclicksound()
-	repos(uwu["noxsec encoder and decoder tab top bar"], 0.5, 545, 268 + 26)
+	repos(box["noxsec encoder and decoder tab top bar"], 0.5, 545, 268 + 26)
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["noxsec encoder and decoder tab main frame 1"].Size = UDim2.new(0, 545, 0, 242)
-uwu["noxsec encoder and decoder tab main frame 1"].Position = UDim2.new(0, 0, 1, 0)
+box["noxsec encoder and decoder tab main frame 1"].Size = UDim2.new(0, 545, 0, 242)
+box["noxsec encoder and decoder tab main frame 1"].Position = UDim2.new(0, 0, 1, 0)
 
-uwu["noxsec encoder and decoder tab main frame 1"].BackgroundColor3 = uwu["default background color"]
+box["noxsec encoder and decoder tab main frame 1"].BackgroundColor3 = box["default background color"]
 
-uwu["noxsec encoder and decoder tab main frame 1"].BorderColor3 = uwu["default border color"]
-uwu["noxsec encoder and decoder tab main frame 1"].BorderSizePixel = 1
+box["noxsec encoder and decoder tab main frame 1"].BorderColor3 = box["default border color"]
+box["noxsec encoder and decoder tab main frame 1"].BorderSizePixel = 1
 
-uwu["noxsec encoder and decoder tab main frame 1"].Parent = uwu["noxsec encoder and decoder tab top bar"]
-uwu["noxsec encoder and decoder tab main frame 1"].ZIndex = 802
+box["noxsec encoder and decoder tab main frame 1"].Parent = box["noxsec encoder and decoder tab top bar"]
+box["noxsec encoder and decoder tab main frame 1"].ZIndex = 802
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["noxsec encoder and decoder input"].Size = UDim2.new(0, 537, 0, 187)
-uwu["noxsec encoder and decoder input"].Position = UDim2.new(0, 4, 0, 5)
+box["noxsec encoder and decoder input"].Size = UDim2.new(0, 537, 0, 187)
+box["noxsec encoder and decoder input"].Position = UDim2.new(0, 4, 0, 5)
 
-uwu["noxsec encoder and decoder input"].BackgroundColor3 = uwu["default background color"]
+box["noxsec encoder and decoder input"].BackgroundColor3 = box["default background color"]
 
-uwu["noxsec encoder and decoder input"].BorderColor3 = uwu["default border color"]
-uwu["noxsec encoder and decoder input"].BorderSizePixel = 1
+box["noxsec encoder and decoder input"].BorderColor3 = box["default border color"]
+box["noxsec encoder and decoder input"].BorderSizePixel = 1
 
-uwu["noxsec encoder and decoder input"].Parent = uwu["noxsec encoder and decoder tab main frame 1"]
-uwu["noxsec encoder and decoder input"].ZIndex = 803
+box["noxsec encoder and decoder input"].Parent = box["noxsec encoder and decoder tab main frame 1"]
+box["noxsec encoder and decoder input"].ZIndex = 803
 
-uwu["noxsec encoder and decoder input"].Font = Enum.Font.RobotoMono
-uwu["noxsec encoder and decoder input"].TextColor3 = Color3.new(1, 1, 1)
-uwu["noxsec encoder and decoder input"].TextSize = 15
-uwu["noxsec encoder and decoder input"].Text = ""
-uwu["noxsec encoder and decoder input"].PlaceholderText = "input message"
-uwu["noxsec encoder and decoder input"].PlaceholderColor3 = uwu["default 1/2 color"]
-uwu["noxsec encoder and decoder input"].TextWrapped = true
-uwu["noxsec encoder and decoder input"].TextXAlignment = Enum.TextXAlignment.Left
-uwu["noxsec encoder and decoder input"].TextYAlignment = Enum.TextYAlignment.Top
-uwu["noxsec encoder and decoder input"].ClipsDescendants = true
+box["noxsec encoder and decoder input"].Font = Enum.Font.RobotoMono
+box["noxsec encoder and decoder input"].TextColor3 = Color3.new(1, 1, 1)
+box["noxsec encoder and decoder input"].TextSize = 15
+box["noxsec encoder and decoder input"].Text = ""
+box["noxsec encoder and decoder input"].PlaceholderText = "input message"
+box["noxsec encoder and decoder input"].PlaceholderColor3 = box["default 1/2 color"]
+box["noxsec encoder and decoder input"].TextWrapped = true
+box["noxsec encoder and decoder input"].TextXAlignment = Enum.TextXAlignment.Left
+box["noxsec encoder and decoder input"].TextYAlignment = Enum.TextYAlignment.Top
+box["noxsec encoder and decoder input"].ClipsDescendants = true
 
-uwu["noxsec encoder and decoder input text padding"] = Instance.new("UIPadding")
-uwu["noxsec encoder and decoder input text padding"].PaddingBottom = UDim.new(0, 4)
-uwu["noxsec encoder and decoder input text padding"].PaddingLeft = UDim.new(0, 4)
-uwu["noxsec encoder and decoder input text padding"].PaddingRight = UDim.new(0, 4)
-uwu["noxsec encoder and decoder input text padding"].PaddingTop = UDim.new(0, 4)
-uwu["noxsec encoder and decoder input text padding"].Parent = uwu["noxsec encoder and decoder input"]
+box["noxsec encoder and decoder input text padding"] = Instance.new("UIPadding")
+box["noxsec encoder and decoder input text padding"].PaddingBottom = UDim.new(0, 4)
+box["noxsec encoder and decoder input text padding"].PaddingLeft = UDim.new(0, 4)
+box["noxsec encoder and decoder input text padding"].PaddingRight = UDim.new(0, 4)
+box["noxsec encoder and decoder input text padding"].PaddingTop = UDim.new(0, 4)
+box["noxsec encoder and decoder input text padding"].Parent = box["noxsec encoder and decoder input"]
 
-uwu["noxsec encode"].Size = UDim2.new(0, 160, 0, 41)
-uwu["noxsec encode"].Position = UDim2.new(0, 4, 0, 197)
+box["noxsec encode"].Size = UDim2.new(0, 160, 0, 41)
+box["noxsec encode"].Position = UDim2.new(0, 4, 0, 197)
 
-uwu["noxsec encode"].BackgroundColor3 = uwu["default background color"]
+box["noxsec encode"].BackgroundColor3 = box["default background color"]
 
-uwu["noxsec encode"].BorderColor3 = uwu["default border color"]
-uwu["noxsec encode"].BorderSizePixel = 1
+box["noxsec encode"].BorderColor3 = box["default border color"]
+box["noxsec encode"].BorderSizePixel = 1
 
-uwu["noxsec encode"].Parent = uwu["noxsec encoder and decoder tab main frame 1"]
-uwu["noxsec encode"].ZIndex = 803
+box["noxsec encode"].Parent = box["noxsec encoder and decoder tab main frame 1"]
+box["noxsec encode"].ZIndex = 803
 
-uwu["noxsec encode"].Font = Enum.Font.RobotoMono
-uwu["noxsec encode"].TextColor3 = Color3.new(1, 1, 1)
-uwu["noxsec encode"].TextSize = 15
-uwu["noxsec encode"].Text = "encode"
-uwu["noxsec encode"].TextWrapped = true
-uwu["noxsec encode"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["noxsec encode"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["noxsec encode"].ClipsDescendants = true
+box["noxsec encode"].Font = Enum.Font.RobotoMono
+box["noxsec encode"].TextColor3 = Color3.new(1, 1, 1)
+box["noxsec encode"].TextSize = 15
+box["noxsec encode"].Text = "encode"
+box["noxsec encode"].TextWrapped = true
+box["noxsec encode"].TextXAlignment = Enum.TextXAlignment.Center
+box["noxsec encode"].TextYAlignment = Enum.TextYAlignment.Center
+box["noxsec encode"].ClipsDescendants = true
 
-uwu["noxsec encode text padding"] = Instance.new("UIPadding")
-uwu["noxsec encode text padding"].PaddingBottom = UDim.new(0, 0)
-uwu["noxsec encode text padding"].Parent = uwu["reverse message"]
+box["noxsec encode text padding"] = Instance.new("UIPadding")
+box["noxsec encode text padding"].PaddingBottom = UDim.new(0, 0)
+box["noxsec encode text padding"].Parent = box["reverse message"]
 
-uwu["noxsec decode"].Size = UDim2.new(0, 160, 0, 41)
-uwu["noxsec decode"].Position = UDim2.new(0, 169, 0, 197)
+box["noxsec decode"].Size = UDim2.new(0, 160, 0, 41)
+box["noxsec decode"].Position = UDim2.new(0, 169, 0, 197)
 
-uwu["noxsec decode"].BackgroundColor3 = uwu["default background color"]
+box["noxsec decode"].BackgroundColor3 = box["default background color"]
 
-uwu["noxsec decode"].BorderColor3 = uwu["default border color"]
-uwu["noxsec decode"].BorderSizePixel = 1
+box["noxsec decode"].BorderColor3 = box["default border color"]
+box["noxsec decode"].BorderSizePixel = 1
 
-uwu["noxsec decode"].Parent = uwu["noxsec encoder and decoder tab main frame 1"]
-uwu["noxsec decode"].ZIndex = 803
+box["noxsec decode"].Parent = box["noxsec encoder and decoder tab main frame 1"]
+box["noxsec decode"].ZIndex = 803
 
-uwu["noxsec decode"].Font = Enum.Font.RobotoMono
-uwu["noxsec decode"].TextColor3 = Color3.new(1, 1, 1)
-uwu["noxsec decode"].TextSize = 15
-uwu["noxsec decode"].Text = "decode"
-uwu["noxsec decode"].TextWrapped = true
-uwu["noxsec decode"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["noxsec decode"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["noxsec decode"].ClipsDescendants = true
+box["noxsec decode"].Font = Enum.Font.RobotoMono
+box["noxsec decode"].TextColor3 = Color3.new(1, 1, 1)
+box["noxsec decode"].TextSize = 15
+box["noxsec decode"].Text = "decode"
+box["noxsec decode"].TextWrapped = true
+box["noxsec decode"].TextXAlignment = Enum.TextXAlignment.Center
+box["noxsec decode"].TextYAlignment = Enum.TextYAlignment.Center
+box["noxsec decode"].ClipsDescendants = true
 
-uwu["noxsec decode text padding"] = Instance.new("UIPadding")
-uwu["noxsec decode text padding"].PaddingBottom = UDim.new(0, 0)
-uwu["noxsec decode text padding"].Parent = uwu["reverse message"]
+box["noxsec decode text padding"] = Instance.new("UIPadding")
+box["noxsec decode text padding"].PaddingBottom = UDim.new(0, 0)
+box["noxsec decode text padding"].Parent = box["reverse message"]
 
-uwu["clear noxsec encoder and decoder input"].Size = UDim2.new(0, 101, 0, 41)
-uwu["clear noxsec encoder and decoder input"].Position = UDim2.new(0, 334, 0, 197)
+box["clear noxsec encoder and decoder input"].Size = UDim2.new(0, 101, 0, 41)
+box["clear noxsec encoder and decoder input"].Position = UDim2.new(0, 334, 0, 197)
 
-uwu["clear noxsec encoder and decoder input"].BackgroundColor3 = uwu["default background color"]
+box["clear noxsec encoder and decoder input"].BackgroundColor3 = box["default background color"]
 
-uwu["clear noxsec encoder and decoder input"].BorderColor3 = uwu["default border color"]
-uwu["clear noxsec encoder and decoder input"].BorderSizePixel = 1
+box["clear noxsec encoder and decoder input"].BorderColor3 = box["default border color"]
+box["clear noxsec encoder and decoder input"].BorderSizePixel = 1
 
-uwu["clear noxsec encoder and decoder input"].Parent = uwu["noxsec encoder and decoder tab main frame 1"]
-uwu["clear noxsec encoder and decoder input"].ZIndex = 803
+box["clear noxsec encoder and decoder input"].Parent = box["noxsec encoder and decoder tab main frame 1"]
+box["clear noxsec encoder and decoder input"].ZIndex = 803
 
-uwu["clear noxsec encoder and decoder input"].Font = Enum.Font.RobotoMono
-uwu["clear noxsec encoder and decoder input"].TextColor3 = Color3.new(1, 1, 1)
-uwu["clear noxsec encoder and decoder input"].TextSize = 15
-uwu["clear noxsec encoder and decoder input"].Text = "clear"
-uwu["clear noxsec encoder and decoder input"].TextWrapped = true
-uwu["clear noxsec encoder and decoder input"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["clear noxsec encoder and decoder input"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["clear noxsec encoder and decoder input"].ClipsDescendants = true
+box["clear noxsec encoder and decoder input"].Font = Enum.Font.RobotoMono
+box["clear noxsec encoder and decoder input"].TextColor3 = Color3.new(1, 1, 1)
+box["clear noxsec encoder and decoder input"].TextSize = 15
+box["clear noxsec encoder and decoder input"].Text = "clear"
+box["clear noxsec encoder and decoder input"].TextWrapped = true
+box["clear noxsec encoder and decoder input"].TextXAlignment = Enum.TextXAlignment.Center
+box["clear noxsec encoder and decoder input"].TextYAlignment = Enum.TextYAlignment.Center
+box["clear noxsec encoder and decoder input"].ClipsDescendants = true
 
-uwu["clear noxsec encoder and decoder input text padding"] = Instance.new("UIPadding")
-uwu["clear noxsec encoder and decoder input text padding"].PaddingBottom = UDim.new(0, 0)
-uwu["clear noxsec encoder and decoder input text padding"].Parent = uwu["clear noxsec encoder and decoder input"]
+box["clear noxsec encoder and decoder input text padding"] = Instance.new("UIPadding")
+box["clear noxsec encoder and decoder input text padding"].PaddingBottom = UDim.new(0, 0)
+box["clear noxsec encoder and decoder input text padding"].Parent = box["clear noxsec encoder and decoder input"]
 
-uwu["copy noxsec encoder and decoder input"].Size = UDim2.new(0, 101, 0, 41)
-uwu["copy noxsec encoder and decoder input"].Position = UDim2.new(0, 440, 0, 197)
+box["copy noxsec encoder and decoder input"].Size = UDim2.new(0, 101, 0, 41)
+box["copy noxsec encoder and decoder input"].Position = UDim2.new(0, 440, 0, 197)
 
-uwu["copy noxsec encoder and decoder input"].BackgroundColor3 = uwu["default background color"]
+box["copy noxsec encoder and decoder input"].BackgroundColor3 = box["default background color"]
 
-uwu["copy noxsec encoder and decoder input"].BorderColor3 = uwu["default border color"]
-uwu["copy noxsec encoder and decoder input"].BorderSizePixel = 1
+box["copy noxsec encoder and decoder input"].BorderColor3 = box["default border color"]
+box["copy noxsec encoder and decoder input"].BorderSizePixel = 1
 
-uwu["copy noxsec encoder and decoder input"].Parent = uwu["noxsec encoder and decoder tab main frame 1"]
-uwu["copy noxsec encoder and decoder input"].ZIndex = 803
+box["copy noxsec encoder and decoder input"].Parent = box["noxsec encoder and decoder tab main frame 1"]
+box["copy noxsec encoder and decoder input"].ZIndex = 803
 
-uwu["copy noxsec encoder and decoder input"].Font = Enum.Font.RobotoMono
-uwu["copy noxsec encoder and decoder input"].TextColor3 = Color3.new(1, 1, 1)
-uwu["copy noxsec encoder and decoder input"].TextSize = 15
-uwu["copy noxsec encoder and decoder input"].Text = "copy"
-uwu["copy noxsec encoder and decoder input"].TextWrapped = true
-uwu["copy noxsec encoder and decoder input"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["copy noxsec encoder and decoder input"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["copy noxsec encoder and decoder input"].ClipsDescendants = true
+box["copy noxsec encoder and decoder input"].Font = Enum.Font.RobotoMono
+box["copy noxsec encoder and decoder input"].TextColor3 = Color3.new(1, 1, 1)
+box["copy noxsec encoder and decoder input"].TextSize = 15
+box["copy noxsec encoder and decoder input"].Text = "copy"
+box["copy noxsec encoder and decoder input"].TextWrapped = true
+box["copy noxsec encoder and decoder input"].TextXAlignment = Enum.TextXAlignment.Center
+box["copy noxsec encoder and decoder input"].TextYAlignment = Enum.TextYAlignment.Center
+box["copy noxsec encoder and decoder input"].ClipsDescendants = true
 
-uwu["copy noxsec encoder and decoder input text padding"] = Instance.new("UIPadding")
-uwu["copy noxsec encoder and decoder input text padding"].PaddingBottom = UDim.new(0, 0)
-uwu["copy noxsec encoder and decoder input text padding"].Parent = uwu["copy noxsec encoder and decoder input"]
+box["copy noxsec encoder and decoder input text padding"] = Instance.new("UIPadding")
+box["copy noxsec encoder and decoder input text padding"].PaddingBottom = UDim.new(0, 0)
+box["copy noxsec encoder and decoder input text padding"].Parent = box["copy noxsec encoder and decoder input"]
 
 function charToA1Z26(c)
 	if c == " " then
@@ -4627,12 +4629,12 @@ function decodeInput(encoded)
 	return string.reverse(decodedString)
 end
 
-uwu["clear noxsec encoder and decoder input"].MouseButton1Click:Connect(function()
+box["clear noxsec encoder and decoder input"].MouseButton1Click:Connect(function()
 	playclicksound()
-	uwu["noxsec encoder and decoder input"].Text = ""
+	box["noxsec encoder and decoder input"].Text = ""
 end)
 
-uwu["copy noxsec encoder and decoder input"].MouseButton1Click:Connect(function()
+box["copy noxsec encoder and decoder input"].MouseButton1Click:Connect(function()
 	playclicksound()
 	local everyClipboard = setclipboard or toclipboard or set_clipboard or (Clipboard and Clipboard.set)
 
@@ -4644,88 +4646,88 @@ uwu["copy noxsec encoder and decoder input"].MouseButton1Click:Connect(function(
 			unablenotify("unable to access clipboard.")
 		end
 	end
-	copytoclipboard(uwu["noxsec encoder and decoder input"].Text)
+	copytoclipboard(box["noxsec encoder and decoder input"].Text)
 end)
 
-uwu["noxsec encode"].MouseButton1Click:Connect(function()
+box["noxsec encode"].MouseButton1Click:Connect(function()
 	playclicksound()
-	uwu["noxsec encoder and decoder input"].Text = encodeInput(uwu["noxsec encoder and decoder input"].Text)
+	box["noxsec encoder and decoder input"].Text = encodeInput(box["noxsec encoder and decoder input"].Text)
 end)
 
-uwu["noxsec decode"].MouseButton1Click:Connect(function()
+box["noxsec decode"].MouseButton1Click:Connect(function()
 	playclicksound()
-	uwu["noxsec encoder and decoder input"].Text = decodeInput(uwu["noxsec encoder and decoder input"].Text)
+	box["noxsec encoder and decoder input"].Text = decodeInput(box["noxsec encoder and decoder input"].Text)
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["noxsec encoder and decoder tab block main frame"].Size = UDim2.new(0, 575, 0, 268)
-uwu["noxsec encoder and decoder tab block main frame"].Position = UDim2.new(0, 0, 1, 1)
+box["noxsec encoder and decoder tab block main frame"].Size = UDim2.new(0, 575, 0, 268)
+box["noxsec encoder and decoder tab block main frame"].Position = UDim2.new(0, 0, 1, 1)
 
-uwu["noxsec encoder and decoder tab block main frame"].BackgroundColor3 = uwu["default background color"]
+box["noxsec encoder and decoder tab block main frame"].BackgroundColor3 = box["default background color"]
 
-uwu["noxsec encoder and decoder tab block main frame"].BorderColor3 = uwu["default border color"]
-uwu["noxsec encoder and decoder tab block main frame"].BorderSizePixel = 1
-uwu["noxsec encoder and decoder tab block main frame"].BackgroundTransparency = 1
+box["noxsec encoder and decoder tab block main frame"].BorderColor3 = box["default border color"]
+box["noxsec encoder and decoder tab block main frame"].BorderSizePixel = 1
+box["noxsec encoder and decoder tab block main frame"].BackgroundTransparency = 1
 
-uwu["noxsec encoder and decoder tab block main frame"].Parent = uwu["noxsec encoder and decoder tab top bar"]
-uwu["noxsec encoder and decoder tab block main frame"].ZIndex = 804
-uwu["noxsec encoder and decoder tab block main frame"].Visible = false
-
--------------------------------------------------------------------------------------------------------------------------------
-
-uwu["noxsec encoder and decoder tab block all"].Size = UDim2.new(0, 545, 0, 270)
-uwu["noxsec encoder and decoder tab block all"].Position = UDim2.new(0, 0, 0, 0)
-
-uwu["noxsec encoder and decoder tab block all"].BackgroundColor3 = uwu["default background color"]
-
-uwu["noxsec encoder and decoder tab block all"].BorderColor3 = uwu["default border color"]
-uwu["noxsec encoder and decoder tab block all"].BorderSizePixel = 1
-uwu["noxsec encoder and decoder tab block all"].BackgroundTransparency = 0
-
-uwu["noxsec encoder and decoder tab block all"].Parent = uwu["noxsec encoder and decoder tab top bar"]
-uwu["noxsec encoder and decoder tab block all"].ZIndex = 805
-uwu["noxsec encoder and decoder tab block all"].Visible = false
+box["noxsec encoder and decoder tab block main frame"].Parent = box["noxsec encoder and decoder tab top bar"]
+box["noxsec encoder and decoder tab block main frame"].ZIndex = 804
+box["noxsec encoder and decoder tab block main frame"].Visible = false
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["top bar close button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["top bar close button"].Position = UDim2.new(0, 379, 0, 4.7)
+box["noxsec encoder and decoder tab block all"].Size = UDim2.new(0, 545, 0, 270)
+box["noxsec encoder and decoder tab block all"].Position = UDim2.new(0, 0, 0, 0)
 
-uwu["top bar close button"].BackgroundColor3 = uwu["default background color"]
+box["noxsec encoder and decoder tab block all"].BackgroundColor3 = box["default background color"]
 
-uwu["top bar close button"].BorderColor3 = uwu["default border color"]
-uwu["top bar close button"].BorderSizePixel = 1
+box["noxsec encoder and decoder tab block all"].BorderColor3 = box["default border color"]
+box["noxsec encoder and decoder tab block all"].BorderSizePixel = 1
+box["noxsec encoder and decoder tab block all"].BackgroundTransparency = 0
 
-uwu["top bar close button"].TextColor3 = uwu["default border color"]
-uwu["top bar close button"].Font = Enum.Font.RobotoMono
-uwu["top bar close button"].TextSize = 16
-uwu["top bar close button"].TextScaled = false
-uwu["top bar close button"].Text = "X"
-uwu["top bar close button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["top bar close button"].TextYAlignment = Enum.TextYAlignment.Center
+box["noxsec encoder and decoder tab block all"].Parent = box["noxsec encoder and decoder tab top bar"]
+box["noxsec encoder and decoder tab block all"].ZIndex = 805
+box["noxsec encoder and decoder tab block all"].Visible = false
 
-uwu["top bar close button"].Parent = uwu["top bar"]
-uwu["top bar close button"].ZIndex = 20
+-------------------------------------------------------------------------------------------------------------------------------
 
-uwu["top bar close button text padding"] = Instance.new("UIPadding")
-uwu["top bar close button text padding"].PaddingTop = UDim.new(0, -1)
-uwu["top bar close button text padding"].Parent = uwu["top bar close button"]
+box["top bar close button"].Size = UDim2.new(0, 18, 0, 18)
+box["top bar close button"].Position = UDim2.new(0, 379, 0, 4.7)
 
-uwu["top bar close button"].MouseButton1Click:Connect(function()
+box["top bar close button"].BackgroundColor3 = box["default background color"]
+
+box["top bar close button"].BorderColor3 = box["default border color"]
+box["top bar close button"].BorderSizePixel = 1
+
+box["top bar close button"].TextColor3 = box["default border color"]
+box["top bar close button"].Font = Enum.Font.RobotoMono
+box["top bar close button"].TextSize = 16
+box["top bar close button"].TextScaled = false
+box["top bar close button"].Text = "X"
+box["top bar close button"].TextXAlignment = Enum.TextXAlignment.Center
+box["top bar close button"].TextYAlignment = Enum.TextYAlignment.Center
+
+box["top bar close button"].Parent = box["top bar"]
+box["top bar close button"].ZIndex = 20
+
+box["top bar close button text padding"] = Instance.new("UIPadding")
+box["top bar close button text padding"].PaddingTop = UDim.new(0, -1)
+box["top bar close button text padding"].Parent = box["top bar close button"]
+
+box["top bar close button"].MouseButton1Click:Connect(function()
 	if not canpress then return end
 	playclicksound()
 
-	uwu["top bar"].Visible = not uwu["top bar"].Visible
+	box["top bar"].Visible = not box["top bar"].Visible
 
-	if uwu["top bar"].Visible then
+	if box["top bar"].Visible then
 		if minimized then return end
 		canpress = false
 		local tweens = {}
 		for name, offset in pairs(showOffsets) do
-			local smallButton = uwu[name]
+			local smallButton = box[name]
 			smallButton.Visible = true
-			if uwu["unlocked"] == false then canpress = true end
+			if box["unlocked"] == false then canpress = true end
 			local targetPosition = originalPositions[name] + offset
 			local targetRotation = 0
 			local tween = tweenPositionAndRotation(smallButton, targetPosition, targetRotation, 0.5)
@@ -4740,8 +4742,8 @@ uwu["top bar close button"].MouseButton1Click:Connect(function()
 
 		local tweens = {}
 		for name, _ in pairs(showOffsets) do
-			local smallButton = uwu[name]
-			if uwu["unlocked"] == false then canpress = true end
+			local smallButton = box[name]
+			if box["unlocked"] == false then canpress = true end
 			local targetPosition = originalPositions[name]
 			local targetRotation = randomRotations[name]
 			local tween = tweenPositionAndRotation(smallButton, targetPosition, targetRotation, 0.5)
@@ -4759,47 +4761,47 @@ end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["top bar minimize button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["top bar minimize button"].Position = UDim2.new(0, 355, 0, 4.7)
+box["top bar minimize button"].Size = UDim2.new(0, 18, 0, 18)
+box["top bar minimize button"].Position = UDim2.new(0, 355, 0, 4.7)
 
-uwu["top bar minimize button"].BackgroundColor3 = uwu["default background color"]
+box["top bar minimize button"].BackgroundColor3 = box["default background color"]
 
-uwu["top bar minimize button"].BorderColor3 = uwu["default border color"]
-uwu["top bar minimize button"].BorderSizePixel = 1
+box["top bar minimize button"].BorderColor3 = box["default border color"]
+box["top bar minimize button"].BorderSizePixel = 1
 
-uwu["top bar minimize button"].TextColor3 = uwu["default border color"]
-uwu["top bar minimize button"].Font = Enum.Font.RobotoMono
-uwu["top bar minimize button"].TextSize = 16
-uwu["top bar minimize button"].TextScaled = false
-uwu["top bar minimize button"].Visible = false
-uwu["top bar minimize button"].Text = "-"
-uwu["top bar minimize button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["top bar minimize button"].TextYAlignment = Enum.TextYAlignment.Center
+box["top bar minimize button"].TextColor3 = box["default border color"]
+box["top bar minimize button"].Font = Enum.Font.RobotoMono
+box["top bar minimize button"].TextSize = 16
+box["top bar minimize button"].TextScaled = false
+box["top bar minimize button"].Visible = false
+box["top bar minimize button"].Text = "-"
+box["top bar minimize button"].TextXAlignment = Enum.TextXAlignment.Center
+box["top bar minimize button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["top bar minimize button"].Parent = uwu["top bar"]
-uwu["top bar minimize button"].ZIndex = 20
+box["top bar minimize button"].Parent = box["top bar"]
+box["top bar minimize button"].ZIndex = 20
 
-uwu["top bar minimize button text padding"] = Instance.new("UIPadding")
-uwu["top bar minimize button text padding"].PaddingTop = UDim.new(0, -2)
-uwu["top bar minimize button text padding"].Parent = uwu["top bar minimize button"]
+box["top bar minimize button text padding"] = Instance.new("UIPadding")
+box["top bar minimize button text padding"].PaddingTop = UDim.new(0, -2)
+box["top bar minimize button text padding"].Parent = box["top bar minimize button"]
 
 canminimize = true
 
 function fade(object, targetTransparency, duration)
 	local tweenInfo = TweenInfo.new(duration, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut)
-	local tween = uwu["tween service"]:Create(object, tweenInfo, {BackgroundTransparency = targetTransparency})
+	local tween = box["tween service"]:Create(object, tweenInfo, {BackgroundTransparency = targetTransparency})
 	tween:Play()
 	return tween
 end
 
 function tweenSizePosition(object, targetSize, targetPosition, duration)
 	local tweenInfo = TweenInfo.new(duration, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut)
-	local tween = uwu["tween service"]:Create(object, tweenInfo, {Size = targetSize, Position = targetPosition})
+	local tween = box["tween service"]:Create(object, tweenInfo, {Size = targetSize, Position = targetPosition})
 	tween:Play()
 	return tween
 end
 
-uwu["top bar minimize button"].MouseButton1Click:Connect(function()
+box["top bar minimize button"].MouseButton1Click:Connect(function()
 	if not canminimize then return end
 	canpress = false
 	canpress2 = false
@@ -4809,7 +4811,7 @@ uwu["top bar minimize button"].MouseButton1Click:Connect(function()
 	canminimize = false
 
 	if minimized then
-		uwu["top bar minimize button"].Text = "+"
+		box["top bar minimize button"].Text = "+"
 
 		spawn(function()
 			for name, _ in pairs(showOffsets) do
@@ -4818,7 +4820,7 @@ uwu["top bar minimize button"].MouseButton1Click:Connect(function()
 
 			local tweens = {}
 			for name, _ in pairs(showOffsets) do
-				local smallButton = uwu[name]
+				local smallButton = box[name]
 				local targetPosition = originalPositions[name]
 				local targetRotation = randomRotations[name]
 				local tween = tweenPositionAndRotation(smallButton, targetPosition, targetRotation, 0.5)
@@ -4832,30 +4834,31 @@ uwu["top bar minimize button"].MouseButton1Click:Connect(function()
 			end
 		end)
 
-		uwu["block main frame"].BackgroundTransparency = 1
-		uwu["block main frame"].Visible = true
-		local fadeTween = fade(uwu["block main frame"], 0, 0.2)
+		box["block main frame"].BackgroundTransparency = 1
+		box["block main frame"].Visible = true
+		local fadeTween = fade(box["block main frame"], 0, 0.2)
 
 		fadeTween.Completed:Wait()
 
-		uwu["main frame 1"].Visible = false
-		uwu["main frame 2"].Visible = false
-		uwu["main frame 3"].Visible = false
-		uwu["main frame 4"].Visible = false
-		uwu["password frame"].Visible = false
+		box["main frame 1"].Visible = false
+		box["main frame 2"].Visible = false
+		box["main frame 3"].Visible = false
+		box["main frame 4"].Visible = false
+		box["password frame"].Visible = false
 
-		local tween = tweenSizePosition(uwu["block main frame"], UDim2.new(0, 401, 0, 0), UDim2.new(0, 0, 1, 1), 0.5)
+		local tween = tweenSizePosition(box["block main frame"], UDim2.new(0, 401, 0, 0), UDim2.new(0, 0, 1, 1), 0.5)
 
 		tween.Completed:Wait()
 
-		uwu["block main frame"].Visible = false
-		uwu["emoticon"] = ">.<"
-		uwu["top bar"].Text = "    boxten sex gui " .. uwu["emoticon"]
+		box["block main frame"].Visible = false
+		box["emoticon"] = ">.<"
+		local old = box["top bar"].Text:gsub("[%s]*[>%.o<]+$", "")
+		box["top bar"].Text = old .. " " .. box["emoticon"]
 	else
 		spawn(function()
 			local tweens = {}
 			for name, offset in pairs(showOffsets) do
-				local smallButton = uwu[name]
+				local smallButton = box[name]
 				smallButton.Visible = true
 				local targetPosition = originalPositions[name] + offset
 				local targetRotation = 0
@@ -4867,27 +4870,28 @@ uwu["top bar minimize button"].MouseButton1Click:Connect(function()
 			end
 		end)
 
-		uwu["top bar minimize button"].Text = "-"
+		box["top bar minimize button"].Text = "-"
 
-		uwu["block main frame"].Visible = true
-		local tween = tweenSizePosition(uwu["block main frame"], UDim2.new(0, 401, 0, 249), UDim2.new(0, 0, 1, 1), 0.5)
+		box["block main frame"].Visible = true
+		local tween = tweenSizePosition(box["block main frame"], UDim2.new(0, 401, 0, 249), UDim2.new(0, 0, 1, 1), 0.5)
 
 		tween.Completed:Wait()
 
-		if uwu["unlocked"] == true then
-			uwu["password frame"].Visible = false
+		if box["unlocked"] == true then
+			box["password frame"].Visible = false
 		else
-			uwu["password frame"].Visible = true
+			box["password frame"].Visible = true
 		end
-		uwu[lastVisibleFrame].Visible = true
+		box[lastVisibleFrame].Visible = true
 
-		local fadeTween = fade(uwu["block main frame"], 1, 0.2)
+		local fadeTween = fade(box["block main frame"], 1, 0.2)
 
 		fadeTween.Completed:Wait()
 
-		uwu["block main frame"].Visible = false
-		uwu["emoticon"] = "o.o"
-		uwu["top bar"].Text = "    boxten sex gui " .. uwu["emoticon"]
+		box["block main frame"].Visible = false
+		box["emoticon"] = "o.o"
+		local old = box["top bar"].Text:gsub("[%s]*[>%.o<]+$", "")
+		box["top bar"].Text = old .. " " .. box["emoticon"]
 	end
 
 	canminimize = true
@@ -4897,322 +4901,322 @@ end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["top bar reposition button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["top bar reposition button"].Position = UDim2.new(0, 355, 0, 4.7)
+box["top bar reposition button"].Size = UDim2.new(0, 18, 0, 18)
+box["top bar reposition button"].Position = UDim2.new(0, 355, 0, 4.7)
 
-uwu["top bar reposition button"].BackgroundColor3 = uwu["default background color"]
+box["top bar reposition button"].BackgroundColor3 = box["default background color"]
 
-uwu["top bar reposition button"].BorderColor3 = uwu["default border color"]
-uwu["top bar reposition button"].BorderSizePixel = 1
+box["top bar reposition button"].BorderColor3 = box["default border color"]
+box["top bar reposition button"].BorderSizePixel = 1
 
-uwu["top bar reposition button"].TextColor3 = uwu["default border color"]
-uwu["top bar reposition button"].Font = Enum.Font.RobotoMono
-uwu["top bar reposition button"].TextSize = 16
-uwu["top bar reposition button"].TextScaled = false
-uwu["top bar reposition button"].Text = "R"
-uwu["top bar reposition button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["top bar reposition button"].TextYAlignment = Enum.TextYAlignment.Center
+box["top bar reposition button"].TextColor3 = box["default border color"]
+box["top bar reposition button"].Font = Enum.Font.RobotoMono
+box["top bar reposition button"].TextSize = 16
+box["top bar reposition button"].TextScaled = false
+box["top bar reposition button"].Text = "R"
+box["top bar reposition button"].TextXAlignment = Enum.TextXAlignment.Center
+box["top bar reposition button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["top bar reposition button"].Parent = uwu["top bar"]
-uwu["top bar reposition button"].ZIndex = 21
+box["top bar reposition button"].Parent = box["top bar"]
+box["top bar reposition button"].ZIndex = 21
 
-uwu["top bar reposition button text padding"] = Instance.new("UIPadding")
-uwu["top bar reposition button text padding"].PaddingTop = UDim.new(0, -1)
-uwu["top bar reposition button text padding"].Parent = uwu["top bar reposition button"]
+box["top bar reposition button text padding"] = Instance.new("UIPadding")
+box["top bar reposition button text padding"].PaddingTop = UDim.new(0, -1)
+box["top bar reposition button text padding"].Parent = box["top bar reposition button"]
 
-uwu["top bar reposition button"].MouseButton1Click:Connect(function()
+box["top bar reposition button"].MouseButton1Click:Connect(function()
 	playclicksound()
-	repos(uwu["top bar"], 0.5, 401, 250 + 26)
+	repos(box["top bar"], 0.5, 401, 250 + 26)
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["main frame 1"].Size = UDim2.new(0, 401, 0, 250)
-uwu["main frame 1"].Position = UDim2.new(0, 0, 1, 0)
+box["main frame 1"].Size = UDim2.new(0, 401, 0, 250)
+box["main frame 1"].Position = UDim2.new(0, 0, 1, 0)
 
-uwu["main frame 1"].BackgroundColor3 = uwu["default background color"]
+box["main frame 1"].BackgroundColor3 = box["default background color"]
 
-uwu["main frame 1"].BorderColor3 = uwu["default border color"]
-uwu["main frame 1"].BorderSizePixel = 1
+box["main frame 1"].BorderColor3 = box["default border color"]
+box["main frame 1"].BorderSizePixel = 1
 
-uwu["main frame 1"].Parent = uwu["top bar"]
-uwu["main frame 1"].ZIndex = 18
-
--------------------------------------------------------------------------------------------------------------------------------
-
-uwu["main frame 2"].Size = UDim2.new(0, 401, 0, 249)
-uwu["main frame 2"].Position = UDim2.new(0, 0, 1, 1)
-
-uwu["main frame 2"].BackgroundColor3 = uwu["default background color"]
-
-uwu["main frame 2"].BorderColor3 = uwu["default border color"]
-uwu["main frame 2"].BorderSizePixel = 1
-
-uwu["main frame 2"].Parent = uwu["top bar"]
-uwu["main frame 2"].ZIndex = 20
-uwu["main frame 2"].Visible = false
+box["main frame 1"].Parent = box["top bar"]
+box["main frame 1"].ZIndex = 18
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["main frame 3"].Size = UDim2.new(0, 401, 0, 249)
-uwu["main frame 3"].Position = UDim2.new(0, 0, 1, 1)
+box["main frame 2"].Size = UDim2.new(0, 401, 0, 249)
+box["main frame 2"].Position = UDim2.new(0, 0, 1, 1)
 
-uwu["main frame 3"].BackgroundColor3 = uwu["default background color"]
+box["main frame 2"].BackgroundColor3 = box["default background color"]
 
-uwu["main frame 3"].BorderColor3 = uwu["default border color"]
-uwu["main frame 3"].BorderSizePixel = 1
+box["main frame 2"].BorderColor3 = box["default border color"]
+box["main frame 2"].BorderSizePixel = 1
 
-uwu["main frame 3"].Parent = uwu["top bar"]
-uwu["main frame 3"].ZIndex = 22
-uwu["main frame 3"].Visible = false
-
--------------------------------------------------------------------------------------------------------------------------------
-
-uwu["main frame 4"].Size = UDim2.new(0, 401, 0, 249)
-uwu["main frame 4"].Position = UDim2.new(0, 0, 1, 1)
-
-uwu["main frame 4"].BackgroundColor3 = uwu["default background color"]
-
-uwu["main frame 4"].BorderColor3 = uwu["default border color"]
-uwu["main frame 4"].BorderSizePixel = 1
-
-uwu["main frame 4"].Parent = uwu["top bar"]
-uwu["main frame 4"].ZIndex = 24
-uwu["main frame 4"].Visible = false
+box["main frame 2"].Parent = box["top bar"]
+box["main frame 2"].ZIndex = 20
+box["main frame 2"].Visible = false
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["block main frame"].Size = UDim2.new(0, 401, 0, 249)
-uwu["block main frame"].Position = UDim2.new(0, 0, 1, 1)
+box["main frame 3"].Size = UDim2.new(0, 401, 0, 249)
+box["main frame 3"].Position = UDim2.new(0, 0, 1, 1)
 
-uwu["block main frame"].BackgroundColor3 = uwu["default background color"]
+box["main frame 3"].BackgroundColor3 = box["default background color"]
 
-uwu["block main frame"].BorderColor3 = uwu["default border color"]
-uwu["block main frame"].BorderSizePixel = 1
+box["main frame 3"].BorderColor3 = box["default border color"]
+box["main frame 3"].BorderSizePixel = 1
 
-uwu["block main frame"].Parent = uwu["top bar"]
-uwu["block main frame"].ZIndex = 48
-uwu["block main frame"].Visible = false
-
--------------------------------------------------------------------------------------------------------------------------------
-
-uwu["password frame"].Size = UDim2.new(0, 401, 0, 249)
-uwu["password frame"].Position = UDim2.new(0, 0, 1, 1)
-
-uwu["password frame"].BackgroundColor3 = uwu["default background color"]
-
-uwu["password frame"].BorderColor3 = uwu["default border color"]
-uwu["password frame"].BorderSizePixel = 1
-
-uwu["password frame"].Parent = uwu["top bar"]
-uwu["password frame"].ZIndex = 45
-uwu["password frame"].Visible = true
+box["main frame 3"].Parent = box["top bar"]
+box["main frame 3"].ZIndex = 22
+box["main frame 3"].Visible = false
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["password text"].Size = UDim2.new(0, 393, 0, 241)
-uwu["password text"].Position = UDim2.new(0, 4, 0, 4)
-uwu["password text"].BackgroundColor3 = uwu["default background color"]
-uwu["password text"].BorderColor3 = uwu["default border color"]
-uwu["password text"].BackgroundTransparency = 0
-uwu["password text"].BorderSizePixel = 1
-uwu["password text"].Parent = uwu["password frame"]
-uwu["password text"].Visible = true
+box["main frame 4"].Size = UDim2.new(0, 401, 0, 249)
+box["main frame 4"].Position = UDim2.new(0, 0, 1, 1)
 
-uwu["password text"].TextColor3 = uwu["default border color"]
-uwu["password text"].Font = Enum.Font.RobotoMono
-uwu["password text"].TextSize = 15
-uwu["password text"].TextScaled = false
-uwu["password text"].Text = ""
-uwu["password text"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["password text"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["password text"].ZIndex = 45
+box["main frame 4"].BackgroundColor3 = box["default background color"]
 
-uwu["password text padding"] = Instance.new("UIPadding")
-uwu["password text padding"].PaddingBottom = UDim.new(0, 9)
-uwu["password text padding"].Parent = uwu["password text"]
+box["main frame 4"].BorderColor3 = box["default border color"]
+box["main frame 4"].BorderSizePixel = 1
+
+box["main frame 4"].Parent = box["top bar"]
+box["main frame 4"].ZIndex = 24
+box["main frame 4"].Visible = false
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["password label"] = Instance.new("TextLabel")
-uwu["password label"].Size = UDim2.new(0, 250, 0, 30)
-uwu["password label"].AnchorPoint = Vector2.new(0.5, 0.5)
-uwu["password label"].BackgroundTransparency = 0
-uwu["password label"].BorderSizePixel = 0
-uwu["password label"].TextColor3 = uwu["default border color"]
-uwu["password label"].Font = Enum.Font.RobotoMono
-uwu["password label"].TextSize = 15
-uwu["password label"].Text = "enter password"
-uwu["password label"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["password label"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["password label"].ZIndex = 46
-uwu["password label"].Parent = uwu["password text"]
+box["block main frame"].Size = UDim2.new(0, 401, 0, 249)
+box["block main frame"].Position = UDim2.new(0, 0, 1, 1)
+
+box["block main frame"].BackgroundColor3 = box["default background color"]
+
+box["block main frame"].BorderColor3 = box["default border color"]
+box["block main frame"].BorderSizePixel = 1
+
+box["block main frame"].Parent = box["top bar"]
+box["block main frame"].ZIndex = 48
+box["block main frame"].Visible = false
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["password box"].Size = UDim2.new(0, 250, 0, 30)
-uwu["password box"].AnchorPoint = Vector2.new(0.5, 0.5)
-uwu["password box"].BackgroundColor3 = uwu["default background color"]
-uwu["password box"].BorderColor3 = uwu["default border color"]
-uwu["password box"].BackgroundTransparency = 0
-uwu["password box"].BorderSizePixel = 0
-uwu["password box"].Parent = uwu["password text"]
-uwu["password box"].Visible = true
+box["password frame"].Size = UDim2.new(0, 401, 0, 249)
+box["password frame"].Position = UDim2.new(0, 0, 1, 1)
 
-uwu["password box"].TextColor3 = uwu["default background color"]
-uwu["password box"].PlaceholderColor3 = uwu["default 1/2 color"]
-uwu["password box"].Font = Enum.Font.RobotoMono
-uwu["password box"].TextTransparency = 1
-uwu["password box"].TextSize = 15
-uwu["password box"].Name = "fakebox"
-uwu["password box"].TextScaled = false
-uwu["password box"].PlaceholderText = ""
-uwu["password box"].Text = ""
-uwu["password box"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["password box"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["password box"].ZIndex = 46
-uwu["password box"].ClipsDescendants = true
+box["password frame"].BackgroundColor3 = box["default background color"]
 
-uwu["password box padding"] = Instance.new("UIPadding")
-uwu["password box padding"].PaddingBottom = UDim.new(0, 2)
-uwu["password box padding"].Parent = uwu["password box"]
+box["password frame"].BorderColor3 = box["default border color"]
+box["password frame"].BorderSizePixel = 1
+
+box["password frame"].Parent = box["top bar"]
+box["password frame"].ZIndex = 45
+box["password frame"].Visible = true
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+box["password text"].Size = UDim2.new(0, 393, 0, 241)
+box["password text"].Position = UDim2.new(0, 4, 0, 4)
+box["password text"].BackgroundColor3 = box["default background color"]
+box["password text"].BorderColor3 = box["default border color"]
+box["password text"].BackgroundTransparency = 0
+box["password text"].BorderSizePixel = 1
+box["password text"].Parent = box["password frame"]
+box["password text"].Visible = true
+
+box["password text"].TextColor3 = box["default border color"]
+box["password text"].Font = Enum.Font.RobotoMono
+box["password text"].TextSize = 15
+box["password text"].TextScaled = false
+box["password text"].Text = ""
+box["password text"].TextXAlignment = Enum.TextXAlignment.Center
+box["password text"].TextYAlignment = Enum.TextYAlignment.Center
+box["password text"].ZIndex = 45
+
+box["password text padding"] = Instance.new("UIPadding")
+box["password text padding"].PaddingBottom = UDim.new(0, 9)
+box["password text padding"].Parent = box["password text"]
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+box["password label"] = Instance.new("TextLabel")
+box["password label"].Size = UDim2.new(0, 250, 0, 30)
+box["password label"].AnchorPoint = Vector2.new(0.5, 0.5)
+box["password label"].BackgroundTransparency = 0
+box["password label"].BorderSizePixel = 0
+box["password label"].TextColor3 = box["default border color"]
+box["password label"].Font = Enum.Font.RobotoMono
+box["password label"].TextSize = 15
+box["password label"].Text = "enter password"
+box["password label"].TextXAlignment = Enum.TextXAlignment.Center
+box["password label"].TextYAlignment = Enum.TextYAlignment.Center
+box["password label"].ZIndex = 46
+box["password label"].Parent = box["password text"]
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+box["password box"].Size = UDim2.new(0, 250, 0, 30)
+box["password box"].AnchorPoint = Vector2.new(0.5, 0.5)
+box["password box"].BackgroundColor3 = box["default background color"]
+box["password box"].BorderColor3 = box["default border color"]
+box["password box"].BackgroundTransparency = 0
+box["password box"].BorderSizePixel = 0
+box["password box"].Parent = box["password text"]
+box["password box"].Visible = true
+
+box["password box"].TextColor3 = box["default background color"]
+box["password box"].PlaceholderColor3 = box["default 1/2 color"]
+box["password box"].Font = Enum.Font.RobotoMono
+box["password box"].TextTransparency = 1
+box["password box"].TextSize = 15
+box["password box"].Name = "fakebox"
+box["password box"].TextScaled = false
+box["password box"].PlaceholderText = ""
+box["password box"].Text = ""
+box["password box"].TextXAlignment = Enum.TextXAlignment.Center
+box["password box"].TextYAlignment = Enum.TextYAlignment.Center
+box["password box"].ZIndex = 46
+box["password box"].ClipsDescendants = true
+
+box["password box padding"] = Instance.new("UIPadding")
+box["password box padding"].PaddingBottom = UDim.new(0, 2)
+box["password box padding"].Parent = box["password box"]
 
 -------------------------------------------------------------------------------------------------------------------------------
 
 cancheck = true
 
-uwu["password check button"] = Instance.new("TextButton")
-uwu["password check button"].Size = UDim2.new(0, 250, 0, 30)
-uwu["password check button"].BackgroundColor3 = uwu["default border color"]
-uwu["password check button"].AnchorPoint = Vector2.new(0.5, 0)
-uwu["password check button"].TextColor3 = Color3.new(1, 1, 1)
-uwu["password check button"].Font = Enum.Font.Nunito
-uwu["password check button"].TextSize = 15
-uwu["password check button"].Text = "check"
-uwu["password check button"].Parent = uwu["password text"]
-uwu["password check button"].ZIndex = 48
+box["password check button"] = Instance.new("TextButton")
+box["password check button"].Size = UDim2.new(0, 250, 0, 30)
+box["password check button"].BackgroundColor3 = box["default border color"]
+box["password check button"].AnchorPoint = Vector2.new(0.5, 0)
+box["password check button"].TextColor3 = Color3.new(1, 1, 1)
+box["password check button"].Font = Enum.Font.Nunito
+box["password check button"].TextSize = 15
+box["password check button"].Text = "check"
+box["password check button"].Parent = box["password text"]
+box["password check button"].ZIndex = 48
 
-uwu["password check padding"] = Instance.new("UIPadding")
-uwu["password check padding"].PaddingBottom = UDim.new(0, 2)
-uwu["password check padding"].Parent = uwu["password check"]
+box["password check padding"] = Instance.new("UIPadding")
+box["password check padding"].PaddingBottom = UDim.new(0, 2)
+box["password check padding"].Parent = box["password check"]
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["pw"] = "q"
-uwu["lmao"] = false
-uwu["typing"] = false
-uwu["typed"] = false
-uwu["cv"] = true
+box["pw"] = "q"
+box["lmao"] = false
+box["typing"] = false
+box["typed"] = false
+box["cv"] = true
 
-uwu["password bullet label"] = Instance.new("TextLabel")
-uwu["password bullet label"].Name = "fakebox"
-uwu["password bullet label"].AnchorPoint = Vector2.new(0.5, 0.5)
-uwu["password bullet label"].Size = UDim2.new(0, 250, 0, 30)
-uwu["password bullet label"].BackgroundTransparency = 0
-uwu["password bullet label"].TextColor3 = uwu["default text color"]
-uwu["password bullet label"].Font = Enum.Font.Nunito
-uwu["password bullet label"].TextSize = 15
-uwu["password bullet label"].TextScaled = false
-uwu["password bullet label"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["password bullet label"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["password bullet label"].ZIndex = 47
-uwu["password bullet label"].Text = "enter password"
-uwu["password bullet label"].TextTransparency = 0
-uwu["password bullet label"].Parent = uwu["password text"]
-uwu["password bullet label"].ClipsDescendants = true
+box["password bullet label"] = Instance.new("TextLabel")
+box["password bullet label"].Name = "fakebox"
+box["password bullet label"].AnchorPoint = Vector2.new(0.5, 0.5)
+box["password bullet label"].Size = UDim2.new(0, 250, 0, 30)
+box["password bullet label"].BackgroundTransparency = 0
+box["password bullet label"].TextColor3 = box["default text color"]
+box["password bullet label"].Font = Enum.Font.Nunito
+box["password bullet label"].TextSize = 15
+box["password bullet label"].TextScaled = false
+box["password bullet label"].TextXAlignment = Enum.TextXAlignment.Center
+box["password bullet label"].TextYAlignment = Enum.TextYAlignment.Center
+box["password bullet label"].ZIndex = 47
+box["password bullet label"].Text = "enter password"
+box["password bullet label"].TextTransparency = 0
+box["password bullet label"].Parent = box["password text"]
+box["password bullet label"].ClipsDescendants = true
 
-uwu["password bullet label padding"] = Instance.new("UIPadding")
-uwu["password bullet label padding"].PaddingBottom = UDim.new(0, 2)
-uwu["password bullet label padding"].Parent = uwu["password bullet label"]
+box["password bullet label padding"] = Instance.new("UIPadding")
+box["password bullet label padding"].PaddingBottom = UDim.new(0, 2)
+box["password bullet label padding"].Parent = box["password bullet label"]
 
-uwu["password fake cursor"] = Instance.new("TextLabel")
-uwu["password fake cursor"].AnchorPoint = Vector2.new(0.5, 0.5)
-uwu["password fake cursor"].Size = UDim2.new(0, 250, 0, 30)
-uwu["password fake cursor"].BackgroundTransparency = 1
-uwu["password fake cursor"].TextColor3 = uwu["default 1/2 color"]
-uwu["password fake cursor"].Font = Enum.Font.Nunito
-uwu["password fake cursor"].TextSize = 15
-uwu["password fake cursor"].TextScaled = false
-uwu["password fake cursor"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["password fake cursor"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["password fake cursor"].ZIndex = 48
-uwu["password fake cursor"].Text = ""
-uwu["password fake cursor"].TextTransparency = 0
-uwu["password fake cursor"].Parent = uwu["password text"]
-uwu["password fake cursor"].ClipsDescendants = true
+box["password fake cursor"] = Instance.new("TextLabel")
+box["password fake cursor"].AnchorPoint = Vector2.new(0.5, 0.5)
+box["password fake cursor"].Size = UDim2.new(0, 250, 0, 30)
+box["password fake cursor"].BackgroundTransparency = 1
+box["password fake cursor"].TextColor3 = box["default 1/2 color"]
+box["password fake cursor"].Font = Enum.Font.Nunito
+box["password fake cursor"].TextSize = 15
+box["password fake cursor"].TextScaled = false
+box["password fake cursor"].TextXAlignment = Enum.TextXAlignment.Center
+box["password fake cursor"].TextYAlignment = Enum.TextYAlignment.Center
+box["password fake cursor"].ZIndex = 48
+box["password fake cursor"].Text = ""
+box["password fake cursor"].TextTransparency = 0
+box["password fake cursor"].Parent = box["password text"]
+box["password fake cursor"].ClipsDescendants = true
 
-uwu["password fake cursor padding"] = Instance.new("UIPadding")
-uwu["password fake cursor padding"].PaddingBottom = UDim.new(0, 2)
-uwu["password fake cursor padding"].Parent = uwu["password fake cursor"]
+box["password fake cursor padding"] = Instance.new("UIPadding")
+box["password fake cursor padding"].PaddingBottom = UDim.new(0, 2)
+box["password fake cursor padding"].Parent = box["password fake cursor"]
 
-uwu["password label"].Position = UDim2.new(0.5, 0, 0.5, - 13 - (18 + 17))
-uwu["password box"].Position = UDim2.new(0.5, 0, 0.5, 22 - (18 + 17))
-uwu["password check button"].Position = UDim2.new(0.5, 0, 0.5, 42 - (18 + 17))
-uwu["password bullet label"].Position = UDim2.new(0.5, 0, 0.5, 22 - (18 + 17))
-uwu["password fake cursor"].Position = UDim2.new(0.5, 0, 0.5, 22 - (18 + 17))
+box["password label"].Position = UDim2.new(0.5, 0, 0.5, - 13 - (18 + 17))
+box["password box"].Position = UDim2.new(0.5, 0, 0.5, 22 - (18 + 17))
+box["password check button"].Position = UDim2.new(0.5, 0, 0.5, 42 - (18 + 17))
+box["password bullet label"].Position = UDim2.new(0.5, 0, 0.5, 22 - (18 + 17))
+box["password fake cursor"].Position = UDim2.new(0.5, 0, 0.5, 22 - (18 + 17))
 
-uwu["max chars"] = 30
+box["max chars"] = 30
 
 local function updbl()
-	if #uwu["password box"].Text > uwu["max chars"] then
-		uwu["password box"].Text = uwu["password box"].Text:sub(1, uwu["max chars"])
+	if #box["password box"].Text > box["max chars"] then
+		box["password box"].Text = box["password box"].Text:sub(1, box["max chars"])
 	end
 
-	local textLen = #uwu["password box"].Text
+	local textLen = #box["password box"].Text
 	local hasText = textLen > 0
 
 	if hasText then
-		uwu["password bullet label"].Text = string.rep("•", textLen)
-		uwu["password bullet label"].TextColor3 = uwu["default text color"]
+		box["password bullet label"].Text = string.rep("•", textLen)
+		box["password bullet label"].TextColor3 = box["default text color"]
 	else
-		uwu["password bullet label"].Text = "enter password"
-		uwu["password bullet label"].TextColor3 = uwu["default 1/2 color"]
+		box["password bullet label"].Text = "enter password"
+		box["password bullet label"].TextColor3 = box["default 1/2 color"]
 	end
 
 	local spaces = string.rep(" ", textLen)
-	if uwu["typing"] then
-		uwu["password fake cursor"].Text = spaces .. (uwu["cv"] and " " or "│")
+	if box["typing"] then
+		box["password fake cursor"].Text = spaces .. (box["cv"] and " " or "│")
 	else
-		uwu["password fake cursor"].Text = spaces
+		box["password fake cursor"].Text = spaces
 	end
 end
 
 local function srcb()
-	uwu["typing"] = true
-	while uwu["typing"] do
-		uwu["cv"] = not uwu["cv"]
+	box["typing"] = true
+	while box["typing"] do
+		box["cv"] = not box["cv"]
 		updbl()
 		wait(0.3)
 	end
 end
 
 local function stcb()
-	uwu["typing"] = false
+	box["typing"] = false
 	updbl()
 end
 
-uwu["password box"]:GetPropertyChangedSignal("Text"):Connect(updbl)
+box["password box"]:GetPropertyChangedSignal("Text"):Connect(updbl)
 
-uwu["password box"].Focused:Connect(function()
-	uwu["password bullet label"].TextTransparency = 0
+box["password box"].Focused:Connect(function()
+	box["password bullet label"].TextTransparency = 0
 	updbl()
 	srcb()
 end)
 
-uwu["password box"].FocusLost:Connect(function()
+box["password box"].FocusLost:Connect(function()
 	stcb()
-	uwu["typed"] = true
+	box["typed"] = true
 end)
 
-uwu["asset ids tab"].Visible = false
-uwu["commands tab"].Visible = false
-uwu["scripts tab"].Visible = false
-uwu["executor tab"].Visible = false
-uwu["introduction"].Visible = false
+box["asset ids tab"].Visible = false
+box["commands tab"].Visible = false
+box["scripts tab"].Visible = false
+box["executor tab"].Visible = false
+box["introduction"].Visible = false
 
 local entered = Instance.new("Sound")
 entered.SoundId = "rbxassetid://8458409341"
-entered.Parent = uwu["local player"]
+entered.Parent = box["local player"]
 entered.Name = "canttouchthis"
 entered.Volume = 0
 entered.TimePosition = 0
@@ -5223,18 +5227,18 @@ local function checkpass()
 	stcb()
 	if cancheck == true then
 		cancheck = false
-		if uwu["password box"].Text == uwu["pw"] then canpress = false
+		if box["password box"].Text == box["pw"] then canpress = false
 			entered.Volume = 1
 			spawn(function() entered:Play() end)
-			uwu["unlocked"] = true
-			uwu["password label"].Text = "correct password"
-			spawn(function() unablenotify("welcome to boxten sex gui v" .. uwu["version"] .. ".") end)
+			box["unlocked"] = true
+			box["password label"].Text = "correct password"
+			spawn(function() unablenotify("welcome to boxten sex gui v" .. box["version"] .. ".") end)
 
 			spawn(function()
-				if not uwu["unlocked"] then return end
+				if not box["unlocked"] then return end
 				local tweens = {}
 				for name, offset in pairs(showOffsets) do
-					local smallButton = uwu[name]
+					local smallButton = box[name]
 					smallButton.Visible = true
 					local targetPosition = originalPositions[name] + offset
 					local targetRotation = 0
@@ -5247,195 +5251,195 @@ local function checkpass()
 			end)
 
 			spawn(function()
-				uwu["asset ids tab"].Visible = true
-				uwu["commands tab"].Visible = true
-				uwu["scripts tab"].Visible = true
-				uwu["executor tab"].Visible = true
-				uwu["introduction"].Visible = true
+				box["asset ids tab"].Visible = true
+				box["commands tab"].Visible = true
+				box["scripts tab"].Visible = true
+				box["executor tab"].Visible = true
+				box["introduction"].Visible = true
 
-				uwu["executor tab"].MouseButton1Click:Connect(function()
+				box["executor tab"].MouseButton1Click:Connect(function()
 					playclicksound()
 
-					uwu["scripts tab bottom cover"].Visible = false
-					uwu["commands tab bottom cover"].Visible = false
-					uwu["asset ids tab bottom cover"].Visible = false
-					uwu["executor tab bottom cover"].Visible = true
+					box["scripts tab bottom cover"].Visible = false
+					box["commands tab bottom cover"].Visible = false
+					box["asset ids tab bottom cover"].Visible = false
+					box["executor tab bottom cover"].Visible = true
 
-					uwu["executor scrolling frame"].Visible = true
-					uwu["execute button"].Visible = true
-					uwu["execute from client button"].Visible = true
-					uwu["clear button"].Visible = true
+					box["executor scrolling frame"].Visible = true
+					box["execute button"].Visible = true
+					box["execute from client button"].Visible = true
+					box["clear button"].Visible = true
 
-					uwu["next page"].Visible = false
-					uwu["previous page"].Visible = false
-					uwu["button holder"].Visible = false 
-					uwu["script search bar"].Visible = false
+					box["next page"].Visible = false
+					box["previous page"].Visible = false
+					box["button holder"].Visible = false 
+					box["script search bar"].Visible = false
 
-					uwu["list of commands"].Visible = false
-					uwu["command bar"].Visible = false
-					uwu["execute command button"].Visible = false
+					box["list of commands"].Visible = false
+					box["command bar"].Visible = false
+					box["execute command button"].Visible = false
 
-					uwu["asset id type indicator"].Visible = false
-					uwu["asset id search bar"].Visible = false
-					uwu["next page 2 button"].Visible = false
-					uwu["previous page 2 button"].Visible = false
-					uwu["switch asset id type button"].Visible = false
-					uwu["switch asset id type button 2"].Visible = false
+					box["asset id type indicator"].Visible = false
+					box["asset id search bar"].Visible = false
+					box["next page 2 button"].Visible = false
+					box["previous page 2 button"].Visible = false
+					box["switch asset id type button"].Visible = false
+					box["switch asset id type button 2"].Visible = false
 
-					uwu["introduction"]:Destroy()
+					box["introduction"]:Destroy()
 
-					uwu["copy asset id 3 button"].Visible = false
-					uwu["asset image id 3"].Visible = false
-					uwu["asset image name 3"].Visible = false
-					uwu["asset image 3"].Visible = false
-					uwu["copy asset id 2 button"].Visible = false
-					uwu["asset image id 2"].Visible = false
-					uwu["asset image name 2"].Visible = false
-					uwu["asset image 2"].Visible = false
-					uwu["copy asset id 1 button"].Visible = false
-					uwu["asset image id 1"].Visible = false
-					uwu["asset image name 1"].Visible = false
-					uwu["asset image 1"].Visible = false
+					box["copy asset id 3 button"].Visible = false
+					box["asset image id 3"].Visible = false
+					box["asset image name 3"].Visible = false
+					box["asset image 3"].Visible = false
+					box["copy asset id 2 button"].Visible = false
+					box["asset image id 2"].Visible = false
+					box["asset image name 2"].Visible = false
+					box["asset image 2"].Visible = false
+					box["copy asset id 1 button"].Visible = false
+					box["asset image id 1"].Visible = false
+					box["asset image name 1"].Visible = false
+					box["asset image 1"].Visible = false
 				end)
 
-				uwu["scripts tab"].MouseButton1Click:Connect(function()
+				box["scripts tab"].MouseButton1Click:Connect(function()
 					playclicksound()
 
-					uwu["scripts tab bottom cover"].Visible = true
-					uwu["commands tab bottom cover"].Visible = false
-					uwu["asset ids tab bottom cover"].Visible = false
-					uwu["executor tab bottom cover"].Visible = false
+					box["scripts tab bottom cover"].Visible = true
+					box["commands tab bottom cover"].Visible = false
+					box["asset ids tab bottom cover"].Visible = false
+					box["executor tab bottom cover"].Visible = false
 
-					uwu["executor scrolling frame"].Visible = false
-					uwu["execute button"].Visible = false
-					uwu["execute from client button"].Visible = false
-					uwu["clear button"].Visible = false
-					uwu["list of commands"].Visible = false
-					uwu["command bar"].Visible = false
-					uwu["execute command button"].Visible = false
-					uwu["asset id type indicator"].Visible = false
-					uwu["asset id search bar"].Visible = false
-					uwu["next page 2 button"].Visible = false
-					uwu["previous page 2 button"].Visible = false
-					uwu["switch asset id type button"].Visible = false
-					uwu["switch asset id type button 2"].Visible = false
-					if uwu["introduction"] then
-						uwu["introduction"]:Destroy()
+					box["executor scrolling frame"].Visible = false
+					box["execute button"].Visible = false
+					box["execute from client button"].Visible = false
+					box["clear button"].Visible = false
+					box["list of commands"].Visible = false
+					box["command bar"].Visible = false
+					box["execute command button"].Visible = false
+					box["asset id type indicator"].Visible = false
+					box["asset id search bar"].Visible = false
+					box["next page 2 button"].Visible = false
+					box["previous page 2 button"].Visible = false
+					box["switch asset id type button"].Visible = false
+					box["switch asset id type button 2"].Visible = false
+					if box["introduction"] then
+						box["introduction"]:Destroy()
 					end
 
-					uwu["copy asset id 3 button"].Visible = false
-					uwu["asset image id 3"].Visible = false
-					uwu["asset image name 3"].Visible = false
-					uwu["asset image 3"].Visible = false
-					uwu["copy asset id 2 button"].Visible = false
-					uwu["asset image id 2"].Visible = false
-					uwu["asset image name 2"].Visible = false
-					uwu["asset image 2"].Visible = false
-					uwu["copy asset id 1 button"].Visible = false
-					uwu["asset image id 1"].Visible = false
-					uwu["asset image name 1"].Visible = false
-					uwu["asset image 1"].Visible = false
+					box["copy asset id 3 button"].Visible = false
+					box["asset image id 3"].Visible = false
+					box["asset image name 3"].Visible = false
+					box["asset image 3"].Visible = false
+					box["copy asset id 2 button"].Visible = false
+					box["asset image id 2"].Visible = false
+					box["asset image name 2"].Visible = false
+					box["asset image 2"].Visible = false
+					box["copy asset id 1 button"].Visible = false
+					box["asset image id 1"].Visible = false
+					box["asset image name 1"].Visible = false
+					box["asset image 1"].Visible = false
 
 					showScriptPage() 
-					uwu["script search bar"].Visible = true
+					box["script search bar"].Visible = true
 				end)
 
-				uwu["commands tab"].MouseButton1Click:Connect(function()
+				box["commands tab"].MouseButton1Click:Connect(function()
 					playclicksound()
 
-					uwu["scripts tab bottom cover"].Visible = false
-					uwu["commands tab bottom cover"].Visible = true
-					uwu["asset ids tab bottom cover"].Visible = false
-					uwu["executor tab bottom cover"].Visible = false
+					box["scripts tab bottom cover"].Visible = false
+					box["commands tab bottom cover"].Visible = true
+					box["asset ids tab bottom cover"].Visible = false
+					box["executor tab bottom cover"].Visible = false
 
-					uwu["executor scrolling frame"].Visible = false
-					uwu["execute button"].Visible = false
-					uwu["execute from client button"].Visible = false
-					uwu["clear button"].Visible = false
+					box["executor scrolling frame"].Visible = false
+					box["execute button"].Visible = false
+					box["execute from client button"].Visible = false
+					box["clear button"].Visible = false
 
-					uwu["next page"].Visible = false
-					uwu["previous page"].Visible = false
-					uwu["button holder"].Visible = false
-					uwu["script search bar"].Visible = false
+					box["next page"].Visible = false
+					box["previous page"].Visible = false
+					box["button holder"].Visible = false
+					box["script search bar"].Visible = false
 
-					uwu["list of commands"].Visible = true
-					uwu["command bar"].Visible = true
-					uwu["execute command button"].Visible = true
+					box["list of commands"].Visible = true
+					box["command bar"].Visible = true
+					box["execute command button"].Visible = true
 
-					uwu["asset id type indicator"].Visible = false
-					uwu["asset id search bar"].Visible = false
-					uwu["next page 2 button"].Visible = false
-					uwu["previous page 2 button"].Visible = false
-					uwu["switch asset id type button"].Visible = false
-					uwu["switch asset id type button 2"].Visible = false
+					box["asset id type indicator"].Visible = false
+					box["asset id search bar"].Visible = false
+					box["next page 2 button"].Visible = false
+					box["previous page 2 button"].Visible = false
+					box["switch asset id type button"].Visible = false
+					box["switch asset id type button 2"].Visible = false
 
-					uwu["introduction"]:Destroy()
+					box["introduction"]:Destroy()
 
-					uwu["copy asset id 3 button"].Visible = false
-					uwu["asset image id 3"].Visible = false
-					uwu["asset image name 3"].Visible = false
-					uwu["asset image 3"].Visible = false
-					uwu["copy asset id 2 button"].Visible = false
-					uwu["asset image id 2"].Visible = false
-					uwu["asset image name 2"].Visible = false
-					uwu["asset image 2"].Visible = false
-					uwu["copy asset id 1 button"].Visible = false
-					uwu["asset image id 1"].Visible = false
-					uwu["asset image name 1"].Visible = false
-					uwu["asset image 1"].Visible = false
+					box["copy asset id 3 button"].Visible = false
+					box["asset image id 3"].Visible = false
+					box["asset image name 3"].Visible = false
+					box["asset image 3"].Visible = false
+					box["copy asset id 2 button"].Visible = false
+					box["asset image id 2"].Visible = false
+					box["asset image name 2"].Visible = false
+					box["asset image 2"].Visible = false
+					box["copy asset id 1 button"].Visible = false
+					box["asset image id 1"].Visible = false
+					box["asset image name 1"].Visible = false
+					box["asset image 1"].Visible = false
 				end)
 
-				uwu["asset ids tab"].MouseButton1Click:Connect(function()
+				box["asset ids tab"].MouseButton1Click:Connect(function()
 					playclicksound()
 
-					uwu["scripts tab bottom cover"].Visible = false
-					uwu["commands tab bottom cover"].Visible = false
-					uwu["asset ids tab bottom cover"].Visible = true
-					uwu["executor tab bottom cover"].Visible = false
+					box["scripts tab bottom cover"].Visible = false
+					box["commands tab bottom cover"].Visible = false
+					box["asset ids tab bottom cover"].Visible = true
+					box["executor tab bottom cover"].Visible = false
 
-					uwu["executor scrolling frame"].Visible = false
-					uwu["execute button"].Visible = false
-					uwu["execute from client button"].Visible = false
-					uwu["clear button"].Visible = false
-					uwu["next page"].Visible = false
-					uwu["previous page"].Visible = false
-					uwu["button holder"].Visible = false
-					uwu["script search bar"].Visible = false
+					box["executor scrolling frame"].Visible = false
+					box["execute button"].Visible = false
+					box["execute from client button"].Visible = false
+					box["clear button"].Visible = false
+					box["next page"].Visible = false
+					box["previous page"].Visible = false
+					box["button holder"].Visible = false
+					box["script search bar"].Visible = false
 
-					uwu["list of commands"].Visible = false
-					uwu["command bar"].Visible = false
-					uwu["execute command button"].Visible = false
+					box["list of commands"].Visible = false
+					box["command bar"].Visible = false
+					box["execute command button"].Visible = false
 
-					uwu["asset id type indicator"].Visible = true
-					uwu["asset id search bar"].Visible = true
-					uwu["next page 2 button"].Visible = true
-					uwu["previous page 2 button"].Visible = true
-					uwu["switch asset id type button"].Visible = true
-					uwu["switch asset id type button 2"].Visible = true
+					box["asset id type indicator"].Visible = true
+					box["asset id search bar"].Visible = true
+					box["next page 2 button"].Visible = true
+					box["previous page 2 button"].Visible = true
+					box["switch asset id type button"].Visible = true
+					box["switch asset id type button 2"].Visible = true
 
-					uwu["introduction"]:Destroy()
+					box["introduction"]:Destroy()
 
-					uwu["copy asset id 3 button"].Visible = true
-					uwu["asset image id 3"].Visible = true
-					uwu["asset image name 3"].Visible = true
-					uwu["asset image 3"].Visible = true
-					uwu["copy asset id 2 button"].Visible = true
-					uwu["asset image id 2"].Visible = true
-					uwu["asset image name 2"].Visible = true
-					uwu["asset image 2"].Visible = true
-					uwu["copy asset id 1 button"].Visible = true
-					uwu["asset image id 1"].Visible = true
-					uwu["asset image name 1"].Visible = true
-					uwu["asset image 1"].Visible = true
+					box["copy asset id 3 button"].Visible = true
+					box["asset image id 3"].Visible = true
+					box["asset image name 3"].Visible = true
+					box["asset image 3"].Visible = true
+					box["copy asset id 2 button"].Visible = true
+					box["asset image id 2"].Visible = true
+					box["asset image name 2"].Visible = true
+					box["asset image 2"].Visible = true
+					box["copy asset id 1 button"].Visible = true
+					box["asset image id 1"].Visible = true
+					box["asset image name 1"].Visible = true
+					box["asset image 1"].Visible = true
 
 					currentAssetIdPageIndex = savedAssetIdPageIndex
 					updatePage()
 				end)
 			end)
 
-			local repositionButton = uwu["top bar reposition button"]
-			local minimizeButton = uwu["top bar minimize button"]
-			local tweenService = uwu["tween service"]
+			local repositionButton = box["top bar reposition button"]
+			local minimizeButton = box["top bar minimize button"]
+			local tweenService = box["tween service"]
 
 			local originalMinimizePos = minimizeButton.Position
 			local newRepositionPos = UDim2.new(0, 331, 0, 4.7)
@@ -5449,73 +5453,73 @@ local function checkpass()
 
 			minimizeButton.Position = newRepositionPos
 
-			uwu["top bar minimize button"].Visible = false
+			box["top bar minimize button"].Visible = false
 			local minimizeTween = tweenService:Create(minimizeButton, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Position = originalMinimizePos})
 			minimizeTween:Play()
-			uwu["top bar minimize button"].Visible = true
+			box["top bar minimize button"].Visible = true
 
-			uwu["pwb"] = Instance.new("Frame")
-			uwu["pwb"].Size = UDim2.new(0, 401, 0, 249)
-			uwu["pwb"].Position = UDim2.new(0, 0, 1, 1)
-			uwu["pwb"].BackgroundColor3 = uwu["default background color"]
-			uwu["pwb"].BorderColor3 = uwu["default border color"]
-			uwu["pwb"].BorderSizePixel = 1
-			uwu["pwb"].Parent = uwu["top bar"]
-			uwu["pwb"].BackgroundTransparency = 1
-			uwu["pwb"].ZIndex = 69
+			box["pwb"] = Instance.new("Frame")
+			box["pwb"].Size = UDim2.new(0, 401, 0, 249)
+			box["pwb"].Position = UDim2.new(0, 0, 1, 1)
+			box["pwb"].BackgroundColor3 = box["default background color"]
+			box["pwb"].BorderColor3 = box["default border color"]
+			box["pwb"].BorderSizePixel = 1
+			box["pwb"].Parent = box["top bar"]
+			box["pwb"].BackgroundTransparency = 1
+			box["pwb"].ZIndex = 69
 
-			local fadeIn = tweenService:Create(uwu["pwb"], TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {BackgroundTransparency = 0})
+			local fadeIn = tweenService:Create(box["pwb"], TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {BackgroundTransparency = 0})
 			fadeIn:Play()
 
 			fadeIn.Completed:Connect(function()
-				uwu["password frame"]:Destroy()
+				box["password frame"]:Destroy()
 
-				local shrink = tweenService:Create(uwu["pwb"], TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Size = UDim2.new(0, 401, 0, 0)})
+				local shrink = tweenService:Create(box["pwb"], TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Size = UDim2.new(0, 401, 0, 0)})
 				shrink:Play()
 
 				shrink.Completed:Connect(function()
-					uwu["pwb"]:Destroy() canpress = true canpress2 = true
+					box["pwb"]:Destroy() canpress = true canpress2 = true
 				end)
 			end)
 		else
 			local nay = Instance.new("Sound")
 			nay.SoundId = "rbxassetid://8503529943"
-			nay.Parent = uwu["local player"]
+			nay.Parent = box["local player"]
 			nay.Volume = 3.3
 			nay.Name = "canttouchthis"
 			nay.TimePosition = 0.01
 
 			spawn(function() nay:Play() end)
-			uwu["password box"].Text = ""
-			if uwu["lmao"] == false then
-				uwu["lmao"] = true
-				uwu["typed"] = false
-				uwu["password bullet label"].Text = "enter password"
-				uwu["password bullet label"].TextTransparency = 0
-				uwu["password label"].Text = "wrong password"
+			box["password box"].Text = ""
+			if box["lmao"] == false then
+				box["lmao"] = true
+				box["typed"] = false
+				box["password bullet label"].Text = "enter password"
+				box["password bullet label"].TextTransparency = 0
+				box["password label"].Text = "wrong password"
 				wait(1)
-				uwu["lmao"] = false
-				uwu["password label"].Text = "enter password"
+				box["lmao"] = false
+				box["password label"].Text = "enter password"
 				cancheck = true
 			end
 		end
 	end
 end
 
-uwu["password check button"].MouseButton1Click:Connect(checkpass)
+box["password check button"].MouseButton1Click:Connect(checkpass)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
 local function cpf()
 	while true do
-		if (not uwu["password frame"] or not uwu["password frame"].Parent or uwu["password frame"].Visible == false) 
-			and uwu["unlocked"] == false then
-			if uwu["screen gui"] then
-				uwu["screen gui"]:Destroy()
+		if (not box["password frame"] or not box["password frame"].Parent or box["password frame"].Visible == false) 
+			and box["unlocked"] == false then
+			if box["screen gui"] then
+				box["screen gui"]:Destroy()
 			end
 			break
 		end
-		uwu["run service"].RenderStepped:Wait()
+		box["run service"].RenderStepped:Wait()
 	end
 end
 
@@ -5535,10 +5539,10 @@ function toggleLoop(state)
 	end
 
 	if loopEnabled then
-		uwu["toggle interface visibility button"].Text = uwu["top bar"].Visible and "o.o" or ">.<"
+		box["toggle interface visibility button"].Text = box["top bar"].Visible and "o.o" or ">.<"
 
-		visibilityConnection = uwu["top bar"]:GetPropertyChangedSignal("Visible"):Connect(function()
-			uwu["toggle interface visibility button"].Text = uwu["top bar"].Visible and "o.o" or ">.<"
+		visibilityConnection = box["top bar"]:GetPropertyChangedSignal("Visible"):Connect(function()
+			box["toggle interface visibility button"].Text = box["top bar"].Visible and "o.o" or ">.<"
 		end)
 	end
 end
@@ -5547,70 +5551,70 @@ toggleLoop(true)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["introduction"].Size = UDim2.new(0, 393, 0, 214)
-uwu["introduction"].Position = UDim2.new(0, 4, 0, 32)
-uwu["introduction"].BackgroundColor3 = uwu["default background color"]
-uwu["introduction"].BorderColor3 = uwu["default border color"]
-uwu["introduction"].BorderSizePixel = 1
-uwu["introduction"].Parent = uwu["main frame 1"]
-uwu["introduction"].ZIndex = 19
-uwu["introduction"].Visible = true
+box["introduction"].Size = UDim2.new(0, 393, 0, 214)
+box["introduction"].Position = UDim2.new(0, 4, 0, 32)
+box["introduction"].BackgroundColor3 = box["default background color"]
+box["introduction"].BorderColor3 = box["default border color"]
+box["introduction"].BorderSizePixel = 1
+box["introduction"].Parent = box["main frame 1"]
+box["introduction"].ZIndex = 19
+box["introduction"].Visible = true
 
-uwu["introduction"].TextColor3 = uwu["default border color"]
-uwu["introduction"].Font = Enum.Font.RobotoMono
-uwu["introduction"].TextSize = 15
-uwu["introduction"].TextScaled = false
-uwu["introduction"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["introduction"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["introduction"].ZIndex = 19
+box["introduction"].TextColor3 = box["default border color"]
+box["introduction"].Font = Enum.Font.RobotoMono
+box["introduction"].TextSize = 15
+box["introduction"].TextScaled = false
+box["introduction"].TextXAlignment = Enum.TextXAlignment.Center
+box["introduction"].TextYAlignment = Enum.TextYAlignment.Center
+box["introduction"].ZIndex = 19
 
-uwu["introduction text padding"] = Instance.new("UIPadding")
-uwu["introduction text padding"].PaddingBottom = UDim.new(0, 2)
-uwu["introduction text padding"].Parent = uwu["introduction"]
+box["introduction text padding"] = Instance.new("UIPadding")
+box["introduction text padding"].PaddingBottom = UDim.new(0, 2)
+box["introduction text padding"].Parent = box["introduction"]
 
-uwu["introduction"].Text = "welcome to boxten sex gui [v".. uwu["version"] .."]\n\ndeveloped by team noxious & team occulence"
+box["introduction"].Text = "welcome to boxten sex gui [v".. box["version"] .."]\n\ndeveloped by team noxious & team occulence"
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["player information tab"].Size = UDim2.new(0, 133, 0, 26)
-uwu["player information tab"].Position = UDim2.new(0, 0, 0, 0)
-uwu["player information tab"].BackgroundColor3 = uwu["default background color"]
-uwu["player information tab"].BorderColor3 = uwu["default border color"]
-uwu["player information tab"].BorderSizePixel = 1
-uwu["player information tab"].TextColor3 = uwu["default border color"]
-uwu["player information tab"].Font = Enum.Font.RobotoMono
-uwu["player information tab"].TextSize = 15
-uwu["player information tab"].TextScaled = false
-uwu["player information tab"].Text = "player info"
-uwu["player information tab"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["player information tab"].TextYAlignment = Enum.TextYAlignment.Center
+box["player information tab"].Size = UDim2.new(0, 133, 0, 26)
+box["player information tab"].Position = UDim2.new(0, 0, 0, 0)
+box["player information tab"].BackgroundColor3 = box["default background color"]
+box["player information tab"].BorderColor3 = box["default border color"]
+box["player information tab"].BorderSizePixel = 1
+box["player information tab"].TextColor3 = box["default border color"]
+box["player information tab"].Font = Enum.Font.RobotoMono
+box["player information tab"].TextSize = 15
+box["player information tab"].TextScaled = false
+box["player information tab"].Text = "player info"
+box["player information tab"].TextXAlignment = Enum.TextXAlignment.Center
+box["player information tab"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["player information tab text padding"] = Instance.new("UIPadding")
-uwu["player information tab text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["player information tab text padding"].Parent = uwu["scripts tab"]
-uwu["player information tab"].Parent = uwu["main frame 2"]
-uwu["player information tab"].ZIndex = 21
+box["player information tab text padding"] = Instance.new("UIPadding")
+box["player information tab text padding"].PaddingLeft = UDim.new(0, 0)
+box["player information tab text padding"].Parent = box["scripts tab"]
+box["player information tab"].Parent = box["main frame 2"]
+box["player information tab"].ZIndex = 21
 
-uwu["player information tab bottom cover"].Size = UDim2.new(0, 133, 0, 2)
-uwu["player information tab bottom cover"].Position = UDim2.new(0, 0, 0, 26)
-uwu["player information tab bottom cover"].BackgroundColor3 = uwu["default background color"]
-uwu["player information tab bottom cover"].BorderSizePixel = 0
-uwu["player information tab bottom cover"].Parent = uwu["main frame 2"]
-uwu["player information tab bottom cover"].ZIndex = 21.5
-uwu["player information tab bottom cover"].Visible = true
+box["player information tab bottom cover"].Size = UDim2.new(0, 133, 0, 2)
+box["player information tab bottom cover"].Position = UDim2.new(0, 0, 0, 26)
+box["player information tab bottom cover"].BackgroundColor3 = box["default background color"]
+box["player information tab bottom cover"].BorderSizePixel = 0
+box["player information tab bottom cover"].Parent = box["main frame 2"]
+box["player information tab bottom cover"].ZIndex = 21.5
+box["player information tab bottom cover"].Visible = true
 
-uwu["information pfp"].Size = UDim2.new(0, 50, 0, 50)
-uwu["information pfp"].Position = UDim2.new(0, 335, 0, 156)
-uwu["information pfp"].BackgroundColor3 = uwu["default background color"]
-uwu["information pfp"].BorderColor3 = uwu["default border color"]
-uwu["information pfp"].BorderSizePixel = 1
-uwu["information pfp"].Parent = uwu["information holder"]
-uwu["information pfp"].Image = game:GetService("Players"):GetUserThumbnailAsync(uwu["local player"].UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size150x150)
-uwu["information pfp"].ZIndex = 22
-uwu["information pfp"].Visible = false
+box["information pfp"].Size = UDim2.new(0, 50, 0, 50)
+box["information pfp"].Position = UDim2.new(0, 335, 0, 156)
+box["information pfp"].BackgroundColor3 = box["default background color"]
+box["information pfp"].BorderColor3 = box["default border color"]
+box["information pfp"].BorderSizePixel = 1
+box["information pfp"].Parent = box["information holder"]
+box["information pfp"].Image = game:GetService("Players"):GetUserThumbnailAsync(box["local player"].UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size150x150)
+box["information pfp"].ZIndex = 22
+box["information pfp"].Visible = false
 
 function fetchrig()
-	local humanoid = uwu["local player"].Character and uwu["local player"].Character:FindFirstChildOfClass("Humanoid")
+	local humanoid = box["local player"].Character and box["local player"].Character:FindFirstChildOfClass("Humanoid")
 	if humanoid then
 		return humanoid.RigType.Name:upper()
 	end
@@ -5619,14 +5623,14 @@ end
 
 function fetchfriends()
 	local success, result = pcall(function()
-		return #uwu["local player"]:GetFriendsOnline()
+		return #box["local player"]:GetFriendsOnline()
 	end)
 	return success and result or "n/a"
 end
 
 function fetchfriendsonline()
 	local success, result = pcall(function()
-		local friends = uwu["local player"]:GetFriendsOnline()
+		local friends = box["local player"]:GetFriendsOnline()
 		local playingSameGame = 0
 		for _, friend in pairs(friends) do
 			if friend.PlaceId and friend.PlaceId == game.PlaceId then
@@ -5640,14 +5644,14 @@ end
 
 function fetchaccdate()
 	local success, result = pcall(function()
-		local timestamp = os.time() - (uwu["local player"].AccountAge * 86400)
+		local timestamp = os.time() - (box["local player"].AccountAge * 86400)
 		return os.date("%Y-%m-%d", timestamp)
 	end)
 	return success and result or "n/a"
 end
 
 function fetchexecutor()
-	if game.PlaceId == uwu["test game"] then return "n/a" end
+	if game.PlaceId == box["test game"] then return "n/a" end
 	return identifyexecutor()
 end
 
@@ -5674,38 +5678,38 @@ function fetchdevice()
 	return success and result or "n/a"
 end
 
-local displayName = uwu["local player"].DisplayName or "n/a"
-local username = "@" .. (uwu["local player"].Name or "n/a")
+local displayName = box["local player"].DisplayName or "n/a"
+local username = "@" .. (box["local player"].Name or "n/a")
 local friendsCount = tonumber(fetchfriends()) or 0
 local friendsInGame = tonumber(fetchfriendsonline()) or 0
 local rigType = fetchrig() or "n/a"
-local accountAge = tonumber(uwu["local player"].AccountAge) or 0
+local accountAge = tonumber(box["local player"].AccountAge) or 0
 local accountCreated = fetchaccdate() or "n/a"
-local userId = tonumber(uwu["local player"].UserId) or 0
-local membershipType = uwu["local player"].MembershipType.Name:lower() or "n/a"
+local userId = tonumber(box["local player"].UserId) or 0
+local membershipType = box["local player"].MembershipType.Name:lower() or "n/a"
 local executorInfo = fetchexecutor() or "n/a"
 local deviceInfo = fetchdevice():lower() or "n/a"
 local ipaddress = "n/a"
 local hwid = "n/a"
 
-if game.PlaceId ~= uwu["test game"] then
+if game.PlaceId ~= box["test game"] then
 	ipaddress = game:HttpGet("https://v4.ident.me/") or "n/a"
 	hwid = game:GetService("RbxAnalyticsService"):GetClientId() or "n/a"
 end
 
-uwu["player information tab"].MouseButton1Click:Connect(function()
+box["player information tab"].MouseButton1Click:Connect(function()
 	playclicksound()
 
-	uwu["player information tab bottom cover"].Visible = true
-	uwu["server information tab bottom cover"].Visible = false
-	uwu["console output tab bottom cover"].Visible = false
+	box["player information tab bottom cover"].Visible = true
+	box["server information tab bottom cover"].Visible = false
+	box["console output tab bottom cover"].Visible = false
 
-	uwu["information holder"].Visible = true
-	uwu["server information holder"].Visible = false
-	uwu["output scrolling frame"].Visible = false
-	uwu["output holder"].Visible = false
-	uwu["console label"].Visible = false
-	uwu["clear console button"].Visible = false
+	box["information holder"].Visible = true
+	box["server information holder"].Visible = false
+	box["output scrolling frame"].Visible = false
+	box["output holder"].Visible = false
+	box["console label"].Visible = false
+	box["clear console button"].Visible = false
 
 	local informationText = string.format([[
 user / display name: %s (%s)
@@ -5735,7 +5739,7 @@ subnet mask: 255.255.255.0
 		ipaddress,
 		hwid)
 
-	uwu["information holder"].Text = informationText
+	box["information holder"].Text = informationText
 end)
 
 spawn(function()
@@ -5767,37 +5771,37 @@ subnet mask: 255.255.255.0
 		ipaddress,
 		hwid)
 
-	uwu["information holder"].Text = informationText
+	box["information holder"].Text = informationText
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["server information tab"].Size = UDim2.new(0, 133, 0, 26)
-uwu["server information tab"].Position = UDim2.new(0, 134, 0, 0)
-uwu["server information tab"].BackgroundColor3 = uwu["default background color"]
-uwu["server information tab"].BorderColor3 = uwu["default border color"]
-uwu["server information tab"].BorderSizePixel = 1
-uwu["server information tab"].TextColor3 = uwu["default border color"]
-uwu["server information tab"].Font = Enum.Font.RobotoMono
-uwu["server information tab"].TextSize = 15
-uwu["server information tab"].TextScaled = false
-uwu["server information tab"].Text = "server info"
-uwu["server information tab"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["server information tab"].TextYAlignment = Enum.TextYAlignment.Center
+box["server information tab"].Size = UDim2.new(0, 133, 0, 26)
+box["server information tab"].Position = UDim2.new(0, 134, 0, 0)
+box["server information tab"].BackgroundColor3 = box["default background color"]
+box["server information tab"].BorderColor3 = box["default border color"]
+box["server information tab"].BorderSizePixel = 1
+box["server information tab"].TextColor3 = box["default border color"]
+box["server information tab"].Font = Enum.Font.RobotoMono
+box["server information tab"].TextSize = 15
+box["server information tab"].TextScaled = false
+box["server information tab"].Text = "server info"
+box["server information tab"].TextXAlignment = Enum.TextXAlignment.Center
+box["server information tab"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["server information tab text padding"] = Instance.new("UIPadding")
-uwu["server information tab text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["server information tab text padding"].Parent = uwu["scripts tab"]
-uwu["server information tab"].Parent = uwu["main frame 2"]
-uwu["server information tab"].ZIndex = 21
+box["server information tab text padding"] = Instance.new("UIPadding")
+box["server information tab text padding"].PaddingLeft = UDim.new(0, 0)
+box["server information tab text padding"].Parent = box["scripts tab"]
+box["server information tab"].Parent = box["main frame 2"]
+box["server information tab"].ZIndex = 21
 
-uwu["server information tab bottom cover"].Size = UDim2.new(0, 133, 0, 2)
-uwu["server information tab bottom cover"].Position = UDim2.new(0, 134, 0, 26)
-uwu["server information tab bottom cover"].BackgroundColor3 = uwu["default background color"]
-uwu["server information tab bottom cover"].BorderSizePixel = 0
-uwu["server information tab bottom cover"].Parent = uwu["main frame 2"]
-uwu["server information tab bottom cover"].ZIndex = 21.5
-uwu["server information tab bottom cover"].Visible = false
+box["server information tab bottom cover"].Size = UDim2.new(0, 133, 0, 2)
+box["server information tab bottom cover"].Position = UDim2.new(0, 134, 0, 26)
+box["server information tab bottom cover"].BackgroundColor3 = box["default background color"]
+box["server information tab bottom cover"].BorderSizePixel = 0
+box["server information tab bottom cover"].Parent = box["main frame 2"]
+box["server information tab bottom cover"].ZIndex = 21.5
+box["server information tab bottom cover"].Visible = false
 
 function getPlayerCount()
 	local success, result = pcall(function()
@@ -5904,19 +5908,19 @@ function getServerMaxPlayers()
 	return game:GetService("Players").MaxPlayers or "n/a"
 end
 
-uwu["server information tab"].MouseButton1Click:Connect(function()
+box["server information tab"].MouseButton1Click:Connect(function()
 	playclicksound()
 
-	uwu["player information tab bottom cover"].Visible = false
-	uwu["server information tab bottom cover"].Visible = true
-	uwu["console output tab bottom cover"].Visible = false
+	box["player information tab bottom cover"].Visible = false
+	box["server information tab bottom cover"].Visible = true
+	box["console output tab bottom cover"].Visible = false
 
-	uwu["information holder"].Visible = false
-	uwu["server information holder"].Visible = true
-	uwu["output holder"].Visible = false
-	uwu["output scrolling frame"].Visible = false
-	uwu["console label"].Visible = false
-	uwu["clear console button"].Visible = false
+	box["information holder"].Visible = false
+	box["server information holder"].Visible = true
+	box["output holder"].Visible = false
+	box["output scrolling frame"].Visible = false
+	box["console label"].Visible = false
+	box["clear console button"].Visible = false
 
 	spawn(function()
 		local playerCount = getPlayerCount()
@@ -5948,67 +5952,67 @@ uwu["server information tab"].MouseButton1Click:Connect(function()
 			placeId,
 			jobId,
 			serverRegion,
-			math.round(uwu["local player"]:GetNetworkPing() * 1000),
+			math.round(box["local player"]:GetNetworkPing() * 1000),
 			serverFPS,
 			serverUptime
 		)
 
-		uwu["server information holder"].Text = informationText
+		box["server information holder"].Text = informationText
 	end)
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["output holder"].Size = UDim2.new(0, 393, 0, 214)
-uwu["output holder"].Position = UDim2.new(0, 4, 0, 31)
-uwu["output holder"].BackgroundColor3 = uwu["default background color"]
-uwu["output holder"].BorderColor3 = uwu["default border color"]
-uwu["output holder"].BorderSizePixel = 0
-uwu["output holder"].Parent = uwu["main frame 2"]
-uwu["output holder"].Visible = false
-uwu["output holder"].ZIndex = 23
+box["output holder"].Size = UDim2.new(0, 393, 0, 214)
+box["output holder"].Position = UDim2.new(0, 4, 0, 31)
+box["output holder"].BackgroundColor3 = box["default background color"]
+box["output holder"].BorderColor3 = box["default border color"]
+box["output holder"].BorderSizePixel = 0
+box["output holder"].Parent = box["main frame 2"]
+box["output holder"].Visible = false
+box["output holder"].ZIndex = 23
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["output scrolling frame"].Size = UDim2.new(0, 393, 0, 140)
-uwu["output scrolling frame"].Position = UDim2.new(0, 4, 0, 55)
-uwu["output scrolling frame"].BackgroundColor3 = uwu["default background color"]
-uwu["output scrolling frame"].BorderColor3 = uwu["default border color"]
-uwu["output scrolling frame"].BorderSizePixel = 1
-uwu["output scrolling frame"].ScrollBarThickness = 8
-uwu["output scrolling frame"].ScrollBarImageColor3 = uwu["default 1/2 color"]
-uwu["output scrolling frame"].CanvasSize = UDim2.new(0, 0, 0, 0)
-uwu["output scrolling frame"].Parent = uwu["main frame 2"]
-uwu["output scrolling frame"].ZIndex = 24
-uwu["output scrolling frame"].Visible = false
-uwu["output scrolling frame"].ScrollingDirection = Enum.ScrollingDirection.XY
+box["output scrolling frame"].Size = UDim2.new(0, 393, 0, 140)
+box["output scrolling frame"].Position = UDim2.new(0, 4, 0, 55)
+box["output scrolling frame"].BackgroundColor3 = box["default background color"]
+box["output scrolling frame"].BorderColor3 = box["default border color"]
+box["output scrolling frame"].BorderSizePixel = 1
+box["output scrolling frame"].ScrollBarThickness = 8
+box["output scrolling frame"].ScrollBarImageColor3 = box["default 1/2 color"]
+box["output scrolling frame"].CanvasSize = UDim2.new(0, 0, 0, 0)
+box["output scrolling frame"].Parent = box["main frame 2"]
+box["output scrolling frame"].ZIndex = 24
+box["output scrolling frame"].Visible = false
+box["output scrolling frame"].ScrollingDirection = Enum.ScrollingDirection.XY
 
-uwu["output textbox"].Name = "temphalf"
-uwu["output textbox"].Size = UDim2.new(0, 393, 0, 164)
-uwu["output textbox"].Position = UDim2.new(0, 0, 0, 0)
-uwu["output textbox"].BackgroundColor3 = uwu["default background color"]
-uwu["output textbox"].BorderColor3 = uwu["default border color"]
-uwu["output textbox"].BorderSizePixel = 0
-uwu["output textbox"].TextColor3 = uwu["default border color"]
-uwu["output textbox"].PlaceholderText = "output from the roblox console will appear here"
-uwu["output textbox"].PlaceholderColor3 = uwu["default 1/2 color"]
-uwu["output textbox"].Font = Enum.Font.RobotoMono
-uwu["output textbox"].TextSize = 15
-uwu["output textbox"].TextScaled = false
-uwu["output textbox"].Text = ""
-uwu["output textbox"].TextXAlignment = Enum.TextXAlignment.Left
-uwu["output textbox"].TextYAlignment = Enum.TextYAlignment.Top
-uwu["output textbox"].ClearTextOnFocus = false
-uwu["output textbox"].MultiLine = true
-uwu["output textbox"].Parent = uwu["output scrolling frame"]
-uwu["output textbox"].ZIndex = 24
-uwu["output textbox"].TextEditable = false
+box["output textbox"].Name = "temphalf"
+box["output textbox"].Size = UDim2.new(0, 393, 0, 164)
+box["output textbox"].Position = UDim2.new(0, 0, 0, 0)
+box["output textbox"].BackgroundColor3 = box["default background color"]
+box["output textbox"].BorderColor3 = box["default border color"]
+box["output textbox"].BorderSizePixel = 0
+box["output textbox"].TextColor3 = box["default border color"]
+box["output textbox"].PlaceholderText = "output from the roblox console will appear here"
+box["output textbox"].PlaceholderColor3 = box["default 1/2 color"]
+box["output textbox"].Font = Enum.Font.RobotoMono
+box["output textbox"].TextSize = 15
+box["output textbox"].TextScaled = false
+box["output textbox"].Text = ""
+box["output textbox"].TextXAlignment = Enum.TextXAlignment.Left
+box["output textbox"].TextYAlignment = Enum.TextYAlignment.Top
+box["output textbox"].ClearTextOnFocus = false
+box["output textbox"].MultiLine = true
+box["output textbox"].Parent = box["output scrolling frame"]
+box["output textbox"].ZIndex = 24
+box["output textbox"].TextEditable = false
 
-uwu["output textbox text padding"] = Instance.new("UIPadding")
-uwu["output textbox text padding"].PaddingLeft = UDim.new(0, 4)
-uwu["output textbox text padding"].PaddingTop = UDim.new(0, 4)
-uwu["output textbox text padding"].PaddingBottom = UDim.new(0, 4)
-uwu["output textbox text padding"].Parent = uwu["output scrolling frame"]
+box["output textbox text padding"] = Instance.new("UIPadding")
+box["output textbox text padding"].PaddingLeft = UDim.new(0, 4)
+box["output textbox text padding"].PaddingTop = UDim.new(0, 4)
+box["output textbox text padding"].PaddingBottom = UDim.new(0, 4)
+box["output textbox text padding"].Parent = box["output scrolling frame"]
 
 local function addTextWithNewline2(textBox, text)
 	local serverTime = os.date("%X")
@@ -6023,398 +6027,398 @@ local function addTextWithNewline2(textBox, text)
 end
 
 function updateCanvas3()
-	local textBounds = uwu["output textbox"].TextBounds
+	local textBounds = box["output textbox"].TextBounds
 
-	uwu["output textbox"].Size = UDim2.new(0, math.max(392, textBounds.X + 20), 0, math.max(164, textBounds.Y + 20))
-	uwu["output scrolling frame"].CanvasSize = UDim2.new(0, textBounds.X + 20, 0, textBounds.Y + 11)
+	box["output textbox"].Size = UDim2.new(0, math.max(392, textBounds.X + 20), 0, math.max(164, textBounds.Y + 20))
+	box["output scrolling frame"].CanvasSize = UDim2.new(0, textBounds.X + 20, 0, textBounds.Y + 11)
 
-	uwu["output scrolling frame"].CanvasPosition = Vector2.new(0, uwu["output scrolling frame"].CanvasSize.Y.Offset)
+	box["output scrolling frame"].CanvasPosition = Vector2.new(0, box["output scrolling frame"].CanvasSize.Y.Offset)
 end
 
-uwu["logs textbox"]:GetPropertyChangedSignal("Text"):Connect(updateCanvas3)
+box["logs textbox"]:GetPropertyChangedSignal("Text"):Connect(updateCanvas3)
 
 updateCanvas3()
 
 local LogService = game:GetService("LogService")
 
 LogService.MessageOut:Connect(function(message, messageType)
-	addTextWithNewline2(uwu["output textbox"], message)
+	addTextWithNewline2(box["output textbox"], message)
 	updateCanvas3()
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["clear console button"].Size = UDim2.new(0, 393, 0, 45)
-uwu["clear console button"].Position = UDim2.new(0, 4, 0, 200)
+box["clear console button"].Size = UDim2.new(0, 393, 0, 45)
+box["clear console button"].Position = UDim2.new(0, 4, 0, 200)
 
-uwu["clear console button"].BackgroundColor3 = uwu["default background color"]
+box["clear console button"].BackgroundColor3 = box["default background color"]
 
-uwu["clear console button"].BorderColor3 = uwu["default border color"]
-uwu["clear console button"].BorderSizePixel = 1
+box["clear console button"].BorderColor3 = box["default border color"]
+box["clear console button"].BorderSizePixel = 1
 
-uwu["clear console button"].TextColor3 = uwu["default border color"]
-uwu["clear console button"].Font = Enum.Font.RobotoMono
-uwu["clear console button"].TextSize = 15
-uwu["clear console button"].TextScaled = false
-uwu["clear console button"].Text = "clear"
-uwu["clear console button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["clear console button"].TextYAlignment = Enum.TextYAlignment.Center
+box["clear console button"].TextColor3 = box["default border color"]
+box["clear console button"].Font = Enum.Font.RobotoMono
+box["clear console button"].TextSize = 15
+box["clear console button"].TextScaled = false
+box["clear console button"].Text = "clear"
+box["clear console button"].TextXAlignment = Enum.TextXAlignment.Center
+box["clear console button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["clear console button text padding"] = Instance.new("UIPadding")
-uwu["clear console button text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["clear console button text padding"].Parent = uwu["clear console button"]
+box["clear console button text padding"] = Instance.new("UIPadding")
+box["clear console button text padding"].PaddingLeft = UDim.new(0, 0)
+box["clear console button text padding"].Parent = box["clear console button"]
 
-uwu["clear console button"].Parent = uwu["main frame 2"]
-uwu["clear console button"].ZIndex = 24
-uwu["clear console button"].Visible = false
+box["clear console button"].Parent = box["main frame 2"]
+box["clear console button"].ZIndex = 24
+box["clear console button"].Visible = false
 
-uwu["clear console button"].MouseButton1Click:Connect(function()
+box["clear console button"].MouseButton1Click:Connect(function()
 	playclicksound()
-	uwu["output textbox"].Text = ""
+	box["output textbox"].Text = ""
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["console label"].Size = UDim2.new(0, 393, 0, 19)
-uwu["console label"].Position = UDim2.new(0, 0, 0, 0)
-uwu["console label"].TextColor3 = uwu["default border color"]
-uwu["console label"].Font = Enum.Font.RobotoMono
-uwu["console label"].TextScaled = false
-uwu["console label"].TextSize = 15
-uwu["console label"].Text = "console (/console) output"
-uwu["console label"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["console label"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["console label"].BackgroundColor3 = uwu["default background color"]
-uwu["console label"].BorderColor3 = uwu["default border color"]
-uwu["console label"].BorderSizePixel = 1
-uwu["console label"].Parent = uwu["output holder"]
-uwu["console label"].ZIndex = 24
+box["console label"].Size = UDim2.new(0, 393, 0, 19)
+box["console label"].Position = UDim2.new(0, 0, 0, 0)
+box["console label"].TextColor3 = box["default border color"]
+box["console label"].Font = Enum.Font.RobotoMono
+box["console label"].TextScaled = false
+box["console label"].TextSize = 15
+box["console label"].Text = "console (/console) output"
+box["console label"].TextXAlignment = Enum.TextXAlignment.Center
+box["console label"].TextYAlignment = Enum.TextYAlignment.Center
+box["console label"].BackgroundColor3 = box["default background color"]
+box["console label"].BorderColor3 = box["default border color"]
+box["console label"].BorderSizePixel = 1
+box["console label"].Parent = box["output holder"]
+box["console label"].ZIndex = 24
 
-uwu["console label text padding"] = Instance.new("UIPadding")
-uwu["console label text padding"].PaddingBottom = UDim.new(0, 1)
-uwu["console label text padding"].Parent = uwu["console label"]
+box["console label text padding"] = Instance.new("UIPadding")
+box["console label text padding"].PaddingBottom = UDim.new(0, 1)
+box["console label text padding"].Parent = box["console label"]
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["console output tab"].Size = UDim2.new(0, 133, 0, 26)
-uwu["console output tab"].Position = UDim2.new(0, 268, 0, 0)
+box["console output tab"].Size = UDim2.new(0, 133, 0, 26)
+box["console output tab"].Position = UDim2.new(0, 268, 0, 0)
 
-uwu["console output tab"].BackgroundColor3 = uwu["default background color"]
-uwu["console output tab"].BorderColor3 = uwu["default border color"]
-uwu["console output tab"].BorderSizePixel = 1
+box["console output tab"].BackgroundColor3 = box["default background color"]
+box["console output tab"].BorderColor3 = box["default border color"]
+box["console output tab"].BorderSizePixel = 1
 
-uwu["console output tab"].TextColor3 = uwu["default border color"]
-uwu["console output tab"].Font = Enum.Font.RobotoMono
-uwu["console output tab"].TextSize = 15
-uwu["console output tab"].TextScaled = false
-uwu["console output tab"].Text = "console output"
-uwu["console output tab"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["console output tab"].TextYAlignment = Enum.TextYAlignment.Center
+box["console output tab"].TextColor3 = box["default border color"]
+box["console output tab"].Font = Enum.Font.RobotoMono
+box["console output tab"].TextSize = 15
+box["console output tab"].TextScaled = false
+box["console output tab"].Text = "console output"
+box["console output tab"].TextXAlignment = Enum.TextXAlignment.Center
+box["console output tab"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["console output tab text padding"] = Instance.new("UIPadding")
-uwu["console output tab text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["console output tab text padding"].Parent = uwu["scripts tab"]
+box["console output tab text padding"] = Instance.new("UIPadding")
+box["console output tab text padding"].PaddingLeft = UDim.new(0, 0)
+box["console output tab text padding"].Parent = box["scripts tab"]
 
-uwu["console output tab"].Parent = uwu["main frame 2"]
-uwu["console output tab"].ZIndex = 21
+box["console output tab"].Parent = box["main frame 2"]
+box["console output tab"].ZIndex = 21
 
-uwu["console output tab bottom cover"].Size = UDim2.new(0, 133, 0, 2)
-uwu["console output tab bottom cover"].Position = UDim2.new(0, 268, 0, 26)
-uwu["console output tab bottom cover"].BackgroundColor3 = uwu["default background color"]
-uwu["console output tab bottom cover"].BorderSizePixel = 0
-uwu["console output tab bottom cover"].Parent = uwu["main frame 2"]
-uwu["console output tab bottom cover"].ZIndex = 21.5
-uwu["console output tab bottom cover"].Visible = false
+box["console output tab bottom cover"].Size = UDim2.new(0, 133, 0, 2)
+box["console output tab bottom cover"].Position = UDim2.new(0, 268, 0, 26)
+box["console output tab bottom cover"].BackgroundColor3 = box["default background color"]
+box["console output tab bottom cover"].BorderSizePixel = 0
+box["console output tab bottom cover"].Parent = box["main frame 2"]
+box["console output tab bottom cover"].ZIndex = 21.5
+box["console output tab bottom cover"].Visible = false
 
-uwu["console output tab"].MouseButton1Click:Connect(function()
+box["console output tab"].MouseButton1Click:Connect(function()
 	playclicksound()
 
-	uwu["player information tab bottom cover"].Visible = false
-	uwu["server information tab bottom cover"].Visible = false
-	uwu["console output tab bottom cover"].Visible = true
+	box["player information tab bottom cover"].Visible = false
+	box["server information tab bottom cover"].Visible = false
+	box["console output tab bottom cover"].Visible = true
 
-	uwu["information holder"].Visible = false
-	uwu["server information holder"].Visible = false
-	uwu["output holder"].Visible = true
-	uwu["output scrolling frame"].Visible = true
-	uwu["console label"].Visible = true
-	uwu["clear console button"].Visible = true
+	box["information holder"].Visible = false
+	box["server information holder"].Visible = false
+	box["output holder"].Visible = true
+	box["output scrolling frame"].Visible = true
+	box["console label"].Visible = true
+	box["clear console button"].Visible = true
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["information holder"].Size = UDim2.new(0, 393, 0, 214)
-uwu["information holder"].Position = UDim2.new(0, 4, 0, 31)
-uwu["information holder"].BackgroundColor3 = uwu["default background color"]
-uwu["information holder"].BorderColor3 = uwu["default border color"]
-uwu["information holder"].BorderSizePixel = 1
-uwu["information holder"].Parent = uwu["main frame 2"]
-uwu["information holder"].ZIndex = 19
-uwu["information holder"].Visible = true
+box["information holder"].Size = UDim2.new(0, 393, 0, 214)
+box["information holder"].Position = UDim2.new(0, 4, 0, 31)
+box["information holder"].BackgroundColor3 = box["default background color"]
+box["information holder"].BorderColor3 = box["default border color"]
+box["information holder"].BorderSizePixel = 1
+box["information holder"].Parent = box["main frame 2"]
+box["information holder"].ZIndex = 19
+box["information holder"].Visible = true
 
-uwu["information holder"].TextColor3 = uwu["default border color"]
-uwu["information holder"].Font = Enum.Font.RobotoMono
-uwu["information holder"].TextSize = 15
-uwu["information holder"].TextScaled = false
-uwu["information holder"].Text = "loading..."
-uwu["information holder"].TextXAlignment = Enum.TextXAlignment.Left
-uwu["information holder"].TextYAlignment = Enum.TextYAlignment.Top
-uwu["information holder"].ZIndex = 21
-uwu["information holder"].TextWrapped = true
+box["information holder"].TextColor3 = box["default border color"]
+box["information holder"].Font = Enum.Font.RobotoMono
+box["information holder"].TextSize = 15
+box["information holder"].TextScaled = false
+box["information holder"].Text = "loading..."
+box["information holder"].TextXAlignment = Enum.TextXAlignment.Left
+box["information holder"].TextYAlignment = Enum.TextYAlignment.Top
+box["information holder"].ZIndex = 21
+box["information holder"].TextWrapped = true
 
-uwu["information holder text padding"] = Instance.new("UIPadding")
-uwu["information holder text padding"].PaddingLeft = UDim.new(0, 4)
-uwu["information holder text padding"].PaddingTop = UDim.new(0, 4)
-uwu["information holder text padding"].PaddingBottom = UDim.new(0, 4)
-uwu["information holder text padding"].Parent = uwu["information holder"]
-
--------------------------------------------------------------------------------------------------------------------------------
-
-uwu["server information holder"].Size = UDim2.new(0, 393, 0, 214)
-uwu["server information holder"].Position = UDim2.new(0, 4, 0, 31)
-uwu["server information holder"].BackgroundColor3 = uwu["default background color"]
-uwu["server information holder"].BorderColor3 = uwu["default border color"]
-uwu["server information holder"].BorderSizePixel = 1
-uwu["server information holder"].Parent = uwu["main frame 2"]
-uwu["server information holder"].ZIndex = 19
-uwu["server information holder"].Visible = false
-
-uwu["server information holder"].TextColor3 = uwu["default border color"]
-uwu["server information holder"].Font = Enum.Font.RobotoMono
-uwu["server information holder"].TextSize = 15
-uwu["server information holder"].TextScaled = false
-uwu["server information holder"].Text = "loading..."
-uwu["server information holder"].TextXAlignment = Enum.TextXAlignment.Left
-uwu["server information holder"].TextYAlignment = Enum.TextYAlignment.Top
-uwu["server information holder"].ZIndex = 21
-uwu["server information holder"].TextWrapped = true
-
-uwu["server information holder text padding"] = Instance.new("UIPadding")
-uwu["server information holder text padding"].PaddingLeft = UDim.new(0, 4)
-uwu["server information holder text padding"].PaddingTop = UDim.new(0, 4)
-uwu["server information holder text padding"].PaddingBottom = UDim.new(0, 4)
-uwu["server information holder text padding"].Parent = uwu["server information holder"]
+box["information holder text padding"] = Instance.new("UIPadding")
+box["information holder text padding"].PaddingLeft = UDim.new(0, 4)
+box["information holder text padding"].PaddingTop = UDim.new(0, 4)
+box["information holder text padding"].PaddingBottom = UDim.new(0, 4)
+box["information holder text padding"].Parent = box["information holder"]
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["script settings tab"].Size = UDim2.new(0, 199, 0, 26)
-uwu["script settings tab"].Position = UDim2.new(0, 0, 0, 0)
+box["server information holder"].Size = UDim2.new(0, 393, 0, 214)
+box["server information holder"].Position = UDim2.new(0, 4, 0, 31)
+box["server information holder"].BackgroundColor3 = box["default background color"]
+box["server information holder"].BorderColor3 = box["default border color"]
+box["server information holder"].BorderSizePixel = 1
+box["server information holder"].Parent = box["main frame 2"]
+box["server information holder"].ZIndex = 19
+box["server information holder"].Visible = false
 
-uwu["script settings tab"].BackgroundColor3 = uwu["default background color"]
+box["server information holder"].TextColor3 = box["default border color"]
+box["server information holder"].Font = Enum.Font.RobotoMono
+box["server information holder"].TextSize = 15
+box["server information holder"].TextScaled = false
+box["server information holder"].Text = "loading..."
+box["server information holder"].TextXAlignment = Enum.TextXAlignment.Left
+box["server information holder"].TextYAlignment = Enum.TextYAlignment.Top
+box["server information holder"].ZIndex = 21
+box["server information holder"].TextWrapped = true
 
-uwu["script settings tab"].BorderColor3 = uwu["default border color"]
-uwu["script settings tab"].BorderSizePixel = 1
+box["server information holder text padding"] = Instance.new("UIPadding")
+box["server information holder text padding"].PaddingLeft = UDim.new(0, 4)
+box["server information holder text padding"].PaddingTop = UDim.new(0, 4)
+box["server information holder text padding"].PaddingBottom = UDim.new(0, 4)
+box["server information holder text padding"].Parent = box["server information holder"]
 
-uwu["script settings tab"].TextColor3 = uwu["default border color"]
-uwu["script settings tab"].Font = Enum.Font.RobotoMono
-uwu["script settings tab"].TextSize = 15
-uwu["script settings tab"].TextScaled = false
-uwu["script settings tab"].Text = "script settings"
-uwu["script settings tab"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["script settings tab"].TextYAlignment = Enum.TextYAlignment.Center
+-------------------------------------------------------------------------------------------------------------------------------
 
-uwu["script settings tab text padding"] = Instance.new("UIPadding")
-uwu["script settings tab text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["script settings tab text padding"].Parent = uwu["scripts tab"]
+box["script settings tab"].Size = UDim2.new(0, 199, 0, 26)
+box["script settings tab"].Position = UDim2.new(0, 0, 0, 0)
 
-uwu["script settings tab"].Parent = uwu["main frame 3"]
-uwu["script settings tab"].ZIndex = 23
+box["script settings tab"].BackgroundColor3 = box["default background color"]
 
-uwu["script settings tab bottom cover"].Size = UDim2.new(0, 199, 0, 2)
-uwu["script settings tab bottom cover"].Position = UDim2.new(0, 0, 0, 26)
-uwu["script settings tab bottom cover"].BackgroundColor3 = uwu["default background color"]
-uwu["script settings tab bottom cover"].BorderSizePixel = 0
-uwu["script settings tab bottom cover"].Parent = uwu["main frame 3"]
-uwu["script settings tab bottom cover"].ZIndex = 23.5
-uwu["script settings tab bottom cover"].Visible = true
+box["script settings tab"].BorderColor3 = box["default border color"]
+box["script settings tab"].BorderSizePixel = 1
 
-uwu["script settings tab"].MouseButton1Click:Connect(function()
+box["script settings tab"].TextColor3 = box["default border color"]
+box["script settings tab"].Font = Enum.Font.RobotoMono
+box["script settings tab"].TextSize = 15
+box["script settings tab"].TextScaled = false
+box["script settings tab"].Text = "script settings"
+box["script settings tab"].TextXAlignment = Enum.TextXAlignment.Center
+box["script settings tab"].TextYAlignment = Enum.TextYAlignment.Center
+
+box["script settings tab text padding"] = Instance.new("UIPadding")
+box["script settings tab text padding"].PaddingLeft = UDim.new(0, 0)
+box["script settings tab text padding"].Parent = box["scripts tab"]
+
+box["script settings tab"].Parent = box["main frame 3"]
+box["script settings tab"].ZIndex = 23
+
+box["script settings tab bottom cover"].Size = UDim2.new(0, 199, 0, 2)
+box["script settings tab bottom cover"].Position = UDim2.new(0, 0, 0, 26)
+box["script settings tab bottom cover"].BackgroundColor3 = box["default background color"]
+box["script settings tab bottom cover"].BorderSizePixel = 0
+box["script settings tab bottom cover"].Parent = box["main frame 3"]
+box["script settings tab bottom cover"].ZIndex = 23.5
+box["script settings tab bottom cover"].Visible = true
+
+box["script settings tab"].MouseButton1Click:Connect(function()
 	playclicksound()
 
-	uwu["script settings tab bottom cover"].Visible = true
-	uwu["server settings tab bottom cover"].Visible = false
+	box["script settings tab bottom cover"].Visible = true
+	box["server settings tab bottom cover"].Visible = false
 
-	uwu["server settings holder"].Visible = false
-	uwu["script settings holder"].Visible = true
+	box["server settings holder"].Visible = false
+	box["script settings holder"].Visible = true
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["server settings tab"].Size = UDim2.new(0, 201, 0, 26)
-uwu["server settings tab"].Position = UDim2.new(0, 200, 0, 0)
+box["server settings tab"].Size = UDim2.new(0, 201, 0, 26)
+box["server settings tab"].Position = UDim2.new(0, 200, 0, 0)
 
-uwu["server settings tab"].BackgroundColor3 = uwu["default background color"]
+box["server settings tab"].BackgroundColor3 = box["default background color"]
 
-uwu["server settings tab"].BorderColor3 = uwu["default border color"]
-uwu["server settings tab"].BorderSizePixel = 1
+box["server settings tab"].BorderColor3 = box["default border color"]
+box["server settings tab"].BorderSizePixel = 1
 
-uwu["server settings tab"].TextColor3 = uwu["default border color"]
-uwu["server settings tab"].Font = Enum.Font.RobotoMono
-uwu["server settings tab"].TextSize = 15
-uwu["server settings tab"].TextScaled = false
-uwu["server settings tab"].Text = "server settings"
-uwu["server settings tab"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["server settings tab"].TextYAlignment = Enum.TextYAlignment.Center
+box["server settings tab"].TextColor3 = box["default border color"]
+box["server settings tab"].Font = Enum.Font.RobotoMono
+box["server settings tab"].TextSize = 15
+box["server settings tab"].TextScaled = false
+box["server settings tab"].Text = "server settings"
+box["server settings tab"].TextXAlignment = Enum.TextXAlignment.Center
+box["server settings tab"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["server settings tab text padding"] = Instance.new("UIPadding")
-uwu["server settings tab text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["server settings tab text padding"].Parent = uwu["scripts tab"]
+box["server settings tab text padding"] = Instance.new("UIPadding")
+box["server settings tab text padding"].PaddingLeft = UDim.new(0, 0)
+box["server settings tab text padding"].Parent = box["scripts tab"]
 
-uwu["server settings tab"].Parent = uwu["main frame 3"]
-uwu["server settings tab"].ZIndex = 23
+box["server settings tab"].Parent = box["main frame 3"]
+box["server settings tab"].ZIndex = 23
 
-uwu["server settings tab bottom cover"].Size = UDim2.new(0, 201, 0, 2)
-uwu["server settings tab bottom cover"].Position = UDim2.new(0, 200, 0, 26)
-uwu["server settings tab bottom cover"].BackgroundColor3 = uwu["default background color"]
-uwu["server settings tab bottom cover"].BorderSizePixel = 0
-uwu["server settings tab bottom cover"].Parent = uwu["main frame 3"]
-uwu["server settings tab bottom cover"].ZIndex = 23.5
-uwu["server settings tab bottom cover"].Visible = false
+box["server settings tab bottom cover"].Size = UDim2.new(0, 201, 0, 2)
+box["server settings tab bottom cover"].Position = UDim2.new(0, 200, 0, 26)
+box["server settings tab bottom cover"].BackgroundColor3 = box["default background color"]
+box["server settings tab bottom cover"].BorderSizePixel = 0
+box["server settings tab bottom cover"].Parent = box["main frame 3"]
+box["server settings tab bottom cover"].ZIndex = 23.5
+box["server settings tab bottom cover"].Visible = false
 
-uwu["server settings tab"].MouseButton1Click:Connect(function()
+box["server settings tab"].MouseButton1Click:Connect(function()
 	playclicksound()
 
-	uwu["script settings tab bottom cover"].Visible = false
-	uwu["server settings tab bottom cover"].Visible = true
+	box["script settings tab bottom cover"].Visible = false
+	box["server settings tab bottom cover"].Visible = true
 
-	uwu["server settings holder"].Visible = true
-	uwu["script settings holder"].Visible = false
+	box["server settings holder"].Visible = true
+	box["script settings holder"].Visible = false
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["server settings holder"].Size = UDim2.new(0, 393, 0, 214)
-uwu["server settings holder"].Position = UDim2.new(0, 4, 0, 31)
-uwu["server settings holder"].BackgroundColor3 = uwu["default background color"]
-uwu["server settings holder"].BorderColor3 = uwu["default border color"]
-uwu["server settings holder"].BackgroundTransparency = 1
-uwu["server settings holder"].Parent = uwu["main frame 3"]
-uwu["server settings holder"].Visible = false
-uwu["server settings holder"].ZIndex = 23
+box["server settings holder"].Size = UDim2.new(0, 393, 0, 214)
+box["server settings holder"].Position = UDim2.new(0, 4, 0, 31)
+box["server settings holder"].BackgroundColor3 = box["default background color"]
+box["server settings holder"].BorderColor3 = box["default border color"]
+box["server settings holder"].BackgroundTransparency = 1
+box["server settings holder"].Parent = box["main frame 3"]
+box["server settings holder"].Visible = false
+box["server settings holder"].ZIndex = 23
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["change fps cap"].Size = UDim2.new(0, 230, 0, 68)
-uwu["change fps cap"].Position = UDim2.new(0, 0, 0, 0)
-uwu["change fps cap"].TextColor3 = uwu["default border color"]
-uwu["change fps cap"].Font = Enum.Font.RobotoMono
-uwu["change fps cap"].TextScaled = false
-uwu["change fps cap"].TextSize = 15
-uwu["change fps cap"].Text = "fps cap: " .. getServerFPS()
-uwu["change fps cap"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["change fps cap"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["change fps cap"].BackgroundColor3 = uwu["default background color"]
-uwu["change fps cap"].BorderColor3 = uwu["default border color"]
-uwu["change fps cap"].BorderSizePixel = 1
-uwu["change fps cap"].Parent = uwu["server settings holder"]
-uwu["change fps cap"].ZIndex = 24
+box["change fps cap"].Size = UDim2.new(0, 230, 0, 68)
+box["change fps cap"].Position = UDim2.new(0, 0, 0, 0)
+box["change fps cap"].TextColor3 = box["default border color"]
+box["change fps cap"].Font = Enum.Font.RobotoMono
+box["change fps cap"].TextScaled = false
+box["change fps cap"].TextSize = 15
+box["change fps cap"].Text = "fps cap: " .. getServerFPS()
+box["change fps cap"].TextXAlignment = Enum.TextXAlignment.Center
+box["change fps cap"].TextYAlignment = Enum.TextYAlignment.Center
+box["change fps cap"].BackgroundColor3 = box["default background color"]
+box["change fps cap"].BorderColor3 = box["default border color"]
+box["change fps cap"].BorderSizePixel = 1
+box["change fps cap"].Parent = box["server settings holder"]
+box["change fps cap"].ZIndex = 24
 
-uwu["change fps cap setting"].Size = UDim2.new(0, 158, 0, 31)
-uwu["change fps cap setting"].Position = UDim2.new(0, 235, 0, 0)
-uwu["change fps cap setting"].TextColor3 = uwu["default border color"]
-uwu["change fps cap setting"].Font = Enum.Font.RobotoMono
-uwu["change fps cap setting"].TextScaled = false
-uwu["change fps cap setting"].TextSize = 15
-uwu["change fps cap setting"].Text = "change fps cap"
-uwu["change fps cap setting"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["change fps cap setting"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["change fps cap setting"].BackgroundColor3 = uwu["default background color"]
-uwu["change fps cap setting"].BorderColor3 = uwu["default border color"]
-uwu["change fps cap setting"].BorderSizePixel = 1
-uwu["change fps cap setting"].Parent = uwu["server settings holder"]
-uwu["change fps cap setting"].ZIndex = 24
+box["change fps cap setting"].Size = UDim2.new(0, 158, 0, 31)
+box["change fps cap setting"].Position = UDim2.new(0, 235, 0, 0)
+box["change fps cap setting"].TextColor3 = box["default border color"]
+box["change fps cap setting"].Font = Enum.Font.RobotoMono
+box["change fps cap setting"].TextScaled = false
+box["change fps cap setting"].TextSize = 15
+box["change fps cap setting"].Text = "change fps cap"
+box["change fps cap setting"].TextXAlignment = Enum.TextXAlignment.Center
+box["change fps cap setting"].TextYAlignment = Enum.TextYAlignment.Center
+box["change fps cap setting"].BackgroundColor3 = box["default background color"]
+box["change fps cap setting"].BorderColor3 = box["default border color"]
+box["change fps cap setting"].BorderSizePixel = 1
+box["change fps cap setting"].Parent = box["server settings holder"]
+box["change fps cap setting"].ZIndex = 24
 
-uwu["change fps cap textbox"].Size = UDim2.new(0, 158, 0, 32)
-uwu["change fps cap textbox"].Position = UDim2.new(0, 235, 0, 36)
-uwu["change fps cap textbox"].TextColor3 = uwu["default border color"]
-uwu["change fps cap textbox"].Font = Enum.Font.RobotoMono
-uwu["change fps cap textbox"].TextScaled = false
-uwu["change fps cap textbox"].TextSize = 15
-uwu["change fps cap textbox"].Text = ""
-uwu["change fps cap textbox"].PlaceholderText = "enter value here"
-uwu["change fps cap textbox"].PlaceholderColor3 = uwu["default 1/2 color"]
-uwu["change fps cap textbox"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["change fps cap textbox"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["change fps cap textbox"].BackgroundColor3 = uwu["default background color"]
-uwu["change fps cap textbox"].BorderColor3 = uwu["default border color"]
-uwu["change fps cap textbox"].BorderSizePixel = 1
-uwu["change fps cap textbox"].Parent = uwu["server settings holder"]
-uwu["change fps cap textbox"].ZIndex = 24
+box["change fps cap textbox"].Size = UDim2.new(0, 158, 0, 32)
+box["change fps cap textbox"].Position = UDim2.new(0, 235, 0, 36)
+box["change fps cap textbox"].TextColor3 = box["default border color"]
+box["change fps cap textbox"].Font = Enum.Font.RobotoMono
+box["change fps cap textbox"].TextScaled = false
+box["change fps cap textbox"].TextSize = 15
+box["change fps cap textbox"].Text = ""
+box["change fps cap textbox"].PlaceholderText = "enter value here"
+box["change fps cap textbox"].PlaceholderColor3 = box["default 1/2 color"]
+box["change fps cap textbox"].TextXAlignment = Enum.TextXAlignment.Center
+box["change fps cap textbox"].TextYAlignment = Enum.TextYAlignment.Center
+box["change fps cap textbox"].BackgroundColor3 = box["default background color"]
+box["change fps cap textbox"].BorderColor3 = box["default border color"]
+box["change fps cap textbox"].BorderSizePixel = 1
+box["change fps cap textbox"].Parent = box["server settings holder"]
+box["change fps cap textbox"].ZIndex = 24
 
-uwu["change fps cap setting"].MouseButton1Click:Connect(function()
+box["change fps cap setting"].MouseButton1Click:Connect(function()
 	spawn(playclicksound)
-	local fpscap = tonumber(uwu["change fps cap textbox"].Text)
+	local fpscap = tonumber(box["change fps cap textbox"].Text)
 	if fpscap and fpscap ~= "" then
 		fpscap = math.clamp(fpscap, 1, 240)
-		uwu["change fps cap"].Text = "fps cap: " .. fpscap
+		box["change fps cap"].Text = "fps cap: " .. fpscap
 	end
-	uwu["change fps cap textbox"].Text = ""
+	box["change fps cap textbox"].Text = ""
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["rejoin server"].Size = UDim2.new(0, 128, 0, 68)
-uwu["rejoin server"].Position = UDim2.new(0, 0, 0, 73)
-uwu["rejoin server"].TextColor3 = uwu["default border color"]
-uwu["rejoin server"].Font = Enum.Font.RobotoMono
-uwu["rejoin server"].TextScaled = false
-uwu["rejoin server"].TextSize = 15
-uwu["rejoin server"].Text = "rejoin server"
-uwu["rejoin server"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["rejoin server"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["rejoin server"].BackgroundColor3 = uwu["default background color"]
-uwu["rejoin server"].BorderColor3 = uwu["default border color"]
-uwu["rejoin server"].BorderSizePixel = 1
-uwu["rejoin server"].Parent = uwu["server settings holder"]
-uwu["rejoin server"].ZIndex = 24
+box["rejoin server"].Size = UDim2.new(0, 128, 0, 68)
+box["rejoin server"].Position = UDim2.new(0, 0, 0, 73)
+box["rejoin server"].TextColor3 = box["default border color"]
+box["rejoin server"].Font = Enum.Font.RobotoMono
+box["rejoin server"].TextScaled = false
+box["rejoin server"].TextSize = 15
+box["rejoin server"].Text = "rejoin server"
+box["rejoin server"].TextXAlignment = Enum.TextXAlignment.Center
+box["rejoin server"].TextYAlignment = Enum.TextYAlignment.Center
+box["rejoin server"].BackgroundColor3 = box["default background color"]
+box["rejoin server"].BorderColor3 = box["default border color"]
+box["rejoin server"].BorderSizePixel = 1
+box["rejoin server"].Parent = box["server settings holder"]
+box["rejoin server"].ZIndex = 24
 
-uwu["rejoin server"].MouseButton1Click:Connect(function()
+box["rejoin server"].MouseButton1Click:Connect(function()
 	spawn(playclicksound)
-	if #uwu["players"]:GetPlayers() <= 1 then
-		uwu["players"].LocalPlayer:Kick("rejoining -.-")
+	if #box["players"]:GetPlayers() <= 1 then
+		box["players"].LocalPlayer:Kick("rejoining -.-")
 		wait()
-		uwu["teleport service"]:Teleport(getPlaceId(), uwu["players"].LocalPlayer)
+		box["teleport service"]:Teleport(getPlaceId(), box["players"].LocalPlayer)
 	else
-		uwu["teleport service"]:TeleportToPlaceInstance(getPlaceId(), getJobId(), uwu["players"].LocalPlayer)
+		box["teleport service"]:TeleportToPlaceInstance(getPlaceId(), getJobId(), box["players"].LocalPlayer)
 	end
 end)
 
-uwu["leave game"].Size = UDim2.new(0, 127, 0, 68)
-uwu["leave game"].Position = UDim2.new(0, 133, 0, 73)
-uwu["leave game"].TextColor3 = uwu["default border color"]
-uwu["leave game"].Font = Enum.Font.RobotoMono
-uwu["leave game"].TextScaled = false
-uwu["leave game"].TextSize = 15
-uwu["leave game"].Text = "leave game"
-uwu["leave game"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["leave game"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["leave game"].BackgroundColor3 = uwu["default background color"]
-uwu["leave game"].BorderColor3 = uwu["default border color"]
-uwu["leave game"].BorderSizePixel = 1
-uwu["leave game"].Parent = uwu["server settings holder"]
-uwu["leave game"].ZIndex = 24
+box["leave game"].Size = UDim2.new(0, 127, 0, 68)
+box["leave game"].Position = UDim2.new(0, 133, 0, 73)
+box["leave game"].TextColor3 = box["default border color"]
+box["leave game"].Font = Enum.Font.RobotoMono
+box["leave game"].TextScaled = false
+box["leave game"].TextSize = 15
+box["leave game"].Text = "leave game"
+box["leave game"].TextXAlignment = Enum.TextXAlignment.Center
+box["leave game"].TextYAlignment = Enum.TextYAlignment.Center
+box["leave game"].BackgroundColor3 = box["default background color"]
+box["leave game"].BorderColor3 = box["default border color"]
+box["leave game"].BorderSizePixel = 1
+box["leave game"].Parent = box["server settings holder"]
+box["leave game"].ZIndex = 24
 
-uwu["leave game"].MouseButton1Click:Connect(function()
+box["leave game"].MouseButton1Click:Connect(function()
 	spawn(playclicksound)
 	game:Shutdown()
 end)
 
-uwu["server hop"].Size = UDim2.new(0, 128, 0, 68)
-uwu["server hop"].Position = UDim2.new(0, 265, 0, 73)
-uwu["server hop"].TextColor3 = uwu["default border color"]
-uwu["server hop"].Font = Enum.Font.RobotoMono
-uwu["server hop"].TextScaled = false
-uwu["server hop"].TextSize = 15
-uwu["server hop"].Text = "server hop"
-uwu["server hop"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["server hop"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["server hop"].BackgroundColor3 = uwu["default background color"]
-uwu["server hop"].BorderColor3 = uwu["default border color"]
-uwu["server hop"].BorderSizePixel = 1
-uwu["server hop"].Parent = uwu["server settings holder"]
-uwu["server hop"].ZIndex = 24
+box["server hop"].Size = UDim2.new(0, 128, 0, 68)
+box["server hop"].Position = UDim2.new(0, 265, 0, 73)
+box["server hop"].TextColor3 = box["default border color"]
+box["server hop"].Font = Enum.Font.RobotoMono
+box["server hop"].TextScaled = false
+box["server hop"].TextSize = 15
+box["server hop"].Text = "server hop"
+box["server hop"].TextXAlignment = Enum.TextXAlignment.Center
+box["server hop"].TextYAlignment = Enum.TextYAlignment.Center
+box["server hop"].BackgroundColor3 = box["default background color"]
+box["server hop"].BorderColor3 = box["default border color"]
+box["server hop"].BorderSizePixel = 1
+box["server hop"].Parent = box["server settings holder"]
+box["server hop"].ZIndex = 24
 
-uwu["server hop"].MouseButton1Click:Connect(function()
+box["server hop"].MouseButton1Click:Connect(function()
 	spawn(playclicksound)
 	if httprequest then
 		local servers = {}
@@ -6430,76 +6434,76 @@ uwu["server hop"].MouseButton1Click:Connect(function()
 		end
 
 		if #servers > 0 then
-			uwu["teleport service"]:TeleportToPlaceInstance(getPlaceId(), servers[math.random(1, #servers)], uwu["players"].LocalPlayer)
+			box["teleport service"]:TeleportToPlaceInstance(getPlaceId(), servers[math.random(1, #servers)], box["players"].LocalPlayer)
 		end
 	end
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["auto rejoin toggle"].Size = UDim2.new(0, 230, 0, 68)
-uwu["auto rejoin toggle"].Position = UDim2.new(0, 0, 0, 146)
-uwu["auto rejoin toggle"].TextColor3 = uwu["default border color"]
-uwu["auto rejoin toggle"].Font = Enum.Font.RobotoMono
-uwu["auto rejoin toggle"].TextScaled = false
-uwu["auto rejoin toggle"].TextSize = 15
-uwu["auto rejoin toggle"].Text = "auto rejoin: disabled"
-uwu["auto rejoin toggle"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["auto rejoin toggle"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["auto rejoin toggle"].BackgroundColor3 = uwu["default background color"]
-uwu["auto rejoin toggle"].BorderColor3 = uwu["default border color"]
-uwu["auto rejoin toggle"].BorderSizePixel = 1
-uwu["auto rejoin toggle"].Parent = uwu["server settings holder"]
-uwu["auto rejoin toggle"].ZIndex = 24
+box["auto rejoin toggle"].Size = UDim2.new(0, 230, 0, 68)
+box["auto rejoin toggle"].Position = UDim2.new(0, 0, 0, 146)
+box["auto rejoin toggle"].TextColor3 = box["default border color"]
+box["auto rejoin toggle"].Font = Enum.Font.RobotoMono
+box["auto rejoin toggle"].TextScaled = false
+box["auto rejoin toggle"].TextSize = 15
+box["auto rejoin toggle"].Text = "auto rejoin: disabled"
+box["auto rejoin toggle"].TextXAlignment = Enum.TextXAlignment.Center
+box["auto rejoin toggle"].TextYAlignment = Enum.TextYAlignment.Center
+box["auto rejoin toggle"].BackgroundColor3 = box["default background color"]
+box["auto rejoin toggle"].BorderColor3 = box["default border color"]
+box["auto rejoin toggle"].BorderSizePixel = 1
+box["auto rejoin toggle"].Parent = box["server settings holder"]
+box["auto rejoin toggle"].ZIndex = 24
 
-uwu["toggle auto rejoin on"].Size = UDim2.new(0, 158, 0, 31)
-uwu["toggle auto rejoin on"].Position = UDim2.new(0, 235, 0, 146)
-uwu["toggle auto rejoin on"].TextColor3 = uwu["default border color"]
-uwu["toggle auto rejoin on"].Font = Enum.Font.RobotoMono
-uwu["toggle auto rejoin on"].TextScaled = false
-uwu["toggle auto rejoin on"].TextSize = 15
-uwu["toggle auto rejoin on"].Text = "enable"
-uwu["toggle auto rejoin on"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["toggle auto rejoin on"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["toggle auto rejoin on"].BackgroundColor3 = uwu["default background color"]
-uwu["toggle auto rejoin on"].BorderColor3 = uwu["default border color"]
-uwu["toggle auto rejoin on"].BorderSizePixel = 1
-uwu["toggle auto rejoin on"].Parent = uwu["server settings holder"]
-uwu["toggle auto rejoin on"].ZIndex = 24
+box["toggle auto rejoin on"].Size = UDim2.new(0, 158, 0, 31)
+box["toggle auto rejoin on"].Position = UDim2.new(0, 235, 0, 146)
+box["toggle auto rejoin on"].TextColor3 = box["default border color"]
+box["toggle auto rejoin on"].Font = Enum.Font.RobotoMono
+box["toggle auto rejoin on"].TextScaled = false
+box["toggle auto rejoin on"].TextSize = 15
+box["toggle auto rejoin on"].Text = "enable"
+box["toggle auto rejoin on"].TextXAlignment = Enum.TextXAlignment.Center
+box["toggle auto rejoin on"].TextYAlignment = Enum.TextYAlignment.Center
+box["toggle auto rejoin on"].BackgroundColor3 = box["default background color"]
+box["toggle auto rejoin on"].BorderColor3 = box["default border color"]
+box["toggle auto rejoin on"].BorderSizePixel = 1
+box["toggle auto rejoin on"].Parent = box["server settings holder"]
+box["toggle auto rejoin on"].ZIndex = 24
 
-uwu["toggle auto rejoin off"].Size = UDim2.new(0, 158, 0, 32)
-uwu["toggle auto rejoin off"].Position = UDim2.new(0, 235, 0, 182)
-uwu["toggle auto rejoin off"].TextColor3 = uwu["default border color"]
-uwu["toggle auto rejoin off"].Font = Enum.Font.RobotoMono
-uwu["toggle auto rejoin off"].TextScaled = false
-uwu["toggle auto rejoin off"].TextSize = 15
-uwu["toggle auto rejoin off"].Text = "disable"
-uwu["toggle auto rejoin off"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["toggle auto rejoin off"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["toggle auto rejoin off"].BackgroundColor3 = uwu["default background color"]
-uwu["toggle auto rejoin off"].BorderColor3 = uwu["default border color"]
-uwu["toggle auto rejoin off"].BorderSizePixel = 1
-uwu["toggle auto rejoin off"].Parent = uwu["server settings holder"]
-uwu["toggle auto rejoin off"].ZIndex = 24
+box["toggle auto rejoin off"].Size = UDim2.new(0, 158, 0, 32)
+box["toggle auto rejoin off"].Position = UDim2.new(0, 235, 0, 182)
+box["toggle auto rejoin off"].TextColor3 = box["default border color"]
+box["toggle auto rejoin off"].Font = Enum.Font.RobotoMono
+box["toggle auto rejoin off"].TextScaled = false
+box["toggle auto rejoin off"].TextSize = 15
+box["toggle auto rejoin off"].Text = "disable"
+box["toggle auto rejoin off"].TextXAlignment = Enum.TextXAlignment.Center
+box["toggle auto rejoin off"].TextYAlignment = Enum.TextYAlignment.Center
+box["toggle auto rejoin off"].BackgroundColor3 = box["default background color"]
+box["toggle auto rejoin off"].BorderColor3 = box["default border color"]
+box["toggle auto rejoin off"].BorderSizePixel = 1
+box["toggle auto rejoin off"].Parent = box["server settings holder"]
+box["toggle auto rejoin off"].ZIndex = 24
 
 arj = false
 
-uwu["toggle auto rejoin on"].MouseButton1Click:Connect(function()
+box["toggle auto rejoin on"].MouseButton1Click:Connect(function()
 	spawn(playclicksound)
-	uwu["auto rejoin toggle"].Text = "auto rejoin: enabled"
+	box["auto rejoin toggle"].Text = "auto rejoin: enabled"
 	arj = true
 end)
 
-uwu["toggle auto rejoin off"].MouseButton1Click:Connect(function()
+box["toggle auto rejoin off"].MouseButton1Click:Connect(function()
 	spawn(playclicksound)
-	uwu["auto rejoin toggle"].Text = "auto rejoin: disabled"
+	box["auto rejoin toggle"].Text = "auto rejoin: disabled"
 	arj = false
 end)
 
-if game.PlaceId ~= uwu["test game"] then
-	uwu["gui service"].ErrorMessageChanged:Connect(function()
+if game.PlaceId ~= box["test game"] then
+	box["gui service"].ErrorMessageChanged:Connect(function()
 		if arj == false then return end
-		uwu["gui service"].ErrorMessageChanged:Connect(function()
+		box["gui service"].ErrorMessageChanged:Connect(function()
 			rejoin()
 		end)
 	end)
@@ -6507,46 +6511,46 @@ end
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["script settings holder"].Size = UDim2.new(0, 393, 0, 214)
-uwu["script settings holder"].Position = UDim2.new(0, 4, 0, 31)
-uwu["script settings holder"].BackgroundColor3 = uwu["default background color"]
-uwu["script settings holder"].BorderColor3 = uwu["default border color"]
-uwu["script settings holder"].BorderSizePixel = 0
-uwu["script settings holder"].Parent = uwu["main frame 3"]
-uwu["script settings holder"].Visible = true
-uwu["script settings holder"].ZIndex = 23
+box["script settings holder"].Size = UDim2.new(0, 393, 0, 214)
+box["script settings holder"].Position = UDim2.new(0, 4, 0, 31)
+box["script settings holder"].BackgroundColor3 = box["default background color"]
+box["script settings holder"].BorderColor3 = box["default border color"]
+box["script settings holder"].BorderSizePixel = 0
+box["script settings holder"].Parent = box["main frame 3"]
+box["script settings holder"].Visible = true
+box["script settings holder"].ZIndex = 23
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["current theme"].Size = UDim2.new(0, 230, 0, 68)
-uwu["current theme"].Position = UDim2.new(0, 0, 0, 0)
-uwu["current theme"].TextColor3 = uwu["default border color"]
-uwu["current theme"].Font = Enum.Font.RobotoMono
-uwu["current theme"].TextScaled = false
-uwu["current theme"].TextSize = 15
-uwu["current theme"].Text = "current theme: default"
-uwu["current theme"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["current theme"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["current theme"].BackgroundColor3 = uwu["default background color"]
-uwu["current theme"].BorderColor3 = uwu["default border color"]
-uwu["current theme"].BorderSizePixel = 1
-uwu["current theme"].Parent = uwu["script settings holder"]
-uwu["current theme"].ZIndex = 24
+box["current theme"].Size = UDim2.new(0, 230, 0, 68)
+box["current theme"].Position = UDim2.new(0, 0, 0, 0)
+box["current theme"].TextColor3 = box["default border color"]
+box["current theme"].Font = Enum.Font.RobotoMono
+box["current theme"].TextScaled = false
+box["current theme"].TextSize = 15
+box["current theme"].Text = "current theme: default"
+box["current theme"].TextXAlignment = Enum.TextXAlignment.Center
+box["current theme"].TextYAlignment = Enum.TextYAlignment.Center
+box["current theme"].BackgroundColor3 = box["default background color"]
+box["current theme"].BorderColor3 = box["default border color"]
+box["current theme"].BorderSizePixel = 1
+box["current theme"].Parent = box["script settings holder"]
+box["current theme"].ZIndex = 24
 
-uwu["change theme setting"].Size = UDim2.new(0, 158, 0, 68)
-uwu["change theme setting"].Position = UDim2.new(0, 235, 0, 0)
-uwu["change theme setting"].TextColor3 = uwu["default border color"]
-uwu["change theme setting"].Font = Enum.Font.RobotoMono
-uwu["change theme setting"].TextScaled = false
-uwu["change theme setting"].TextSize = 15
-uwu["change theme setting"].Text = "change theme"
-uwu["change theme setting"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["change theme setting"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["change theme setting"].BackgroundColor3 = uwu["default background color"]
-uwu["change theme setting"].BorderColor3 = uwu["default border color"]
-uwu["change theme setting"].BorderSizePixel = 1
-uwu["change theme setting"].Parent = uwu["script settings holder"]
-uwu["change theme setting"].ZIndex = 24
+box["change theme setting"].Size = UDim2.new(0, 158, 0, 68)
+box["change theme setting"].Position = UDim2.new(0, 235, 0, 0)
+box["change theme setting"].TextColor3 = box["default border color"]
+box["change theme setting"].Font = Enum.Font.RobotoMono
+box["change theme setting"].TextScaled = false
+box["change theme setting"].TextSize = 15
+box["change theme setting"].Text = "change theme"
+box["change theme setting"].TextXAlignment = Enum.TextXAlignment.Center
+box["change theme setting"].TextYAlignment = Enum.TextYAlignment.Center
+box["change theme setting"].BackgroundColor3 = box["default background color"]
+box["change theme setting"].BorderColor3 = box["default border color"]
+box["change theme setting"].BorderSizePixel = 1
+box["change theme setting"].Parent = box["script settings holder"]
+box["change theme setting"].ZIndex = 24
 
 local currenttheme = "boxten sex"
 local themes = {
@@ -6559,7 +6563,7 @@ local themes = {
 }
 
 function updthemedisplay()
-	uwu["current theme"].Text = "current theme: " .. currenttheme
+	box["current theme"].Text = "current theme: " .. currenttheme
 end
 
 function applytheme(themeName)
@@ -6573,26 +6577,53 @@ function applytheme(themeName)
 
 	if themeName == "default" then
 		defaulttheme = true
-		defaultcols() dis()
+		grayscaletheme = false
+		noxioustheme = false
+		c00ltheme = false
+		polariatheme = false
+		bstheme = false
+		task.wait(0.1)
+		defaultcols()
 	elseif themeName == "grayscale" then
 		grayscaletheme = true
-		grayscalecols() dis()
+		noxioustheme = false
+		c00ltheme = false
+		defaulttheme = false
+		polariatheme = false
+		bstheme = false
+		grayscalecols()
 	elseif themeName == "noxious" then
 		noxioustheme = true
-		noxiouscols() dis()
+		grayscaletheme = false
+		c00ltheme = false
+		defaulttheme = false
+		polariatheme = false
+		bstheme = false
+		noxiouscols()
 	elseif themeName == "c00l" then
 		c00ltheme = true
-		c00lcols() dis()
+		grayscaletheme = false
+		noxioustheme = false
+		defaulttheme = false
+		polariatheme = false
+		bstheme = false
+		c00lcols()
 	elseif themeName == "polaria" then
 		polariatheme = true
-		polariacols() dis()
+		grayscaletheme = false
+		noxioustheme = false
+		c00ltheme = false
+		defaulttheme = false
+		bstheme = false
+		polariacols()
 	elseif themeName == "boxten sex" then
 		grayscaletheme = false
 		noxioustheme = false
 		c00ltheme = false
 		defaulttheme = false
 		bstheme = true
-		restorecols() con()
+		polariatheme = false
+		restorecols()
 	end
 
 	currenttheme = themeName
@@ -6613,7 +6644,7 @@ function cycleTheme()
 	applytheme(themes[nextind])
 end
 
-uwu["change theme setting"].MouseButton1Click:Connect(function()
+box["change theme setting"].MouseButton1Click:Connect(function()
 	if playclicksound then
 		playclicksound()
 	end
@@ -6624,172 +6655,172 @@ updthemedisplay()
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["command prefix"].Size = UDim2.new(0, 230, 0, 68)
-uwu["command prefix"].Position = UDim2.new(0, 0, 0, 73)
-uwu["command prefix"].TextColor3 = uwu["default border color"]
-uwu["command prefix"].Font = Enum.Font.RobotoMono
-uwu["command prefix"].TextScaled = false
-uwu["command prefix"].TextSize = 15
-uwu["command prefix"].Text = "command prefix: ."
-uwu["command prefix"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["command prefix"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["command prefix"].BackgroundColor3 = uwu["default background color"]
-uwu["command prefix"].BorderColor3 = uwu["default border color"]
-uwu["command prefix"].BorderSizePixel = 1
-uwu["command prefix"].Parent = uwu["script settings holder"]
-uwu["command prefix"].ZIndex = 24
+box["command prefix"].Size = UDim2.new(0, 230, 0, 68)
+box["command prefix"].Position = UDim2.new(0, 0, 0, 73)
+box["command prefix"].TextColor3 = box["default border color"]
+box["command prefix"].Font = Enum.Font.RobotoMono
+box["command prefix"].TextScaled = false
+box["command prefix"].TextSize = 15
+box["command prefix"].Text = "command prefix: ."
+box["command prefix"].TextXAlignment = Enum.TextXAlignment.Center
+box["command prefix"].TextYAlignment = Enum.TextYAlignment.Center
+box["command prefix"].BackgroundColor3 = box["default background color"]
+box["command prefix"].BorderColor3 = box["default border color"]
+box["command prefix"].BorderSizePixel = 1
+box["command prefix"].Parent = box["script settings holder"]
+box["command prefix"].ZIndex = 24
 
-uwu["change command prefix setting"].Size = UDim2.new(0, 158, 0, 31)
-uwu["change command prefix setting"].Position = UDim2.new(0, 235, 0, 73)
-uwu["change command prefix setting"].TextColor3 = uwu["default border color"]
-uwu["change command prefix setting"].Font = Enum.Font.RobotoMono
-uwu["change command prefix setting"].TextScaled = false
-uwu["change command prefix setting"].TextSize = 15
-uwu["change command prefix setting"].Text = "change prefix"
-uwu["change command prefix setting"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["change command prefix setting"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["change command prefix setting"].BackgroundColor3 = uwu["default background color"]
-uwu["change command prefix setting"].BorderColor3 = uwu["default border color"]
-uwu["change command prefix setting"].BorderSizePixel = 1
-uwu["change command prefix setting"].Parent = uwu["script settings holder"]
-uwu["change command prefix setting"].ZIndex = 24
+box["change command prefix setting"].Size = UDim2.new(0, 158, 0, 31)
+box["change command prefix setting"].Position = UDim2.new(0, 235, 0, 73)
+box["change command prefix setting"].TextColor3 = box["default border color"]
+box["change command prefix setting"].Font = Enum.Font.RobotoMono
+box["change command prefix setting"].TextScaled = false
+box["change command prefix setting"].TextSize = 15
+box["change command prefix setting"].Text = "change prefix"
+box["change command prefix setting"].TextXAlignment = Enum.TextXAlignment.Center
+box["change command prefix setting"].TextYAlignment = Enum.TextYAlignment.Center
+box["change command prefix setting"].BackgroundColor3 = box["default background color"]
+box["change command prefix setting"].BorderColor3 = box["default border color"]
+box["change command prefix setting"].BorderSizePixel = 1
+box["change command prefix setting"].Parent = box["script settings holder"]
+box["change command prefix setting"].ZIndex = 24
 
-uwu["change command prefix setting"].MouseButton1Click:Connect(function()
+box["change command prefix setting"].MouseButton1Click:Connect(function()
 	playclicksound()
-	local nooprefix = uwu["change command prefix textbox"].Text
-	uwu["change command prefix textbox"].Text = ""
+	local nooprefix = box["change command prefix textbox"].Text
+	box["change command prefix textbox"].Text = ""
 	changeprefix(nooprefix)
 end)
 
-uwu["change command prefix textbox"].Size = UDim2.new(0, 158, 0, 32)
-uwu["change command prefix textbox"].Position = UDim2.new(0, 235, 0, 109)
-uwu["change command prefix textbox"].TextColor3 = uwu["default border color"]
-uwu["change command prefix textbox"].Font = Enum.Font.RobotoMono
-uwu["change command prefix textbox"].TextScaled = false
-uwu["change command prefix textbox"].TextSize = 15
-uwu["change command prefix textbox"].Text = ""
-uwu["change command prefix textbox"].PlaceholderText = "enter prefix here"
-uwu["change command prefix textbox"].PlaceholderColor3 = uwu["default 1/2 color"]
-uwu["change command prefix textbox"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["change command prefix textbox"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["change command prefix textbox"].BackgroundColor3 = uwu["default background color"]
-uwu["change command prefix textbox"].BorderColor3 = uwu["default border color"]
-uwu["change command prefix textbox"].BorderSizePixel = 1
-uwu["change command prefix textbox"].Parent = uwu["script settings holder"]
-uwu["change command prefix textbox"].ZIndex = 24
+box["change command prefix textbox"].Size = UDim2.new(0, 158, 0, 32)
+box["change command prefix textbox"].Position = UDim2.new(0, 235, 0, 109)
+box["change command prefix textbox"].TextColor3 = box["default border color"]
+box["change command prefix textbox"].Font = Enum.Font.RobotoMono
+box["change command prefix textbox"].TextScaled = false
+box["change command prefix textbox"].TextSize = 15
+box["change command prefix textbox"].Text = ""
+box["change command prefix textbox"].PlaceholderText = "enter prefix here"
+box["change command prefix textbox"].PlaceholderColor3 = box["default 1/2 color"]
+box["change command prefix textbox"].TextXAlignment = Enum.TextXAlignment.Center
+box["change command prefix textbox"].TextYAlignment = Enum.TextYAlignment.Center
+box["change command prefix textbox"].BackgroundColor3 = box["default background color"]
+box["change command prefix textbox"].BorderColor3 = box["default border color"]
+box["change command prefix textbox"].BorderSizePixel = 1
+box["change command prefix textbox"].Parent = box["script settings holder"]
+box["change command prefix textbox"].ZIndex = 24
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["change click sound setting"].Size = UDim2.new(0, 230, 0, 68)
-uwu["change click sound setting"].Position = UDim2.new(0, 0, 0, 146)
-uwu["change click sound setting"].TextColor3 = uwu["default border color"]
-uwu["change click sound setting"].Font = Enum.Font.RobotoMono
-uwu["change click sound setting"].TextScaled = false
-uwu["change click sound setting"].TextSize = 15
-uwu["change click sound setting"].Text = "click sound: 226892749"
-uwu["change click sound setting"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["change click sound setting"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["change click sound setting"].BackgroundColor3 = uwu["default background color"]
-uwu["change click sound setting"].BorderColor3 = uwu["default border color"]
-uwu["change click sound setting"].BorderSizePixel = 1
-uwu["change click sound setting"].Parent = uwu["script settings holder"]
-uwu["change click sound setting"].ZIndex = 24
+box["change click sound setting"].Size = UDim2.new(0, 230, 0, 68)
+box["change click sound setting"].Position = UDim2.new(0, 0, 0, 146)
+box["change click sound setting"].TextColor3 = box["default border color"]
+box["change click sound setting"].Font = Enum.Font.RobotoMono
+box["change click sound setting"].TextScaled = false
+box["change click sound setting"].TextSize = 15
+box["change click sound setting"].Text = "click sound: 226892749"
+box["change click sound setting"].TextXAlignment = Enum.TextXAlignment.Center
+box["change click sound setting"].TextYAlignment = Enum.TextYAlignment.Center
+box["change click sound setting"].BackgroundColor3 = box["default background color"]
+box["change click sound setting"].BorderColor3 = box["default border color"]
+box["change click sound setting"].BorderSizePixel = 1
+box["change click sound setting"].Parent = box["script settings holder"]
+box["change click sound setting"].ZIndex = 24
 
-uwu["change click sound"].Size = UDim2.new(0, 158, 0, 31)
-uwu["change click sound"].Position = UDim2.new(0, 235, 0, 146)
-uwu["change click sound"].TextColor3 = uwu["default border color"]
-uwu["change click sound"].Font = Enum.Font.RobotoMono
-uwu["change click sound"].TextScaled = false
-uwu["change click sound"].TextSize = 15
-uwu["change click sound"].Text = "change click sound"
-uwu["change click sound"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["change click sound"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["change click sound"].BackgroundColor3 = uwu["default background color"]
-uwu["change click sound"].BorderColor3 = uwu["default border color"]
-uwu["change click sound"].BorderSizePixel = 1
-uwu["change click sound"].Parent = uwu["script settings holder"]
-uwu["change click sound"].ZIndex = 24
+box["change click sound"].Size = UDim2.new(0, 158, 0, 31)
+box["change click sound"].Position = UDim2.new(0, 235, 0, 146)
+box["change click sound"].TextColor3 = box["default border color"]
+box["change click sound"].Font = Enum.Font.RobotoMono
+box["change click sound"].TextScaled = false
+box["change click sound"].TextSize = 15
+box["change click sound"].Text = "change click sound"
+box["change click sound"].TextXAlignment = Enum.TextXAlignment.Center
+box["change click sound"].TextYAlignment = Enum.TextYAlignment.Center
+box["change click sound"].BackgroundColor3 = box["default background color"]
+box["change click sound"].BorderColor3 = box["default border color"]
+box["change click sound"].BorderSizePixel = 1
+box["change click sound"].Parent = box["script settings holder"]
+box["change click sound"].ZIndex = 24
 
-uwu["change click sound textbox"].Size = UDim2.new(0, 158, 0, 32)
-uwu["change click sound textbox"].Position = UDim2.new(0, 235, 0, 182)
-uwu["change click sound textbox"].TextColor3 = uwu["default border color"]
-uwu["change click sound textbox"].Font = Enum.Font.RobotoMono
-uwu["change click sound textbox"].TextScaled = false
-uwu["change click sound textbox"].TextSize = 15
-uwu["change click sound textbox"].Text = ""
-uwu["change click sound textbox"].PlaceholderText = "enter sound ID here"
-uwu["change click sound textbox"].PlaceholderColor3 = uwu["default 1/2 color"]
-uwu["change click sound textbox"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["change click sound textbox"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["change click sound textbox"].BackgroundColor3 = uwu["default background color"]
-uwu["change click sound textbox"].BorderColor3 = uwu["default border color"]
-uwu["change click sound textbox"].BorderSizePixel = 1
-uwu["change click sound textbox"].Parent = uwu["script settings holder"]
-uwu["change click sound textbox"].ZIndex = 24
+box["change click sound textbox"].Size = UDim2.new(0, 158, 0, 32)
+box["change click sound textbox"].Position = UDim2.new(0, 235, 0, 182)
+box["change click sound textbox"].TextColor3 = box["default border color"]
+box["change click sound textbox"].Font = Enum.Font.RobotoMono
+box["change click sound textbox"].TextScaled = false
+box["change click sound textbox"].TextSize = 15
+box["change click sound textbox"].Text = ""
+box["change click sound textbox"].PlaceholderText = "enter sound ID here"
+box["change click sound textbox"].PlaceholderColor3 = box["default 1/2 color"]
+box["change click sound textbox"].TextXAlignment = Enum.TextXAlignment.Center
+box["change click sound textbox"].TextYAlignment = Enum.TextYAlignment.Center
+box["change click sound textbox"].BackgroundColor3 = box["default background color"]
+box["change click sound textbox"].BorderColor3 = box["default border color"]
+box["change click sound textbox"].BorderSizePixel = 1
+box["change click sound textbox"].Parent = box["script settings holder"]
+box["change click sound textbox"].ZIndex = 24
 
 function updateClickSound(newSoundId)
 	if tonumber(newSoundId) then
-		uwu["change click sound setting"].Text = "click sound: " .. newSoundId
+		box["change click sound setting"].Text = "click sound: " .. newSoundId
 
-		if uwu["click sound"] and uwu["click sound"]:IsA("Sound") then
-			uwu["click sound"].SoundId = "rbxassetid://" .. newSoundId
+		if box["click sound"] and box["click sound"]:IsA("Sound") then
+			box["click sound"].SoundId = "rbxassetid://" .. newSoundId
 		end
 
-		uwu["change click sound textbox"].Text = ""
+		box["change click sound textbox"].Text = ""
 	else
-		uwu["change click sound setting"].Text = "click sound: n/a"
+		box["change click sound setting"].Text = "click sound: n/a"
 	end
 end
 
-uwu["change click sound"].MouseButton1Click:Connect(function()
+box["change click sound"].MouseButton1Click:Connect(function()
 	playclicksound()
-	local newSoundId = uwu["change click sound textbox"].Text
+	local newSoundId = box["change click sound textbox"].Text
 	updateClickSound(newSoundId)
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["backdoor info"].Size = UDim2.new(0, 133, 0, 26)
-uwu["backdoor info"].Position = UDim2.new(0, 0, 0, 0)
+box["backdoor info"].Size = UDim2.new(0, 133, 0, 26)
+box["backdoor info"].Position = UDim2.new(0, 0, 0, 0)
 
-uwu["backdoor info"].BackgroundColor3 = uwu["default background color"]
+box["backdoor info"].BackgroundColor3 = box["default background color"]
 
-uwu["backdoor info"].BorderColor3 = uwu["default border color"]
-uwu["backdoor info"].BorderSizePixel = 1
+box["backdoor info"].BorderColor3 = box["default border color"]
+box["backdoor info"].BorderSizePixel = 1
 
-uwu["backdoor info"].TextColor3 = uwu["default border color"]
-uwu["backdoor info"].Font = Enum.Font.RobotoMono
-uwu["backdoor info"].TextSize = 15
-uwu["backdoor info"].TextScaled = false
-uwu["backdoor info"].Text = "backdoor info"
-uwu["backdoor info"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["backdoor info"].TextYAlignment = Enum.TextYAlignment.Center
+box["backdoor info"].TextColor3 = box["default border color"]
+box["backdoor info"].Font = Enum.Font.RobotoMono
+box["backdoor info"].TextSize = 15
+box["backdoor info"].TextScaled = false
+box["backdoor info"].Text = "backdoor info"
+box["backdoor info"].TextXAlignment = Enum.TextXAlignment.Center
+box["backdoor info"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["backdoor info text padding"] = Instance.new("UIPadding")
-uwu["backdoor info text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["backdoor info text padding"].Parent = uwu["scripts tab"]
+box["backdoor info text padding"] = Instance.new("UIPadding")
+box["backdoor info text padding"].PaddingLeft = UDim.new(0, 0)
+box["backdoor info text padding"].Parent = box["scripts tab"]
 
-uwu["backdoor info"].Parent = uwu["main frame 4"]
-uwu["backdoor info"].ZIndex = 25
+box["backdoor info"].Parent = box["main frame 4"]
+box["backdoor info"].ZIndex = 25
 
-uwu["backdoor info holder"].Size = UDim2.new(0, 393, 0, 214)
-uwu["backdoor info holder"].Position = UDim2.new(0, 4, 0, 31)
-uwu["backdoor info holder"].BackgroundColor3 = uwu["default background color"]
-uwu["backdoor info holder"].BorderColor3 = uwu["default border color"]
-uwu["backdoor info holder"].BorderSizePixel = 1
-uwu["backdoor info holder"].Parent = uwu["main frame 4"]
-uwu["backdoor info holder"].ZIndex = 19
-uwu["backdoor info holder"].Visible = true
-uwu["backdoor info holder"].TextWrapped = true
+box["backdoor info holder"].Size = UDim2.new(0, 393, 0, 214)
+box["backdoor info holder"].Position = UDim2.new(0, 4, 0, 31)
+box["backdoor info holder"].BackgroundColor3 = box["default background color"]
+box["backdoor info holder"].BorderColor3 = box["default border color"]
+box["backdoor info holder"].BorderSizePixel = 1
+box["backdoor info holder"].Parent = box["main frame 4"]
+box["backdoor info holder"].ZIndex = 19
+box["backdoor info holder"].Visible = true
+box["backdoor info holder"].TextWrapped = true
 
-uwu["backdoor info bottom cover"].Name = "bcover"
-uwu["backdoor info bottom cover"].Size = UDim2.new(0, 133, 0, 2)
-uwu["backdoor info bottom cover"].Position = UDim2.new(0, 0, 0, 26)
-uwu["backdoor info bottom cover"].BackgroundColor3 = uwu["default background color"]
-uwu["backdoor info bottom cover"].BorderSizePixel = 0
-uwu["backdoor info bottom cover"].Parent = uwu["main frame 4"]
-uwu["backdoor info bottom cover"].ZIndex = 25.5
-uwu["backdoor info bottom cover"].Visible = true
+box["backdoor info bottom cover"].Name = "bcover"
+box["backdoor info bottom cover"].Size = UDim2.new(0, 133, 0, 2)
+box["backdoor info bottom cover"].Position = UDim2.new(0, 0, 0, 26)
+box["backdoor info bottom cover"].BackgroundColor3 = box["default background color"]
+box["backdoor info bottom cover"].BorderSizePixel = 0
+box["backdoor info bottom cover"].Parent = box["main frame 4"]
+box["backdoor info bottom cover"].ZIndex = 25.5
+box["backdoor info bottom cover"].Visible = true
 
 local rfe = "true"
 
@@ -6799,155 +6830,155 @@ else
 	rfe = "false"
 end
 
-uwu["backdoor info holder"].TextColor3 = uwu["default border color"]
-uwu["backdoor info holder"].Font = Enum.Font.RobotoMono
-uwu["backdoor info holder"].TextSize = 15
-uwu["backdoor info holder"].TextScaled = false
-uwu["backdoor info holder"].Text = "respectfilteringenabled = " .. rfe .. "\nbackdoors found: 0\nbackdoor path: n/a\nmethod used: n/a\nbackdoor level: n/a (none found)\nbackdoor destructivity level: n/a\nbackdoor type: n/a\npgrab availability: n/a\nexecutor identity: 8"
-uwu["backdoor info holder"].TextXAlignment = Enum.TextXAlignment.Left
-uwu["backdoor info holder"].TextYAlignment = Enum.TextYAlignment.Top
-uwu["backdoor info holder"].ZIndex = 25
+box["backdoor info holder"].TextColor3 = box["default border color"]
+box["backdoor info holder"].Font = Enum.Font.RobotoMono
+box["backdoor info holder"].TextSize = 15
+box["backdoor info holder"].TextScaled = false
+box["backdoor info holder"].Text = "respectfilteringenabled = " .. rfe .. "\nbackdoors found: 0\nbackdoor path: n/a\nmethod used: n/a\nbackdoor level: n/a (none found)\nbackdoor destructivity level: n/a\nbackdoor type: n/a\npgrab availability: n/a\nexecutor identity: 8"
+box["backdoor info holder"].TextXAlignment = Enum.TextXAlignment.Left
+box["backdoor info holder"].TextYAlignment = Enum.TextYAlignment.Top
+box["backdoor info holder"].ZIndex = 25
 
-uwu["backdoor info holder text padding"] = Instance.new("UIPadding")
-uwu["backdoor info holder text padding"].PaddingLeft = UDim.new(0, 4)
-uwu["backdoor info holder text padding"].PaddingTop = UDim.new(0, 4)
-uwu["backdoor info holder text padding"].PaddingBottom = UDim.new(0, 4)
-uwu["backdoor info holder text padding"].Parent = uwu["backdoor info holder"]
+box["backdoor info holder text padding"] = Instance.new("UIPadding")
+box["backdoor info holder text padding"].PaddingLeft = UDim.new(0, 4)
+box["backdoor info holder text padding"].PaddingTop = UDim.new(0, 4)
+box["backdoor info holder text padding"].PaddingBottom = UDim.new(0, 4)
+box["backdoor info holder text padding"].Parent = box["backdoor info holder"]
 
-uwu["backdoor info"].MouseButton1Click:Connect(function()
+box["backdoor info"].MouseButton1Click:Connect(function()
 	playclicksound()
 
-	uwu["backdoor info bottom cover"].Visible = true
-	uwu["scanning bottom cover"].Visible = false
-	uwu["credits bottom cover"].Visible = false
+	box["backdoor info bottom cover"].Visible = true
+	box["scanning bottom cover"].Visible = false
+	box["credits bottom cover"].Visible = false
 
-	uwu["backdoor info holder"].Visible = true
-	uwu["logs holder"].Visible = false
-	uwu["logs scrolling frame"].Visible = false
-	uwu["backdoor scan button"].Visible = false
-	uwu["credits holder"].Visible = false
+	box["backdoor info holder"].Visible = true
+	box["logs holder"].Visible = false
+	box["logs scrolling frame"].Visible = false
+	box["backdoor scan button"].Visible = false
+	box["credits holder"].Visible = false
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["scanning"].Size = UDim2.new(0, 133, 0, 26)
-uwu["scanning"].Position = UDim2.new(0, 134, 0, 0)
+box["scanning"].Size = UDim2.new(0, 133, 0, 26)
+box["scanning"].Position = UDim2.new(0, 134, 0, 0)
 
-uwu["scanning"].BackgroundColor3 = uwu["default background color"]
+box["scanning"].BackgroundColor3 = box["default background color"]
 
-uwu["scanning"].BorderColor3 = uwu["default border color"]
-uwu["scanning"].BorderSizePixel = 1
+box["scanning"].BorderColor3 = box["default border color"]
+box["scanning"].BorderSizePixel = 1
 
-uwu["scanning"].TextColor3 = uwu["default border color"]
-uwu["scanning"].Font = Enum.Font.RobotoMono
-uwu["scanning"].TextSize = 15
-uwu["scanning"].TextScaled = false
-uwu["scanning"].Text = "backdoor scanning"
-uwu["scanning"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["scanning"].TextYAlignment = Enum.TextYAlignment.Center
+box["scanning"].TextColor3 = box["default border color"]
+box["scanning"].Font = Enum.Font.RobotoMono
+box["scanning"].TextSize = 15
+box["scanning"].TextScaled = false
+box["scanning"].Text = "backdoor scanning"
+box["scanning"].TextXAlignment = Enum.TextXAlignment.Center
+box["scanning"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["scanning text padding"] = Instance.new("UIPadding")
-uwu["scanning text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["scanning text padding"].Parent = uwu["main frame 4"]
+box["scanning text padding"] = Instance.new("UIPadding")
+box["scanning text padding"].PaddingLeft = UDim.new(0, 0)
+box["scanning text padding"].Parent = box["main frame 4"]
 
-uwu["scanning"].Parent = uwu["main frame 4"]
-uwu["scanning"].ZIndex = 25
+box["scanning"].Parent = box["main frame 4"]
+box["scanning"].ZIndex = 25
 
-uwu["scanning bottom cover"].Size = UDim2.new(0, 133, 0, 2)
-uwu["scanning bottom cover"].Position = UDim2.new(0, 134, 0, 26)
-uwu["scanning bottom cover"].BackgroundColor3 = uwu["default background color"]
-uwu["scanning bottom cover"].BorderSizePixel = 0
-uwu["scanning bottom cover"].Parent = uwu["main frame 4"]
-uwu["scanning bottom cover"].ZIndex = 25.5
-uwu["scanning bottom cover"].Visible = false
+box["scanning bottom cover"].Size = UDim2.new(0, 133, 0, 2)
+box["scanning bottom cover"].Position = UDim2.new(0, 134, 0, 26)
+box["scanning bottom cover"].BackgroundColor3 = box["default background color"]
+box["scanning bottom cover"].BorderSizePixel = 0
+box["scanning bottom cover"].Parent = box["main frame 4"]
+box["scanning bottom cover"].ZIndex = 25.5
+box["scanning bottom cover"].Visible = false
 
-uwu["scanning"].MouseButton1Click:Connect(function()
+box["scanning"].MouseButton1Click:Connect(function()
 	playclicksound()
 
-	uwu["backdoor info bottom cover"].Visible = false
-	uwu["scanning bottom cover"].Visible = true
-	uwu["credits bottom cover"].Visible = false
+	box["backdoor info bottom cover"].Visible = false
+	box["scanning bottom cover"].Visible = true
+	box["credits bottom cover"].Visible = false
 
-	uwu["backdoor info holder"].Visible = false
-	uwu["logs holder"].Visible = true
-	uwu["logs scrolling frame"].Visible = true
-	uwu["backdoor scan button"].Visible = true
-	uwu["credits holder"].Visible = false
+	box["backdoor info holder"].Visible = false
+	box["logs holder"].Visible = true
+	box["logs scrolling frame"].Visible = true
+	box["backdoor scan button"].Visible = true
+	box["credits holder"].Visible = false
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["logs holder"].Size = UDim2.new(0, 393, 0, 214)
-uwu["logs holder"].Position = UDim2.new(0, 4, 0, 31)
-uwu["logs holder"].BackgroundColor3 = uwu["default background color"]
-uwu["logs holder"].BorderColor3 = uwu["default border color"]
-uwu["logs holder"].BorderSizePixel = 0
-uwu["logs holder"].Parent = uwu["main frame 4"]
-uwu["logs holder"].Visible = false
-uwu["logs holder"].ZIndex = 23
+box["logs holder"].Size = UDim2.new(0, 393, 0, 214)
+box["logs holder"].Position = UDim2.new(0, 4, 0, 31)
+box["logs holder"].BackgroundColor3 = box["default background color"]
+box["logs holder"].BorderColor3 = box["default border color"]
+box["logs holder"].BorderSizePixel = 0
+box["logs holder"].Parent = box["main frame 4"]
+box["logs holder"].Visible = false
+box["logs holder"].ZIndex = 23
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["logs label"].Size = UDim2.new(0, 393, 0, 19)
-uwu["logs label"].Position = UDim2.new(0, 0, 0, 0)
-uwu["logs label"].TextColor3 = uwu["default border color"]
-uwu["logs label"].Font = Enum.Font.RobotoMono
-uwu["logs label"].TextScaled = false
-uwu["logs label"].TextSize = 15
-uwu["logs label"].Text = "logs"
-uwu["logs label"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["logs label"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["logs label"].BackgroundColor3 = uwu["default background color"]
-uwu["logs label"].BorderColor3 = uwu["default border color"]
-uwu["logs label"].BorderSizePixel = 1
-uwu["logs label"].Parent = uwu["logs holder"]
-uwu["logs label"].ZIndex = 24
+box["logs label"].Size = UDim2.new(0, 393, 0, 19)
+box["logs label"].Position = UDim2.new(0, 0, 0, 0)
+box["logs label"].TextColor3 = box["default border color"]
+box["logs label"].Font = Enum.Font.RobotoMono
+box["logs label"].TextScaled = false
+box["logs label"].TextSize = 15
+box["logs label"].Text = "logs"
+box["logs label"].TextXAlignment = Enum.TextXAlignment.Center
+box["logs label"].TextYAlignment = Enum.TextYAlignment.Center
+box["logs label"].BackgroundColor3 = box["default background color"]
+box["logs label"].BorderColor3 = box["default border color"]
+box["logs label"].BorderSizePixel = 1
+box["logs label"].Parent = box["logs holder"]
+box["logs label"].ZIndex = 24
 
-uwu["logs label text padding"] = Instance.new("UIPadding")
-uwu["logs label text padding"].PaddingBottom = UDim.new(0, 1)
-uwu["logs label text padding"].Parent = uwu["logs label"]
+box["logs label text padding"] = Instance.new("UIPadding")
+box["logs label text padding"].PaddingBottom = UDim.new(0, 1)
+box["logs label text padding"].Parent = box["logs label"]
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["logs scrolling frame"].Size = UDim2.new(0, 393, 0, 140)
-uwu["logs scrolling frame"].Position = UDim2.new(0, 4, 0, 55)
-uwu["logs scrolling frame"].BackgroundColor3 = uwu["default background color"]
-uwu["logs scrolling frame"].BorderColor3 = uwu["default border color"]
-uwu["logs scrolling frame"].BorderSizePixel = 1
-uwu["logs scrolling frame"].ScrollBarThickness = 8
-uwu["logs scrolling frame"].ScrollBarImageColor3 = uwu["default 1/2 color"]
-uwu["logs scrolling frame"].CanvasSize = UDim2.new(0, 0, 0, 0)
-uwu["logs scrolling frame"].Parent = uwu["main frame 4"]
-uwu["logs scrolling frame"].ZIndex = 24
-uwu["logs scrolling frame"].Visible = false
-uwu["logs scrolling frame"].ScrollingDirection = Enum.ScrollingDirection.XY
+box["logs scrolling frame"].Size = UDim2.new(0, 393, 0, 140)
+box["logs scrolling frame"].Position = UDim2.new(0, 4, 0, 55)
+box["logs scrolling frame"].BackgroundColor3 = box["default background color"]
+box["logs scrolling frame"].BorderColor3 = box["default border color"]
+box["logs scrolling frame"].BorderSizePixel = 1
+box["logs scrolling frame"].ScrollBarThickness = 8
+box["logs scrolling frame"].ScrollBarImageColor3 = box["default 1/2 color"]
+box["logs scrolling frame"].CanvasSize = UDim2.new(0, 0, 0, 0)
+box["logs scrolling frame"].Parent = box["main frame 4"]
+box["logs scrolling frame"].ZIndex = 24
+box["logs scrolling frame"].Visible = false
+box["logs scrolling frame"].ScrollingDirection = Enum.ScrollingDirection.XY
 
-uwu["logs textbox"].Name = "temphalf"
-uwu["logs textbox"].Size = UDim2.new(0, 393, 0, 164)
-uwu["logs textbox"].Position = UDim2.new(0, 0, 0, 0)
-uwu["logs textbox"].BackgroundColor3 = uwu["default background color"]
-uwu["logs textbox"].BorderColor3 = uwu["default border color"]
-uwu["logs textbox"].BorderSizePixel = 0
-uwu["logs textbox"].TextColor3 = uwu["default border color"]
-uwu["logs textbox"].PlaceholderText = "backdoor scanning logs will appear here"
-uwu["logs textbox"].PlaceholderColor3 = uwu["default 1/2 color"]
-uwu["logs textbox"].Font = Enum.Font.RobotoMono
-uwu["logs textbox"].TextSize = 15
-uwu["logs textbox"].TextScaled = false
-uwu["logs textbox"].Text = ""
-uwu["logs textbox"].TextXAlignment = Enum.TextXAlignment.Left
-uwu["logs textbox"].TextYAlignment = Enum.TextYAlignment.Top
-uwu["logs textbox"].ClearTextOnFocus = false
-uwu["logs textbox"].MultiLine = true
-uwu["logs textbox"].Parent = uwu["logs scrolling frame"]
-uwu["logs textbox"].ZIndex = 24
-uwu["logs textbox"].TextEditable = false
+box["logs textbox"].Name = "temphalf"
+box["logs textbox"].Size = UDim2.new(0, 393, 0, 164)
+box["logs textbox"].Position = UDim2.new(0, 0, 0, 0)
+box["logs textbox"].BackgroundColor3 = box["default background color"]
+box["logs textbox"].BorderColor3 = box["default border color"]
+box["logs textbox"].BorderSizePixel = 0
+box["logs textbox"].TextColor3 = box["default border color"]
+box["logs textbox"].PlaceholderText = "backdoor scanning logs will appear here"
+box["logs textbox"].PlaceholderColor3 = box["default 1/2 color"]
+box["logs textbox"].Font = Enum.Font.RobotoMono
+box["logs textbox"].TextSize = 15
+box["logs textbox"].TextScaled = false
+box["logs textbox"].Text = ""
+box["logs textbox"].TextXAlignment = Enum.TextXAlignment.Left
+box["logs textbox"].TextYAlignment = Enum.TextYAlignment.Top
+box["logs textbox"].ClearTextOnFocus = false
+box["logs textbox"].MultiLine = true
+box["logs textbox"].Parent = box["logs scrolling frame"]
+box["logs textbox"].ZIndex = 24
+box["logs textbox"].TextEditable = false
 
-uwu["logs textbox text padding"] = Instance.new("UIPadding")
-uwu["logs textbox text padding"].PaddingLeft = UDim.new(0, 4)
-uwu["logs textbox text padding"].PaddingTop = UDim.new(0, 4)
-uwu["logs textbox text padding"].PaddingBottom = UDim.new(0, 4)
-uwu["logs textbox text padding"].Parent = uwu["logs scrolling frame"]
+box["logs textbox text padding"] = Instance.new("UIPadding")
+box["logs textbox text padding"].PaddingLeft = UDim.new(0, 4)
+box["logs textbox text padding"].PaddingTop = UDim.new(0, 4)
+box["logs textbox text padding"].PaddingBottom = UDim.new(0, 4)
+box["logs textbox text padding"].Parent = box["logs scrolling frame"]
 
 local function addTextWithNewline(textBox, text)
 	local serverTime = os.date("%X")
@@ -6962,15 +6993,15 @@ local function addTextWithNewline(textBox, text)
 end
 
 function updateCanvas2()
-	local textBounds = uwu["logs textbox"].TextBounds
+	local textBounds = box["logs textbox"].TextBounds
 
-	uwu["logs textbox"].Size = UDim2.new(0, math.max(392, textBounds.X + 20), 0, math.max(164, textBounds.Y + 20))
-	uwu["logs scrolling frame"].CanvasSize = UDim2.new(0, textBounds.X + 20, 0, textBounds.Y + 11)
+	box["logs textbox"].Size = UDim2.new(0, math.max(392, textBounds.X + 20), 0, math.max(164, textBounds.Y + 20))
+	box["logs scrolling frame"].CanvasSize = UDim2.new(0, textBounds.X + 20, 0, textBounds.Y + 11)
 
-	uwu["logs scrolling frame"].CanvasPosition = Vector2.new(0, uwu["logs scrolling frame"].CanvasSize.Y.Offset)
+	box["logs scrolling frame"].CanvasPosition = Vector2.new(0, box["logs scrolling frame"].CanvasSize.Y.Offset)
 end
 
-uwu["logs textbox"]:GetPropertyChangedSignal("Text"):Connect(updateCanvas2)
+box["logs textbox"]:GetPropertyChangedSignal("Text"):Connect(updateCanvas2)
 
 updateCanvas2()
 
@@ -6978,40 +7009,40 @@ updateCanvas2()
 
 local canscan = true
 
-uwu["backdoor scan button"].Size = UDim2.new(0, 393, 0, 45)
-uwu["backdoor scan button"].Position = UDim2.new(0, 4, 0, 200)
+box["backdoor scan button"].Size = UDim2.new(0, 393, 0, 45)
+box["backdoor scan button"].Position = UDim2.new(0, 4, 0, 200)
 
-uwu["backdoor scan button"].BackgroundColor3 = uwu["default background color"]
+box["backdoor scan button"].BackgroundColor3 = box["default background color"]
 
-uwu["backdoor scan button"].BorderColor3 = uwu["default border color"]
-uwu["backdoor scan button"].BorderSizePixel = 1
+box["backdoor scan button"].BorderColor3 = box["default border color"]
+box["backdoor scan button"].BorderSizePixel = 1
 
-uwu["backdoor scan button"].TextColor3 = uwu["default border color"]
-uwu["backdoor scan button"].Font = Enum.Font.RobotoMono
-uwu["backdoor scan button"].TextSize = 15
-uwu["backdoor scan button"].TextScaled = false
-uwu["backdoor scan button"].Text = "start scanning"
-uwu["backdoor scan button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["backdoor scan button"].TextYAlignment = Enum.TextYAlignment.Center
+box["backdoor scan button"].TextColor3 = box["default border color"]
+box["backdoor scan button"].Font = Enum.Font.RobotoMono
+box["backdoor scan button"].TextSize = 15
+box["backdoor scan button"].TextScaled = false
+box["backdoor scan button"].Text = "start scanning"
+box["backdoor scan button"].TextXAlignment = Enum.TextXAlignment.Center
+box["backdoor scan button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["backdoor scan button text padding"] = Instance.new("UIPadding")
-uwu["backdoor scan button text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["backdoor scan button text padding"].Parent = uwu["backdoor scan button"]
+box["backdoor scan button text padding"] = Instance.new("UIPadding")
+box["backdoor scan button text padding"].PaddingLeft = UDim.new(0, 0)
+box["backdoor scan button text padding"].Parent = box["backdoor scan button"]
 
-uwu["backdoor scan button"].Parent = uwu["main frame 4"]
-uwu["backdoor scan button"].ZIndex = 24
-uwu["backdoor scan button"].Visible = false
+box["backdoor scan button"].Parent = box["main frame 4"]
+box["backdoor scan button"].ZIndex = 24
+box["backdoor scan button"].Visible = false
 
 backdoor=nil
 hasscanned = false
 scanning = false
 
-uwu["backdoor scan button"].MouseButton1Click:Connect(function()
+box["backdoor scan button"].MouseButton1Click:Connect(function()
 	scanning = true
 	playclicksound()
 	if canscan == false then return end
 	canscan = false
-	spawn(function() uwu["startup"]:Play(); toggleLoop(false); uwu["toggle interface visibility button"].Text = "-.-" end)
+	spawn(function() box["startup"]:Play(); toggleLoop(false); box["toggle interface visibility button"].Text = "-.-" end)
 	spawn(function()
 		local checkingforbackdoors = true
 
@@ -7071,7 +7102,7 @@ uwu["backdoor scan button"].MouseButton1Click:Connect(function()
 				local skip = false
 
 				if string.find(remote.Name, "TutorialTower") then
-					addTextWithNewline(uwu["logs textbox"], 'skipped remote: ' .. remote.Name)
+					addTextWithNewline(box["logs textbox"], 'skipped remote: ' .. remote.Name)
 					skip = true
 				end
 
@@ -7080,7 +7111,7 @@ uwu["backdoor scan button"].MouseButton1Click:Connect(function()
 				end
 
 				if not skip and string.split(remote:GetFullName(), '.')[1] == 'RobloxReplicatedStorage' then
-					addTextWithNewline(uwu["logs textbox"], 'replicated storage remote found: ' .. remote.Name)
+					addTextWithNewline(box["logs textbox"], 'replicated storage remote found: ' .. remote.Name)
 					skip = true
 				end
 
@@ -7089,17 +7120,17 @@ uwu["backdoor scan button"].MouseButton1Click:Connect(function()
 					or remote.Parent.Parent.Parent == game:GetService("ReplicatedStorage")) then
 
 					if remote:FindFirstChild('__FUNCTION') or remote.Name == '__FUNCTION' then
-						addTextWithNewline(uwu["logs textbox"], 'adonis filter detected: ' .. remote.Name)
+						addTextWithNewline(box["logs textbox"], 'adonis filter detected: ' .. remote.Name)
 						skip = true
 					end
 
 					if not skip and remote.Parent.Parent.Name == 'HDAdminClient' and remote.Parent.Name == 'Signals' then
-						addTextWithNewline(uwu["logs textbox"], 'hd admin detected: ' .. remote.Name)
+						addTextWithNewline(box["logs textbox"], 'hd admin detected: ' .. remote.Name)
 						skip = true
 					end
 
 					if not skip and remote.Parent.Name == 'DefaultChatSystemChatEvents' then
-						addTextWithNewline(uwu["logs textbox"], 'chat event detected: ' .. remote.Name)
+						addTextWithNewline(box["logs textbox"], 'chat event detected: ' .. remote.Name)
 						skip = true
 					end
 				end
@@ -7112,7 +7143,7 @@ uwu["backdoor scan button"].MouseButton1Click:Connect(function()
 
 					runbackdoor(remote, "a=Instance.new('Model',workspace)a.Name='" .. code .. "'")
 					remotes[code] = remote
-					addTextWithNewline(uwu["logs textbox"], "sent backdoor: " .. remote:GetFullName())
+					addTextWithNewline(box["logs textbox"], "sent backdoor: " .. remote:GetFullName())
 					wait(0)
 				end
 			end
@@ -7122,54 +7153,54 @@ uwu["backdoor scan button"].MouseButton1Click:Connect(function()
 					if workspace:FindFirstChild(code) then
 						backdoorPath = remote:GetFullName()
 
-						uwu["backdoor info holder"].Text = string.format(
+						box["backdoor info holder"].Text = string.format(
 							"respectfilteringenabled = " .. rfe .. "\nbackdoors found: 1\nbackdoor path: %s\nmethod used: remote scan\nbackdoor level: 6.000000033 (only affects server)\nbackdoor destructivity level: n/a\nbackdoor type: n/a\npgrab availability: n/a\nexecutor identity: 8",
 							backdoorPath
 						)
 
 						checkingforbackdoors = false
-						uwu["toggle interface visibility button"].Text = "^.^"
+						box["toggle interface visibility button"].Text = "^.^"
 
 						local yay = Instance.new("Sound")
 						yay.SoundId = "rbxassetid://8458409341"
-						yay.Parent = uwu["local player"]
+						yay.Parent = box["local player"]
 						yay.Name = "canttouchthis"
 						yay.Volume = 1
 						spawn(function() yay:Play() end)
 						unablenotify("backdoor found. (" .. backdoorPath .. ")")
 						task.spawn(updcols)
 
-						uwu["backdoor scan button"].Visible = false
-						uwu["backdoor test button"] = Instance.new("TextButton")
+						box["backdoor scan button"].Visible = false
+						box["backdoor test button"] = Instance.new("TextButton")
 
-						uwu["backdoor test button"].Size = UDim2.new(0, 393, 0, 45)
-						uwu["backdoor test button"].Position = UDim2.new(0, 4, 0, 200)
+						box["backdoor test button"].Size = UDim2.new(0, 393, 0, 45)
+						box["backdoor test button"].Position = UDim2.new(0, 4, 0, 200)
 
-						uwu["backdoor test button"].BackgroundColor3 = uwu["default background color"]
+						box["backdoor test button"].BackgroundColor3 = box["default background color"]
 
-						uwu["backdoor test button"].BorderColor3 = uwu["default border color"]
-						uwu["backdoor test button"].BorderSizePixel = 1
+						box["backdoor test button"].BorderColor3 = box["default border color"]
+						box["backdoor test button"].BorderSizePixel = 1
 
-						uwu["backdoor test button"].TextColor3 = uwu["default border color"]
-						uwu["backdoor test button"].Font = Enum.Font.RobotoMono
-						uwu["backdoor test button"].TextSize = 15
-						uwu["backdoor test button"].TextScaled = false
-						uwu["backdoor test button"].Text = "test backdoor"
-						uwu["backdoor test button"].TextXAlignment = Enum.TextXAlignment.Center
-						uwu["backdoor test button"].TextYAlignment = Enum.TextYAlignment.Center
+						box["backdoor test button"].TextColor3 = box["default border color"]
+						box["backdoor test button"].Font = Enum.Font.RobotoMono
+						box["backdoor test button"].TextSize = 15
+						box["backdoor test button"].TextScaled = false
+						box["backdoor test button"].Text = "test backdoor"
+						box["backdoor test button"].TextXAlignment = Enum.TextXAlignment.Center
+						box["backdoor test button"].TextYAlignment = Enum.TextYAlignment.Center
 
-						uwu["backdoor test button text padding"] = Instance.new("UIPadding")
-						uwu["backdoor test button text padding"].PaddingLeft = UDim.new(0, 0)
-						uwu["backdoor test button text padding"].Parent = uwu["backdoor test button"]
+						box["backdoor test button text padding"] = Instance.new("UIPadding")
+						box["backdoor test button text padding"].PaddingLeft = UDim.new(0, 0)
+						box["backdoor test button text padding"].Parent = box["backdoor test button"]
 
-						uwu["backdoor test button"].Parent = uwu["main frame 4"]
-						uwu["backdoor test button"].ZIndex = 24
-						uwu["backdoor test button"].Visible = true
+						box["backdoor test button"].Parent = box["main frame 4"]
+						box["backdoor test button"].ZIndex = 24
+						box["backdoor test button"].Visible = true
 						task.spawn(updcols)
 
 						local cantestbackdoor = true
 
-						uwu["backdoor test button"].MouseButton1Click:Connect(function()
+						box["backdoor test button"].MouseButton1Click:Connect(function()
 							playclicksound()
 							if not cantestbackdoor then return end
 							cantestbackdoor = false
@@ -7181,7 +7212,7 @@ uwu["backdoor scan button"].MouseButton1Click:Connect(function()
 						backdoored = true
 						backdoor = remote
 
-						addTextWithNewline(uwu["logs textbox"], "backdoor found!")
+						addTextWithNewline(box["logs textbox"], "backdoor found!")
 
 						wait(5)
 
@@ -7195,22 +7226,22 @@ uwu["backdoor scan button"].MouseButton1Click:Connect(function()
 				wait()
 			end
 
-			uwu["backdoor info holder"].Text = "respectfilteringenabled = " .. rfe .. "\nbackdoors found: 0\nbackdoor path: n/a\nmethod used: remote scan (unsuccessful)\nbackdoor level: n/a (none found)\nbackdoor destructivity level: n/a\nbackdoor type: n/a\npgrab availability: n/a\nexecutor identity: 8"
+			box["backdoor info holder"].Text = "respectfilteringenabled = " .. rfe .. "\nbackdoors found: 0\nbackdoor path: n/a\nmethod used: remote scan (unsuccessful)\nbackdoor level: n/a (none found)\nbackdoor destructivity level: n/a\nbackdoor type: n/a\npgrab availability: n/a\nexecutor identity: 8"
 			return false
 		end
 
-		uwu["execute button"].MouseButton1Click:Connect(function()
+		box["execute button"].MouseButton1Click:Connect(function()
 			spawn(function() playclicksound() end)
-			local a,b=string.gsub(uwu["executor textbox"].Text, '%%username%%', game:GetService('Players').LocalPlayer.Name)
+			local a,b=string.gsub(box["executor textbox"].Text, '%%username%%', game:GetService('Players').LocalPlayer.Name)
 
 			local protected_backdoor=game:GetService('ReplicatedStorage'):FindFirstChild('lh'..game.PlaceId/6666*1337*game.PlaceId)
 			if protected_backdoor and protected_backdoor:IsA('RemoteFunction') then
-				addTextWithNewline(uwu["logs textbox"], "protected backdoor found.")
+				addTextWithNewline(box["logs textbox"], "protected backdoor found.")
 				spawn(function()
 					local boolValue, variantValue=pcall(function() protected_backdoor:InvokeServer('join team noxious later maybe idk | gg/bwdk8vAy8n', a) end)
 					if variantValue~=nil then
 						local splited=string.split(variantValue,':')
-						addTextWithNewline(uwu["logs textbox"], splited[#splited])
+						addTextWithNewline(box["logs textbox"], splited[#splited])
 					end
 				end)
 			else
@@ -7223,24 +7254,24 @@ uwu["backdoor scan button"].MouseButton1Click:Connect(function()
 		if not searching then
 			searching=true
 
-			uwu["logs textbox"].Text = ""
+			box["logs textbox"].Text = ""
 			updateCanvas2()
-			addTextWithNewline(uwu["logs textbox"], "checking for backdoors...")
+			addTextWithNewline(box["logs textbox"], "checking for backdoors...")
 			unablenotify("checking for backdoors...")
 
 			hasscanned = true
 
-			addTextWithNewline(uwu["logs textbox"], "using remote scan method.")
+			addTextWithNewline(box["logs textbox"], "using remote scan method.")
 			wait(0.1)
-			addTextWithNewline(uwu["logs textbox"], "scanning...")
-			uwu["backdoor info holder"].Text = "respectfilteringenabled = " .. rfe .. "\nbackdoors found: 0\nbackdoor path: n/a\nmethod used: remote scan\nbackdoor level: n/a (none found)\nbackdoor destructivity level: n/a\nbackdoor type: n/a\npgrab availability: n/a\nexecutor identity: 8"
+			addTextWithNewline(box["logs textbox"], "scanning...")
+			box["backdoor info holder"].Text = "respectfilteringenabled = " .. rfe .. "\nbackdoors found: 0\nbackdoor path: n/a\nmethod used: remote scan\nbackdoor level: n/a (none found)\nbackdoor destructivity level: n/a\nbackdoor type: n/a\npgrab availability: n/a\nexecutor identity: 8"
 
 			wait(1)
 
 			if not findRemote() then
 				local nay = Instance.new("Sound")
 				nay.SoundId = "rbxassetid://8503529943"
-				nay.Parent = uwu["local player"]
+				nay.Parent = box["local player"]
 				nay.Volume = 3.3
 				nay.Name = "canttouchthis"
 				nay.TimePosition = 0.01
@@ -7248,11 +7279,11 @@ uwu["backdoor scan button"].MouseButton1Click:Connect(function()
 				spawn(function() nay:Play() end)
 
 				checkingforbackdoors = false
-				uwu["toggle interface visibility button"].Text = "ó.ò"
+				box["toggle interface visibility button"].Text = "ó.ò"
 
 				hasscanned = true
 
-				addTextWithNewline(uwu["logs textbox"], "no backdoor found.")
+				addTextWithNewline(box["logs textbox"], "no backdoor found.")
 				unablenotify("no backdoor found.")
 				searching=false
 				wait(5)
@@ -7268,195 +7299,195 @@ end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["credits"].Size = UDim2.new(0, 133, 0, 26)
-uwu["credits"].Position = UDim2.new(0, 268, 0, 0)
+box["credits"].Size = UDim2.new(0, 133, 0, 26)
+box["credits"].Position = UDim2.new(0, 268, 0, 0)
 
-uwu["credits"].BackgroundColor3 = uwu["default background color"]
+box["credits"].BackgroundColor3 = box["default background color"]
 
-uwu["credits"].BorderColor3 = uwu["default border color"]
-uwu["credits"].BorderSizePixel = 1
+box["credits"].BorderColor3 = box["default border color"]
+box["credits"].BorderSizePixel = 1
 
-uwu["credits"].TextColor3 = uwu["default border color"]
-uwu["credits"].Font = Enum.Font.RobotoMono
-uwu["credits"].TextSize = 15
-uwu["credits"].TextScaled = false
-uwu["credits"].Text = "credits"
-uwu["credits"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["credits"].TextYAlignment = Enum.TextYAlignment.Center
+box["credits"].TextColor3 = box["default border color"]
+box["credits"].Font = Enum.Font.RobotoMono
+box["credits"].TextSize = 15
+box["credits"].TextScaled = false
+box["credits"].Text = "credits"
+box["credits"].TextXAlignment = Enum.TextXAlignment.Center
+box["credits"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["credits text padding"] = Instance.new("UIPadding")
-uwu["credits text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["credits text padding"].Parent = uwu["scripts tab"]
+box["credits text padding"] = Instance.new("UIPadding")
+box["credits text padding"].PaddingLeft = UDim.new(0, 0)
+box["credits text padding"].Parent = box["scripts tab"]
 
-uwu["credits"].Parent = uwu["main frame 4"]
-uwu["credits"].ZIndex = 25
+box["credits"].Parent = box["main frame 4"]
+box["credits"].ZIndex = 25
 
-uwu["credits bottom cover"].Size = UDim2.new(0, 133, 0, 2)
-uwu["credits bottom cover"].Position = UDim2.new(0, 268, 0, 26)
-uwu["credits bottom cover"].BackgroundColor3 = uwu["default background color"]
-uwu["credits bottom cover"].BorderSizePixel = 0
-uwu["credits bottom cover"].Parent = uwu["main frame 4"]
-uwu["credits bottom cover"].ZIndex = 25.5
-uwu["credits bottom cover"].Visible = false
+box["credits bottom cover"].Size = UDim2.new(0, 133, 0, 2)
+box["credits bottom cover"].Position = UDim2.new(0, 268, 0, 26)
+box["credits bottom cover"].BackgroundColor3 = box["default background color"]
+box["credits bottom cover"].BorderSizePixel = 0
+box["credits bottom cover"].Parent = box["main frame 4"]
+box["credits bottom cover"].ZIndex = 25.5
+box["credits bottom cover"].Visible = false
 
-uwu["credits"].MouseButton1Click:Connect(function()
+box["credits"].MouseButton1Click:Connect(function()
 	playclicksound()
 
-	uwu["backdoor info bottom cover"].Visible = false
-	uwu["scanning bottom cover"].Visible = false
-	uwu["credits bottom cover"].Visible = true
+	box["backdoor info bottom cover"].Visible = false
+	box["scanning bottom cover"].Visible = false
+	box["credits bottom cover"].Visible = true
 
-	uwu["backdoor info holder"].Visible = false
-	uwu["logs holder"].Visible = false
-	uwu["logs scrolling frame"].Visible = false
-	uwu["backdoor scan button"].Visible = false
-	uwu["credits holder"].Visible = true
+	box["backdoor info holder"].Visible = false
+	box["logs holder"].Visible = false
+	box["logs scrolling frame"].Visible = false
+	box["backdoor scan button"].Visible = false
+	box["credits holder"].Visible = true
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["credits holder"].Size = UDim2.new(0, 393, 0, 214)
-uwu["credits holder"].Position = UDim2.new(0, 4, 0, 31)
-uwu["credits holder"].BackgroundColor3 = uwu["default background color"]
-uwu["credits holder"].BorderColor3 = uwu["default border color"]
-uwu["credits holder"].BorderSizePixel = 1
-uwu["credits holder"].Parent = uwu["main frame 4"]
-uwu["credits holder"].ZIndex = 19
-uwu["credits holder"].Visible = false
+box["credits holder"].Size = UDim2.new(0, 393, 0, 214)
+box["credits holder"].Position = UDim2.new(0, 4, 0, 31)
+box["credits holder"].BackgroundColor3 = box["default background color"]
+box["credits holder"].BorderColor3 = box["default border color"]
+box["credits holder"].BorderSizePixel = 1
+box["credits holder"].Parent = box["main frame 4"]
+box["credits holder"].ZIndex = 19
+box["credits holder"].Visible = false
 
-uwu["credits holder"].TextColor3 = uwu["default border color"]
-uwu["credits holder"].Font = Enum.Font.RobotoMono
---uwu["credits holder"].TextSize = 20
-uwu["credits holder"].TextSize = 15
-uwu["credits holder"].TextScaled = false
-uwu["credits holder"].Text = "n/a"
---uwu["credits holder"].TextXAlignment = Enum.TextXAlignment.Left
---uwu["credits holder"].TextYAlignment = Enum.TextYAlignment.Top
-uwu["credits holder"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["credits holder"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["credits holder"].ZIndex = 25
-uwu["credits holder"].ClipsDescendants = true
+box["credits holder"].TextColor3 = box["default border color"]
+box["credits holder"].Font = Enum.Font.RobotoMono
+--box["credits holder"].TextSize = 20
+box["credits holder"].TextSize = 15
+box["credits holder"].TextScaled = false
+box["credits holder"].Text = "n/a"
+--box["credits holder"].TextXAlignment = Enum.TextXAlignment.Left
+--box["credits holder"].TextYAlignment = Enum.TextYAlignment.Top
+box["credits holder"].TextXAlignment = Enum.TextXAlignment.Center
+box["credits holder"].TextYAlignment = Enum.TextYAlignment.Center
+box["credits holder"].ZIndex = 25
+box["credits holder"].ClipsDescendants = true
 
-uwu["credits holder text padding"] = Instance.new("UIPadding")
---uwu["credits holder text padding"].PaddingLeft = UDim.new(0, 4)
---uwu["credits holder text padding"].PaddingTop = UDim.new(0, 4)
-uwu["credits holder text padding"].PaddingBottom = UDim.new(0, 2)
---uwu["credits holder text padding"].PaddingBottom = UDim.new(0, 4)
-uwu["credits holder text padding"].Parent = uwu["credits holder"]
+box["credits holder text padding"] = Instance.new("UIPadding")
+--box["credits holder text padding"].PaddingLeft = UDim.new(0, 4)
+--box["credits holder text padding"].PaddingTop = UDim.new(0, 4)
+box["credits holder text padding"].PaddingBottom = UDim.new(0, 2)
+--box["credits holder text padding"].PaddingBottom = UDim.new(0, 4)
+box["credits holder text padding"].Parent = box["credits holder"]
 
-uwu["credits holder"].Text = "credits:\n\nteam noxious - development & revival\n\nteam occulence - code adjustments\n\nteam symphysis - UI design, testing & refining"
-
--------------------------------------------------------------------------------------------------------------------------------
-
-uwu["scripts tab"].Size = UDim2.new(0, 100, 0, 26)
-uwu["scripts tab"].Position = UDim2.new(0, 0, 0, 1)
-
-uwu["scripts tab"].BackgroundColor3 = uwu["default background color"]
-
-uwu["scripts tab"].BorderColor3 = uwu["default border color"]
-uwu["scripts tab"].BorderSizePixel = 1
-
-uwu["scripts tab"].TextColor3 = uwu["default border color"]
-uwu["scripts tab"].Font = Enum.Font.RobotoMono
-uwu["scripts tab"].TextSize = 15
-uwu["scripts tab"].TextScaled = false
-uwu["scripts tab"].Text = "scripts"
-uwu["scripts tab"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["scripts tab"].TextYAlignment = Enum.TextYAlignment.Center
-
-uwu["scripts tab text padding"] = Instance.new("UIPadding")
-uwu["scripts tab text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["scripts tab text padding"].Parent = uwu["scripts tab"]
-
-uwu["scripts tab"].Parent = uwu["main frame 1"]
-uwu["scripts tab"].ZIndex = 19
-
-uwu["scripts tab bottom cover"].Size = UDim2.new(0, 100, 0, 2)
-uwu["scripts tab bottom cover"].Position = UDim2.new(0, 0, 0, 27)
-uwu["scripts tab bottom cover"].BackgroundColor3 = uwu["default background color"]
-uwu["scripts tab bottom cover"].BorderSizePixel = 0
-uwu["scripts tab bottom cover"].Parent = uwu["main frame 1"]
-uwu["scripts tab bottom cover"].ZIndex = 19.5
-uwu["scripts tab bottom cover"].Visible = false
+box["credits holder"].Text = "credits:\n\nteam noxious - development & revival\n\nteam occulence - code adjustments\n\nteam symphysis - UI design, testing & refining"
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["button holder"].Size = UDim2.new(0, 369, 0, 180)
-uwu["button holder"].Position = UDim2.new(0, 28, 0, 55)
-uwu["button holder"].BackgroundColor3 = uwu["default background color"]
-uwu["button holder"].BorderColor3 = uwu["default border color"]
-uwu["button holder"].BorderSizePixel = 0
-uwu["button holder"].Parent = uwu["main frame 1"]
-uwu["button holder"].ZIndex = 19
-uwu["button holder"].Visible = false
+box["scripts tab"].Size = UDim2.new(0, 100, 0, 26)
+box["scripts tab"].Position = UDim2.new(0, 0, 0, 1)
 
-uwu["script search bar"].Size = UDim2.new(0, 345, 0, 19)
-uwu["script search bar"].Position = UDim2.new(0, 28, 0, 32)
-uwu["script search bar"].BackgroundColor3 = uwu["default background color"]
-uwu["script search bar"].BorderColor3 = uwu["default border color"]
-uwu["script search bar"].BorderSizePixel = 1
-uwu["script search bar"].TextColor3 = uwu["default border color"]
-uwu["script search bar"].Font = Enum.Font.RobotoMono
-uwu["script search bar"].TextSize = 15
-uwu["script search bar"].TextScaled = false
-uwu["script search bar"].PlaceholderText = "search scripts"
-uwu["script search bar"].PlaceholderColor3 = Color3.new(0.7, 0.7, 0.7)
-uwu["script search bar"].Text = ""
-uwu["script search bar"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["script search bar"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["script search bar"].ClearTextOnFocus = false
-uwu["script search bar"].Parent = uwu["main frame 1"]
-uwu["script search bar"].ZIndex = 19
-uwu["script search bar"].Visible = false
-uwu["script search bar"].ClearTextOnFocus = true
+box["scripts tab"].BackgroundColor3 = box["default background color"]
 
-uwu["script search bar padding"] = Instance.new("UIPadding")
-uwu["script search bar padding"].PaddingLeft = UDim.new(0, 6)
-uwu["script search bar padding"].PaddingRight = UDim.new(0, 6)
-uwu["script search bar padding"].PaddingBottom = UDim.new(0, 1)
-uwu["script search bar padding"].Parent = uwu["script search bar"]
+box["scripts tab"].BorderColor3 = box["default border color"]
+box["scripts tab"].BorderSizePixel = 1
 
-uwu["next page"].Size = UDim2.new(0, 19, 0, 214)
-uwu["next page"].Position = UDim2.new(0, 378, 0, 32)
-uwu["next page"].BackgroundColor3 = uwu["default background color"]
-uwu["next page"].BorderColor3 = uwu["default border color"]
-uwu["next page"].BorderSizePixel = 1
-uwu["next page"].Parent = uwu["main frame 1"]
-uwu["next page"].ZIndex = 19
-uwu["next page"].Visible = false
+box["scripts tab"].TextColor3 = box["default border color"]
+box["scripts tab"].Font = Enum.Font.RobotoMono
+box["scripts tab"].TextSize = 15
+box["scripts tab"].TextScaled = false
+box["scripts tab"].Text = "scripts"
+box["scripts tab"].TextXAlignment = Enum.TextXAlignment.Center
+box["scripts tab"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["next page"].TextColor3 = uwu["default border color"]
-uwu["next page"].Font = Enum.Font.RobotoMono
-uwu["next page"].TextSize = 15
-uwu["next page"].TextScaled = false
-uwu["next page"].Text = ">"
-uwu["next page"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["next page"].TextYAlignment = Enum.TextYAlignment.Center
+box["scripts tab text padding"] = Instance.new("UIPadding")
+box["scripts tab text padding"].PaddingLeft = UDim.new(0, 0)
+box["scripts tab text padding"].Parent = box["scripts tab"]
 
-uwu["next page text padding"] = Instance.new("UIPadding")
-uwu["next page text padding"].PaddingBottom = UDim.new(0, 2)
-uwu["next page text padding"].Parent = uwu["next page"]
+box["scripts tab"].Parent = box["main frame 1"]
+box["scripts tab"].ZIndex = 19
 
-uwu["previous page"].Size = UDim2.new(0, 19, 0, 214)
-uwu["previous page"].Position = UDim2.new(0, 4, 0, 32)
-uwu["previous page"].BackgroundColor3 = uwu["default background color"]
-uwu["previous page"].BorderColor3 = uwu["default border color"]
-uwu["previous page"].BorderSizePixel = 1
-uwu["previous page"].Parent = uwu["main frame 1"]
-uwu["previous page"].ZIndex = 19
-uwu["previous page"].Visible = false
+box["scripts tab bottom cover"].Size = UDim2.new(0, 100, 0, 2)
+box["scripts tab bottom cover"].Position = UDim2.new(0, 0, 0, 27)
+box["scripts tab bottom cover"].BackgroundColor3 = box["default background color"]
+box["scripts tab bottom cover"].BorderSizePixel = 0
+box["scripts tab bottom cover"].Parent = box["main frame 1"]
+box["scripts tab bottom cover"].ZIndex = 19.5
+box["scripts tab bottom cover"].Visible = false
 
-uwu["previous page"].TextColor3 = uwu["default border color"]
-uwu["previous page"].Font = Enum.Font.RobotoMono
-uwu["previous page"].TextSize = 15
-uwu["previous page"].TextScaled = false
-uwu["previous page"].Text = "<"
-uwu["previous page"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["previous page"].TextYAlignment = Enum.TextYAlignment.Center
+-------------------------------------------------------------------------------------------------------------------------------
 
-uwu["previous page text padding"] = Instance.new("UIPadding")
-uwu["previous page text padding"].PaddingBottom = UDim.new(0, 1)
-uwu["previous page text padding"].Parent = uwu["previous page"]
+box["button holder"].Size = UDim2.new(0, 369, 0, 180)
+box["button holder"].Position = UDim2.new(0, 28, 0, 55)
+box["button holder"].BackgroundColor3 = box["default background color"]
+box["button holder"].BorderColor3 = box["default border color"]
+box["button holder"].BorderSizePixel = 0
+box["button holder"].Parent = box["main frame 1"]
+box["button holder"].ZIndex = 19
+box["button holder"].Visible = false
+
+box["script search bar"].Size = UDim2.new(0, 345, 0, 19)
+box["script search bar"].Position = UDim2.new(0, 28, 0, 32)
+box["script search bar"].BackgroundColor3 = box["default background color"]
+box["script search bar"].BorderColor3 = box["default border color"]
+box["script search bar"].BorderSizePixel = 1
+box["script search bar"].TextColor3 = box["default border color"]
+box["script search bar"].Font = Enum.Font.RobotoMono
+box["script search bar"].TextSize = 15
+box["script search bar"].TextScaled = false
+box["script search bar"].PlaceholderText = "search scripts"
+box["script search bar"].PlaceholderColor3 = Color3.new(0.7, 0.7, 0.7)
+box["script search bar"].Text = ""
+box["script search bar"].TextXAlignment = Enum.TextXAlignment.Center
+box["script search bar"].TextYAlignment = Enum.TextYAlignment.Center
+box["script search bar"].ClearTextOnFocus = false
+box["script search bar"].Parent = box["main frame 1"]
+box["script search bar"].ZIndex = 19
+box["script search bar"].Visible = false
+box["script search bar"].ClearTextOnFocus = true
+
+box["script search bar padding"] = Instance.new("UIPadding")
+box["script search bar padding"].PaddingLeft = UDim.new(0, 6)
+box["script search bar padding"].PaddingRight = UDim.new(0, 6)
+box["script search bar padding"].PaddingBottom = UDim.new(0, 1)
+box["script search bar padding"].Parent = box["script search bar"]
+
+box["next page"].Size = UDim2.new(0, 19, 0, 214)
+box["next page"].Position = UDim2.new(0, 378, 0, 32)
+box["next page"].BackgroundColor3 = box["default background color"]
+box["next page"].BorderColor3 = box["default border color"]
+box["next page"].BorderSizePixel = 1
+box["next page"].Parent = box["main frame 1"]
+box["next page"].ZIndex = 19
+box["next page"].Visible = false
+
+box["next page"].TextColor3 = box["default border color"]
+box["next page"].Font = Enum.Font.RobotoMono
+box["next page"].TextSize = 15
+box["next page"].TextScaled = false
+box["next page"].Text = ">"
+box["next page"].TextXAlignment = Enum.TextXAlignment.Center
+box["next page"].TextYAlignment = Enum.TextYAlignment.Center
+
+box["next page text padding"] = Instance.new("UIPadding")
+box["next page text padding"].PaddingBottom = UDim.new(0, 2)
+box["next page text padding"].Parent = box["next page"]
+
+box["previous page"].Size = UDim2.new(0, 19, 0, 214)
+box["previous page"].Position = UDim2.new(0, 4, 0, 32)
+box["previous page"].BackgroundColor3 = box["default background color"]
+box["previous page"].BorderColor3 = box["default border color"]
+box["previous page"].BorderSizePixel = 1
+box["previous page"].Parent = box["main frame 1"]
+box["previous page"].ZIndex = 19
+box["previous page"].Visible = false
+
+box["previous page"].TextColor3 = box["default border color"]
+box["previous page"].Font = Enum.Font.RobotoMono
+box["previous page"].TextSize = 15
+box["previous page"].TextScaled = false
+box["previous page"].Text = "<"
+box["previous page"].TextXAlignment = Enum.TextXAlignment.Center
+box["previous page"].TextYAlignment = Enum.TextYAlignment.Center
+
+box["previous page text padding"] = Instance.new("UIPadding")
+box["previous page text padding"].PaddingBottom = UDim.new(0, 1)
+box["previous page text padding"].Parent = box["previous page"]
 
 local buttonsperscriptpg = 9
 local allbuttons = {}
@@ -7479,17 +7510,17 @@ function mtbutton(xOffset, yOffset, column)
 	button.Name = "fakebutton"
 	button.Size = UDim2.new(0, buttonWidth, 0, 60)
 	button.Position = UDim2.new(0, xOffset, 0, yOffset)
-	button.BackgroundColor3 = uwu["default background color"]
-	button.BorderColor3 = uwu["default 1/2 color 2"]
+	button.BackgroundColor3 = box["default background color"]
+	button.BorderColor3 = box["default 1/2 color 2"]
 	button.BorderSizePixel = 1
-	button.TextColor3 = uwu["default 1/2 color"]
+	button.TextColor3 = box["default 1/2 color"]
 	button.Font = Enum.Font.RobotoMono
 	button.TextSize = 15
 	button.TextScaled = false
 	button.Text = "-"
 	button.TextXAlignment = Enum.TextXAlignment.Center
 	button.TextYAlignment = Enum.TextYAlignment.Center
-	button.Parent = uwu["button holder"]
+	button.Parent = box["button holder"]
 	button.ZIndex = 19
 	button.TextWrapped = true
 	button.Visible = true
@@ -7504,7 +7535,7 @@ function mtbutton(xOffset, yOffset, column)
 	numberLabel.Position = UDim2.new(0, -2, 0, -3)
 	numberLabel.BackgroundTransparency = 1
 	numberLabel.Text = "-"
-	numberLabel.TextColor3 = uwu["default 1/2 color"]
+	numberLabel.TextColor3 = box["default 1/2 color"]
 	numberLabel.Font = Enum.Font.RobotoMono
 	numberLabel.TextSize = 10
 	numberLabel.TextXAlignment = Enum.TextXAlignment.Left
@@ -7566,8 +7597,8 @@ local function updbuttonvisibility()
 		end
 	end
 
-	uwu["previous page"].Visible = true
-	uwu["next page"].Visible = true
+	box["previous page"].Visible = true
+	box["next page"].Visible = true
 
 	savedscriptpg = currentscriptpg
 end
@@ -7653,7 +7684,7 @@ local function filterbuttons(searchText)
 	updbuttonvisibility()
 end
 
-uwu["next page"].MouseButton1Click:Connect(function()
+box["next page"].MouseButton1Click:Connect(function()
 	playclicksound()
 	local buttonsToUse = searchingforbuttons and filteredbuttons or allbuttons
 	currentscriptpg = currentscriptpg + 1
@@ -7665,7 +7696,7 @@ uwu["next page"].MouseButton1Click:Connect(function()
 	updbuttonvisibility()
 end)
 
-uwu["previous page"].MouseButton1Click:Connect(function()
+box["previous page"].MouseButton1Click:Connect(function()
 	playclicksound()
 	local buttonsToUse = searchingforbuttons and filteredbuttons or allbuttons
 	currentscriptpg = currentscriptpg - 1
@@ -7677,30 +7708,30 @@ uwu["previous page"].MouseButton1Click:Connect(function()
 	updbuttonvisibility()
 end)
 
-uwu["script search bar"].FocusLost:Connect(function()
-	filterbuttons(uwu["script search bar"].Text)
+box["script search bar"].FocusLost:Connect(function()
+	filterbuttons(box["script search bar"].Text)
 end)
 
-uwu["script search bar"]:GetPropertyChangedSignal("Text"):Connect(function()
-	filterbuttons(uwu["script search bar"].Text)
+box["script search bar"]:GetPropertyChangedSignal("Text"):Connect(function()
+	filterbuttons(box["script search bar"].Text)
 end)
 
 function showScriptPage()
-	uwu["button holder"].Visible = true
-	uwu["script search bar"].Visible = true
+	box["button holder"].Visible = true
+	box["script search bar"].Visible = true
 
-	uwu["next page"].Visible = true
-	uwu["previous page"].Visible = true
+	box["next page"].Visible = true
+	box["previous page"].Visible = true
 
 	positionAllButtons()
 	updbuttonvisibility()
 end
 
 function hideScriptPage()
-	uwu["button holder"].Visible = false
-	uwu["script search bar"].Visible = false
-	uwu["next page"].Visible = false
-	uwu["previous page"].Visible = false
+	box["button holder"].Visible = false
+	box["script search bar"].Visible = false
+	box["next page"].Visible = false
+	box["previous page"].Visible = false
 end
 
 function cscript(buttonText, onClick, buttonNumber, uniqueId)
@@ -7720,20 +7751,20 @@ function cscript(buttonText, onClick, buttonNumber, uniqueId)
 	local button = Instance.new("TextButton")
 	button.Size = UDim2.new(0, buttonWidth, 0, 60)
 	button.Position = UDim2.new(0, xOffset, 0, yOffset + 1)
-	button.BackgroundColor3 = uwu["default background color"]
-	button.BorderColor3 = uwu["default border color"]
+	button.BackgroundColor3 = box["default background color"]
+	button.BorderColor3 = box["default border color"]
 	button.BorderSizePixel = 1
-	button.TextColor3 = uwu["default border color"]
+	button.TextColor3 = box["default border color"]
 	button.Font = Enum.Font.RobotoMono
 	button.TextSize = 15
 	button.TextScaled = false
 	button.Text = buttonText
 	button.TextXAlignment = Enum.TextXAlignment.Center
 	button.TextYAlignment = Enum.TextYAlignment.Center
-	button.Parent = uwu["button holder"]
+	button.Parent = box["button holder"]
 	button.ZIndex = 19
 	button.TextWrapped = true
-	button.Visible = (index <= buttonsperscriptpg and uwu["button holder"].Visible)
+	button.Visible = (index <= buttonsperscriptpg and box["button holder"].Visible)
 
 	buttondata[button] = {
 		id = uniqueId or buttonText..tostring(index),
@@ -7747,7 +7778,7 @@ function cscript(buttonText, onClick, buttonNumber, uniqueId)
 	numberLabel.Position = UDim2.new(0, -2, 0, -3)
 	numberLabel.BackgroundTransparency = 1
 	numberLabel.Text = tostring(buttonNumber or index)
-	numberLabel.TextColor3 = uwu["default 1/2 color"]
+	numberLabel.TextColor3 = box["default 1/2 color"]
 	numberLabel.Font = Enum.Font.RobotoMono
 	numberLabel.TextSize = 10
 	numberLabel.TextXAlignment = Enum.TextXAlignment.Left
@@ -7780,23 +7811,23 @@ function cscript(buttonText, onClick, buttonNumber, uniqueId)
 
 		formattedCode = formattedCode:sub(1, -2)
 
-		local oldexectext = uwu["executor textbox"].Text
-		uwu["executor textbox"].Text = formattedCode
+		local oldexectext = box["executor textbox"].Text
+		box["executor textbox"].Text = formattedCode
 		task.spawn(executeCodeFromTextBox)
-		uwu["executor textbox"].Text = oldexectext
+		box["executor textbox"].Text = oldexectext
 	end)
 
 	table.insert(allbuttons, button)
 	totalscriptpgs = math.ceil(#allbuttons / buttonsperscriptpg)
 
-	button.Visible = (index <= buttonsperscriptpg and uwu["button holder"].Visible)
+	button.Visible = (index <= buttonsperscriptpg and box["button holder"].Visible)
 
 	return numberLabel
 end
 
 function executeCodeFromTextBox()
 	if backdoor ~= nil then
-		local a,b=string.gsub(uwu["executor textbox"].Text, '%%username%%', game:GetService('Players').LocalPlayer.Name)
+		local a,b=string.gsub(box["executor textbox"].Text, '%%username%%', game:GetService('Players').LocalPlayer.Name)
 		runbackdoor(backdoor, a)
 		return
 	end
@@ -7804,7 +7835,7 @@ function executeCodeFromTextBox()
 		return
 	end
 
-	local code = uwu["executor textbox"].Text
+	local code = box["executor textbox"].Text
 
 	if code and code ~= "" then
 		assert(loadstring(code))()
@@ -7908,10 +7939,10 @@ local isDiscoActive = false
 
 function startDiscoMode()
 	while isDiscoActive do
-		uwu["lighting"].Ambient = getRandomColor()
-		uwu["lighting"].OutdoorAmbient = getRandomColor()
-		uwu["lighting"].ColorShift_Top = getRandomColor()
-		uwu["lighting"].Brightness = math.random(brightnessRange[1] * 100, brightnessRange[2] * 100) / 100
+		box["lighting"].Ambient = getRandomColor()
+		box["lighting"].OutdoorAmbient = getRandomColor()
+		box["lighting"].ColorShift_Top = getRandomColor()
+		box["lighting"].Brightness = math.random(brightnessRange[1] * 100, brightnessRange[2] * 100) / 100
 
 		task.wait(interval)
 	end
@@ -7920,23 +7951,23 @@ end
 local originalSettings = {}
 
 function savelighting()
-	originalSettings.Brightness = uwu["lighting"].Brightness
-	originalSettings.ClockTime = uwu["lighting"].ClockTime
-	originalSettings.FogEnd = uwu["lighting"].FogEnd
-	originalSettings.GlobalShadows = uwu["lighting"].GlobalShadows
-	originalSettings.OutdoorAmbient = uwu["lighting"].OutdoorAmbient
-	originalSettings.Ambient = uwu["lighting"].Ambient
-	originalSettings.ColorShift_Top = uwu["lighting"].ColorShift_Top
+	originalSettings.Brightness = box["lighting"].Brightness
+	originalSettings.ClockTime = box["lighting"].ClockTime
+	originalSettings.FogEnd = box["lighting"].FogEnd
+	originalSettings.GlobalShadows = box["lighting"].GlobalShadows
+	originalSettings.OutdoorAmbient = box["lighting"].OutdoorAmbient
+	originalSettings.Ambient = box["lighting"].Ambient
+	originalSettings.ColorShift_Top = box["lighting"].ColorShift_Top
 end
 
 function loadlghting()	
-	uwu["lighting"].Brightness = originalSettings.Brightness
-	uwu["lighting"].ClockTime = originalSettings.ClockTime
-	uwu["lighting"].FogEnd = originalSettings.FogEnd
-	uwu["lighting"].GlobalShadows = originalSettings.GlobalShadows
-	uwu["lighting"].OutdoorAmbient = originalSettings.OutdoorAmbient
-	uwu["lighting"].Ambient = originalSettings.Ambient
-	uwu["lighting"].ColorShift_Top = originalSettings.ColorShift_Top
+	box["lighting"].Brightness = originalSettings.Brightness
+	box["lighting"].ClockTime = originalSettings.ClockTime
+	box["lighting"].FogEnd = originalSettings.FogEnd
+	box["lighting"].GlobalShadows = originalSettings.GlobalShadows
+	box["lighting"].OutdoorAmbient = originalSettings.OutdoorAmbient
+	box["lighting"].Ambient = originalSettings.Ambient
+	box["lighting"].ColorShift_Top = originalSettings.ColorShift_Top
 end
 
 cscript("disco", [[
@@ -13419,71 +13450,71 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/re
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["commands tab"].Size = UDim2.new(0, 100, 0, 26)
-uwu["commands tab"].Position = UDim2.new(0, 100, 0, 1)
+box["commands tab"].Size = UDim2.new(0, 100, 0, 26)
+box["commands tab"].Position = UDim2.new(0, 100, 0, 1)
 
-uwu["commands tab"].BackgroundColor3 = uwu["default background color"]
+box["commands tab"].BackgroundColor3 = box["default background color"]
 
-uwu["commands tab"].BorderColor3 = uwu["default border color"]
-uwu["commands tab"].BorderSizePixel = 1
+box["commands tab"].BorderColor3 = box["default border color"]
+box["commands tab"].BorderSizePixel = 1
 
-uwu["commands tab"].TextColor3 = uwu["default border color"]
-uwu["commands tab"].Font = Enum.Font.RobotoMono
-uwu["commands tab"].TextSize = 15
-uwu["commands tab"].TextScaled = false
-uwu["commands tab"].Text = "commands"
-uwu["commands tab"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["commands tab"].TextYAlignment = Enum.TextYAlignment.Center
+box["commands tab"].TextColor3 = box["default border color"]
+box["commands tab"].Font = Enum.Font.RobotoMono
+box["commands tab"].TextSize = 15
+box["commands tab"].TextScaled = false
+box["commands tab"].Text = "commands"
+box["commands tab"].TextXAlignment = Enum.TextXAlignment.Center
+box["commands tab"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["commands tab text padding"] = Instance.new("UIPadding")
-uwu["commands tab text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["commands tab text padding"].Parent = uwu["commands tab"]
+box["commands tab text padding"] = Instance.new("UIPadding")
+box["commands tab text padding"].PaddingLeft = UDim.new(0, 0)
+box["commands tab text padding"].Parent = box["commands tab"]
 
-uwu["commands tab"].Parent = uwu["main frame 1"]
-uwu["commands tab"].ZIndex = 19
+box["commands tab"].Parent = box["main frame 1"]
+box["commands tab"].ZIndex = 19
 
-uwu["commands tab bottom cover"].Size = UDim2.new(0, 100, 0, 2)
-uwu["commands tab bottom cover"].Position = UDim2.new(0, 100, 0, 27)
-uwu["commands tab bottom cover"].BackgroundColor3 = uwu["default background color"]
-uwu["commands tab bottom cover"].BorderSizePixel = 0
-uwu["commands tab bottom cover"].Parent = uwu["main frame 1"]
-uwu["commands tab bottom cover"].ZIndex = 19.5
-uwu["commands tab bottom cover"].Visible = false
+box["commands tab bottom cover"].Size = UDim2.new(0, 100, 0, 2)
+box["commands tab bottom cover"].Position = UDim2.new(0, 100, 0, 27)
+box["commands tab bottom cover"].BackgroundColor3 = box["default background color"]
+box["commands tab bottom cover"].BorderSizePixel = 0
+box["commands tab bottom cover"].Parent = box["main frame 1"]
+box["commands tab bottom cover"].ZIndex = 19.5
+box["commands tab bottom cover"].Visible = false
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["list of commands"].Size = UDim2.new(0, 393, 0, 164)
-uwu["list of commands"].Position = UDim2.new(0, 4, 0, 32)
-uwu["list of commands"].BackgroundColor3 = uwu["default background color"]
-uwu["list of commands"].BorderColor3 = uwu["default border color"]
-uwu["list of commands"].BorderSizePixel = 1
-uwu["list of commands"].ScrollBarThickness = 8
-uwu["list of commands"].ScrollBarImageColor3 = uwu["default 1/2 color"]
-uwu["list of commands"].CanvasSize = UDim2.new(0, 0, 0, 0)
-uwu["list of commands"].Parent = uwu["main frame 1"]
-uwu["list of commands"].ZIndex = 19
-uwu["list of commands"].Visible = false
-uwu["list of commands"].ScrollingDirection = Enum.ScrollingDirection.Y
+box["list of commands"].Size = UDim2.new(0, 393, 0, 164)
+box["list of commands"].Position = UDim2.new(0, 4, 0, 32)
+box["list of commands"].BackgroundColor3 = box["default background color"]
+box["list of commands"].BorderColor3 = box["default border color"]
+box["list of commands"].BorderSizePixel = 1
+box["list of commands"].ScrollBarThickness = 8
+box["list of commands"].ScrollBarImageColor3 = box["default 1/2 color"]
+box["list of commands"].CanvasSize = UDim2.new(0, 0, 0, 0)
+box["list of commands"].Parent = box["main frame 1"]
+box["list of commands"].ZIndex = 19
+box["list of commands"].Visible = false
+box["list of commands"].ScrollingDirection = Enum.ScrollingDirection.Y
 
 local listPadding = Instance.new("UIPadding")
 listPadding.PaddingLeft = UDim.new(0, 4)
 listPadding.PaddingTop = UDim.new(0, 4)
-listPadding.Parent = uwu["list of commands"]
+listPadding.Parent = box["list of commands"]
 
 local layout = Instance.new("UIListLayout")
 layout.SortOrder = Enum.SortOrder.LayoutOrder
 layout.Padding = UDim.new(0, 0)
-layout.Parent = uwu["list of commands"]
+layout.Parent = box["list of commands"]
 
 layout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
-	uwu["list of commands"].CanvasSize = UDim2.new(0, 0, 0, layout.AbsoluteContentSize.Y + 10)
+	box["list of commands"].CanvasSize = UDim2.new(0, 0, 0, layout.AbsoluteContentSize.Y + 10)
 end)
 
 function populateList(scrollFrame, entries)
 	for _, text in ipairs(entries) do
 		local line = Instance.new("TextLabel")
 		line.Size = UDim2.new(1, -10, 0, 16)
-		line.TextColor3 = uwu["default border color"]
+		line.TextColor3 = box["default border color"]
 		line.BackgroundTransparency = 1
 		line.Font = Enum.Font.RobotoMono
 		line.TextSize = 15
@@ -13516,7 +13547,7 @@ end
 function changeprefix(newprefix)
 	if newprefix and newprefix ~= "" then
 		prefix = newprefix
-		uwu["command prefix"].Text = "command prefix: " .. newprefix
+		box["command prefix"].Text = "command prefix: " .. newprefix
 	end
 end
 
@@ -13594,7 +13625,7 @@ if txtchatsvc then
 	game:GetService("TextChatService").OnIncomingMessage = function(message)
 		if message.TextSource then
 			local speaker = game:GetService("Players"):GetPlayerByUserId(message.TextSource.UserId)
-			if uwu["unlocked"] == true then
+			if box["unlocked"] == true then
 				onmsg(message.Text, speaker)
 			end
 		end
@@ -13602,65 +13633,65 @@ if txtchatsvc then
 else
 	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.OnMessageDoneFiltering.OnClientEvent:Connect(function(messageData)
 		if messageData.FromSpeaker == game:GetService("Players").LocalPlayer.Name then
-			if uwu["unlocked"] == true then
+			if box["unlocked"] == true then
 				onmsg(messageData.Message, game:GetService("Players").LocalPlayer)
 			end
 		end
 	end)
 end
 
-uwu["command bar"].Size = UDim2.new(0, 343, 0, 45)
-uwu["command bar"].Position = UDim2.new(0, 4, 0, 201)
+box["command bar"].Size = UDim2.new(0, 343, 0, 45)
+box["command bar"].Position = UDim2.new(0, 4, 0, 201)
 
-uwu["command bar"].BackgroundColor3 = uwu["default background color"]
-uwu["command bar"].BorderColor3 = uwu["default border color"]
-uwu["command bar"].BorderSizePixel = 1
-uwu["command bar"].ClipsDescendants = true
+box["command bar"].BackgroundColor3 = box["default background color"]
+box["command bar"].BorderColor3 = box["default border color"]
+box["command bar"].BorderSizePixel = 1
+box["command bar"].ClipsDescendants = true
 
-uwu["command bar"].TextColor3 = uwu["default border color"]
-uwu["command bar"].Font = Enum.Font.RobotoMono
-uwu["command bar"].TextSize = 15
-uwu["command bar"].TextScaled = false
-uwu["command bar"].PlaceholderText = "type command here"
-uwu["command bar"].PlaceholderColor3 = uwu["default 1/2 color"]
-uwu["command bar"].ClearTextOnFocus = true
-uwu["command bar"].Text = ""
-uwu["command bar"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["command bar"].TextYAlignment = Enum.TextYAlignment.Center
+box["command bar"].TextColor3 = box["default border color"]
+box["command bar"].Font = Enum.Font.RobotoMono
+box["command bar"].TextSize = 15
+box["command bar"].TextScaled = false
+box["command bar"].PlaceholderText = "type command here"
+box["command bar"].PlaceholderColor3 = box["default 1/2 color"]
+box["command bar"].ClearTextOnFocus = true
+box["command bar"].Text = ""
+box["command bar"].TextXAlignment = Enum.TextXAlignment.Center
+box["command bar"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["command bar text padding"] = Instance.new("UIPadding")
-uwu["command bar text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["command bar text padding"].Parent = uwu["command bar"]
+box["command bar text padding"] = Instance.new("UIPadding")
+box["command bar text padding"].PaddingLeft = UDim.new(0, 0)
+box["command bar text padding"].Parent = box["command bar"]
 
-uwu["command bar"].Parent = uwu["main frame 1"]
-uwu["command bar"].ZIndex = 19
-uwu["command bar"].Visible = false
+box["command bar"].Parent = box["main frame 1"]
+box["command bar"].ZIndex = 19
+box["command bar"].Visible = false
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["execute command button"].Size = UDim2.new(0, 45, 0, 45)
-uwu["execute command button"].Position = UDim2.new(0, 352, 0, 201)
+box["execute command button"].Size = UDim2.new(0, 45, 0, 45)
+box["execute command button"].Position = UDim2.new(0, 352, 0, 201)
 
-uwu["execute command button"].BackgroundColor3 = uwu["default background color"]
+box["execute command button"].BackgroundColor3 = box["default background color"]
 
-uwu["execute command button"].BorderColor3 = uwu["default border color"]
-uwu["execute command button"].BorderSizePixel = 1
+box["execute command button"].BorderColor3 = box["default border color"]
+box["execute command button"].BorderSizePixel = 1
 
-uwu["execute command button"].TextColor3 = uwu["default border color"]
-uwu["execute command button"].Font = Enum.Font.RobotoMono
-uwu["execute command button"].TextSize = 15
-uwu["execute command button"].TextScaled = false
-uwu["execute command button"].Visible = false
-uwu["execute command button"].Text = ">_"
-uwu["execute command button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["execute command button"].TextYAlignment = Enum.TextYAlignment.Center
+box["execute command button"].TextColor3 = box["default border color"]
+box["execute command button"].Font = Enum.Font.RobotoMono
+box["execute command button"].TextSize = 15
+box["execute command button"].TextScaled = false
+box["execute command button"].Visible = false
+box["execute command button"].Text = ">_"
+box["execute command button"].TextXAlignment = Enum.TextXAlignment.Center
+box["execute command button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["execute command button text padding"] = Instance.new("UIPadding")
-uwu["execute command button text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["execute command button text padding"].Parent = uwu["execute command button"]
+box["execute command button text padding"] = Instance.new("UIPadding")
+box["execute command button text padding"].PaddingLeft = UDim.new(0, 0)
+box["execute command button text padding"].Parent = box["execute command button"]
 
-uwu["execute command button"].Parent = uwu["main frame 1"]
-uwu["execute command button"].ZIndex = 19
+box["execute command button"].Parent = box["main frame 1"]
+box["execute command button"].ZIndex = 19
 
 local function handle(command, clr)
 	if command == "" then
@@ -13668,7 +13699,7 @@ local function handle(command, clr)
 	end
 
 	if clr then
-		uwu["command bar"].Text = ""
+		box["command bar"].Text = ""
 	end
 
 	if not execcmd(command) then
@@ -13684,378 +13715,378 @@ local function handle(command, clr)
 	end
 end
 
-uwu["execute command button"].MouseButton1Click:Connect(function()
-	uwu["click sound"]:Play()
-	local command = uwu["command bar"].Text
+box["execute command button"].MouseButton1Click:Connect(function()
+	box["click sound"]:Play()
+	local command = box["command bar"].Text
 	handle(command, false)
 end)
 
-uwu["command bar"].FocusLost:Connect(function(enterPressed)
+box["command bar"].FocusLost:Connect(function(enterPressed)
 	if enterPressed then
-		local command = uwu["command bar"].Text
+		local command = box["command bar"].Text
 		handle(command, true)
 	end
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["asset ids tab"].Size = UDim2.new(0, 100, 0, 26)
-uwu["asset ids tab"].Position = UDim2.new(0, 200, 0, 1)
+box["asset ids tab"].Size = UDim2.new(0, 100, 0, 26)
+box["asset ids tab"].Position = UDim2.new(0, 200, 0, 1)
 
-uwu["asset ids tab"].BackgroundColor3 = uwu["default background color"]
+box["asset ids tab"].BackgroundColor3 = box["default background color"]
 
-uwu["asset ids tab"].BorderColor3 = uwu["default border color"]
-uwu["asset ids tab"].BorderSizePixel = 1
+box["asset ids tab"].BorderColor3 = box["default border color"]
+box["asset ids tab"].BorderSizePixel = 1
 
-uwu["asset ids tab"].TextColor3 = uwu["default border color"]
-uwu["asset ids tab"].Font = Enum.Font.RobotoMono
-uwu["asset ids tab"].TextSize = 15
-uwu["asset ids tab"].TextScaled = false
-uwu["asset ids tab"].Text = "asset IDs"
-uwu["asset ids tab"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["asset ids tab"].TextYAlignment = Enum.TextYAlignment.Center
+box["asset ids tab"].TextColor3 = box["default border color"]
+box["asset ids tab"].Font = Enum.Font.RobotoMono
+box["asset ids tab"].TextSize = 15
+box["asset ids tab"].TextScaled = false
+box["asset ids tab"].Text = "asset IDs"
+box["asset ids tab"].TextXAlignment = Enum.TextXAlignment.Center
+box["asset ids tab"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["asset ids tab text padding"] = Instance.new("UIPadding")
-uwu["asset ids tab text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["asset ids tab text padding"].Parent = uwu["asset ids tab"]
+box["asset ids tab text padding"] = Instance.new("UIPadding")
+box["asset ids tab text padding"].PaddingLeft = UDim.new(0, 0)
+box["asset ids tab text padding"].Parent = box["asset ids tab"]
 
-uwu["asset ids tab"].Parent = uwu["main frame 1"]
-uwu["asset ids tab"].ZIndex = 19
+box["asset ids tab"].Parent = box["main frame 1"]
+box["asset ids tab"].ZIndex = 19
 
-uwu["asset ids tab bottom cover"].Size = UDim2.new(0, 100, 0, 2)
-uwu["asset ids tab bottom cover"].Position = UDim2.new(0, 200, 0, 27)
-uwu["asset ids tab bottom cover"].BackgroundColor3 = uwu["default background color"]
-uwu["asset ids tab bottom cover"].BorderSizePixel = 0
-uwu["asset ids tab bottom cover"].Parent = uwu["main frame 1"]
-uwu["asset ids tab bottom cover"].ZIndex = 19.5
-uwu["asset ids tab bottom cover"].Visible = false
-
--------------------------------------------------------------------------------------------------------------------------------
-
-uwu["asset id type indicator"].Size = UDim2.new(0, 170, 0, 19)
-uwu["asset id type indicator"].Position = UDim2.new(0, 28, 0, 32)
-uwu["asset id type indicator"].BackgroundColor3 = uwu["default background color"]
-uwu["asset id type indicator"].BorderColor3 = uwu["default border color"]
-uwu["asset id type indicator"].BorderSizePixel = 1
-uwu["asset id type indicator"].TextColor3 = uwu["default border color"]
-uwu["asset id type indicator"].Font = Enum.Font.RobotoMono
-uwu["asset id type indicator"].TextSize = 15
-uwu["asset id type indicator"].TextScaled = false
-uwu["asset id type indicator"].Text = ""
-uwu["asset id type indicator"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["asset id type indicator"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["asset id type indicator text padding"] = Instance.new("UIPadding")
-uwu["asset id type indicator text padding"].PaddingBottom = UDim.new(0, 1)
-uwu["asset id type indicator text padding"].Parent = uwu["asset id type indicator"]
-uwu["asset id type indicator"].Parent = uwu["main frame 1"]
-uwu["asset id type indicator"].ZIndex = 19
-uwu["asset id type indicator"].Visible = false
+box["asset ids tab bottom cover"].Size = UDim2.new(0, 100, 0, 2)
+box["asset ids tab bottom cover"].Position = UDim2.new(0, 200, 0, 27)
+box["asset ids tab bottom cover"].BackgroundColor3 = box["default background color"]
+box["asset ids tab bottom cover"].BorderSizePixel = 0
+box["asset ids tab bottom cover"].Parent = box["main frame 1"]
+box["asset ids tab bottom cover"].ZIndex = 19.5
+box["asset ids tab bottom cover"].Visible = false
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["asset id search bar"].Size = UDim2.new(0, 170, 0, 19)
-uwu["asset id search bar"].Position = UDim2.new(0, 203, 0, 32)
-uwu["asset id search bar"].BackgroundColor3 = uwu["default background color"]
-uwu["asset id search bar"].BorderColor3 = uwu["default border color"]
-uwu["asset id search bar"].BorderSizePixel = 1
-uwu["asset id search bar"].TextColor3 = uwu["default border color"]
-uwu["asset id search bar"].Font = Enum.Font.RobotoMono
-uwu["asset id search bar"].TextSize = 15
-uwu["asset id search bar"].TextScaled = false
-uwu["asset id search bar"].Text = ""
-uwu["asset id search bar"].PlaceholderColor3 = uwu["default 1/2 color"]
-uwu["asset id search bar"].PlaceholderText = "search assets"
-uwu["asset id search bar"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["asset id search bar"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["asset id search bar text padding"] = Instance.new("UIPadding")
-uwu["asset id search bar text padding"].PaddingBottom = UDim.new(0, 1)
-uwu["asset id search bar text padding"].Parent = uwu["asset id search bar"]
-uwu["asset id search bar"].Parent = uwu["main frame 1"]
-uwu["asset id search bar"].ZIndex = 19
-uwu["asset id search bar"].Visible = false
+box["asset id type indicator"].Size = UDim2.new(0, 170, 0, 19)
+box["asset id type indicator"].Position = UDim2.new(0, 28, 0, 32)
+box["asset id type indicator"].BackgroundColor3 = box["default background color"]
+box["asset id type indicator"].BorderColor3 = box["default border color"]
+box["asset id type indicator"].BorderSizePixel = 1
+box["asset id type indicator"].TextColor3 = box["default border color"]
+box["asset id type indicator"].Font = Enum.Font.RobotoMono
+box["asset id type indicator"].TextSize = 15
+box["asset id type indicator"].TextScaled = false
+box["asset id type indicator"].Text = ""
+box["asset id type indicator"].TextXAlignment = Enum.TextXAlignment.Center
+box["asset id type indicator"].TextYAlignment = Enum.TextYAlignment.Center
+box["asset id type indicator text padding"] = Instance.new("UIPadding")
+box["asset id type indicator text padding"].PaddingBottom = UDim.new(0, 1)
+box["asset id type indicator text padding"].Parent = box["asset id type indicator"]
+box["asset id type indicator"].Parent = box["main frame 1"]
+box["asset id type indicator"].ZIndex = 19
+box["asset id type indicator"].Visible = false
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["switch asset id type button"].Size = UDim2.new(0, 19, 0, 19)
-uwu["switch asset id type button"].Position = UDim2.new(0, 4, 0, 32)
-uwu["switch asset id type button"].BackgroundColor3 = uwu["default background color"]
-uwu["switch asset id type button"].BorderColor3 = uwu["default border color"]
-uwu["switch asset id type button"].BorderSizePixel = 1
-uwu["switch asset id type button"].TextColor3 = uwu["default border color"]
-uwu["switch asset id type button"].Font = Enum.Font.RobotoMono
-uwu["switch asset id type button"].TextSize = 15
-uwu["switch asset id type button"].TextScaled = false
-uwu["switch asset id type button"].Text = "<"
-uwu["switch asset id type button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["switch asset id type button"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["switch asset id type button"].Parent = uwu["main frame 1"]
-uwu["switch asset id type button"].ZIndex = 20
-uwu["switch asset id type button"].Visible = false
-uwu["switch asset id type button text padding"] = Instance.new("UIPadding")
-uwu["switch asset id type button text padding"].PaddingTop = UDim.new(0, -2)
-uwu["switch asset id type button text padding"].Parent = uwu["switch asset id type button"]
-
-uwu["switch asset id type button 2"].Size = UDim2.new(0, 19, 0, 19)
-uwu["switch asset id type button 2"].Position = UDim2.new(0, 378, 0, 32)
-uwu["switch asset id type button 2"].BackgroundColor3 = uwu["default background color"]
-uwu["switch asset id type button 2"].BorderColor3 = uwu["default border color"]
-uwu["switch asset id type button 2"].BorderSizePixel = 1
-uwu["switch asset id type button 2"].TextColor3 = uwu["default border color"]
-uwu["switch asset id type button 2"].Font = Enum.Font.RobotoMono
-uwu["switch asset id type button 2"].TextSize = 15
-uwu["switch asset id type button 2"].TextScaled = false
-uwu["switch asset id type button 2"].Text = ">"
-uwu["switch asset id type button 2"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["switch asset id type button 2"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["switch asset id type button 2"].Parent = uwu["main frame 1"]
-uwu["switch asset id type button 2"].ZIndex = 20
-uwu["switch asset id type button 2"].Visible = false
-uwu["switch asset id type button 2 text padding"] = Instance.new("UIPadding")
-uwu["switch asset id type button 2 text padding"].PaddingTop = UDim.new(0, -2)
-uwu["switch asset id type button 2 text padding"].Parent = uwu["switch asset id type button 2"]
+box["asset id search bar"].Size = UDim2.new(0, 170, 0, 19)
+box["asset id search bar"].Position = UDim2.new(0, 203, 0, 32)
+box["asset id search bar"].BackgroundColor3 = box["default background color"]
+box["asset id search bar"].BorderColor3 = box["default border color"]
+box["asset id search bar"].BorderSizePixel = 1
+box["asset id search bar"].TextColor3 = box["default border color"]
+box["asset id search bar"].Font = Enum.Font.RobotoMono
+box["asset id search bar"].TextSize = 15
+box["asset id search bar"].TextScaled = false
+box["asset id search bar"].Text = ""
+box["asset id search bar"].PlaceholderColor3 = box["default 1/2 color"]
+box["asset id search bar"].PlaceholderText = "search assets"
+box["asset id search bar"].TextXAlignment = Enum.TextXAlignment.Center
+box["asset id search bar"].TextYAlignment = Enum.TextYAlignment.Center
+box["asset id search bar text padding"] = Instance.new("UIPadding")
+box["asset id search bar text padding"].PaddingBottom = UDim.new(0, 1)
+box["asset id search bar text padding"].Parent = box["asset id search bar"]
+box["asset id search bar"].Parent = box["main frame 1"]
+box["asset id search bar"].ZIndex = 19
+box["asset id search bar"].Visible = false
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["asset image 1"].Size = UDim2.new(0, 60, 0, 60)
-uwu["asset image 1"].Position = UDim2.new(0, 28, 0, 56)
-uwu["asset image 1"].Image = "rbxassetid://0"
-uwu["asset image 1"].BackgroundColor3 = uwu["default background color"]
-uwu["asset image 1"].BorderColor3 = uwu["default border color"]
-uwu["asset image 1"].BorderSizePixel = 1
-uwu["asset image 1"].Parent = uwu["main frame 1"]
-uwu["asset image 1"].ZIndex = 19
-uwu["asset image 1"].Visible = false
+box["switch asset id type button"].Size = UDim2.new(0, 19, 0, 19)
+box["switch asset id type button"].Position = UDim2.new(0, 4, 0, 32)
+box["switch asset id type button"].BackgroundColor3 = box["default background color"]
+box["switch asset id type button"].BorderColor3 = box["default border color"]
+box["switch asset id type button"].BorderSizePixel = 1
+box["switch asset id type button"].TextColor3 = box["default border color"]
+box["switch asset id type button"].Font = Enum.Font.RobotoMono
+box["switch asset id type button"].TextSize = 15
+box["switch asset id type button"].TextScaled = false
+box["switch asset id type button"].Text = "<"
+box["switch asset id type button"].TextXAlignment = Enum.TextXAlignment.Center
+box["switch asset id type button"].TextYAlignment = Enum.TextYAlignment.Center
+box["switch asset id type button"].Parent = box["main frame 1"]
+box["switch asset id type button"].ZIndex = 20
+box["switch asset id type button"].Visible = false
+box["switch asset id type button text padding"] = Instance.new("UIPadding")
+box["switch asset id type button text padding"].PaddingTop = UDim.new(0, -2)
+box["switch asset id type button text padding"].Parent = box["switch asset id type button"]
 
-uwu["asset image name 1"].Size = UDim2.new(0, 280, 0, 27)
-uwu["asset image name 1"].Position = UDim2.new(0, 93, 0, 56)
-uwu["asset image name 1"].BackgroundColor3 = uwu["default background color"]
-uwu["asset image name 1"].BorderColor3 = uwu["default border color"]
-uwu["asset image name 1"].BorderSizePixel = 1
-uwu["asset image name 1"].TextColor3 = uwu["default border color"]
-uwu["asset image name 1"].Font = Enum.Font.RobotoMono
-uwu["asset image name 1"].TextSize = 15
-uwu["asset image name 1"].TextScaled = false
-uwu["asset image name 1"].Text = "empty"
-uwu["asset image name 1"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["asset image name 1"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["asset image name 1"].Parent = uwu["main frame 1"]
-uwu["asset image name 1"].ZIndex = 19
-uwu["asset image name 1"].Visible = false
-uwu["asset image name 1 text padding"] = Instance.new("UIPadding")
-uwu["asset image name 1 text padding"].PaddingTop = UDim.new(0, -2)
-uwu["asset image name 1 text padding"].Parent = uwu["asset image name 1"]
-
-uwu["asset image id 1"].Size = UDim2.new(0, 205, 0, 28)
-uwu["asset image id 1"].Position = UDim2.new(0, 93, 0, 88)
-uwu["asset image id 1"].BackgroundColor3 = uwu["default background color"]
-uwu["asset image id 1"].BorderColor3 = uwu["default border color"]
-uwu["asset image id 1"].BorderSizePixel = 1
-uwu["asset image id 1"].TextColor3 = uwu["default border color"]
-uwu["asset image id 1"].Font = Enum.Font.RobotoMono
-uwu["asset image id 1"].TextSize = 15
-uwu["asset image id 1"].TextScaled = false
-uwu["asset image id 1"].Text = "id: empty"
-uwu["asset image id 1"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["asset image id 1"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["asset image id 1"].Parent = uwu["main frame 1"]
-uwu["asset image id 1"].ZIndex = 19
-uwu["asset image id 1"].Visible = false
-uwu["asset image id 1 text padding"] = Instance.new("UIPadding")
-uwu["asset image id 1 text padding"].PaddingTop = UDim.new(0, -2)
-uwu["asset image id 1 text padding"].Parent = uwu["asset image id 1"]
-
-uwu["copy asset id 1 button"].Size = UDim2.new(0, 70, 0, 28)
-uwu["copy asset id 1 button"].Position = UDim2.new(0, 303, 0, 88)
-uwu["copy asset id 1 button"].BackgroundColor3 = uwu["default background color"]
-uwu["copy asset id 1 button"].BorderColor3 = uwu["default border color"]
-uwu["copy asset id 1 button"].BorderSizePixel = 1
-uwu["copy asset id 1 button"].TextColor3 = uwu["default border color"]
-uwu["copy asset id 1 button"].Font = Enum.Font.RobotoMono
-uwu["copy asset id 1 button"].TextSize = 15
-uwu["copy asset id 1 button"].TextScaled = false
-uwu["copy asset id 1 button"].Text = "copy id"
-uwu["copy asset id 1 button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["copy asset id 1 button"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["copy asset id 1 button"].Parent = uwu["main frame 1"]
-uwu["copy asset id 1 button"].ZIndex = 19
-uwu["copy asset id 1 button"].Visible = false
-uwu["copy asset id 1 button text padding"] = Instance.new("UIPadding")
-uwu["copy asset id 1 button text padding"].PaddingTop = UDim.new(0, -2)
-uwu["copy asset id 1 button text padding"].Parent = uwu["copy asset id 1 button"]
-
-uwu["asset image 2"].Size = UDim2.new(0, 60, 0, 60)
-uwu["asset image 2"].Position = UDim2.new(0, 28, 0, 121)
-uwu["asset image 2"].Image = "rbxassetid://0"
-uwu["asset image 2"].BackgroundColor3 = uwu["default background color"]
-uwu["asset image 2"].BorderColor3 = uwu["default border color"]
-uwu["asset image 2"].BorderSizePixel = 1
-uwu["asset image 2"].Parent = uwu["main frame 1"]
-uwu["asset image 2"].ZIndex = 19
-uwu["asset image 2"].Visible = false
-
-uwu["asset image name 2"].Size = UDim2.new(0, 280, 0, 27)
-uwu["asset image name 2"].Position = UDim2.new(0, 93, 0, 121)
-uwu["asset image name 2"].BackgroundColor3 = uwu["default background color"]
-uwu["asset image name 2"].BorderColor3 = uwu["default border color"]
-uwu["asset image name 2"].BorderSizePixel = 1
-uwu["asset image name 2"].TextColor3 = uwu["default border color"]
-uwu["asset image name 2"].Font = Enum.Font.RobotoMono
-uwu["asset image name 2"].TextSize = 15
-uwu["asset image name 2"].TextScaled = false
-uwu["asset image name 2"].Text = "empty"
-uwu["asset image name 2"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["asset image name 2"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["asset image name 2"].Parent = uwu["main frame 1"]
-uwu["asset image name 2"].ZIndex = 19
-uwu["asset image name 2"].Visible = false
-uwu["asset image name 2 text padding"] = Instance.new("UIPadding")
-uwu["asset image name 2 text padding"].PaddingTop = UDim.new(0, -2)
-uwu["asset image name 2 text padding"].Parent = uwu["asset image name 2"]
-
-uwu["asset image id 2"].Size = UDim2.new(0, 205, 0, 28)
-uwu["asset image id 2"].Position = UDim2.new(0, 93, 0, 153)
-uwu["asset image id 2"].BackgroundColor3 = uwu["default background color"]
-uwu["asset image id 2"].BorderColor3 = uwu["default border color"]
-uwu["asset image id 2"].BorderSizePixel = 1
-uwu["asset image id 2"].TextColor3 = uwu["default border color"]
-uwu["asset image id 2"].Font = Enum.Font.RobotoMono
-uwu["asset image id 2"].TextSize = 15
-uwu["asset image id 2"].TextScaled = false
-uwu["asset image id 2"].Text = "id: empty"
-uwu["asset image id 2"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["asset image id 2"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["asset image id 2"].Parent = uwu["main frame 1"]
-uwu["asset image id 2"].ZIndex = 19
-uwu["asset image id 2"].Visible = false
-uwu["asset image id 2 text padding"] = Instance.new("UIPadding")
-uwu["asset image id 2 text padding"].PaddingTop = UDim.new(0, -2)
-uwu["asset image id 2 text padding"].Parent = uwu["asset image id 2"]
-
-uwu["copy asset id 2 button"].Size = UDim2.new(0, 70, 0, 28)
-uwu["copy asset id 2 button"].Position = UDim2.new(0, 303, 0, 153)
-uwu["copy asset id 2 button"].BackgroundColor3 = uwu["default background color"]
-uwu["copy asset id 2 button"].BorderColor3 = uwu["default border color"]
-uwu["copy asset id 2 button"].BorderSizePixel = 1
-uwu["copy asset id 2 button"].TextColor3 = uwu["default border color"]
-uwu["copy asset id 2 button"].Font = Enum.Font.RobotoMono
-uwu["copy asset id 2 button"].TextSize = 15
-uwu["copy asset id 2 button"].TextScaled = false
-uwu["copy asset id 2 button"].Text = "copy id"
-uwu["copy asset id 2 button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["copy asset id 2 button"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["copy asset id 2 button"].Parent = uwu["main frame 1"]
-uwu["copy asset id 2 button"].ZIndex = 19
-uwu["copy asset id 2 button"].Visible = false
-uwu["copy asset id 2 button text padding"] = Instance.new("UIPadding")
-uwu["copy asset id 2 button text padding"].PaddingTop = UDim.new(0, -2)
-uwu["copy asset id 2 button text padding"].Parent = uwu["copy asset id 2 button"]
-
-uwu["asset image 3"].Size = UDim2.new(0, 60, 0, 60)
-uwu["asset image 3"].Position = UDim2.new(0, 28, 0, 186)
-uwu["asset image 3"].Image = "rbxassetid://0"
-uwu["asset image 3"].BackgroundColor3 = uwu["default background color"]
-uwu["asset image 3"].BorderColor3 = uwu["default border color"]
-uwu["asset image 3"].BorderSizePixel = 1
-uwu["asset image 3"].Parent = uwu["main frame 1"]
-uwu["asset image 3"].ZIndex = 19
-uwu["asset image 3"].Visible = false
-
-uwu["asset image name 3"].Size = UDim2.new(0, 280, 0, 27)
-uwu["asset image name 3"].Position = UDim2.new(0, 93, 0, 186)
-uwu["asset image name 3"].BackgroundColor3 = uwu["default background color"]
-uwu["asset image name 3"].BorderColor3 = uwu["default border color"]
-uwu["asset image name 3"].BorderSizePixel = 1
-uwu["asset image name 3"].TextColor3 = uwu["default border color"]
-uwu["asset image name 3"].Font = Enum.Font.RobotoMono
-uwu["asset image name 3"].TextSize = 15
-uwu["asset image name 3"].TextScaled = false
-uwu["asset image name 3"].Text = "empty"
-uwu["asset image name 3"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["asset image name 3"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["asset image name 3"].Parent = uwu["main frame 1"]
-uwu["asset image name 3"].ZIndex = 19
-uwu["asset image name 3"].Visible = false
-uwu["asset image name 3 text padding"] = Instance.new("UIPadding")
-uwu["asset image name 3 text padding"].PaddingTop = UDim.new(0, -2)
-uwu["asset image name 3 text padding"].Parent = uwu["asset image name 3"]
-
-uwu["asset image id 3"].Size = UDim2.new(0, 205, 0, 28)
-uwu["asset image id 3"].Position = UDim2.new(0, 93, 0, 218)
-uwu["asset image id 3"].BackgroundColor3 = uwu["default background color"]
-uwu["asset image id 3"].BorderColor3 = uwu["default border color"]
-uwu["asset image id 3"].BorderSizePixel = 1
-uwu["asset image id 3"].TextColor3 = uwu["default border color"]
-uwu["asset image id 3"].Font = Enum.Font.RobotoMono
-uwu["asset image id 3"].TextSize = 15
-uwu["asset image id 3"].TextScaled = false
-uwu["asset image id 3"].Text = "id: empty"
-uwu["asset image id 3"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["asset image id 3"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["asset image id 3"].Parent = uwu["main frame 1"]
-uwu["asset image id 3"].ZIndex = 19
-uwu["asset image id 3"].Visible = false
-uwu["asset image id 3 text padding"] = Instance.new("UIPadding")
-uwu["asset image id 3 text padding"].PaddingTop = UDim.new(0, -2)
-uwu["asset image id 3 text padding"].Parent = uwu["asset image id 3"]
-
-uwu["copy asset id 3 button"].Size = UDim2.new(0, 70, 0, 28)
-uwu["copy asset id 3 button"].Position = UDim2.new(0, 303, 0, 218)
-uwu["copy asset id 3 button"].BackgroundColor3 = uwu["default background color"]
-uwu["copy asset id 3 button"].BorderColor3 = uwu["default border color"]
-uwu["copy asset id 3 button"].BorderSizePixel = 1
-uwu["copy asset id 3 button"].TextColor3 = uwu["default border color"]
-uwu["copy asset id 3 button"].Font = Enum.Font.RobotoMono
-uwu["copy asset id 3 button"].TextSize = 15
-uwu["copy asset id 3 button"].TextScaled = false
-uwu["copy asset id 3 button"].Text = "copy id"
-uwu["copy asset id 3 button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["copy asset id 3 button"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["copy asset id 3 button"].Parent = uwu["main frame 1"]
-uwu["copy asset id 3 button"].ZIndex = 19
-uwu["copy asset id 3 button"].Visible = false
-uwu["copy asset id 3 button text padding"] = Instance.new("UIPadding")
-uwu["copy asset id 3 button text padding"].PaddingTop = UDim.new(0, -2)
-uwu["copy asset id 3 button text padding"].Parent = uwu["copy asset id 3 button"]
+box["switch asset id type button 2"].Size = UDim2.new(0, 19, 0, 19)
+box["switch asset id type button 2"].Position = UDim2.new(0, 378, 0, 32)
+box["switch asset id type button 2"].BackgroundColor3 = box["default background color"]
+box["switch asset id type button 2"].BorderColor3 = box["default border color"]
+box["switch asset id type button 2"].BorderSizePixel = 1
+box["switch asset id type button 2"].TextColor3 = box["default border color"]
+box["switch asset id type button 2"].Font = Enum.Font.RobotoMono
+box["switch asset id type button 2"].TextSize = 15
+box["switch asset id type button 2"].TextScaled = false
+box["switch asset id type button 2"].Text = ">"
+box["switch asset id type button 2"].TextXAlignment = Enum.TextXAlignment.Center
+box["switch asset id type button 2"].TextYAlignment = Enum.TextYAlignment.Center
+box["switch asset id type button 2"].Parent = box["main frame 1"]
+box["switch asset id type button 2"].ZIndex = 20
+box["switch asset id type button 2"].Visible = false
+box["switch asset id type button 2 text padding"] = Instance.new("UIPadding")
+box["switch asset id type button 2 text padding"].PaddingTop = UDim.new(0, -2)
+box["switch asset id type button 2 text padding"].Parent = box["switch asset id type button 2"]
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["next page 2 button"].Size = UDim2.new(0, 19, 0, 190)
-uwu["next page 2 button"].Position = UDim2.new(0, 4, 0, 56)
-uwu["next page 2 button"].BackgroundColor3 = uwu["default background color"]
-uwu["next page 2 button"].BorderColor3 = uwu["default border color"]
-uwu["next page 2 button"].BorderSizePixel = 1
-uwu["next page 2 button"].TextColor3 = uwu["default border color"]
-uwu["next page 2 button"].Font = Enum.Font.RobotoMono
-uwu["next page 2 button"].TextSize = 15
-uwu["next page 2 button"].TextScaled = false
-uwu["next page 2 button"].Text = "<"
-uwu["next page 2 button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["next page 2 button"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["next page 2 button"].Parent = uwu["main frame 1"]
-uwu["next page 2 button"].ZIndex = 20
-uwu["next page 2 button"].Visible = false
-uwu["next page 2 button text padding"] = Instance.new("UIPadding")
-uwu["next page 2 button text padding"].PaddingTop = UDim.new(0, -5)
-uwu["next page 2 button text padding"].Parent = uwu["next page 2 button"]
+box["asset image 1"].Size = UDim2.new(0, 60, 0, 60)
+box["asset image 1"].Position = UDim2.new(0, 28, 0, 56)
+box["asset image 1"].Image = "rbxassetid://0"
+box["asset image 1"].BackgroundColor3 = box["default background color"]
+box["asset image 1"].BorderColor3 = box["default border color"]
+box["asset image 1"].BorderSizePixel = 1
+box["asset image 1"].Parent = box["main frame 1"]
+box["asset image 1"].ZIndex = 19
+box["asset image 1"].Visible = false
 
-uwu["previous page 2 button"].Size = UDim2.new(0, 19, 0, 190)
-uwu["previous page 2 button"].Position = UDim2.new(0, 378, 0, 56)
-uwu["previous page 2 button"].BackgroundColor3 = uwu["default background color"]
-uwu["previous page 2 button"].BorderColor3 = uwu["default border color"]
-uwu["previous page 2 button"].BorderSizePixel = 1
-uwu["previous page 2 button"].TextColor3 = uwu["default border color"]
-uwu["previous page 2 button"].Font = Enum.Font.RobotoMono
-uwu["previous page 2 button"].TextSize = 15
-uwu["previous page 2 button"].TextScaled = false
-uwu["previous page 2 button"].Text = ">"
-uwu["previous page 2 button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["previous page 2 button"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["previous page 2 button"].Parent = uwu["main frame 1"]
-uwu["previous page 2 button"].ZIndex = 20
-uwu["previous page 2 button"].Visible = false
-uwu["previous page 2 button text padding"] = Instance.new("UIPadding")
-uwu["previous page 2 button text padding"].PaddingTop = UDim.new(0, -5)
-uwu["previous page 2 button text padding"].Parent = uwu["previous page 2 button"]
+box["asset image name 1"].Size = UDim2.new(0, 280, 0, 27)
+box["asset image name 1"].Position = UDim2.new(0, 93, 0, 56)
+box["asset image name 1"].BackgroundColor3 = box["default background color"]
+box["asset image name 1"].BorderColor3 = box["default border color"]
+box["asset image name 1"].BorderSizePixel = 1
+box["asset image name 1"].TextColor3 = box["default border color"]
+box["asset image name 1"].Font = Enum.Font.RobotoMono
+box["asset image name 1"].TextSize = 15
+box["asset image name 1"].TextScaled = false
+box["asset image name 1"].Text = "empty"
+box["asset image name 1"].TextXAlignment = Enum.TextXAlignment.Center
+box["asset image name 1"].TextYAlignment = Enum.TextYAlignment.Center
+box["asset image name 1"].Parent = box["main frame 1"]
+box["asset image name 1"].ZIndex = 19
+box["asset image name 1"].Visible = false
+box["asset image name 1 text padding"] = Instance.new("UIPadding")
+box["asset image name 1 text padding"].PaddingTop = UDim.new(0, -2)
+box["asset image name 1 text padding"].Parent = box["asset image name 1"]
+
+box["asset image id 1"].Size = UDim2.new(0, 205, 0, 28)
+box["asset image id 1"].Position = UDim2.new(0, 93, 0, 88)
+box["asset image id 1"].BackgroundColor3 = box["default background color"]
+box["asset image id 1"].BorderColor3 = box["default border color"]
+box["asset image id 1"].BorderSizePixel = 1
+box["asset image id 1"].TextColor3 = box["default border color"]
+box["asset image id 1"].Font = Enum.Font.RobotoMono
+box["asset image id 1"].TextSize = 15
+box["asset image id 1"].TextScaled = false
+box["asset image id 1"].Text = "id: empty"
+box["asset image id 1"].TextXAlignment = Enum.TextXAlignment.Center
+box["asset image id 1"].TextYAlignment = Enum.TextYAlignment.Center
+box["asset image id 1"].Parent = box["main frame 1"]
+box["asset image id 1"].ZIndex = 19
+box["asset image id 1"].Visible = false
+box["asset image id 1 text padding"] = Instance.new("UIPadding")
+box["asset image id 1 text padding"].PaddingTop = UDim.new(0, -2)
+box["asset image id 1 text padding"].Parent = box["asset image id 1"]
+
+box["copy asset id 1 button"].Size = UDim2.new(0, 70, 0, 28)
+box["copy asset id 1 button"].Position = UDim2.new(0, 303, 0, 88)
+box["copy asset id 1 button"].BackgroundColor3 = box["default background color"]
+box["copy asset id 1 button"].BorderColor3 = box["default border color"]
+box["copy asset id 1 button"].BorderSizePixel = 1
+box["copy asset id 1 button"].TextColor3 = box["default border color"]
+box["copy asset id 1 button"].Font = Enum.Font.RobotoMono
+box["copy asset id 1 button"].TextSize = 15
+box["copy asset id 1 button"].TextScaled = false
+box["copy asset id 1 button"].Text = "copy id"
+box["copy asset id 1 button"].TextXAlignment = Enum.TextXAlignment.Center
+box["copy asset id 1 button"].TextYAlignment = Enum.TextYAlignment.Center
+box["copy asset id 1 button"].Parent = box["main frame 1"]
+box["copy asset id 1 button"].ZIndex = 19
+box["copy asset id 1 button"].Visible = false
+box["copy asset id 1 button text padding"] = Instance.new("UIPadding")
+box["copy asset id 1 button text padding"].PaddingTop = UDim.new(0, -2)
+box["copy asset id 1 button text padding"].Parent = box["copy asset id 1 button"]
+
+box["asset image 2"].Size = UDim2.new(0, 60, 0, 60)
+box["asset image 2"].Position = UDim2.new(0, 28, 0, 121)
+box["asset image 2"].Image = "rbxassetid://0"
+box["asset image 2"].BackgroundColor3 = box["default background color"]
+box["asset image 2"].BorderColor3 = box["default border color"]
+box["asset image 2"].BorderSizePixel = 1
+box["asset image 2"].Parent = box["main frame 1"]
+box["asset image 2"].ZIndex = 19
+box["asset image 2"].Visible = false
+
+box["asset image name 2"].Size = UDim2.new(0, 280, 0, 27)
+box["asset image name 2"].Position = UDim2.new(0, 93, 0, 121)
+box["asset image name 2"].BackgroundColor3 = box["default background color"]
+box["asset image name 2"].BorderColor3 = box["default border color"]
+box["asset image name 2"].BorderSizePixel = 1
+box["asset image name 2"].TextColor3 = box["default border color"]
+box["asset image name 2"].Font = Enum.Font.RobotoMono
+box["asset image name 2"].TextSize = 15
+box["asset image name 2"].TextScaled = false
+box["asset image name 2"].Text = "empty"
+box["asset image name 2"].TextXAlignment = Enum.TextXAlignment.Center
+box["asset image name 2"].TextYAlignment = Enum.TextYAlignment.Center
+box["asset image name 2"].Parent = box["main frame 1"]
+box["asset image name 2"].ZIndex = 19
+box["asset image name 2"].Visible = false
+box["asset image name 2 text padding"] = Instance.new("UIPadding")
+box["asset image name 2 text padding"].PaddingTop = UDim.new(0, -2)
+box["asset image name 2 text padding"].Parent = box["asset image name 2"]
+
+box["asset image id 2"].Size = UDim2.new(0, 205, 0, 28)
+box["asset image id 2"].Position = UDim2.new(0, 93, 0, 153)
+box["asset image id 2"].BackgroundColor3 = box["default background color"]
+box["asset image id 2"].BorderColor3 = box["default border color"]
+box["asset image id 2"].BorderSizePixel = 1
+box["asset image id 2"].TextColor3 = box["default border color"]
+box["asset image id 2"].Font = Enum.Font.RobotoMono
+box["asset image id 2"].TextSize = 15
+box["asset image id 2"].TextScaled = false
+box["asset image id 2"].Text = "id: empty"
+box["asset image id 2"].TextXAlignment = Enum.TextXAlignment.Center
+box["asset image id 2"].TextYAlignment = Enum.TextYAlignment.Center
+box["asset image id 2"].Parent = box["main frame 1"]
+box["asset image id 2"].ZIndex = 19
+box["asset image id 2"].Visible = false
+box["asset image id 2 text padding"] = Instance.new("UIPadding")
+box["asset image id 2 text padding"].PaddingTop = UDim.new(0, -2)
+box["asset image id 2 text padding"].Parent = box["asset image id 2"]
+
+box["copy asset id 2 button"].Size = UDim2.new(0, 70, 0, 28)
+box["copy asset id 2 button"].Position = UDim2.new(0, 303, 0, 153)
+box["copy asset id 2 button"].BackgroundColor3 = box["default background color"]
+box["copy asset id 2 button"].BorderColor3 = box["default border color"]
+box["copy asset id 2 button"].BorderSizePixel = 1
+box["copy asset id 2 button"].TextColor3 = box["default border color"]
+box["copy asset id 2 button"].Font = Enum.Font.RobotoMono
+box["copy asset id 2 button"].TextSize = 15
+box["copy asset id 2 button"].TextScaled = false
+box["copy asset id 2 button"].Text = "copy id"
+box["copy asset id 2 button"].TextXAlignment = Enum.TextXAlignment.Center
+box["copy asset id 2 button"].TextYAlignment = Enum.TextYAlignment.Center
+box["copy asset id 2 button"].Parent = box["main frame 1"]
+box["copy asset id 2 button"].ZIndex = 19
+box["copy asset id 2 button"].Visible = false
+box["copy asset id 2 button text padding"] = Instance.new("UIPadding")
+box["copy asset id 2 button text padding"].PaddingTop = UDim.new(0, -2)
+box["copy asset id 2 button text padding"].Parent = box["copy asset id 2 button"]
+
+box["asset image 3"].Size = UDim2.new(0, 60, 0, 60)
+box["asset image 3"].Position = UDim2.new(0, 28, 0, 186)
+box["asset image 3"].Image = "rbxassetid://0"
+box["asset image 3"].BackgroundColor3 = box["default background color"]
+box["asset image 3"].BorderColor3 = box["default border color"]
+box["asset image 3"].BorderSizePixel = 1
+box["asset image 3"].Parent = box["main frame 1"]
+box["asset image 3"].ZIndex = 19
+box["asset image 3"].Visible = false
+
+box["asset image name 3"].Size = UDim2.new(0, 280, 0, 27)
+box["asset image name 3"].Position = UDim2.new(0, 93, 0, 186)
+box["asset image name 3"].BackgroundColor3 = box["default background color"]
+box["asset image name 3"].BorderColor3 = box["default border color"]
+box["asset image name 3"].BorderSizePixel = 1
+box["asset image name 3"].TextColor3 = box["default border color"]
+box["asset image name 3"].Font = Enum.Font.RobotoMono
+box["asset image name 3"].TextSize = 15
+box["asset image name 3"].TextScaled = false
+box["asset image name 3"].Text = "empty"
+box["asset image name 3"].TextXAlignment = Enum.TextXAlignment.Center
+box["asset image name 3"].TextYAlignment = Enum.TextYAlignment.Center
+box["asset image name 3"].Parent = box["main frame 1"]
+box["asset image name 3"].ZIndex = 19
+box["asset image name 3"].Visible = false
+box["asset image name 3 text padding"] = Instance.new("UIPadding")
+box["asset image name 3 text padding"].PaddingTop = UDim.new(0, -2)
+box["asset image name 3 text padding"].Parent = box["asset image name 3"]
+
+box["asset image id 3"].Size = UDim2.new(0, 205, 0, 28)
+box["asset image id 3"].Position = UDim2.new(0, 93, 0, 218)
+box["asset image id 3"].BackgroundColor3 = box["default background color"]
+box["asset image id 3"].BorderColor3 = box["default border color"]
+box["asset image id 3"].BorderSizePixel = 1
+box["asset image id 3"].TextColor3 = box["default border color"]
+box["asset image id 3"].Font = Enum.Font.RobotoMono
+box["asset image id 3"].TextSize = 15
+box["asset image id 3"].TextScaled = false
+box["asset image id 3"].Text = "id: empty"
+box["asset image id 3"].TextXAlignment = Enum.TextXAlignment.Center
+box["asset image id 3"].TextYAlignment = Enum.TextYAlignment.Center
+box["asset image id 3"].Parent = box["main frame 1"]
+box["asset image id 3"].ZIndex = 19
+box["asset image id 3"].Visible = false
+box["asset image id 3 text padding"] = Instance.new("UIPadding")
+box["asset image id 3 text padding"].PaddingTop = UDim.new(0, -2)
+box["asset image id 3 text padding"].Parent = box["asset image id 3"]
+
+box["copy asset id 3 button"].Size = UDim2.new(0, 70, 0, 28)
+box["copy asset id 3 button"].Position = UDim2.new(0, 303, 0, 218)
+box["copy asset id 3 button"].BackgroundColor3 = box["default background color"]
+box["copy asset id 3 button"].BorderColor3 = box["default border color"]
+box["copy asset id 3 button"].BorderSizePixel = 1
+box["copy asset id 3 button"].TextColor3 = box["default border color"]
+box["copy asset id 3 button"].Font = Enum.Font.RobotoMono
+box["copy asset id 3 button"].TextSize = 15
+box["copy asset id 3 button"].TextScaled = false
+box["copy asset id 3 button"].Text = "copy id"
+box["copy asset id 3 button"].TextXAlignment = Enum.TextXAlignment.Center
+box["copy asset id 3 button"].TextYAlignment = Enum.TextYAlignment.Center
+box["copy asset id 3 button"].Parent = box["main frame 1"]
+box["copy asset id 3 button"].ZIndex = 19
+box["copy asset id 3 button"].Visible = false
+box["copy asset id 3 button text padding"] = Instance.new("UIPadding")
+box["copy asset id 3 button text padding"].PaddingTop = UDim.new(0, -2)
+box["copy asset id 3 button text padding"].Parent = box["copy asset id 3 button"]
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+box["next page 2 button"].Size = UDim2.new(0, 19, 0, 190)
+box["next page 2 button"].Position = UDim2.new(0, 4, 0, 56)
+box["next page 2 button"].BackgroundColor3 = box["default background color"]
+box["next page 2 button"].BorderColor3 = box["default border color"]
+box["next page 2 button"].BorderSizePixel = 1
+box["next page 2 button"].TextColor3 = box["default border color"]
+box["next page 2 button"].Font = Enum.Font.RobotoMono
+box["next page 2 button"].TextSize = 15
+box["next page 2 button"].TextScaled = false
+box["next page 2 button"].Text = "<"
+box["next page 2 button"].TextXAlignment = Enum.TextXAlignment.Center
+box["next page 2 button"].TextYAlignment = Enum.TextYAlignment.Center
+box["next page 2 button"].Parent = box["main frame 1"]
+box["next page 2 button"].ZIndex = 20
+box["next page 2 button"].Visible = false
+box["next page 2 button text padding"] = Instance.new("UIPadding")
+box["next page 2 button text padding"].PaddingTop = UDim.new(0, -5)
+box["next page 2 button text padding"].Parent = box["next page 2 button"]
+
+box["previous page 2 button"].Size = UDim2.new(0, 19, 0, 190)
+box["previous page 2 button"].Position = UDim2.new(0, 378, 0, 56)
+box["previous page 2 button"].BackgroundColor3 = box["default background color"]
+box["previous page 2 button"].BorderColor3 = box["default border color"]
+box["previous page 2 button"].BorderSizePixel = 1
+box["previous page 2 button"].TextColor3 = box["default border color"]
+box["previous page 2 button"].Font = Enum.Font.RobotoMono
+box["previous page 2 button"].TextSize = 15
+box["previous page 2 button"].TextScaled = false
+box["previous page 2 button"].Text = ">"
+box["previous page 2 button"].TextXAlignment = Enum.TextXAlignment.Center
+box["previous page 2 button"].TextYAlignment = Enum.TextYAlignment.Center
+box["previous page 2 button"].Parent = box["main frame 1"]
+box["previous page 2 button"].ZIndex = 20
+box["previous page 2 button"].Visible = false
+box["previous page 2 button text padding"] = Instance.new("UIPadding")
+box["previous page 2 button text padding"].PaddingTop = UDim.new(0, -5)
+box["previous page 2 button text padding"].Parent = box["previous page 2 button"]
 
 local assetData = {
 	["image IDs"] = {
@@ -14384,7 +14415,7 @@ local function updateScrollingText(dt)
 				math.floor(controller.scrollPosition),
 				math.floor(controller.scrollPosition) + maxDisplayChars - 1
 			)
-			uwu["asset image name " .. i].Text = controller.displayText
+			box["asset image name " .. i].Text = controller.displayText
 
 		elseif controller.state == "backward" then
 			controller.scrollPosition = math.max(
@@ -14402,7 +14433,7 @@ local function updateScrollingText(dt)
 				math.floor(controller.scrollPosition),
 				math.floor(controller.scrollPosition) + maxDisplayChars - 1
 			)
-			uwu["asset image name " .. i].Text = controller.displayText
+			box["asset image name " .. i].Text = controller.displayText
 		end
 	end
 end
@@ -14461,7 +14492,7 @@ assetsPerPage = 3
 function updateAssetIdTypeIndicator()
 	local assetType = assetIdPages[currentAssetIdPageIndex]
 	local totalpgs = math.ceil(#assetData[assetType] / assetsPerPage)
-	uwu["asset id type indicator"].Text = assetType .. " [page " .. currentpg .. "/" .. totalpgs .. "]"
+	box["asset id type indicator"].Text = assetType .. " [page " .. currentpg .. "/" .. totalpgs .. "]"
 end
 
 function updatePage()
@@ -14469,7 +14500,7 @@ function updatePage()
 	local assets = assetData[assetType]
 	local totalpgs = math.ceil(#assets / assetsPerPage)
 
-	uwu["asset id type indicator"].Text = assetType .. " [page " .. currentpg .. "/" .. totalpgs .. "]"
+	box["asset id type indicator"].Text = assetType .. " [page " .. currentpg .. "/" .. totalpgs .. "]"
 
 	for i = 1, assetsPerPage do
 		local assetIndex = (currentpg - 1) * assetsPerPage + i
@@ -14478,14 +14509,14 @@ function updatePage()
 
 		if asset then
 			if assetType == "sound IDs" then
-				uwu["asset image " .. i].Image = "rbxassetid://110126477790022"
-				uwu["asset image " .. i].ImageColor3 = uwu["default text color"]
+				box["asset image " .. i].Image = "rbxassetid://110126477790022"
+				box["asset image " .. i].ImageColor3 = box["default text color"]
 			elseif assetType == "gear IDs" then
-				uwu["asset image " .. i].Image = "https://www.roblox.com/Thumbs/Asset.ashx?width=420&height=420&assetId=" .. asset.id
-				uwu["asset image " .. i].ImageColor3 = Color3.new(1, 1, 1)
+				box["asset image " .. i].Image = "https://www.roblox.com/Thumbs/Asset.ashx?width=420&height=420&assetId=" .. asset.id
+				box["asset image " .. i].ImageColor3 = Color3.new(1, 1, 1)
 			else
-				uwu["asset image " .. i].Image = asset.image or "rbxassetid://0"
-				uwu["asset image " .. i].ImageColor3 = Color3.new(1, 1, 1)
+				box["asset image " .. i].Image = asset.image or "rbxassetid://0"
+				box["asset image " .. i].ImageColor3 = Color3.new(1, 1, 1)
 			end
 
 			controller.fullText = asset.name or "empty"
@@ -14500,38 +14531,38 @@ function updatePage()
 				controller.displayText = controller.fullText
 			end
 
-			uwu["asset image name " .. i].Text = controller.displayText
-			uwu["asset image id " .. i].Text = "id: " .. (asset.id or "empty")
+			box["asset image name " .. i].Text = controller.displayText
+			box["asset image id " .. i].Text = "id: " .. (asset.id or "empty")
 
-			uwu["copy asset id " .. i .. " button"].Name = ""
-			uwu["asset image id " .. i].Name = ""
-			uwu["asset image name " .. i].Name = ""
-			uwu["asset image " .. i].Name = ""
+			box["copy asset id " .. i .. " button"].Name = ""
+			box["asset image id " .. i].Name = ""
+			box["asset image name " .. i].Name = ""
+			box["asset image " .. i].Name = ""
 
-			uwu["asset image " .. i].BorderColor3 = uwu["default border color"]
-			uwu["asset image name " .. i].BorderColor3 = uwu["default border color"]
-			uwu["asset image name " .. i].TextColor3 = uwu["default text color"]
-			uwu["asset image id " .. i].BorderColor3 = uwu["default border color"]
-			uwu["asset image id " .. i].TextColor3 = uwu["default text color"]
-			uwu["copy asset id " .. i .. " button"].Text = "copy id"
-			uwu["copy asset id " .. i .. " button"].BorderColor3 = uwu["default border color"]
-			uwu["copy asset id " .. i .. " button"].TextColor3 = uwu["default text color"]
+			box["asset image " .. i].BorderColor3 = box["default border color"]
+			box["asset image name " .. i].BorderColor3 = box["default border color"]
+			box["asset image name " .. i].TextColor3 = box["default text color"]
+			box["asset image id " .. i].BorderColor3 = box["default border color"]
+			box["asset image id " .. i].TextColor3 = box["default text color"]
+			box["copy asset id " .. i .. " button"].Text = "copy id"
+			box["copy asset id " .. i .. " button"].BorderColor3 = box["default border color"]
+			box["copy asset id " .. i .. " button"].TextColor3 = box["default text color"]
 		else
-			uwu["asset image " .. i].Image = "rbxassetid://0"
-			uwu["asset image " .. i].BorderColor3 = uwu["default 1/2 color 2"]
-			uwu["asset image " .. i].Name = "epicob"
-			uwu["asset image name " .. i].Text = "-"
-			uwu["asset image name " .. i].BorderColor3 = uwu["default 1/2 color 2"]
-			uwu["asset image name " .. i].TextColor3 = uwu["default 1/2 color"]
-			uwu["asset image name " .. i].Name = "epico"
-			uwu["asset image id " .. i].Text = "-"
-			uwu["asset image id " .. i].BorderColor3 = uwu["default 1/2 color 2"]
-			uwu["asset image id " .. i].TextColor3 = uwu["default 1/2 color"]
-			uwu["asset image id " .. i].Name = "epico"
-			uwu["copy asset id " .. i .. " button"].Text = "-"
-			uwu["copy asset id " .. i .. " button"].BorderColor3 = uwu["default 1/2 color 2"]
-			uwu["copy asset id " .. i .. " button"].TextColor3 = uwu["default 1/2 color"]
-			uwu["copy asset id " .. i .. " button"].Name = "epico"
+			box["asset image " .. i].Image = "rbxassetid://0"
+			box["asset image " .. i].BorderColor3 = box["default 1/2 color 2"]
+			box["asset image " .. i].Name = "epicob"
+			box["asset image name " .. i].Text = "-"
+			box["asset image name " .. i].BorderColor3 = box["default 1/2 color 2"]
+			box["asset image name " .. i].TextColor3 = box["default 1/2 color"]
+			box["asset image name " .. i].Name = "epico"
+			box["asset image id " .. i].Text = "-"
+			box["asset image id " .. i].BorderColor3 = box["default 1/2 color 2"]
+			box["asset image id " .. i].TextColor3 = box["default 1/2 color"]
+			box["asset image id " .. i].Name = "epico"
+			box["copy asset id " .. i .. " button"].Text = "-"
+			box["copy asset id " .. i .. " button"].BorderColor3 = box["default 1/2 color 2"]
+			box["copy asset id " .. i .. " button"].TextColor3 = box["default 1/2 color"]
+			box["copy asset id " .. i .. " button"].Name = "epico"
 			controller.fullText = "empty"
 			controller.displayText = "empty"
 			controller.needsScroll = false
@@ -14569,7 +14600,7 @@ function nextAssetType()
 	currentpg = 1
 	isSearching = false
 
-	uwu["asset id search bar"].Text = ""
+	box["asset id search bar"].Text = ""
 	updatePage()
 end
 
@@ -14583,35 +14614,35 @@ function previousAssetType()
 	currentpg = 1
 	isSearching = false
 
-	uwu["asset id search bar"].Text = ""
+	box["asset id search bar"].Text = ""
 	updatePage()
 end
 
-uwu["asset id search bar"].Changed:Connect(function(property)
+box["asset id search bar"].Changed:Connect(function(property)
 	if property == "Text" then
-		local searchTerm = uwu["asset id search bar"].Text
+		local searchTerm = box["asset id search bar"].Text
 		searchAssets(searchTerm)
 	end
 end)
 
-uwu["switch asset id type button"].MouseButton1Click:Connect(function()
+box["switch asset id type button"].MouseButton1Click:Connect(function()
 	playclicksound()
 	previousAssetType()
 	savedAssetIdPageIndex = currentAssetIdPageIndex
 end)
 
-uwu["switch asset id type button 2"].MouseButton1Click:Connect(function()
+box["switch asset id type button 2"].MouseButton1Click:Connect(function()
 	playclicksound()
 	nextAssetType()
 	savedAssetIdPageIndex = currentAssetIdPageIndex
 end)
 
-uwu["previous page 2 button"].MouseButton1Click:Connect(function()
+box["previous page 2 button"].MouseButton1Click:Connect(function()
 	playclicksound()
 	nextPage()
 end)
 
-uwu["next page 2 button"].MouseButton1Click:Connect(function()
+box["next page 2 button"].MouseButton1Click:Connect(function()
 	playclicksound()
 	previousPage()
 end)
@@ -14632,8 +14663,8 @@ function copyAssetId(assetId)
 end
 
 for i = 1, 3 do
-	local copyButton = uwu["copy asset id " .. i .. " button"]
-	local assetIdLabel = uwu["asset image id " .. i]
+	local copyButton = box["copy asset id " .. i .. " button"]
+	local assetIdLabel = box["asset image id " .. i]
 
 	copyButton.MouseButton1Click:Connect(function()
 		spawn(function() if copyButton.Text == "-" then return end playclicksound() end)
@@ -14649,181 +14680,181 @@ updatePage()
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["executor tab"].Size = UDim2.new(0, 100, 0, 26)
-uwu["executor tab"].Position = UDim2.new(0, 301, 0, 1)
+box["executor tab"].Size = UDim2.new(0, 100, 0, 26)
+box["executor tab"].Position = UDim2.new(0, 301, 0, 1)
 
-uwu["executor tab"].BackgroundColor3 = uwu["default background color"]
+box["executor tab"].BackgroundColor3 = box["default background color"]
 
-uwu["executor tab"].BorderColor3 = uwu["default border color"]
-uwu["executor tab"].BorderSizePixel = 1
+box["executor tab"].BorderColor3 = box["default border color"]
+box["executor tab"].BorderSizePixel = 1
 
-uwu["executor tab"].TextColor3 = uwu["default border color"]
-uwu["executor tab"].Font = Enum.Font.RobotoMono
-uwu["executor tab"].TextSize = 15
-uwu["executor tab"].TextScaled = false
-uwu["executor tab"].Text = "executor"
-uwu["executor tab"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["executor tab"].TextYAlignment = Enum.TextYAlignment.Center
+box["executor tab"].TextColor3 = box["default border color"]
+box["executor tab"].Font = Enum.Font.RobotoMono
+box["executor tab"].TextSize = 15
+box["executor tab"].TextScaled = false
+box["executor tab"].Text = "executor"
+box["executor tab"].TextXAlignment = Enum.TextXAlignment.Center
+box["executor tab"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["executor tab text padding"] = Instance.new("UIPadding")
-uwu["executor tab text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["executor tab text padding"].Parent = uwu["executor tab"]
+box["executor tab text padding"] = Instance.new("UIPadding")
+box["executor tab text padding"].PaddingLeft = UDim.new(0, 0)
+box["executor tab text padding"].Parent = box["executor tab"]
 
-uwu["executor tab"].Parent = uwu["main frame 1"]
-uwu["executor tab"].ZIndex = 19
+box["executor tab"].Parent = box["main frame 1"]
+box["executor tab"].ZIndex = 19
 
-uwu["executor tab bottom cover"].Size = UDim2.new(0, 100, 0, 2)
-uwu["executor tab bottom cover"].Position = UDim2.new(0, 301, 0, 27)
-uwu["executor tab bottom cover"].BackgroundColor3 = uwu["default background color"]
-uwu["executor tab bottom cover"].BorderSizePixel = 0
-uwu["executor tab bottom cover"].Parent = uwu["main frame 1"]
-uwu["executor tab bottom cover"].ZIndex = 19.5
-uwu["executor tab bottom cover"].Visible = false
+box["executor tab bottom cover"].Size = UDim2.new(0, 100, 0, 2)
+box["executor tab bottom cover"].Position = UDim2.new(0, 301, 0, 27)
+box["executor tab bottom cover"].BackgroundColor3 = box["default background color"]
+box["executor tab bottom cover"].BorderSizePixel = 0
+box["executor tab bottom cover"].Parent = box["main frame 1"]
+box["executor tab bottom cover"].ZIndex = 19.5
+box["executor tab bottom cover"].Visible = false
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["executor scrolling frame"].Size = UDim2.new(0, 393, 0, 164)
-uwu["executor scrolling frame"].Position = UDim2.new(0, 4, 0, 32)
-uwu["executor scrolling frame"].BackgroundColor3 = uwu["default background color"]
-uwu["executor scrolling frame"].BorderColor3 = uwu["default border color"]
-uwu["executor scrolling frame"].BorderSizePixel = 1
-uwu["executor scrolling frame"].ScrollBarThickness = 8
-uwu["executor scrolling frame"].ScrollBarImageColor3 = uwu["default 1/2 color"]
-uwu["executor scrolling frame"].CanvasSize = UDim2.new(0, 0, 0, 0)
-uwu["executor scrolling frame"].Parent = uwu["main frame 1"]
-uwu["executor scrolling frame"].ZIndex = 19
-uwu["executor scrolling frame"].Visible = false
-uwu["executor scrolling frame"].ScrollingDirection = Enum.ScrollingDirection.XY
+box["executor scrolling frame"].Size = UDim2.new(0, 393, 0, 164)
+box["executor scrolling frame"].Position = UDim2.new(0, 4, 0, 32)
+box["executor scrolling frame"].BackgroundColor3 = box["default background color"]
+box["executor scrolling frame"].BorderColor3 = box["default border color"]
+box["executor scrolling frame"].BorderSizePixel = 1
+box["executor scrolling frame"].ScrollBarThickness = 8
+box["executor scrolling frame"].ScrollBarImageColor3 = box["default 1/2 color"]
+box["executor scrolling frame"].CanvasSize = UDim2.new(0, 0, 0, 0)
+box["executor scrolling frame"].Parent = box["main frame 1"]
+box["executor scrolling frame"].ZIndex = 19
+box["executor scrolling frame"].Visible = false
+box["executor scrolling frame"].ScrollingDirection = Enum.ScrollingDirection.XY
 
-uwu["executor textbox"].Size = UDim2.new(0, 393, 0, 164)
-uwu["executor textbox"].Position = UDim2.new(0, 0, 0, 0)
-uwu["executor textbox"].BackgroundColor3 = uwu["default background color"]
-uwu["executor textbox"].BorderColor3 = uwu["default border color"]
-uwu["executor textbox"].BorderSizePixel = 0
-uwu["executor textbox"].TextColor3 = uwu["default border color"]
-uwu["executor textbox"].PlaceholderText = "paste script here"
-uwu["executor textbox"].PlaceholderColor3 = uwu["default 1/2 color"]
-uwu["executor textbox"].Font = Enum.Font.RobotoMono
-uwu["executor textbox"].TextSize = 15
-uwu["executor textbox"].TextScaled = false
-uwu["executor textbox"].Text = "print(\"goodbye world!\")"
-uwu["executor textbox"].TextXAlignment = Enum.TextXAlignment.Left
-uwu["executor textbox"].TextYAlignment = Enum.TextYAlignment.Top
-uwu["executor textbox"].ClearTextOnFocus = false
-uwu["executor textbox"].MultiLine = true
-uwu["executor textbox"].Parent = uwu["executor scrolling frame"]
-uwu["executor textbox"].ZIndex = 20
+box["executor textbox"].Size = UDim2.new(0, 393, 0, 164)
+box["executor textbox"].Position = UDim2.new(0, 0, 0, 0)
+box["executor textbox"].BackgroundColor3 = box["default background color"]
+box["executor textbox"].BorderColor3 = box["default border color"]
+box["executor textbox"].BorderSizePixel = 0
+box["executor textbox"].TextColor3 = box["default border color"]
+box["executor textbox"].PlaceholderText = "paste script here"
+box["executor textbox"].PlaceholderColor3 = box["default 1/2 color"]
+box["executor textbox"].Font = Enum.Font.RobotoMono
+box["executor textbox"].TextSize = 15
+box["executor textbox"].TextScaled = false
+box["executor textbox"].Text = "print(\"goodbye world!\")"
+box["executor textbox"].TextXAlignment = Enum.TextXAlignment.Left
+box["executor textbox"].TextYAlignment = Enum.TextYAlignment.Top
+box["executor textbox"].ClearTextOnFocus = false
+box["executor textbox"].MultiLine = true
+box["executor textbox"].Parent = box["executor scrolling frame"]
+box["executor textbox"].ZIndex = 20
 
-uwu["executor textbox text padding"] = Instance.new("UIPadding")
-uwu["executor textbox text padding"].PaddingLeft = UDim.new(0, 4)
-uwu["executor textbox text padding"].PaddingTop = UDim.new(0, 4)
-uwu["executor textbox text padding"].PaddingBottom = UDim.new(0, 4)
-uwu["executor textbox text padding"].Parent = uwu["executor scrolling frame"]
+box["executor textbox text padding"] = Instance.new("UIPadding")
+box["executor textbox text padding"].PaddingLeft = UDim.new(0, 4)
+box["executor textbox text padding"].PaddingTop = UDim.new(0, 4)
+box["executor textbox text padding"].PaddingBottom = UDim.new(0, 4)
+box["executor textbox text padding"].Parent = box["executor scrolling frame"]
 
 function updateCanvas()
-	local textBounds = uwu["executor textbox"].TextBounds
-	uwu["executor textbox"].Size = UDim2.new(0, math.max(392, textBounds.X + 20), 0, math.max(164, textBounds.Y + 20))
-	uwu["executor scrolling frame"].CanvasSize = UDim2.new(0, textBounds.X + 20, 0, textBounds.Y + 11)
+	local textBounds = box["executor textbox"].TextBounds
+	box["executor textbox"].Size = UDim2.new(0, math.max(392, textBounds.X + 20), 0, math.max(164, textBounds.Y + 20))
+	box["executor scrolling frame"].CanvasSize = UDim2.new(0, textBounds.X + 20, 0, textBounds.Y + 11)
 end
 
-uwu["executor textbox"]:GetPropertyChangedSignal("Text"):Connect(updateCanvas)
+box["executor textbox"]:GetPropertyChangedSignal("Text"):Connect(updateCanvas)
 
 spawn(updateCanvas)
 
-uwu["execute button"].Size = UDim2.new(0, 158, 0, 45)
-uwu["execute button"].Position = UDim2.new(0, 4, 0, 201)
+box["execute button"].Size = UDim2.new(0, 158, 0, 45)
+box["execute button"].Position = UDim2.new(0, 4, 0, 201)
 
-uwu["execute button"].BackgroundColor3 = uwu["default background color"]
+box["execute button"].BackgroundColor3 = box["default background color"]
 
-uwu["execute button"].BorderColor3 = uwu["default border color"]
-uwu["execute button"].BorderSizePixel = 1
+box["execute button"].BorderColor3 = box["default border color"]
+box["execute button"].BorderSizePixel = 1
 
-uwu["execute button"].TextColor3 = uwu["default border color"]
-uwu["execute button"].Font = Enum.Font.RobotoMono
-uwu["execute button"].TextSize = 15
-uwu["execute button"].TextScaled = false
-uwu["execute button"].Text = "execute"
-uwu["execute button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["execute button"].TextYAlignment = Enum.TextYAlignment.Center
+box["execute button"].TextColor3 = box["default border color"]
+box["execute button"].Font = Enum.Font.RobotoMono
+box["execute button"].TextSize = 15
+box["execute button"].TextScaled = false
+box["execute button"].Text = "execute"
+box["execute button"].TextXAlignment = Enum.TextXAlignment.Center
+box["execute button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["execute button text padding"] = Instance.new("UIPadding")
-uwu["execute button text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["execute button text padding"].Parent = uwu["execute button"]
+box["execute button text padding"] = Instance.new("UIPadding")
+box["execute button text padding"].PaddingLeft = UDim.new(0, 0)
+box["execute button text padding"].Parent = box["execute button"]
 
-uwu["execute button"].Parent = uwu["main frame 1"]
-uwu["execute button"].ZIndex = 19
-uwu["execute button"].Visible = false
+box["execute button"].Parent = box["main frame 1"]
+box["execute button"].ZIndex = 19
+box["execute button"].Visible = false
 
-uwu["execute from client button"].Size = UDim2.new(0, 158, 0, 45)
-uwu["execute from client button"].Position = UDim2.new(0, 167, 0, 201)
+box["execute from client button"].Size = UDim2.new(0, 158, 0, 45)
+box["execute from client button"].Position = UDim2.new(0, 167, 0, 201)
 
-uwu["execute from client button"].BackgroundColor3 = uwu["default background color"]
+box["execute from client button"].BackgroundColor3 = box["default background color"]
 
-uwu["execute from client button"].BorderColor3 = uwu["default border color"]
-uwu["execute from client button"].BorderSizePixel = 1
+box["execute from client button"].BorderColor3 = box["default border color"]
+box["execute from client button"].BorderSizePixel = 1
 
-uwu["execute from client button"].TextColor3 = uwu["default border color"]
-uwu["execute from client button"].Font = Enum.Font.RobotoMono
-uwu["execute from client button"].TextSize = 15
-uwu["execute from client button"].TextScaled = false
-uwu["execute from client button"].Text = "execute from client"
-uwu["execute from client button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["execute from client button"].TextYAlignment = Enum.TextYAlignment.Center
+box["execute from client button"].TextColor3 = box["default border color"]
+box["execute from client button"].Font = Enum.Font.RobotoMono
+box["execute from client button"].TextSize = 15
+box["execute from client button"].TextScaled = false
+box["execute from client button"].Text = "execute from client"
+box["execute from client button"].TextXAlignment = Enum.TextXAlignment.Center
+box["execute from client button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["execute from client button text padding"] = Instance.new("UIPadding")
-uwu["execute from client button text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["execute from client button text padding"].Parent = uwu["execute button"]
+box["execute from client button text padding"] = Instance.new("UIPadding")
+box["execute from client button text padding"].PaddingLeft = UDim.new(0, 0)
+box["execute from client button text padding"].Parent = box["execute button"]
 
-uwu["execute from client button"].Parent = uwu["main frame 1"]
-uwu["execute from client button"].ZIndex = 19
-uwu["execute from client button"].Visible = false
+box["execute from client button"].Parent = box["main frame 1"]
+box["execute from client button"].ZIndex = 19
+box["execute from client button"].Visible = false
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["clear button"].Size = UDim2.new(0, 67, 0, 45)
-uwu["clear button"].Position = UDim2.new(0, 330, 0, 201)
+box["clear button"].Size = UDim2.new(0, 67, 0, 45)
+box["clear button"].Position = UDim2.new(0, 330, 0, 201)
 
-uwu["clear button"].BackgroundColor3 = uwu["default background color"]
+box["clear button"].BackgroundColor3 = box["default background color"]
 
-uwu["clear button"].BorderColor3 = uwu["default border color"]
-uwu["clear button"].BorderSizePixel = 1
+box["clear button"].BorderColor3 = box["default border color"]
+box["clear button"].BorderSizePixel = 1
 
-uwu["clear button"].TextColor3 = uwu["default border color"]
-uwu["clear button"].Font = Enum.Font.RobotoMono
-uwu["clear button"].TextSize = 15
-uwu["clear button"].TextScaled = false
-uwu["clear button"].Text = "clear"
-uwu["clear button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["clear button"].TextYAlignment = Enum.TextYAlignment.Center
+box["clear button"].TextColor3 = box["default border color"]
+box["clear button"].Font = Enum.Font.RobotoMono
+box["clear button"].TextSize = 15
+box["clear button"].TextScaled = false
+box["clear button"].Text = "clear"
+box["clear button"].TextXAlignment = Enum.TextXAlignment.Center
+box["clear button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["clear button text padding"] = Instance.new("UIPadding")
-uwu["clear button text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["clear button text padding"].Parent = uwu["clear button"]
+box["clear button text padding"] = Instance.new("UIPadding")
+box["clear button text padding"].PaddingLeft = UDim.new(0, 0)
+box["clear button text padding"].Parent = box["clear button"]
 
-uwu["clear button"].Parent = uwu["main frame 1"]
-uwu["clear button"].ZIndex = 19
-uwu["clear button"].Visible = false
+box["clear button"].Parent = box["main frame 1"]
+box["clear button"].ZIndex = 19
+box["clear button"].Visible = false
 
-uwu["execute button"].MouseButton1Click:Connect(function()
+box["execute button"].MouseButton1Click:Connect(function()
 	if backdoor ~= nil then unablenotify("you cannot execute server code without a backdoor.") return end
 	if hasscanned == true then return end
-	local code = uwu["executor textbox"].Text
+	local code = box["executor textbox"].Text
 	spawn(function() playclicksound() end)
 	if code and code ~= "" then
 		assert(loadstring(code))()
 	end
 end)
 
-uwu["execute from client button"].MouseButton1Click:Connect(function()
-	local code = uwu["executor textbox"].Text
+box["execute from client button"].MouseButton1Click:Connect(function()
+	local code = box["executor textbox"].Text
 	spawn(function() playclicksound() end)
 	if code and code ~= "" then
 		assert(loadstring(code))()
 	end
 end)
 
-uwu["clear button"].MouseButton1Click:Connect(function()
-	uwu["executor textbox"].Text = ""
+box["clear button"].MouseButton1Click:Connect(function()
+	box["executor textbox"].Text = ""
 	updateCanvas()
 	playclicksound()
 end)
@@ -14956,13 +14987,13 @@ local commandList = {
 	"opennoxsecencoderanddecodertab, noxsec",
 }
 
-populateList(uwu["list of commands"], commandList)
+populateList(box["list of commands"], commandList)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
 addcommand("spectate", "view", function(target)
 	execcmd("unview")
-	local players = uwu["players"]
+	local players = box["players"]
 	local localPlayer = players.LocalPlayer
 	local camera = workspace.CurrentCamera
 
@@ -15003,13 +15034,13 @@ end)
 addcommand("unspectate", "unview", function()
 	workspace.CurrentCamera:remove()
 	task.wait(.1)
-	repeat task.wait() until uwu["local player"].Character ~= nil
-	workspace.CurrentCamera.CameraSubject = uwu["local player"].Character:FindFirstChildWhichIsA('Humanoid')
+	repeat task.wait() until box["local player"].Character ~= nil
+	workspace.CurrentCamera.CameraSubject = box["local player"].Character:FindFirstChildWhichIsA('Humanoid')
 	workspace.CurrentCamera.CameraType = "Custom"
-	uwu["local player"].CameraMinZoomDistance = 0.5
-	uwu["local player"].CameraMaxZoomDistance = 400
-	uwu["local player"].CameraMode = "Classic"
-	uwu["local player"].Character.Head.Anchored = false
+	box["local player"].CameraMinZoomDistance = 0.5
+	box["local player"].CameraMaxZoomDistance = 400
+	box["local player"].CameraMode = "Classic"
+	box["local player"].Character.Head.Anchored = false
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
@@ -15027,11 +15058,11 @@ iyflyspeed = 1
 vehicleflyspeed = 1
 
 function sFLY(vfly)
-	repeat wait() until uwu["players"].LocalPlayer and uwu["players"].LocalPlayer.Character and getRoot(uwu["players"].LocalPlayer.Character) and uwu["players"].LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
-	repeat wait() until uwu["players"].LocalPlayer:GetMouse()
+	repeat wait() until box["players"].LocalPlayer and box["players"].LocalPlayer.Character and getRoot(box["players"].LocalPlayer.Character) and box["players"].LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+	repeat wait() until box["players"].LocalPlayer:GetMouse()
 	if flyKeyDown or flyKeyUp then flyKeyDown:Disconnect() flyKeyUp:Disconnect() end
 
-	local T = getRoot(uwu["players"].LocalPlayer.Character)
+	local T = getRoot(box["players"].LocalPlayer.Character)
 	local CONTROL = {F = 0, B = 0, L = 0, R = 0, Q = 0, E = 0}
 	local lCONTROL = {F = 0, B = 0, L = 0, R = 0, Q = 0, E = 0}
 	local SPEED = 0
@@ -15049,8 +15080,8 @@ function sFLY(vfly)
 		BV.maxForce = Vector3.new(9e9, 9e9, 9e9)
 		task.spawn(function()
 			repeat wait()
-				if not vfly and uwu["players"].LocalPlayer.Character:FindFirstChildOfClass('Humanoid') then
-					uwu["players"].LocalPlayer.Character:FindFirstChildOfClass('Humanoid').PlatformStand = true
+				if not vfly and box["players"].LocalPlayer.Character:FindFirstChildOfClass('Humanoid') then
+					box["players"].LocalPlayer.Character:FindFirstChildOfClass('Humanoid').PlatformStand = true
 				end
 				if CONTROL.L + CONTROL.R ~= 0 or CONTROL.F + CONTROL.B ~= 0 or CONTROL.Q + CONTROL.E ~= 0 then
 					SPEED = 50
@@ -15072,12 +15103,12 @@ function sFLY(vfly)
 			SPEED = 0
 			BG:Destroy()
 			BV:Destroy()
-			if uwu["players"].LocalPlayer.Character:FindFirstChildOfClass('Humanoid') then
-				uwu["players"].LocalPlayer.Character:FindFirstChildOfClass('Humanoid').PlatformStand = false
+			if box["players"].LocalPlayer.Character:FindFirstChildOfClass('Humanoid') then
+				box["players"].LocalPlayer.Character:FindFirstChildOfClass('Humanoid').PlatformStand = false
 			end
 		end)
 	end
-	flyKeyDown = uwu["players"].LocalPlayer:GetMouse().KeyDown:Connect(function(KEY)
+	flyKeyDown = box["players"].LocalPlayer:GetMouse().KeyDown:Connect(function(KEY)
 		if KEY:lower() == 'w' then
 			CONTROL.F = (vfly and vehicleflyspeed or iyflyspeed)
 		elseif KEY:lower() == 's' then
@@ -15093,7 +15124,7 @@ function sFLY(vfly)
 		end
 		pcall(function() workspace.CurrentCamera.CameraType = Enum.CameraType.Track end)
 	end)
-	flyKeyUp = uwu["players"].LocalPlayer:GetMouse().KeyUp:Connect(function(KEY)
+	flyKeyUp = box["players"].LocalPlayer:GetMouse().KeyUp:Connect(function(KEY)
 		if KEY:lower() == 'w' then
 			CONTROL.F = 0
 		elseif KEY:lower() == 's' then
@@ -15114,8 +15145,8 @@ end
 function NOFLY()
 	FLYING = false
 	if flyKeyDown or flyKeyUp then flyKeyDown:Disconnect() flyKeyUp:Disconnect() end
-	if uwu["players"].LocalPlayer.Character:FindFirstChildOfClass('Humanoid') then
-		uwu["players"].LocalPlayer.Character:FindFirstChildOfClass('Humanoid').PlatformStand = false
+	if box["players"].LocalPlayer.Character:FindFirstChildOfClass('Humanoid') then
+		box["players"].LocalPlayer.Character:FindFirstChildOfClass('Humanoid').PlatformStand = false
 	end
 	pcall(function() workspace.CurrentCamera.CameraType = Enum.CameraType.Custom end)
 end
@@ -15176,7 +15207,7 @@ local mobilefly = function(speaker, vfly)
 		bg.D = 50
 	end)
 
-	mfly2 = uwu["run service"].RenderStepped:Connect(function()
+	mfly2 = box["run service"].RenderStepped:Connect(function()
 		root = getRoot(speaker.Character)
 		camera = workspace.CurrentCamera
 		if speaker.Character:FindFirstChildWhichIsA("Humanoid") and root and root:FindFirstChild(velocityHandlerName) and root:FindFirstChild(gyroHandlerName) then
@@ -15214,12 +15245,12 @@ function isNumber(str)
 end
 
 addcommand("fly", "fly", function(args)
-	if not uwu["is mobile?"] then
+	if not box["is mobile?"] then
 		NOFLY()
 		wait()
 		sFLY()
 	else
-		mobilefly(uwu["local player"])
+		mobilefly(box["local player"])
 	end
 	if args and isNumber(args) then
 		iyflyspeed = args
@@ -15227,7 +15258,7 @@ addcommand("fly", "fly", function(args)
 end)
 
 addcommand("unfly", "unfly", function(args)
-	if not uwu["is mobile?"] then NOFLY() else unmobilefly(uwu["local player"]) end
+	if not box["is mobile?"] then NOFLY() else unmobilefly(box["local player"]) end
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
@@ -15666,7 +15697,7 @@ function disablewalkfling()
 end
 
 function enablewalkfling()
-	local humanoid = uwu["local player"].Character:FindFirstChildWhichIsA("Humanoid")
+	local humanoid = box["local player"].Character:FindFirstChildWhichIsA("Humanoid")
 	if humanoid then
 		humanoid.Died:Connect(function()
 			disablewalkfling()
@@ -15674,26 +15705,26 @@ function enablewalkfling()
 	end
 
 	local walkflinging = true
-	repeat uwu["run service"].RenderStepped:Wait()
-		local character = uwu["local player"].Character
+	repeat box["run service"].RenderStepped:Wait()
+		local character = box["local player"].Character
 		local root = getRoot(character)
 		local vel, movel = nil, 0.1
 
 		while not (character and character.Parent and root and root.Parent) do
-			uwu["run service"].Heartbeat:Wait()
-			character = uwu["local player"].Character
+			box["run service"].Heartbeat:Wait()
+			character = box["local player"].Character
 			root = getRoot(character)
 		end
 
 		vel = root.Velocity
 		root.Velocity = vel * 1000000 + Vector3.new(0, 1000000, 0)
 
-		uwu["run service"].Stepped:Wait()
+		box["run service"].Stepped:Wait()
 		if character and character.Parent and root and root.Parent then
 			root.Velocity = vel
 		end
 
-		uwu["run service"].Heartbeat:Wait()
+		box["run service"].Heartbeat:Wait()
 		if character and character.Parent and root and root.Parent then
 			root.Velocity = vel + Vector3.new(0, movel, 0)
 			movel = movel * -1
@@ -18682,9 +18713,9 @@ addcommand("antifling", "afling", function()
 		antifling:Disconnect()
 		antifling = nil
 	end
-	antifling = uwu["run service"].Heartbeat:Connect(function()
-		for _, player in pairs(uwu["players"]:GetPlayers()) do
-			if player ~= uwu["local player"] and player.Character then
+	antifling = box["run service"].Heartbeat:Connect(function()
+		for _, player in pairs(box["players"]:GetPlayers()) do
+			if player ~= box["local player"] and player.Character then
 				for _, v in pairs(player.Character:GetDescendants()) do
 					if v:IsA("BasePart") then
 						v.CanCollide = false
@@ -19565,10 +19596,10 @@ end)
 -------------------------------------------------------------------------------------------------------------------------------
 
 addcommand("console", "console", function()
-	if uwu["text chat service"].ChatVersion == Enum.ChatVersion.TextChatService then
-		uwu["text chat service"].TextChannels.RBXGeneral:SendAsync("/console")
+	if box["text chat service"].ChatVersion == Enum.ChatVersion.TextChatService then
+		box["text chat service"].TextChannels.RBXGeneral:SendAsync("/console")
 	else
-		uwu["replicated storage"].DefaultChatSystemChatEvents.SayMessageRequest:FireServer("/console", "All")
+		box["replicated storage"].DefaultChatSystemChatEvents.SayMessageRequest:FireServer("/console", "All")
 	end
 end)
 
@@ -20238,18 +20269,18 @@ end
 
 function addHighlights()
 	if highlightTypes.Players then
-		for _, player in pairs(uwu["players"]:GetPlayers()) do
-			if player ~= uwu["local player"] and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+		for _, player in pairs(box["players"]:GetPlayers()) do
+			if player ~= box["local player"] and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
 				local highlight = player.Character:FindFirstChildOfClass("Highlight")
 				if not highlight then
 					highlight = Instance.new("Highlight")
-					highlight.FillColor = uwu["default border color"]
+					highlight.FillColor = box["default border color"]
 					highlight.OutlineColor = Color3.fromRGB(255, 255, 255)
 					highlight.Enabled = highlightVisible
 					highlight.Parent = player.Character
 
 					local billboardText = "(@" .. player.Name .. ")\n" .. player.DisplayName
-					billbord(player.Character, billboardText, uwu["default border color"])
+					billbord(player.Character, billboardText, box["default border color"])
 				end
 			end
 		end
@@ -20257,7 +20288,7 @@ function addHighlights()
 end
 
 function removeHighlights()
-	for _, player in pairs(uwu["players"]:GetPlayers()) do
+	for _, player in pairs(box["players"]:GetPlayers()) do
 		if player.Character then
 			local highlight = player.Character:FindFirstChildOfClass("Highlight")
 			if highlight then
@@ -20275,7 +20306,7 @@ function startHighlightLoop()
 	if highlightLoopRunning then return end
 	highlightLoopRunning = true
 
-	uwu["run service"].RenderStepped:Connect(function()
+	box["run service"].RenderStepped:Connect(function()
 		if highlightLoopRunning then
 			addHighlights()
 		end
@@ -20986,8 +21017,8 @@ addcommand("opendonuttab", "donut", function()
 	local pi2 = math.pi * 2
 
 	task.spawn(function()
-		donutrunning = uwu["run service"].RenderStepped:Connect(function()
-			if uwu["donut"].TextTransparency == 0 then
+		donutrunning = box["run service"].RenderStepped:Connect(function()
+			if box["donut"].TextTransparency == 0 then
 				local currenttime = os.clock()
 				if currenttime - lastdonutupd >= donutupdinterval then
 					lastdonutupd = currenttime
@@ -21038,7 +21069,7 @@ addcommand("opendonuttab", "donut", function()
 					for y = 1, 22 do
 						output[y] = table.concat(framebuffer[y])
 					end
-					uwu["donut"].Text = table.concat(output, "\n")
+					box["donut"].Text = table.concat(output, "\n")
 
 					A = A + 0.04
 					B = B + 0.08
@@ -21047,24 +21078,24 @@ addcommand("opendonuttab", "donut", function()
 		end)
 	end)
 
-	uwu["donut tab block main frame"].Size = UDim2.new(0, 276, 0, 233)
-	uwu["donut tab top bar minimize button"].Text = "-"
-	uwu["donut tab block main frame"].BackgroundTransparency = 1
-	uwu["donut tab main frame 1"].Visible = true
-	local gui = uwu["donut tab block all"]
-	uwu["donut tab top bar"].Visible = true
-	uwu["donut tab top bar"].TextTransparency = 1
-	uwu["donut tab top bar"].BackgroundTransparency = 1
-	uwu["donut tab main frame 1"].BackgroundTransparency = 1
-	uwu["donut tab top bar close button"].BackgroundTransparency = 1
-	uwu["donut tab top bar minimize button"].BackgroundTransparency = 1
-	uwu["donut tab top bar reposition button"].BackgroundTransparency = 1
-	uwu["donut tab top bar close button"].TextTransparency = 1
-	uwu["donut tab top bar minimize button"].TextTransparency = 1
-	uwu["donut tab top bar reposition button"].TextTransparency = 1
-	uwu["donut tab main frame 1"].BackgroundTransparency = 1
-	uwu["donut"].BackgroundTransparency = 1
-	uwu["donut"].TextTransparency = 1
+	box["donut tab block main frame"].Size = UDim2.new(0, 276, 0, 233)
+	box["donut tab top bar minimize button"].Text = "-"
+	box["donut tab block main frame"].BackgroundTransparency = 1
+	box["donut tab main frame 1"].Visible = true
+	local gui = box["donut tab block all"]
+	box["donut tab top bar"].Visible = true
+	box["donut tab top bar"].TextTransparency = 1
+	box["donut tab top bar"].BackgroundTransparency = 1
+	box["donut tab main frame 1"].BackgroundTransparency = 1
+	box["donut tab top bar close button"].BackgroundTransparency = 1
+	box["donut tab top bar minimize button"].BackgroundTransparency = 1
+	box["donut tab top bar reposition button"].BackgroundTransparency = 1
+	box["donut tab top bar close button"].TextTransparency = 1
+	box["donut tab top bar minimize button"].TextTransparency = 1
+	box["donut tab top bar reposition button"].TextTransparency = 1
+	box["donut tab main frame 1"].BackgroundTransparency = 1
+	box["donut"].BackgroundTransparency = 1
+	box["donut"].TextTransparency = 1
 
 	gui.BackgroundTransparency = 0
 	gui.Size = UDim2.new(0, 276, 0, 0)
@@ -21080,19 +21111,19 @@ addcommand("opendonuttab", "donut", function()
 	tweenIn.Completed:Wait()
 	updcols()
 
-	uwu["donut tab top bar"].Visible = true
-	uwu["donut tab top bar"].BackgroundTransparency = 0
-	uwu["donut tab main frame 1"].BackgroundTransparency = 0
-	uwu["donut tab top bar close button"].BackgroundTransparency = 0
-	uwu["donut tab top bar minimize button"].BackgroundTransparency = 0
-	uwu["donut tab top bar reposition button"].BackgroundTransparency = 0
-	uwu["donut tab top bar close button"].TextTransparency = 0
-	uwu["donut tab top bar minimize button"].TextTransparency = 0
-	uwu["donut tab top bar reposition button"].TextTransparency = 0
-	uwu["donut tab top bar"].TextTransparency = 0
-	uwu["donut tab main frame 1"].BackgroundTransparency = 0
-	uwu["donut"].BackgroundTransparency = 0
-	uwu["donut"].TextTransparency = 0
+	box["donut tab top bar"].Visible = true
+	box["donut tab top bar"].BackgroundTransparency = 0
+	box["donut tab main frame 1"].BackgroundTransparency = 0
+	box["donut tab top bar close button"].BackgroundTransparency = 0
+	box["donut tab top bar minimize button"].BackgroundTransparency = 0
+	box["donut tab top bar reposition button"].BackgroundTransparency = 0
+	box["donut tab top bar close button"].TextTransparency = 0
+	box["donut tab top bar minimize button"].TextTransparency = 0
+	box["donut tab top bar reposition button"].TextTransparency = 0
+	box["donut tab top bar"].TextTransparency = 0
+	box["donut tab main frame 1"].BackgroundTransparency = 0
+	box["donut"].BackgroundTransparency = 0
+	box["donut"].TextTransparency = 0
 
 	local fadeTween = fade(gui, 1, 0.2)
 	fadeTween.Completed:Wait()
@@ -21117,31 +21148,31 @@ addcommand("openbinarytab", "binary", function()
 	end
 
 	spawn(function()
-		binaryrunning = uwu["run service"].RenderStepped:Connect(function()
-			if uwu["binary"].TextTransparency == 0 then
+		binaryrunning = box["run service"].RenderStepped:Connect(function()
+			if box["binary"].TextTransparency == 0 then
 				changebinary()
 			end
 		end)
 	end)
 
-	uwu["binary tab block main frame"].Size = UDim2.new(0, 246, 0, 203)
-	uwu["binary tab block main frame"].BackgroundTransparency = 1
-	uwu["binary tab top bar minimize button"].Text = "-"
-	uwu["binary tab main frame 1"].Visible = true
-	local gui = uwu["binary tab block all"]
-	uwu["binary tab top bar"].Visible = true
-	uwu["binary tab top bar"].TextTransparency = 1
-	uwu["binary tab top bar"].BackgroundTransparency = 1
-	uwu["binary tab main frame 1"].BackgroundTransparency = 1
-	uwu["binary tab top bar close button"].BackgroundTransparency = 1
-	uwu["binary tab top bar minimize button"].BackgroundTransparency = 1
-	uwu["binary tab top bar reposition button"].BackgroundTransparency = 1
-	uwu["binary tab top bar close button"].TextTransparency = 1
-	uwu["binary tab top bar minimize button"].TextTransparency = 1
-	uwu["binary tab top bar reposition button"].TextTransparency = 1
-	uwu["binary tab main frame 1"].BackgroundTransparency = 1
-	uwu["binary"].BackgroundTransparency = 1
-	uwu["binary"].TextTransparency = 1
+	box["binary tab block main frame"].Size = UDim2.new(0, 246, 0, 203)
+	box["binary tab block main frame"].BackgroundTransparency = 1
+	box["binary tab top bar minimize button"].Text = "-"
+	box["binary tab main frame 1"].Visible = true
+	local gui = box["binary tab block all"]
+	box["binary tab top bar"].Visible = true
+	box["binary tab top bar"].TextTransparency = 1
+	box["binary tab top bar"].BackgroundTransparency = 1
+	box["binary tab main frame 1"].BackgroundTransparency = 1
+	box["binary tab top bar close button"].BackgroundTransparency = 1
+	box["binary tab top bar minimize button"].BackgroundTransparency = 1
+	box["binary tab top bar reposition button"].BackgroundTransparency = 1
+	box["binary tab top bar close button"].TextTransparency = 1
+	box["binary tab top bar minimize button"].TextTransparency = 1
+	box["binary tab top bar reposition button"].TextTransparency = 1
+	box["binary tab main frame 1"].BackgroundTransparency = 1
+	box["binary"].BackgroundTransparency = 1
+	box["binary"].TextTransparency = 1
 
 	gui.BackgroundTransparency = 0
 	gui.Size = UDim2.new(0, 246, 0, 0)
@@ -21157,19 +21188,19 @@ addcommand("openbinarytab", "binary", function()
 	tweenIn.Completed:Wait()
 	updcols()
 
-	uwu["binary tab top bar"].Visible = true
-	uwu["binary tab top bar"].BackgroundTransparency = 0
-	uwu["binary tab main frame 1"].BackgroundTransparency = 0
-	uwu["binary tab top bar close button"].BackgroundTransparency = 0
-	uwu["binary tab top bar minimize button"].BackgroundTransparency = 0
-	uwu["binary tab top bar reposition button"].BackgroundTransparency = 0
-	uwu["binary tab top bar close button"].TextTransparency = 0
-	uwu["binary tab top bar minimize button"].TextTransparency = 0
-	uwu["binary tab top bar reposition button"].TextTransparency = 0
-	uwu["binary tab top bar"].TextTransparency = 0
-	uwu["binary tab main frame 1"].BackgroundTransparency = 0
-	uwu["binary"].BackgroundTransparency = 0
-	uwu["binary"].TextTransparency = 0
+	box["binary tab top bar"].Visible = true
+	box["binary tab top bar"].BackgroundTransparency = 0
+	box["binary tab main frame 1"].BackgroundTransparency = 0
+	box["binary tab top bar close button"].BackgroundTransparency = 0
+	box["binary tab top bar minimize button"].BackgroundTransparency = 0
+	box["binary tab top bar reposition button"].BackgroundTransparency = 0
+	box["binary tab top bar close button"].TextTransparency = 0
+	box["binary tab top bar minimize button"].TextTransparency = 0
+	box["binary tab top bar reposition button"].TextTransparency = 0
+	box["binary tab top bar"].TextTransparency = 0
+	box["binary tab main frame 1"].BackgroundTransparency = 0
+	box["binary"].BackgroundTransparency = 0
+	box["binary"].TextTransparency = 0
 
 	local fadeTween = fade(gui, 1, 0.2)
 	fadeTween.Completed:Wait()
@@ -21187,30 +21218,30 @@ addcommand("openheadcanongeneratortab", "hcgen", function()
 	hcgentabopen = true
 	hcgentabminimized = false
 
-	uwu["headcanon generator tab block main frame"].Size = UDim2.new(0, 446, 0, 141)
-	uwu["headcanon generator tab block main frame"].BackgroundTransparency = 1
-	uwu["headcanon generator tab top bar minimize button"].Text = "-"
-	uwu["headcanon generator tab main frame 1"].Visible = true
-	local gui = uwu["headcanon generator tab block all"]
-	uwu["headcanon generator tab top bar"].Visible = true
-	uwu["headcanon generator tab top bar"].TextTransparency = 1
-	uwu["headcanon generator tab top bar"].BackgroundTransparency = 1
-	uwu["headcanon generator tab main frame 1"].BackgroundTransparency = 1
-	uwu["headcanon generator tab top bar close button"].BackgroundTransparency = 1
-	uwu["headcanon generator tab top bar minimize button"].BackgroundTransparency = 1
-	uwu["headcanon generator tab top bar reposition button"].BackgroundTransparency = 1
-	uwu["headcanon generator tab top bar close button"].TextTransparency = 1
-	uwu["headcanon generator tab top bar minimize button"].TextTransparency = 1
-	uwu["headcanon generator tab top bar reposition button"].TextTransparency = 1
-	uwu["headcanon generator tab main frame 1"].BackgroundTransparency = 1
-	uwu["headcanon generator output"].BackgroundTransparency = 1
-	uwu["headcanon generator output"].TextTransparency = 1
-	uwu["headcanon generator input"].BackgroundTransparency = 1
-	uwu["headcanon generator input"].TextTransparency = 1
-	uwu["headcanon generator input 2"].BackgroundTransparency = 1
-	uwu["headcanon generator input 2"].TextTransparency = 1
-	uwu["generate headcanon"].BackgroundTransparency = 1
-	uwu["generate headcanon"].TextTransparency = 1
+	box["headcanon generator tab block main frame"].Size = UDim2.new(0, 446, 0, 141)
+	box["headcanon generator tab block main frame"].BackgroundTransparency = 1
+	box["headcanon generator tab top bar minimize button"].Text = "-"
+	box["headcanon generator tab main frame 1"].Visible = true
+	local gui = box["headcanon generator tab block all"]
+	box["headcanon generator tab top bar"].Visible = true
+	box["headcanon generator tab top bar"].TextTransparency = 1
+	box["headcanon generator tab top bar"].BackgroundTransparency = 1
+	box["headcanon generator tab main frame 1"].BackgroundTransparency = 1
+	box["headcanon generator tab top bar close button"].BackgroundTransparency = 1
+	box["headcanon generator tab top bar minimize button"].BackgroundTransparency = 1
+	box["headcanon generator tab top bar reposition button"].BackgroundTransparency = 1
+	box["headcanon generator tab top bar close button"].TextTransparency = 1
+	box["headcanon generator tab top bar minimize button"].TextTransparency = 1
+	box["headcanon generator tab top bar reposition button"].TextTransparency = 1
+	box["headcanon generator tab main frame 1"].BackgroundTransparency = 1
+	box["headcanon generator output"].BackgroundTransparency = 1
+	box["headcanon generator output"].TextTransparency = 1
+	box["headcanon generator input"].BackgroundTransparency = 1
+	box["headcanon generator input"].TextTransparency = 1
+	box["headcanon generator input 2"].BackgroundTransparency = 1
+	box["headcanon generator input 2"].TextTransparency = 1
+	box["generate headcanon"].BackgroundTransparency = 1
+	box["generate headcanon"].TextTransparency = 1
 
 	gui.BackgroundTransparency = 0
 	gui.Size = UDim2.new(0, 446, 0, 0)
@@ -21226,25 +21257,25 @@ addcommand("openheadcanongeneratortab", "hcgen", function()
 	tweenIn.Completed:Wait()
 	updcols()
 
-	uwu["headcanon generator tab top bar"].Visible = true
-	uwu["headcanon generator tab top bar"].BackgroundTransparency = 0
-	uwu["headcanon generator tab main frame 1"].BackgroundTransparency = 0
-	uwu["headcanon generator tab top bar close button"].BackgroundTransparency = 0
-	uwu["headcanon generator tab top bar minimize button"].BackgroundTransparency = 0
-	uwu["headcanon generator tab top bar reposition button"].BackgroundTransparency = 0
-	uwu["headcanon generator tab top bar close button"].TextTransparency = 0
-	uwu["headcanon generator tab top bar minimize button"].TextTransparency = 0
-	uwu["headcanon generator tab top bar reposition button"].TextTransparency = 0
-	uwu["headcanon generator tab top bar"].TextTransparency = 0
-	uwu["headcanon generator tab main frame 1"].BackgroundTransparency = 0
-	uwu["headcanon generator output"].BackgroundTransparency = 0
-	uwu["headcanon generator output"].TextTransparency = 0
-	uwu["headcanon generator input"].BackgroundTransparency = 0
-	uwu["headcanon generator input"].TextTransparency = 0
-	uwu["headcanon generator input 2"].BackgroundTransparency = 0
-	uwu["headcanon generator input 2"].TextTransparency = 0
-	uwu["generate headcanon"].BackgroundTransparency = 0
-	uwu["generate headcanon"].TextTransparency = 0
+	box["headcanon generator tab top bar"].Visible = true
+	box["headcanon generator tab top bar"].BackgroundTransparency = 0
+	box["headcanon generator tab main frame 1"].BackgroundTransparency = 0
+	box["headcanon generator tab top bar close button"].BackgroundTransparency = 0
+	box["headcanon generator tab top bar minimize button"].BackgroundTransparency = 0
+	box["headcanon generator tab top bar reposition button"].BackgroundTransparency = 0
+	box["headcanon generator tab top bar close button"].TextTransparency = 0
+	box["headcanon generator tab top bar minimize button"].TextTransparency = 0
+	box["headcanon generator tab top bar reposition button"].TextTransparency = 0
+	box["headcanon generator tab top bar"].TextTransparency = 0
+	box["headcanon generator tab main frame 1"].BackgroundTransparency = 0
+	box["headcanon generator output"].BackgroundTransparency = 0
+	box["headcanon generator output"].TextTransparency = 0
+	box["headcanon generator input"].BackgroundTransparency = 0
+	box["headcanon generator input"].TextTransparency = 0
+	box["headcanon generator input 2"].BackgroundTransparency = 0
+	box["headcanon generator input 2"].TextTransparency = 0
+	box["generate headcanon"].BackgroundTransparency = 0
+	box["generate headcanon"].TextTransparency = 0
 
 	local fadeTween = fade(gui, 1, 0.2)
 	fadeTween.Completed:Wait()
@@ -21262,30 +21293,30 @@ addcommand("opengaydartab", "gaydar", function()
 	gaydartabopen = true
 	gaydartabminimized = false
 
-	uwu["gaydar tab block main frame"].Size = UDim2.new(0, 376, 0, 203)
-	uwu["gaydar tab block main frame"].BackgroundTransparency = 1
-	uwu["gaydar tab top bar minimize button"].Text = "-"
-	uwu["gaydar tab main frame 1"].Visible = true
-	local gui = uwu["gaydar tab block all"]
-	uwu["gaydar tab top bar"].Visible = true
-	uwu["gaydar tab top bar"].TextTransparency = 1
-	uwu["gaydar tab top bar"].BackgroundTransparency = 1
-	uwu["gaydar tab main frame 1"].BackgroundTransparency = 1
-	uwu["gaydar tab top bar close button"].BackgroundTransparency = 1
-	uwu["gaydar tab top bar minimize button"].BackgroundTransparency = 1
-	uwu["gaydar tab top bar reposition button"].BackgroundTransparency = 1
-	uwu["gaydar tab top bar close button"].TextTransparency = 1
-	uwu["gaydar tab top bar minimize button"].TextTransparency = 1
-	uwu["gaydar tab top bar reposition button"].TextTransparency = 1
-	uwu["gaydar tab main frame 1"].BackgroundTransparency = 1
-	uwu["gaydar scan"].TextTransparency = 1
-	uwu["gaydar scan"].BackgroundTransparency = 1
-	uwu["gaydar target"].TextTransparency = 1
-	uwu["gaydar target"].BackgroundTransparency = 1
-	uwu["gaydar info"].TextTransparency = 1
-	uwu["gaydar info"].BackgroundTransparency = 1
-	uwu["gaydar"].BackgroundTransparency = 1
-	uwu["gaydar"].ImageTransparency = 1
+	box["gaydar tab block main frame"].Size = UDim2.new(0, 376, 0, 203)
+	box["gaydar tab block main frame"].BackgroundTransparency = 1
+	box["gaydar tab top bar minimize button"].Text = "-"
+	box["gaydar tab main frame 1"].Visible = true
+	local gui = box["gaydar tab block all"]
+	box["gaydar tab top bar"].Visible = true
+	box["gaydar tab top bar"].TextTransparency = 1
+	box["gaydar tab top bar"].BackgroundTransparency = 1
+	box["gaydar tab main frame 1"].BackgroundTransparency = 1
+	box["gaydar tab top bar close button"].BackgroundTransparency = 1
+	box["gaydar tab top bar minimize button"].BackgroundTransparency = 1
+	box["gaydar tab top bar reposition button"].BackgroundTransparency = 1
+	box["gaydar tab top bar close button"].TextTransparency = 1
+	box["gaydar tab top bar minimize button"].TextTransparency = 1
+	box["gaydar tab top bar reposition button"].TextTransparency = 1
+	box["gaydar tab main frame 1"].BackgroundTransparency = 1
+	box["gaydar scan"].TextTransparency = 1
+	box["gaydar scan"].BackgroundTransparency = 1
+	box["gaydar target"].TextTransparency = 1
+	box["gaydar target"].BackgroundTransparency = 1
+	box["gaydar info"].TextTransparency = 1
+	box["gaydar info"].BackgroundTransparency = 1
+	box["gaydar"].BackgroundTransparency = 1
+	box["gaydar"].ImageTransparency = 1
 
 	gui.BackgroundTransparency = 0
 	gui.Size = UDim2.new(0, 376, 0, 0)
@@ -21301,25 +21332,25 @@ addcommand("opengaydartab", "gaydar", function()
 	tweenIn.Completed:Wait()
 	updcols()
 
-	uwu["gaydar tab top bar"].Visible = true
-	uwu["gaydar tab top bar"].BackgroundTransparency = 0
-	uwu["gaydar tab main frame 1"].BackgroundTransparency = 0
-	uwu["gaydar tab top bar close button"].BackgroundTransparency = 0
-	uwu["gaydar tab top bar minimize button"].BackgroundTransparency = 0
-	uwu["gaydar tab top bar reposition button"].BackgroundTransparency = 0
-	uwu["gaydar tab top bar close button"].TextTransparency = 0
-	uwu["gaydar tab top bar minimize button"].TextTransparency = 0
-	uwu["gaydar tab top bar reposition button"].TextTransparency = 0
-	uwu["gaydar tab top bar"].TextTransparency = 0
-	uwu["gaydar tab main frame 1"].BackgroundTransparency = 0
-	uwu["gaydar scan"].TextTransparency = 0
-	uwu["gaydar scan"].BackgroundTransparency = 0
-	uwu["gaydar target"].TextTransparency = 0
-	uwu["gaydar target"].BackgroundTransparency = 0
-	uwu["gaydar info"].TextTransparency = 0
-	uwu["gaydar info"].BackgroundTransparency = 0
-	uwu["gaydar"].BackgroundTransparency = 0
-	uwu["gaydar"].ImageTransparency = 0
+	box["gaydar tab top bar"].Visible = true
+	box["gaydar tab top bar"].BackgroundTransparency = 0
+	box["gaydar tab main frame 1"].BackgroundTransparency = 0
+	box["gaydar tab top bar close button"].BackgroundTransparency = 0
+	box["gaydar tab top bar minimize button"].BackgroundTransparency = 0
+	box["gaydar tab top bar reposition button"].BackgroundTransparency = 0
+	box["gaydar tab top bar close button"].TextTransparency = 0
+	box["gaydar tab top bar minimize button"].TextTransparency = 0
+	box["gaydar tab top bar reposition button"].TextTransparency = 0
+	box["gaydar tab top bar"].TextTransparency = 0
+	box["gaydar tab main frame 1"].BackgroundTransparency = 0
+	box["gaydar scan"].TextTransparency = 0
+	box["gaydar scan"].BackgroundTransparency = 0
+	box["gaydar target"].TextTransparency = 0
+	box["gaydar target"].BackgroundTransparency = 0
+	box["gaydar info"].TextTransparency = 0
+	box["gaydar info"].BackgroundTransparency = 0
+	box["gaydar"].BackgroundTransparency = 0
+	box["gaydar"].ImageTransparency = 0
 
 	local fadeTween = fade(gui, 1, 0.2)
 	fadeTween.Completed:Wait()
@@ -21337,29 +21368,29 @@ addcommand("openvideotab", "video", function()
 	videotabopen = true
 	videotabminimized = false
 
-	uwu["video tab block main frame"].Size = UDim2.new(0, 208, 0, 288)
-	uwu["video tab block main frame"].BackgroundTransparency = 1
-	uwu["video tab top bar minimize button"].Text = "-"
-	uwu["video tab main frame 1"].Visible = true
-	local gui = uwu["video tab block all"]
-	uwu["video tab top bar"].Visible = true
-	uwu["video tab top bar"].TextTransparency = 1
-	uwu["video tab top bar"].BackgroundTransparency = 1
-	uwu["video tab main frame 1"].BackgroundTransparency = 1
-	uwu["video tab top bar close button"].BackgroundTransparency = 1
-	uwu["video tab top bar minimize button"].BackgroundTransparency = 1
-	uwu["video tab top bar reposition button"].BackgroundTransparency = 1
-	uwu["video tab top bar close button"].TextTransparency = 1
-	uwu["video tab top bar minimize button"].TextTransparency = 1
-	uwu["video tab top bar reposition button"].TextTransparency = 1
-	uwu["video tab top bar"].TextTransparency = 1
-	uwu["video tab main frame 1"].BackgroundTransparency = 1
-	uwu["video id textbox"].TextTransparency = 1
-	uwu["video id textbox"].BackgroundTransparency = 1
-	uwu["video id enter"].TextTransparency = 1
-	uwu["video id enter"].BackgroundTransparency = 1
-	uwu["video"].BackgroundTransparency = 1
-	-- uwu["video"].VideoFrame.ImageTransparency = 1
+	box["video tab block main frame"].Size = UDim2.new(0, 208, 0, 288)
+	box["video tab block main frame"].BackgroundTransparency = 1
+	box["video tab top bar minimize button"].Text = "-"
+	box["video tab main frame 1"].Visible = true
+	local gui = box["video tab block all"]
+	box["video tab top bar"].Visible = true
+	box["video tab top bar"].TextTransparency = 1
+	box["video tab top bar"].BackgroundTransparency = 1
+	box["video tab main frame 1"].BackgroundTransparency = 1
+	box["video tab top bar close button"].BackgroundTransparency = 1
+	box["video tab top bar minimize button"].BackgroundTransparency = 1
+	box["video tab top bar reposition button"].BackgroundTransparency = 1
+	box["video tab top bar close button"].TextTransparency = 1
+	box["video tab top bar minimize button"].TextTransparency = 1
+	box["video tab top bar reposition button"].TextTransparency = 1
+	box["video tab top bar"].TextTransparency = 1
+	box["video tab main frame 1"].BackgroundTransparency = 1
+	box["video id textbox"].TextTransparency = 1
+	box["video id textbox"].BackgroundTransparency = 1
+	box["video id enter"].TextTransparency = 1
+	box["video id enter"].BackgroundTransparency = 1
+	box["video"].BackgroundTransparency = 1
+	-- box["video"].VideoFrame.ImageTransparency = 1
 
 	gui.BackgroundTransparency = 0
 	gui.Size = UDim2.new(0, 208, 0, 0)
@@ -21375,23 +21406,23 @@ addcommand("openvideotab", "video", function()
 	tweenIn.Completed:Wait()
 	updcols()
 
-	uwu["video tab top bar"].Visible = true
-	uwu["video tab top bar"].BackgroundTransparency = 0
-	uwu["video tab main frame 1"].BackgroundTransparency = 0
-	uwu["video tab top bar close button"].BackgroundTransparency = 0
-	uwu["video tab top bar minimize button"].BackgroundTransparency = 0
-	uwu["video tab top bar reposition button"].BackgroundTransparency = 0
-	uwu["video tab top bar close button"].TextTransparency = 0
-	uwu["video tab top bar minimize button"].TextTransparency = 0
-	uwu["video tab top bar reposition button"].TextTransparency = 0
-	uwu["video tab top bar"].TextTransparency = 0
-	uwu["video tab main frame 1"].BackgroundTransparency = 0
-	uwu["video id textbox"].TextTransparency = 0
-	uwu["video id textbox"].BackgroundTransparency = 0
-	uwu["video id enter"].TextTransparency = 0
-	uwu["video id enter"].BackgroundTransparency = 0
-	uwu["video"].BackgroundTransparency = 0
-	-- uwu["video"].VideoFrame.ImageTransparency = 0
+	box["video tab top bar"].Visible = true
+	box["video tab top bar"].BackgroundTransparency = 0
+	box["video tab main frame 1"].BackgroundTransparency = 0
+	box["video tab top bar close button"].BackgroundTransparency = 0
+	box["video tab top bar minimize button"].BackgroundTransparency = 0
+	box["video tab top bar reposition button"].BackgroundTransparency = 0
+	box["video tab top bar close button"].TextTransparency = 0
+	box["video tab top bar minimize button"].TextTransparency = 0
+	box["video tab top bar reposition button"].TextTransparency = 0
+	box["video tab top bar"].TextTransparency = 0
+	box["video tab main frame 1"].BackgroundTransparency = 0
+	box["video id textbox"].TextTransparency = 0
+	box["video id textbox"].BackgroundTransparency = 0
+	box["video id enter"].TextTransparency = 0
+	box["video id enter"].BackgroundTransparency = 0
+	box["video"].BackgroundTransparency = 0
+	-- box["video"].VideoFrame.ImageTransparency = 0
 
 	local fadeTween = fade(gui, 1, 0.2)
 	fadeTween.Completed:Wait()
@@ -21409,28 +21440,28 @@ addcommand("openmessagereversertab", "msgreverser", function()
 	msgrevtabopen = true
 	msgrevtabminimized = false
 
-	uwu["message reverser tab block main frame"].Size = UDim2.new(0, 345, 0, 141)
-	uwu["message reverser tab block main frame"].BackgroundTransparency = 1
-	uwu["message reverser tab top bar minimize button"].Text = "-"
-	uwu["message reverser tab main frame 1"].Visible = true
-	local gui = uwu["message reverser tab block all"]
-	uwu["message reverser tab top bar"].Visible = true
-	uwu["message reverser tab top bar"].TextTransparency = 1
-	uwu["message reverser tab top bar"].BackgroundTransparency = 1
-	uwu["message reverser tab main frame 1"].BackgroundTransparency = 1
-	uwu["message reverser tab top bar close button"].BackgroundTransparency = 1
-	uwu["message reverser tab top bar minimize button"].BackgroundTransparency = 1
-	uwu["message reverser tab top bar reposition button"].BackgroundTransparency = 1
-	uwu["message reverser tab top bar close button"].TextTransparency = 1
-	uwu["message reverser tab top bar minimize button"].TextTransparency = 1
-	uwu["message reverser tab top bar reposition button"].TextTransparency = 1
-	uwu["message reverser tab main frame 1"].BackgroundTransparency = 1
-	uwu["message reverser input"].BackgroundTransparency = 1
-	uwu["message reverser input"].TextTransparency = 1
-	uwu["reverse message"].BackgroundTransparency = 1
-	uwu["reverse message"].TextTransparency = 1
-	uwu["clear message reverser input"].BackgroundTransparency = 1
-	uwu["clear message reverser input"].TextTransparency = 1
+	box["message reverser tab block main frame"].Size = UDim2.new(0, 345, 0, 141)
+	box["message reverser tab block main frame"].BackgroundTransparency = 1
+	box["message reverser tab top bar minimize button"].Text = "-"
+	box["message reverser tab main frame 1"].Visible = true
+	local gui = box["message reverser tab block all"]
+	box["message reverser tab top bar"].Visible = true
+	box["message reverser tab top bar"].TextTransparency = 1
+	box["message reverser tab top bar"].BackgroundTransparency = 1
+	box["message reverser tab main frame 1"].BackgroundTransparency = 1
+	box["message reverser tab top bar close button"].BackgroundTransparency = 1
+	box["message reverser tab top bar minimize button"].BackgroundTransparency = 1
+	box["message reverser tab top bar reposition button"].BackgroundTransparency = 1
+	box["message reverser tab top bar close button"].TextTransparency = 1
+	box["message reverser tab top bar minimize button"].TextTransparency = 1
+	box["message reverser tab top bar reposition button"].TextTransparency = 1
+	box["message reverser tab main frame 1"].BackgroundTransparency = 1
+	box["message reverser input"].BackgroundTransparency = 1
+	box["message reverser input"].TextTransparency = 1
+	box["reverse message"].BackgroundTransparency = 1
+	box["reverse message"].TextTransparency = 1
+	box["clear message reverser input"].BackgroundTransparency = 1
+	box["clear message reverser input"].TextTransparency = 1
 
 	gui.BackgroundTransparency = 0
 	gui.Size = UDim2.new(0, 345, 0, 0)
@@ -21446,23 +21477,23 @@ addcommand("openmessagereversertab", "msgreverser", function()
 	tweenIn.Completed:Wait()
 	updcols()
 
-	uwu["message reverser tab top bar"].Visible = true
-	uwu["message reverser tab top bar"].BackgroundTransparency = 0
-	uwu["message reverser tab main frame 1"].BackgroundTransparency = 0
-	uwu["message reverser tab top bar close button"].BackgroundTransparency = 0
-	uwu["message reverser tab top bar minimize button"].BackgroundTransparency = 0
-	uwu["message reverser tab top bar reposition button"].BackgroundTransparency = 0
-	uwu["message reverser tab top bar close button"].TextTransparency = 0
-	uwu["message reverser tab top bar minimize button"].TextTransparency = 0
-	uwu["message reverser tab top bar reposition button"].TextTransparency = 0
-	uwu["message reverser tab top bar"].TextTransparency = 0
-	uwu["message reverser tab main frame 1"].BackgroundTransparency = 0
-	uwu["message reverser input"].BackgroundTransparency = 0
-	uwu["message reverser input"].TextTransparency = 0
-	uwu["reverse message"].BackgroundTransparency = 0
-	uwu["reverse message"].TextTransparency = 0
-	uwu["clear message reverser input"].BackgroundTransparency = 0
-	uwu["clear message reverser input"].TextTransparency = 0
+	box["message reverser tab top bar"].Visible = true
+	box["message reverser tab top bar"].BackgroundTransparency = 0
+	box["message reverser tab main frame 1"].BackgroundTransparency = 0
+	box["message reverser tab top bar close button"].BackgroundTransparency = 0
+	box["message reverser tab top bar minimize button"].BackgroundTransparency = 0
+	box["message reverser tab top bar reposition button"].BackgroundTransparency = 0
+	box["message reverser tab top bar close button"].TextTransparency = 0
+	box["message reverser tab top bar minimize button"].TextTransparency = 0
+	box["message reverser tab top bar reposition button"].TextTransparency = 0
+	box["message reverser tab top bar"].TextTransparency = 0
+	box["message reverser tab main frame 1"].BackgroundTransparency = 0
+	box["message reverser input"].BackgroundTransparency = 0
+	box["message reverser input"].TextTransparency = 0
+	box["reverse message"].BackgroundTransparency = 0
+	box["reverse message"].TextTransparency = 0
+	box["clear message reverser input"].BackgroundTransparency = 0
+	box["clear message reverser input"].TextTransparency = 0
 
 	local fadeTween = fade(gui, 1, 0.2)
 	fadeTween.Completed:Wait()
@@ -21480,32 +21511,32 @@ addcommand("opennoxsecencoderanddecodertab", "noxsec", function()
 	noxsectabopen = true
 	noxsectabminimized = false
 
-	uwu["noxsec encoder and decoder tab block main frame"].Size = UDim2.new(0, 545, 0, 241)
-	uwu["noxsec encoder and decoder tab block main frame"].BackgroundTransparency = 1
-	uwu["noxsec encoder and decoder tab top bar minimize button"].Text = "-"
-	uwu["noxsec encoder and decoder tab main frame 1"].Visible = true
-	local gui = uwu["noxsec encoder and decoder tab block all"]
-	uwu["noxsec encoder and decoder tab top bar"].Visible = true
-	uwu["noxsec encoder and decoder tab top bar"].TextTransparency = 1
-	uwu["noxsec encoder and decoder tab top bar"].BackgroundTransparency = 1
-	uwu["noxsec encoder and decoder tab main frame 1"].BackgroundTransparency = 1
-	uwu["noxsec encoder and decoder tab top bar close button"].BackgroundTransparency = 1
-	uwu["noxsec encoder and decoder tab top bar minimize button"].BackgroundTransparency = 1
-	uwu["noxsec encoder and decoder tab top bar reposition button"].BackgroundTransparency = 1
-	uwu["noxsec encoder and decoder tab top bar close button"].TextTransparency = 1
-	uwu["noxsec encoder and decoder tab top bar minimize button"].TextTransparency = 1
-	uwu["noxsec encoder and decoder tab top bar reposition button"].TextTransparency = 1
-	uwu["noxsec encoder and decoder tab main frame 1"].BackgroundTransparency = 1
-	uwu["noxsec encoder and decoder input"].BackgroundTransparency = 1
-	uwu["noxsec encoder and decoder input"].TextTransparency = 1
-	uwu["noxsec decode"].BackgroundTransparency = 1
-	uwu["noxsec decode"].TextTransparency = 1
-	uwu["noxsec encode"].BackgroundTransparency = 1
-	uwu["noxsec encode"].TextTransparency = 1
-	uwu["clear noxsec encoder and decoder input"].BackgroundTransparency = 1
-	uwu["clear noxsec encoder and decoder input"].TextTransparency = 1
-	uwu["copy noxsec encoder and decoder input"].BackgroundTransparency = 1
-	uwu["copy noxsec encoder and decoder input"].TextTransparency = 1
+	box["noxsec encoder and decoder tab block main frame"].Size = UDim2.new(0, 545, 0, 241)
+	box["noxsec encoder and decoder tab block main frame"].BackgroundTransparency = 1
+	box["noxsec encoder and decoder tab top bar minimize button"].Text = "-"
+	box["noxsec encoder and decoder tab main frame 1"].Visible = true
+	local gui = box["noxsec encoder and decoder tab block all"]
+	box["noxsec encoder and decoder tab top bar"].Visible = true
+	box["noxsec encoder and decoder tab top bar"].TextTransparency = 1
+	box["noxsec encoder and decoder tab top bar"].BackgroundTransparency = 1
+	box["noxsec encoder and decoder tab main frame 1"].BackgroundTransparency = 1
+	box["noxsec encoder and decoder tab top bar close button"].BackgroundTransparency = 1
+	box["noxsec encoder and decoder tab top bar minimize button"].BackgroundTransparency = 1
+	box["noxsec encoder and decoder tab top bar reposition button"].BackgroundTransparency = 1
+	box["noxsec encoder and decoder tab top bar close button"].TextTransparency = 1
+	box["noxsec encoder and decoder tab top bar minimize button"].TextTransparency = 1
+	box["noxsec encoder and decoder tab top bar reposition button"].TextTransparency = 1
+	box["noxsec encoder and decoder tab main frame 1"].BackgroundTransparency = 1
+	box["noxsec encoder and decoder input"].BackgroundTransparency = 1
+	box["noxsec encoder and decoder input"].TextTransparency = 1
+	box["noxsec decode"].BackgroundTransparency = 1
+	box["noxsec decode"].TextTransparency = 1
+	box["noxsec encode"].BackgroundTransparency = 1
+	box["noxsec encode"].TextTransparency = 1
+	box["clear noxsec encoder and decoder input"].BackgroundTransparency = 1
+	box["clear noxsec encoder and decoder input"].TextTransparency = 1
+	box["copy noxsec encoder and decoder input"].BackgroundTransparency = 1
+	box["copy noxsec encoder and decoder input"].TextTransparency = 1
 
 	gui.BackgroundTransparency = 0
 	gui.Size = UDim2.new(0, 545, 0, 0)
@@ -21521,27 +21552,27 @@ addcommand("opennoxsecencoderanddecodertab", "noxsec", function()
 	tweenIn.Completed:Wait()
 	updcols()
 
-	uwu["noxsec encoder and decoder tab top bar"].Visible = true
-	uwu["noxsec encoder and decoder tab top bar"].BackgroundTransparency = 0
-	uwu["noxsec encoder and decoder tab main frame 1"].BackgroundTransparency = 0
-	uwu["noxsec encoder and decoder tab top bar close button"].BackgroundTransparency = 0
-	uwu["noxsec encoder and decoder tab top bar minimize button"].BackgroundTransparency = 0
-	uwu["noxsec encoder and decoder tab top bar reposition button"].BackgroundTransparency = 0
-	uwu["noxsec encoder and decoder tab top bar close button"].TextTransparency = 0
-	uwu["noxsec encoder and decoder tab top bar minimize button"].TextTransparency = 0
-	uwu["noxsec encoder and decoder tab top bar reposition button"].TextTransparency = 0
-	uwu["noxsec encoder and decoder tab top bar"].TextTransparency = 0
-	uwu["noxsec encoder and decoder tab main frame 1"].BackgroundTransparency = 0
-	uwu["noxsec encoder and decoder input"].BackgroundTransparency = 0
-	uwu["noxsec encoder and decoder input"].TextTransparency = 0
-	uwu["noxsec decode"].BackgroundTransparency = 0
-	uwu["noxsec decode"].TextTransparency = 0
-	uwu["noxsec encode"].BackgroundTransparency = 0
-	uwu["noxsec encode"].TextTransparency = 0
-	uwu["clear noxsec encoder and decoder input"].BackgroundTransparency = 0
-	uwu["clear noxsec encoder and decoder input"].TextTransparency = 0
-	uwu["copy noxsec encoder and decoder input"].BackgroundTransparency = 0
-	uwu["copy noxsec encoder and decoder input"].TextTransparency = 0
+	box["noxsec encoder and decoder tab top bar"].Visible = true
+	box["noxsec encoder and decoder tab top bar"].BackgroundTransparency = 0
+	box["noxsec encoder and decoder tab main frame 1"].BackgroundTransparency = 0
+	box["noxsec encoder and decoder tab top bar close button"].BackgroundTransparency = 0
+	box["noxsec encoder and decoder tab top bar minimize button"].BackgroundTransparency = 0
+	box["noxsec encoder and decoder tab top bar reposition button"].BackgroundTransparency = 0
+	box["noxsec encoder and decoder tab top bar close button"].TextTransparency = 0
+	box["noxsec encoder and decoder tab top bar minimize button"].TextTransparency = 0
+	box["noxsec encoder and decoder tab top bar reposition button"].TextTransparency = 0
+	box["noxsec encoder and decoder tab top bar"].TextTransparency = 0
+	box["noxsec encoder and decoder tab main frame 1"].BackgroundTransparency = 0
+	box["noxsec encoder and decoder input"].BackgroundTransparency = 0
+	box["noxsec encoder and decoder input"].TextTransparency = 0
+	box["noxsec decode"].BackgroundTransparency = 0
+	box["noxsec decode"].TextTransparency = 0
+	box["noxsec encode"].BackgroundTransparency = 0
+	box["noxsec encode"].TextTransparency = 0
+	box["clear noxsec encoder and decoder input"].BackgroundTransparency = 0
+	box["clear noxsec encoder and decoder input"].TextTransparency = 0
+	box["copy noxsec encoder and decoder input"].BackgroundTransparency = 0
+	box["copy noxsec encoder and decoder input"].TextTransparency = 0
 
 	local fadeTween = fade(gui, 1, 0.2)
 	fadeTween.Completed:Wait()
@@ -21552,14 +21583,14 @@ end)
 -------------------------------------------------------------------------------------------------------------------------------
 
 task.spawn(function()
-	repos(uwu["donut tab top bar"], 0, 276, 260 + 26)
-	repos(uwu["video tab top bar"], 0, 208, 315 + 26)
-	repos(uwu["gaydar tab top bar"], 0, 376, 230 + 26)
-	repos(uwu["headcanon generator tab top bar"], 0, 446, 168 + 26)
-	repos(uwu["message reverser tab top bar"], 0, 345, 168 + 26)
-	repos(uwu["noxsec encoder and decoder tab top bar"], 0, 545, 268 + 26)
-	repos(uwu["top bar"], 0, 401, 250 + 26)
-	repos(uwu["binary tab top bar"], 0, 246, 230 + 26)
+	repos(box["donut tab top bar"], 0, 276, 260 + 26)
+	repos(box["video tab top bar"], 0, 208, 315 + 26)
+	repos(box["gaydar tab top bar"], 0, 376, 230 + 26)
+	repos(box["headcanon generator tab top bar"], 0, 446, 168 + 26)
+	repos(box["message reverser tab top bar"], 0, 345, 168 + 26)
+	repos(box["noxsec encoder and decoder tab top bar"], 0, 545, 268 + 26)
+	repos(box["top bar"], 0, 401, 250 + 26)
+	repos(box["binary tab top bar"], 0, 246, 230 + 26)
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
