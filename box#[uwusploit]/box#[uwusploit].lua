@@ -4831,7 +4831,8 @@ uwu["top bar minimize button"].MouseButton1Click:Connect(function()
 
 		uwu["block main frame"].Visible = false
 		uwu["emoticon"] = ">.<"
-		uwu["top bar"].Text = " [v" .. uwu["version"] .. "] uwusploit " .. uwu["emoticon"]
+		local old = uwu["top bar"].Text:gsub("[%s]*[>%.o<]+$", "")
+		uwu["top bar"].Text = old .. " " .. uwu["emoticon"]
 	else
 		spawn(function()
 			local tweens = {}
@@ -4868,7 +4869,8 @@ uwu["top bar minimize button"].MouseButton1Click:Connect(function()
 
 		uwu["block main frame"].Visible = false
 		uwu["emoticon"] = "o.o"
-		uwu["top bar"].Text = " [v" .. uwu["version"] .. "] uwusploit " .. uwu["emoticon"]
+		local old = uwu["top bar"].Text:gsub("[%s]*[>%.o<]+$", "")
+		uwu["top bar"].Text = old .. " " .. uwu["emoticon"]
 	end
 
 	canminimize = true
