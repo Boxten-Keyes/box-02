@@ -1027,7 +1027,7 @@ uwu["toggle interface visibility button"].TextXAlignment = Enum.TextXAlignment.C
 uwu["toggle interface visibility button"].TextYAlignment = Enum.TextYAlignment.Center
 
 uwu["toggle interface visibility button text padding"] = Instance.new("UIPadding")
-uwu["toggle interface visibility button text padding"].PaddingTop = UDim.new(0, -2)
+uwu["toggle interface visibility button text padding"].PaddingTop = UDim.new(0, -3)
 uwu["toggle interface visibility button text padding"].Parent = uwu["toggle interface visibility button"]
 
 uwu["toggle interface visibility button"].Parent = uwu["screen gui"]
@@ -12126,41 +12126,57 @@ cscript("gear giver", [[
         loadstring(game:HttpGet("https://raw.githubusercontent.com/x2-x21-x18-x14-x5-x18/unable-s-stupid-admin-panel-obfuscated/refs/heads/main/assets%20and%20scripts/gear%20giver.lua"))()
 ]], "LS")
 
-cscript("loop destroy unanchored", [[
-local RunService = game:GetService("RunService")
-local Debris = game:GetService("Debris")
+cscript("anti part fling", [[
 local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local player = Players.LocalPlayer
 
-local function isDescendantOfPlayerCharacter(part)
-	for _, player in ipairs(Players:GetPlayers()) do
-		local character = player.Character
-		if character and part:IsDescendantOf(character) then
-			return true
-		end
-	end
-	return false
-end
+local CHECK_INTERVAL = 0
+local SPEED_THRESHOLD = 0.05
 
-local function deleteUnanchoredParts()
-	while true do
-		task.wait(0)
+local frozenParts = {}
 
-		local unanchoredParts = {}
-		for _, part in ipairs(workspace:GetDescendants()) do
-			if part:IsA("BasePart") and not part.Anchored and part.Parent ~= nil then
-				if not isDescendantOfPlayerCharacter(part) then
-					table.insert(unanchoredParts, part)
-				end
+local function getMovingParts()
+	local parts = {}
+	for _, part in ipairs(workspace:GetDescendants()) do
+		if part:IsA("BasePart") and not part.Anchored and part:IsDescendantOf(workspace) and part:IsDescendantOf(workspace.Terrain) == false then
+			local speed = part.AssemblyLinearVelocity.Magnitude
+			if speed > SPEED_THRESHOLD then
+				table.insert(parts, part)
 			end
 		end
+	end
+	return parts
+end
 
-		for _, part in ipairs(unanchoredParts) do
-			Debris:AddItem(part, 0)
+local function freezeParts()
+	for _, part in ipairs(getMovingParts()) do
+		if not frozenParts[part] then
+			part.Anchored = true
+			frozenParts[part] = tick()
 		end
 	end
 end
 
-coroutine.wrap(deleteUnanchoredParts)()
+local function thawParts()
+	for part, timeFrozen in pairs(frozenParts) do
+		if part and part:IsDescendantOf(workspace) then
+			local velocity = part.AssemblyLinearVelocity.Magnitude
+			if velocity < SPEED_THRESHOLD then
+				part.Anchored = false
+				frozenParts[part] = nil
+			end
+		else
+			frozenParts[part] = nil
+		end
+	end
+end
+
+while true do
+	task.wait(CHECK_INTERVAL)
+	freezeParts()
+	thawParts()
+end
 ]], "CS / SS")
 
 cscript("betterbypasser", [[ 
@@ -13403,20 +13419,20 @@ cscript("r6 dances", [[
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Br6%20dances%5D/music%23%5Bloader%5D.lua"))()
 ]], "LS")
 
+cscript("r15 dances", [[
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Br15%20dances%5D/music%23%5Bloader%5D.lua"))()
+]], "LS")
+
 cscript("server position predictor", [[
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bposition%20predictor%5D.lua"))()
 ]], "LS")
 
 cscript("anti bang", [[
 local Players = game:GetService("Players")
-
 local Player = Players.LocalPlayer
 local Character, Humanoid, RootPart
-
 local Camera = workspace.CurrentCamera
-
 local IsVoiding = false
-
 local GetNearestPlayers = function()
 	if RootPart then
 		for _, x in next, Players:GetPlayers() do
@@ -13424,7 +13440,6 @@ local GetNearestPlayers = function()
 				local x_Character = x.Character
 				local x_Humanoid = x_Character and x_Character:FindFirstChildWhichIsA("Humanoid")
 				local x_RootPart = x_Humanoid and x_Humanoid.RootPart
-
 				if x_RootPart and (RootPart.Position - x_RootPart.Position).Magnitude < 2 then
 					for _, x in next, x_Humanoid:GetPlayingAnimationTracks() do
 						if x.Animation and x.Animation.AnimationId:match("148840371") or x.Animation.AnimationId:match("5918726674") then
@@ -13437,7 +13452,6 @@ local GetNearestPlayers = function()
 			end
 		end
 	end
-
 	return false
 end
 
@@ -13447,27 +13461,20 @@ while true do
 	Character = Player.Character
 	Humanoid = Character and Character:FindFirstChildWhichIsA("Humanoid")
 	RootPart = Humanoid and Humanoid.RootPart
-
 	if GetNearestPlayers() and Humanoid and RootPart and not IsVoiding then
 		IsVoiding = true
-
 		local CurrentPosition = RootPart.Velocity.Magnitude < 50 and RootPart.CFrame or Camera.Focus
 		local Timer = tick()
-
 		repeat
 			RootPart.CFrame = CFrame.new(0, -499, 0) * CFrame.Angles(math.rad(90), 0, 0)
 			RootPart.AssemblyLinearVelocity = Vector3.new()
 			task.wait()
 		until tick() > Timer + 1
-
 		RootPart.AssemblyLinearVelocity = Vector3.new()
 		RootPart.CFrame = CurrentPosition
-
 		Humanoid:ChangeState(Enum.HumanoidStateType.GettingUp)
-
 		IsVoiding = false
 	end
-
 	task.wait()
 end
 ]], "CS / SS")
