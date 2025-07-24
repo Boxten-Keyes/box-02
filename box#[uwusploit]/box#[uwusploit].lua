@@ -12131,15 +12131,29 @@ local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local player = Players.LocalPlayer
 
-local CHECK_INTERVAL = 0
+local CHECK_INTERVAL = 0.1
 local SPEED_THRESHOLD = 0.05
 
 local frozenParts = {}
 
+-- Returns true if the part is part of any player's character
+local function isPartOfPlayerCharacter(part)
+	for _, plr in ipairs(Players:GetPlayers()) do
+		if plr.Character and part:IsDescendantOf(plr.Character) then
+			return true
+		end
+	end
+	return false
+end
+
 local function getMovingParts()
 	local parts = {}
 	for _, part in ipairs(workspace:GetDescendants()) do
-		if part:IsA("BasePart") and not part.Anchored and part:IsDescendantOf(workspace) and part:IsDescendantOf(workspace.Terrain) == false then
+		if part:IsA("BasePart")
+			and not part.Anchored
+			and not isPartOfPlayerCharacter(part)
+			and not part:IsDescendantOf(workspace.Terrain) then
+
 			local speed = part.AssemblyLinearVelocity.Magnitude
 			if speed > SPEED_THRESHOLD then
 				table.insert(parts, part)
