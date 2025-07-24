@@ -1027,7 +1027,7 @@ uwu["toggle interface visibility button"].TextXAlignment = Enum.TextXAlignment.C
 uwu["toggle interface visibility button"].TextYAlignment = Enum.TextYAlignment.Center
 
 uwu["toggle interface visibility button text padding"] = Instance.new("UIPadding")
-uwu["toggle interface visibility button text padding"].PaddingTop = UDim.new(0, -3)
+uwu["toggle interface visibility button text padding"].PaddingTop = UDim.new(0, -2)
 uwu["toggle interface visibility button text padding"].Parent = uwu["toggle interface visibility button"]
 
 uwu["toggle interface visibility button"].Parent = uwu["screen gui"]
