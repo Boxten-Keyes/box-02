@@ -5,7 +5,7 @@
   \ \_____\  \ \__/".~\_\  \ \_____\  \/\_____\  \ \_\    \ \_____\  \ \_____\  \ \_\    \ \_\ 
    \/_____/   \/_/   \/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/   \/_/     \/_/ 
                                                                                                        
-   Made by Team Noxious, Team Occulence & Team Symphysis -- uwusploit [version 3]
+   Made by Team Noxious, Team Occulence & Team Symphysis -- uwusploit [version 4]
    
 ---------------------------------------------------------------------------------------------------------------------------]]--
 
@@ -17,7 +17,7 @@ wait(0.2) uwu = {}
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["version"] = "3"
+uwu["version"] = "4"
 uwu["workspace"] = game.Workspace
 uwu["user input service"] = game:GetService("UserInputService")
 uwu["players"] = game:GetService("Players")
@@ -147,6 +147,7 @@ uwu["video tab block all"] = Instance.new("Frame")
 uwu["video tab block main frame"] = Instance.new("Frame")
 uwu["video"] = Instance.new("VideoFrame")
 uwu["video id textbox"] = Instance.new("TextBox")
+uwu["video id enter"] = Instance.new("TextButton")
 
 -------------------------------------------------------------------------------------------------------------------------------
 
@@ -162,6 +163,8 @@ uwu["gaydar tab main frame 1"] = Instance.new("Frame")
 uwu["gaydar tab block all"] = Instance.new("Frame")
 uwu["gaydar tab block main frame"] = Instance.new("Frame")
 uwu["gaydar"] = Instance.new("ImageLabel")
+uwu["gaydar scan"] = Instance.new("TextButton")
+uwu["gaydar info"] = Instance.new("TextLabel")
 uwu["gaydar target"] = Instance.new("TextBox")
 
 -------------------------------------------------------------------------------------------------------------------------------
@@ -235,9 +238,6 @@ uwu["main frame 2"] = Instance.new("Frame")
 uwu["main frame 3"] = Instance.new("Frame")
 uwu["main frame 4"] = Instance.new("Frame")
 uwu["block main frame"] = Instance.new("Frame")
-uwu["password frame"] = Instance.new("Frame")
-uwu["password text"] = Instance.new("TextLabel")
-uwu["password box"] = Instance.new("TextBox")
 uwu["introduction"] = Instance.new("TextLabel")
 uwu["player information tab"] = Instance.new("TextButton")
 uwu["server information tab"] = Instance.new("TextButton")
@@ -327,6 +327,16 @@ uwu["scripts tab bottom cover"] = Instance.new("Frame")
 uwu["commands tab bottom cover"] = Instance.new("Frame")
 uwu["asset ids tab bottom cover"] = Instance.new("Frame")
 uwu["executor tab bottom cover"] = Instance.new("Frame")
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+uwu["password label"] = Instance.new("TextLabel")
+uwu["password frame"] = Instance.new("Frame")
+uwu["password text"] = Instance.new("TextLabel")
+uwu["password box"] = Instance.new("TextBox")
+uwu["password check button"] = Instance.new("TextButton")
+uwu["password bullet label"] = Instance.new("TextLabel")
+uwu["password fake cursor"] = Instance.new("TextLabel")
 
 -------------------------------------------------------------------------------------------------------------------------------
 
@@ -2354,7 +2364,6 @@ uwu["video id textbox"].TextYAlignment = Enum.TextYAlignment.Center
 uwu["video id textbox"].ClipsDescendants = true
 uwu["video id textbox"].ZIndex = 413
 
-uwu["video id enter"] = Instance.new("TextButton")
 uwu["video id enter"].Size = UDim2.new(0, 200, 0, 35)
 uwu["video id enter"].Position = UDim2.new(0, 4, 0, 250)
 uwu["video id enter"].BackgroundColor3 = uwu["default background color"]
@@ -2643,7 +2652,6 @@ uwu["gaydar"].BorderSizePixel = 1
 uwu["gaydar"].Parent = uwu["gaydar tab main frame 1"]
 uwu["gaydar"].ZIndex = 313
 
-uwu["gaydar scan"] = Instance.new("TextButton")
 uwu["gaydar scan"].Size = UDim2.new(0, 368, 0, 48)
 uwu["gaydar scan"].Position = UDim2.new(0, 4, 0, 152)
 uwu["gaydar scan"].BackgroundColor3 = uwu["default background color"]
@@ -2696,7 +2704,6 @@ uwu["gaydar target text padding"] = Instance.new("UIPadding")
 uwu["gaydar target text padding"].PaddingBottom = UDim.new(0, 0)
 uwu["gaydar target text padding"].Parent = uwu["gaydar scan"]
 
-uwu["gaydar info"] = Instance.new("TextLabel")
 uwu["gaydar info"].Size = UDim2.new(0, 274, 0, 89)
 uwu["gaydar info"].Position = UDim2.new(0, 4, 0, 5)
 uwu["gaydar info"].BackgroundColor3 = uwu["default background color"]
@@ -5012,7 +5019,6 @@ uwu["password text padding"].Parent = uwu["password text"]
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["password label"] = Instance.new("TextLabel")
 uwu["password label"].Size = UDim2.new(0, 250, 0, 30)
 uwu["password label"].AnchorPoint = Vector2.new(0.5, 0.5)
 uwu["password label"].BackgroundTransparency = 0
@@ -5059,7 +5065,6 @@ uwu["password box padding"].Parent = uwu["password box"]
 
 cancheck = true
 
-uwu["password check button"] = Instance.new("TextButton")
 uwu["password check button"].Size = UDim2.new(0, 250, 0, 30)
 uwu["password check button"].BackgroundColor3 = uwu["default border color"]
 uwu["password check button"].AnchorPoint = Vector2.new(0.5, 0)
@@ -5082,7 +5087,6 @@ uwu["typing"] = false
 uwu["typed"] = false
 uwu["cv"] = true
 
-uwu["password bullet label"] = Instance.new("TextLabel")
 uwu["password bullet label"].Name = "fakebox"
 uwu["password bullet label"].AnchorPoint = Vector2.new(0.5, 0.5)
 uwu["password bullet label"].Size = UDim2.new(0, 250, 0, 30)
@@ -5103,7 +5107,6 @@ uwu["password bullet label padding"] = Instance.new("UIPadding")
 uwu["password bullet label padding"].PaddingBottom = UDim.new(0, 2)
 uwu["password bullet label padding"].Parent = uwu["password bullet label"]
 
-uwu["password fake cursor"] = Instance.new("TextLabel")
 uwu["password fake cursor"].AnchorPoint = Vector2.new(0.5, 0.5)
 uwu["password fake cursor"].Size = UDim2.new(0, 250, 0, 30)
 uwu["password fake cursor"].BackgroundTransparency = 1
