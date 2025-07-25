@@ -13424,7 +13424,7 @@ cscript("player camlock", [[
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bplayer%20camlock%5D.lua"))()
 ]], "LS")
 
-cscript("r15 fly tools", [[
+cscript("r15 fly", [[
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Br15%20fly%5D.lua"))()
 ]], "LS")
 
