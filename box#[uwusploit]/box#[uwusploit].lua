@@ -714,8 +714,6 @@ function applycurrenttheme()
 	end
 end
 
-local screenGui = uwu["screen gui"]
-
 function applycols(object)
 	if object:IsA("TextButton") or object:IsA("TextLabel") or object:IsA("Frame") or object:IsA("ScrollingFrame") or object:IsA("TextBox") or object:IsA("ImageLabel") or object:IsA("VideoFrame") then
 		object.BackgroundColor3 = uwu["default background color"]
@@ -803,8 +801,8 @@ end
 function updcols()
 	applycurrenttheme()
 
-	if screenGui then
-		for _, object in pairs(screenGui:GetDescendants()) do
+	if uwu["screen gui"] then
+		for _, object in pairs(uwu["screen gui"]:GetDescendants()) do
 			applycols(object)
 		end
 	end
@@ -905,7 +903,6 @@ function processNextNotification()
 	isNotifying = true
 	local text = table.remove(pendingNotifications, 1)
 
-	local screenGui = uwu["screen gui"]
 	local camera = workspace.CurrentCamera
 	local screenWidth = camera.ViewportSize.X
 	local screenHeight = camera.ViewportSize.Y
@@ -918,7 +915,7 @@ function processNextNotification()
 	label.ZIndex = notificationZ
 	notificationZ += 1
 	label.Position = UDim2.new(0, startX, 0, startY)
-	label.Parent = screenGui
+	label.Parent = uwu["screen gui"]
 
 	playSound("rbxassetid://15675028888")
 
@@ -1287,13 +1284,12 @@ uwu["toggle interface visibility button"].MouseButton1Click:Connect(function()
 	toggleLoop(false)
 	local topBar = uwu["top bar"]
 	local blockAll = uwu["block all"]
-	local screenGui = uwu["screen gui"]
 
 	if topBar.Visible == false then
 		canpress = false
 		canpress2 = false
 
-		blockAll.Parent = screenGui
+		blockAll.Parent = uwu["screen gui"]
 		blockAll.Position = topBar.Position
 		blockAll.Size = UDim2.new(0, 401, 0, 0)
 		blockAll.BackgroundColor3 = uwu["default background color"]
@@ -1354,7 +1350,7 @@ uwu["toggle interface visibility button"].MouseButton1Click:Connect(function()
 		canpress2 = false
 
 		spawn(function()
-			blockAll.Parent = screenGui
+			blockAll.Parent = uwu["screen gui"]
 			blockAll.Position = topBar.Position
 			if minimized == true then
 				blockAll.Size = UDim2.new(0, 401, 0, 26)
