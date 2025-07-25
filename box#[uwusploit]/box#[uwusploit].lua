@@ -13436,6 +13436,10 @@ cscript("r15 dances", [[
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Br15%20dances%5D/music%23%5Bloader%5D.lua"))()
 ]], "LS")
 
+cscript("fling tools", [[
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bfe%20fling%20all%5D.lua"))()
+]], "LS")
+
 cscript("server position predictor", [[
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bposition%20predictor%5D.lua"))()
 ]], "LS")
