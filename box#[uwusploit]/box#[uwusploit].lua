@@ -12122,78 +12122,15 @@ addbill()
 ]], "CS / SS")
 
 cscript("gear giver", [[ 
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/x2-x21-x18-x14-x5-x18/unable-s-stupid-admin-panel-obfuscated/refs/heads/main/assets%20and%20scripts/gear%20giver.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/x2-x21-x18-x14-x5-x18/unable-s-stupid-admin-panel-obfuscated/refs/heads/main/assets%20and%20scripts/gear%20giver.lua"))()
 ]], "LS")
 
 cscript("anti part fling", [[
-local Players = game:GetService("Players")
-local RunService = game:GetService("RunService")
-local player = Players.LocalPlayer
-
-local CHECK_INTERVAL = 0.1
-local SPEED_THRESHOLD = 0.05
-
-local frozenParts = {}
-
--- Returns true if the part is part of any player's character
-local function isPartOfPlayerCharacter(part)
-	for _, plr in ipairs(Players:GetPlayers()) do
-		if plr.Character and part:IsDescendantOf(plr.Character) then
-			return true
-		end
-	end
-	return false
-end
-
-local function getMovingParts()
-	local parts = {}
-	for _, part in ipairs(workspace:GetDescendants()) do
-		if part:IsA("BasePart")
-			and not part.Anchored
-			and not isPartOfPlayerCharacter(part)
-			and not part:IsDescendantOf(workspace.Terrain) then
-
-			local speed = part.AssemblyLinearVelocity.Magnitude
-			if speed > SPEED_THRESHOLD then
-				table.insert(parts, part)
-			end
-		end
-	end
-	return parts
-end
-
-local function freezeParts()
-	for _, part in ipairs(getMovingParts()) do
-		if not frozenParts[part] then
-			part.Anchored = true
-			frozenParts[part] = tick()
-		end
-	end
-end
-
-local function thawParts()
-	for part, timeFrozen in pairs(frozenParts) do
-		if part and part:IsDescendantOf(workspace) then
-			local velocity = part.AssemblyLinearVelocity.Magnitude
-			if velocity < SPEED_THRESHOLD then
-				part.Anchored = false
-				frozenParts[part] = nil
-			end
-		else
-			frozenParts[part] = nil
-		end
-	end
-end
-
-while true do
-	task.wait(CHECK_INTERVAL)
-	freezeParts()
-	thawParts()
-end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bmiscellaneous%5D/music%23%5Banti%20part%20fling%5D.lua"))()
 ]], "CS / SS")
 
 cscript("betterbypasser", [[ 
-        loadstring(game:HttpGet("https://github.com/Synergy-Networks/products/raw/main/BetterBypasser/loader.lua"))()
+loadstring(game:HttpGet("https://github.com/Synergy-Networks/products/raw/main/BetterBypasser/loader.lua"))()
 ]], "LS")
 
 cscript("NDS launch rocket", [[
@@ -12217,28 +12154,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Bac0nHck/Scripts/main
 ]], "LS")
 
 cscript("anti fall damage", [[
-local rs = game:GetService("RunService")
-local hb = rs.Heartbeat
-local rsd = rs.RenderStepped
-local lp = game.Players.LocalPlayer
-local z = Vector3.zero
-local function f(c)
-    local r = c:WaitForChild("HumanoidRootPart")
-    if r then
-        local con
-        con = hb:Connect(function()
-            if not r.Parent then
-                con:Disconnect()
-            end
-            local v = r.AssemblyLinearVelocity
-            r.AssemblyLinearVelocity = z
-            rsd:Wait()
-            r.AssemblyLinearVelocity = v
-        end)
-    end
-end
-f(lp.Character)
-lp.CharacterAdded:Connect(f)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bmiscellaneous%5D/music%23%5Banti%20fall%20damage%5D.lua"))()
 ]], "CS / SS")
 
 cscript("crawl tool", [[
@@ -13421,11 +13337,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/re
 ]], "LS")
 
 cscript("player camlock", [[
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bplayer%20camlock%5D.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bmiscellaneous%5D/music%23%5Bplayer%20camlock%5D.lua"))()
 ]], "LS")
 
 cscript("r15 fly", [[
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Br15%20fly%5D.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bmiscellaneous%5D/music%23%5Br15%20fly%5D.lua"))()
 ]], "LS")
 
 cscript("r6 dances", [[
@@ -13437,63 +13353,15 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/re
 ]], "LS")
 
 cscript("fling tools", [[
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bfe%20fling%20all%5D.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bmiscellaneous%5D/music%23%5Bfe%20fling%20all%5D.lua"))()
 ]], "LS")
 
 cscript("server position predictor", [[
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bposition%20predictor%5D.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bmiscellaneous%5D/music%23%5Bserver%20position%20predictor%5D.lua"))()
 ]], "LS")
 
 cscript("anti bang", [[
-local Players = game:GetService("Players")
-local Player = Players.LocalPlayer
-local Character, Humanoid, RootPart
-local Camera = workspace.CurrentCamera
-local IsVoiding = false
-local GetNearestPlayers = function()
-	if RootPart then
-		for _, x in next, Players:GetPlayers() do
-			if x ~= Player then
-				local x_Character = x.Character
-				local x_Humanoid = x_Character and x_Character:FindFirstChildWhichIsA("Humanoid")
-				local x_RootPart = x_Humanoid and x_Humanoid.RootPart
-				if x_RootPart and (RootPart.Position - x_RootPart.Position).Magnitude < 2 then
-					for _, x in next, x_Humanoid:GetPlayingAnimationTracks() do
-						if x.Animation and x.Animation.AnimationId:match("148840371") or x.Animation.AnimationId:match("5918726674") then
-							return true
-						end
-					end
-
-					return false
-				end
-			end
-		end
-	end
-	return false
-end
-
-workspace.FallenPartsDestroyHeight = 0 / 0
-
-while true do
-	Character = Player.Character
-	Humanoid = Character and Character:FindFirstChildWhichIsA("Humanoid")
-	RootPart = Humanoid and Humanoid.RootPart
-	if GetNearestPlayers() and Humanoid and RootPart and not IsVoiding then
-		IsVoiding = true
-		local CurrentPosition = RootPart.Velocity.Magnitude < 50 and RootPart.CFrame or Camera.Focus
-		local Timer = tick()
-		repeat
-			RootPart.CFrame = CFrame.new(0, -499, 0) * CFrame.Angles(math.rad(90), 0, 0)
-			RootPart.AssemblyLinearVelocity = Vector3.new()
-			task.wait()
-		until tick() > Timer + 1
-		RootPart.AssemblyLinearVelocity = Vector3.new()
-		RootPart.CFrame = CurrentPosition
-		Humanoid:ChangeState(Enum.HumanoidStateType.GettingUp)
-		IsVoiding = false
-	end
-	task.wait()
-end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bmiscellaneous%5D/music%23%5Banti%20bang%5D.lua"))()
 ]], "CS / SS")
 
 -------------------------------------------------------------------------------------------------------------------------------
