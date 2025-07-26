@@ -1001,7 +1001,6 @@ uwu["startup"].Volume = 0
 uwu["startup"].TimePosition = 0
 
 function playclicksound()
-	updcols()
 	local newSound = uwu["click sound"]:Clone()
 	newSound.Parent = uwu["click sound"].Parent
 	newSound:Play()
