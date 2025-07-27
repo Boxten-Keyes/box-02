@@ -1004,9 +1004,7 @@ function playclicksound()
 	local newSound = uwu["click sound"]:Clone()
 	newSound.Parent = uwu["click sound"].Parent
 	newSound:Play()
-	task.spawn(updcols)
 	newSound.Ended:Connect(function() newSound:Destroy() end)
-	task.spawn(updcols)
 end
 
 uwu["startup"]:Play()
