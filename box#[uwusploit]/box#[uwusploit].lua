@@ -13674,6 +13674,42 @@ cscript("anti bang", [[
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bmiscellaneous%5D/music%23%5Banti%20bang%5D.lua"))()
 ]], "CS / SS")
 
+cscript("mute boomboxes", [[
+if not notifiedRespectFiltering and game["SoundService"].RespectFilteringEnabled then 
+	notifiedRespectFiltering = true 
+end
+
+local players = game:GetService("Players"):GetPlayers()
+
+while true do
+	for _, player in pairs(players) do
+		task.spawn(function()
+			if player.Character then
+				for _, sound in next, player.Character:GetDescendants() do
+					if sound:IsA("Sound") and sound.Playing then
+						sound.Playing = false
+					end
+				end
+			end
+
+			local backpack = player:FindFirstChildOfClass("Backpack")
+			if backpack then
+				for _, sound in next, backpack:GetDescendants() do
+					if sound:IsA("Sound") and sound.Playing then
+						sound.Playing = false
+					end
+				end
+			end
+		end)
+	end
+	task.wait()
+end
+]], "CS / SS")
+
+cscript("plasma fe", [[
+loadstring(game:HttpGet("https://plasmaadmin.xyz/Free-Script"))()
+]], "LS")
+
 -------------------------------------------------------------------------------------------------------------------------------
 
 uwu["commands tab"].Size = UDim2.new(0, 100, 0, 26)
