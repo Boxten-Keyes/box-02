@@ -5546,7 +5546,7 @@ uwu["introduction text padding"] = Instance.new("UIPadding")
 uwu["introduction text padding"].PaddingBottom = UDim.new(0, 2)
 uwu["introduction text padding"].Parent = uwu["introduction"]
 
-uwu["introduction"].Text = "welcome to uwusploit [v".. uwu["version"] .."]\n\ndeveloped by team noxious & team occulence"
+uwu["introduction"].Text = "welcome to uwusploit [v".. uwu["version"] .."]\n\ndeveloped by team noxious, team occulence &\nteam symphysis"
 
 -------------------------------------------------------------------------------------------------------------------------------
 
@@ -6785,7 +6785,7 @@ uwu["backdoor info holder"].TextColor3 = uwu["default border color"]
 uwu["backdoor info holder"].Font = Enum.Font.RobotoMono
 uwu["backdoor info holder"].TextSize = 15
 uwu["backdoor info holder"].TextScaled = false
-uwu["backdoor info holder"].Text = "respectfilteringenabled = " .. rfe .. "\nbackdoors found: 0\nbackdoor path: n/a\nmethod used: n/a\nbackdoor level: n/a (none found)\nbackdoor destructivity level: n/a\nbackdoor type: n/a\npgrab availability: n/a\nexecutor identity: 8"
+uwu["backdoor info holder"].Text = "respectfilteringenabled = " .. rfe .. "\nbackdoors found: 0\nbackdoor path: n/a\nmethod used: n/a\nbackdoor type: n/a\nexecutor identity: 8"
 uwu["backdoor info holder"].TextXAlignment = Enum.TextXAlignment.Left
 uwu["backdoor info holder"].TextYAlignment = Enum.TextYAlignment.Top
 uwu["backdoor info holder"].ZIndex = 25
@@ -7105,7 +7105,7 @@ uwu["backdoor scan button"].MouseButton1Click:Connect(function()
 						backdoorPath = remote:GetFullName()
 
 						uwu["backdoor info holder"].Text = string.format(
-							"respectfilteringenabled = " .. rfe .. "\nbackdoors found: 1\nbackdoor path: %s\nmethod used: remote scan\nbackdoor level: 6.000000033 (only affects server)\nbackdoor destructivity level: n/a\nbackdoor type: n/a\npgrab availability: n/a\nexecutor identity: 8",
+							"respectfilteringenabled = " .. rfe .. "\nbackdoors found: 1\nbackdoor path: %s\nmethod used: remote scan\nbackdoor type: n/a\nexecutor identity: 8",
 							backdoorPath
 						)
 
@@ -7177,7 +7177,7 @@ uwu["backdoor scan button"].MouseButton1Click:Connect(function()
 				wait()
 			end
 
-			uwu["backdoor info holder"].Text = "respectfilteringenabled = " .. rfe .. "\nbackdoors found: 0\nbackdoor path: n/a\nmethod used: remote scan (unsuccessful)\nbackdoor level: n/a (none found)\nbackdoor destructivity level: n/a\nbackdoor type: n/a\npgrab availability: n/a\nexecutor identity: 8"
+			uwu["backdoor info holder"].Text = "respectfilteringenabled = " .. rfe .. "\nbackdoors found: 0\nbackdoor path: n/a\nmethod used: remote scan (unsuccessful)\nbackdoor type: n/a\nexecutor identity: 8"
 			return false
 		end
 
@@ -7215,7 +7215,7 @@ uwu["backdoor scan button"].MouseButton1Click:Connect(function()
 			addTextWithNewline(uwu["logs textbox"], "using remote scan method.")
 			wait(0.1)
 			addTextWithNewline(uwu["logs textbox"], "scanning...")
-			uwu["backdoor info holder"].Text = "respectfilteringenabled = " .. rfe .. "\nbackdoors found: 0\nbackdoor path: n/a\nmethod used: remote scan\nbackdoor level: n/a (none found)\nbackdoor destructivity level: n/a\nbackdoor type: n/a\npgrab availability: n/a\nexecutor identity: 8"
+			uwu["backdoor info holder"].Text = "respectfilteringenabled = " .. rfe .. "\nbackdoors found: 0\nbackdoor path: n/a\nmethod used: remote scan\nbackdoor type: n/a\nexecutor identity: 8"
 
 			wait(1)
 
@@ -15705,7 +15705,7 @@ addcommand("strollerkill", "skill", function(target)
 
 		stroller.Parent = char
 		task.wait(0.1)
-		
+
 		targetHRP.CFrame = hrp.CFrame * CFrame.new(0, 0, -5)
 		task.wait(0.2)
 
@@ -15723,7 +15723,7 @@ addcommand("strollerkill", "skill", function(target)
 		hrp.CFrame = oldcframe
 		strollerkilling = false
 	end
-	
+
 	local input = target
 	local target = getTargetPlayer(input)
 
@@ -15813,7 +15813,7 @@ addcommand("strollerbring", "sbring", function(target)
 
 		stroller.Parent = char
 		task.wait(0.1)
-		
+
 		targetHRP.CFrame = hrp.CFrame * CFrame.new(0, 0, -5)
 		task.wait(0.2)
 
