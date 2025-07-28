@@ -15663,13 +15663,14 @@ addcommand("strollerkill", "skill", function(target)
 
 		local oldcframe = hrp.CFrame
 
+		stroller.Parent = char
+		task.wait(0.1)
+		
 		targetHRP.CFrame = hrp.CFrame * CFrame.new(0, 0, -5)
 		task.wait(0.2)
 
-		stroller.Parent = char
-		task.wait(0.1)
-
 		game.Workspace.FallenPartsDestroyHeight = 0 / 0
+		targetHRP.CFrame = hrp.CFrame * CFrame.new(0, 0, -5)
 		hrp.CFrame = CFrame.new(0, -3000, 0)
 		task.wait(0.2)
 
@@ -15770,13 +15771,14 @@ addcommand("strollerbring", "sbring", function(target)
 
 		local oldcframe = hrp.CFrame
 
+		stroller.Parent = char
+		task.wait(0.1)
+		
 		targetHRP.CFrame = hrp.CFrame * CFrame.new(0, 0, -5)
 		task.wait(0.2)
 
-		stroller.Parent = char
-		task.wait(0.3)
-
 		hrp.CFrame = oldcframe
+		targetHRP.CFrame = hrp.CFrame * CFrame.new(0, 0, -5)
 		task.wait(0.1)
 
 		hrp.CFrame = oldcframe
