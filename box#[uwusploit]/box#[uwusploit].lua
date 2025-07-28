@@ -13710,6 +13710,10 @@ cscript("plasma fe", [[
 loadstring(game:HttpGet("https://plasmaadmin.xyz/Free-Script"))()
 ]], "LS")
 
+cscript("dandy's world nametags", [[
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bmiscellaneous%5D/music%23%5Bdandy's%20world%20nametags%5D.lua"))()
+]], "LS")
+
 -------------------------------------------------------------------------------------------------------------------------------
 
 uwu["commands tab"].Size = UDim2.new(0, 100, 0, 26)
