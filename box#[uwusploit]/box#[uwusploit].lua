@@ -15595,6 +15595,218 @@ end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
+strollerkilling = false
+
+addcommand("strollerkill", "skill", function(target)
+	local function getTargetPlayer(partial)
+		partial = partial:lower()
+
+		if partial == "random" then
+			local candidates = {}
+			for _, player in ipairs(uwu["players"]:GetPlayers()) do
+				if player ~= uwu["local player"] then
+					table.insert(candidates, player)
+				end
+			end
+			if #candidates > 0 then
+				return candidates[math.random(1, #candidates)]
+			else
+				return nil
+			end
+		end
+
+		if partial == "all" or partial == "others" then
+			return partial
+		end
+
+		for _, player in ipairs(uwu["players"]:GetPlayers()) do
+			if player ~= uwu["local player"] and player.DisplayName:lower():find(partial) then
+				return player
+			end
+		end
+
+		for _, player in ipairs(uwu["players"]:GetPlayers()) do
+			if player ~= uwu["local player"] and player.Name:lower():find(partial) then
+				return player
+			end
+		end
+
+		return nil
+	end
+
+	local function yeetPlayer(target)
+		local char = uwu["local player"].Character
+		local hrp = char and char:FindFirstChild("HumanoidRootPart")
+		if not hrp then return end
+		if strollerkilling then return end
+		strollerkilling = true
+
+		local stroller = uwu["local player"].Backpack:FindFirstChild("Stroller") or char:FindFirstChild("Stroller")
+		if not stroller then
+			strollerkilling = false
+			return
+		end
+
+		local targetChar = target.Character
+		if not targetChar then 
+			strollerkilling = false
+			return 
+		end
+
+		local targetHRP = targetChar:FindFirstChild("HumanoidRootPart")
+		if not targetHRP then 
+			strollerkilling = false
+			return 
+		end
+
+		local oldcframe = hrp.CFrame
+
+		targetHRP.CFrame = hrp.CFrame * CFrame.new(0, 0, -5)
+		task.wait(0.2)
+
+		stroller.Parent = char
+		task.wait(0.1)
+
+		game.Workspace.FallenPartsDestroyHeight = 0 / 0
+		hrp.CFrame = CFrame.new(0, -3000, 0)
+		task.wait(0.2)
+
+		stroller.Parent = uwu["local player"].Backpack
+		task.wait(0.2)
+
+		hrp.CFrame = oldcframe
+		task.wait(0.1)
+
+		hrp.CFrame = oldcframe
+		strollerkilling = false
+	end
+	
+	local input = target
+	local target = getTargetPlayer(input)
+
+	if not target then return end
+
+	if target == "all" or target == "others" then
+		for _, player in ipairs(uwu["players"]:GetPlayers()) do
+			if player ~= uwu["local player"] then
+				local char = player.Character
+				if char and not (char:FindFirstChild("Stroller")) then
+					yeetPlayer(player)
+				end
+			end
+		end
+	else
+		yeetPlayer(target)
+	end
+end)
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+strollerbringing = false
+
+addcommand("strollerbring", "sbring", function(target)
+	local function getTargetPlayer(partial)
+		partial = partial:lower()
+
+		if partial == "random" then
+			local candidates = {}
+			for _, player in ipairs(uwu["players"]:GetPlayers()) do
+				if player ~= uwu["local player"] then
+					table.insert(candidates, player)
+				end
+			end
+			if #candidates > 0 then
+				return candidates[math.random(1, #candidates)]
+			else
+				return nil
+			end
+		end
+
+		if partial == "all" or partial == "others" then
+			return partial
+		end
+
+		for _, player in ipairs(uwu["players"]:GetPlayers()) do
+			if player ~= uwu["local player"] and player.DisplayName:lower():find(partial) then
+				return player
+			end
+		end
+
+		for _, player in ipairs(uwu["players"]:GetPlayers()) do
+			if player ~= uwu["local player"] and player.Name:lower():find(partial) then
+				return player
+			end
+		end
+
+		return nil
+	end
+
+	local function bringPlayer(target)
+		local char = uwu["local player"].Character
+		local hrp = char and char:FindFirstChild("HumanoidRootPart")
+		if not hrp then return end
+		if strollerbringing then return end
+		strollerbringing = true
+
+		local stroller = uwu["local player"].Backpack:FindFirstChild("Stroller") or char:FindFirstChild("Stroller")
+		if not stroller then
+			strollerbringing = false
+			return
+		end
+
+		local targetChar = target.Character
+		if not targetChar then 
+			strollerbringing = false
+			return 
+		end
+
+		local targetHRP = targetChar:FindFirstChild("HumanoidRootPart")
+		if not targetHRP then 
+			strollerbringing = false
+			return 
+		end
+
+		local oldcframe = hrp.CFrame
+
+		targetHRP.CFrame = hrp.CFrame * CFrame.new(0, 0, -5)
+		task.wait(0.2)
+
+		stroller.Parent = char
+		task.wait(0.3)
+
+		hrp.CFrame = oldcframe
+		task.wait(0.1)
+
+		hrp.CFrame = oldcframe
+		stroller.Parent = uwu["local player"].Backpack
+
+		strollerbringing = false
+	end
+
+	local input = target
+	local target = getTargetPlayer(input)
+
+	if not target then
+		return
+	end
+
+	if target == "all" or target == "others" then
+		for _, player in ipairs(uwu["players"]:GetPlayers()) do
+			if player ~= uwu["local player"] then
+				local char = player.Character
+				if char and not (char:FindFirstChild("Stroller")) then
+					bringPlayer(player)
+					task.wait(0.5)
+				end
+			end
+		end
+	else
+		bringPlayer(target)
+	end
+end)
+
+-------------------------------------------------------------------------------------------------------------------------------
+
 addcommand("explode", "explode", function(target)
 	local players = game:GetService("Players"):GetPlayers()
 
@@ -16594,7 +16806,7 @@ end)
 
 addcommand("bodyfling", "bfling", function(...)
 	local target = table.concat({...}, " ")
-	
+
 	local Targets = target
 
 	local Players = game:GetService("Players")
