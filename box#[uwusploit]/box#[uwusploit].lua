@@ -16806,10 +16806,8 @@ end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-addcommand("bodyfling", "bfling", function(...)
-	local target = table.concat({...}, " ")
-
-	local Targets = target
+addcommand("bodyfling", "bfling", function(target)
+	local Targets = {target}
 
 	local Players = game:GetService("Players")
 	local Player = Players.LocalPlayer
