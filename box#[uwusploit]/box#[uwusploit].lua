@@ -12154,7 +12154,7 @@ cscript("anti fall damage", [[
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bmiscellaneous%5D/music%23%5Banti%20fall%20damage%5D.lua"))()
 ]], "CS / SS")
 
-cscript("crawl tool", [[
+cscript("r6 crawl tool", [[
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local LocalPlayer = Players.LocalPlayer
@@ -12256,7 +12256,8 @@ end
 LocalPlayer.CharacterAdded:Connect(onCharacterAdded)
 ]], "CS / SS")
 
-cscript("jerk off tool", [[
+cscript("r6 jerk off tool", [[
+task.spawn(function()
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local TOOL_NAME = "jerk off"
@@ -12338,9 +12339,94 @@ end
 
 local tool = giveTool()
 setupTool(tool)
+end)
+
+task.spawn(function()
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local TOOL_NAME = "hyperdrive jerk"
+local ANIMATION_ID = "rbxassetid://72042024"
+local ANIMATION_ID2 = "rbxassetid://168268306"
+
+local function giveTool()
+	if LocalPlayer:FindFirstChildOfClass("Backpack"):FindFirstChild(TOOL_NAME) then return end
+
+	local tool = Instance.new("Tool")
+	tool.Name = TOOL_NAME
+	tool.RequiresHandle = false
+	tool.CanBeDropped = false
+	tool.Parent = LocalPlayer:WaitForChild("Backpack")
+
+	return tool
+end
+
+local function setupTool(tool)
+	local animTrack = nil
+	local animTrack2 = nil
+	local loopConnection = nil
+	local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+	local humanoid = character:WaitForChild("Humanoid")
+	local animator = humanoid:FindFirstChildOfClass("Animator") or Instance.new("Animator", humanoid)
+
+	local animation = Instance.new("Animation")
+	animation.AnimationId = ANIMATION_ID
+	local animation2 = Instance.new("Animation")
+	animation2.AnimationId = ANIMATION_ID2
+
+	tool.Equipped:Connect(function()
+		if animTrack then
+			animTrack:Stop()
+			animTrack = nil
+		end
+		if loopConnection then
+			loopConnection:Disconnect()
+			loopConnection = nil
+		end
+
+		animTrack = animator:LoadAnimation(animation)
+		animTrack.Priority = Enum.AnimationPriority.Action
+		animTrack.Looped = false
+		animTrack:Play()
+		animTrack.TimePosition = 0.4
+    animTrack:AdjustSpeed(2)
+        
+    animTrack2 = animator:LoadAnimation(animation2)
+    animTrack.Priority = Enum.AnimationPriority.Action
+    animTrack2:Play()
+    animTrack2.TimePosition = 1
+    animTrack2:AdjustSpeed(0)
+
+		loopConnection = game:GetService("RunService").Heartbeat:Connect(function()
+			if animTrack and animTrack.Length > 0 and animTrack.TimePosition >= animTrack.Length then
+				animTrack:Play()
+				animTrack.TimePosition = 0.4
+        animTrack:AdjustSpeed(2)
+			end
+		end)
+	end)
+
+	tool.Unequipped:Connect(function()
+		if animTrack then
+			animTrack:Stop()
+			animTrack = nil
+		end
+		if animTrack2 then
+			animTrack2:Stop()
+			animTrack2 = nil
+		end
+		if loopConnection then
+			loopConnection:Disconnect()
+			loopConnection = nil
+		end
+	end)
+end
+
+local tool = giveTool()
+setupTool(tool)
+end)
 ]], "CS / SS")
 
-cscript("hitler salute tool", [[
+cscript("r6 hitler salute tool", [[
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local TOOL_NAME = "austrian salute"
@@ -12388,7 +12474,7 @@ local tool = giveTool()
 setupTool(tool)
 ]], "CS / SS")
 
-cscript("dab tool", [[
+cscript("r6 dab tool", [[
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local TOOL_NAME = "dab"
@@ -12434,7 +12520,7 @@ local tool = giveTool()
 setupTool(tool)
 ]], "CS / SS")
 
-cscript("arm helicopter tool", [[
+cscript("r6 arm helicopter tool", [[
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local TOOL_NAME = "arm helicopter"
@@ -12481,7 +12567,7 @@ local tool = giveTool()
 setupTool(tool)
 ]], "CS / SS")
 
-cscript("lay down tool", [[
+cscript("r6 lay down tool", [[
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local TOOL_NAME = "lay down"
@@ -12528,7 +12614,7 @@ local tool = giveTool()
 setupTool(tool)
 ]], "CS / SS")
 
-cscript("t pose tool", [[
+cscript("r6 t pose tool", [[
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local TOOL_NAME = "t pose"
@@ -12575,7 +12661,7 @@ local tool = giveTool()
 setupTool(tool)
 ]], "CS / SS")
 
-cscript("hands up tool", [[
+cscript("r6 hands up tool", [[
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local TOOL_NAME = "hands up"
@@ -12622,7 +12708,7 @@ local tool = giveTool()
 setupTool(tool)
 ]], "CS / SS")
 
-cscript("dance tool", [[
+cscript("r6 dance tool", [[
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local TOOL_NAME = "dance"
@@ -12694,7 +12780,7 @@ local tool = giveTool()
 setupTool(tool)
 ]], "CS / SS")
 
-cscript("the charleston tool", [[
+cscript("r6 the charleston tool", [[
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local TOOL_NAME = "the charleston"
@@ -12740,7 +12826,7 @@ local tool = giveTool()
 setupTool(tool)
 ]], "CS / SS")
 
-cscript("kneel down tool", [[
+cscript("r6 kneel down tool", [[
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local TOOL_NAME = "kneel down"
@@ -12787,7 +12873,7 @@ local tool = giveTool()
 setupTool(tool)
 ]], "CS / SS")
 
-cscript("cradle tool", [[
+cscript("r6 cradle tool", [[
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local TOOL_NAME = "cradle"
@@ -12835,7 +12921,7 @@ local tool = giveTool()
 setupTool(tool)
 ]], "CS / SS")
 
-cscript("jumping jacks tool", [[
+cscript("r6 jumping jacks tool", [[
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local TOOL_NAME = "jumping jacks"
@@ -12881,7 +12967,7 @@ local tool = giveTool()
 setupTool(tool)
 ]], "CS / SS")
 
-cscript("frantic tool", [[
+cscript("r6 frantic tool", [[
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local TOOL_NAME = "frantic"
@@ -12927,7 +13013,7 @@ local tool = giveTool()
 setupTool(tool)
 ]], "CS / SS")
 
-cscript("shocked tool", [[
+cscript("r6 shocked tool", [[
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local TOOL_NAME = "shocked"
@@ -12975,7 +13061,7 @@ local tool = giveTool()
 setupTool(tool)
 ]], "CS / SS")
 
-cscript("spin dance tool", [[
+cscript("r6 spin dance tool", [[
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local TOOL_NAME = "spin dance"
@@ -13021,7 +13107,7 @@ local tool = giveTool()
 setupTool(tool)
 ]], "CS / SS")
 
-cscript("look right tool", [[
+cscript("r6 look right tool", [[
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local TOOL_NAME = "look right"
@@ -13067,7 +13153,7 @@ local tool = giveTool()
 setupTool(tool)
 ]], "CS / SS")
 
-cscript("bow down tool", [[
+cscript("r6 bow down tool", [[
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local TOOL_NAME = "bow down"
@@ -13115,7 +13201,7 @@ local tool = giveTool()
 setupTool(tool)
 ]], "CS / SS")
 
-cscript("the thinker tool", [[
+cscript("r6 the thinker tool", [[
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local TOOL_NAME = "the thinker"
@@ -13188,7 +13274,7 @@ local tool = giveTool()
 setupTool(tool)
 ]], "CS / SS")
 
-cscript("imitate sucking tool", [[
+cscript("r6 imitate sucking tool", [[
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local TOOL_NAME = "imitate sucking"
@@ -13249,7 +13335,7 @@ local tool = giveTool()
 setupTool(tool)
 ]], "CS / SS")
 
-cscript("kneel suck tool", [[
+cscript("r6 kneel suck tool", [[
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local TOOL_NAME = "kneel suck"
@@ -13311,6 +13397,63 @@ local function setupTool(tool)
 	end)
 
 	tool.Unequipped:Connect(stopAll)
+end
+
+local tool = giveTool()
+setupTool(tool)
+]], "CS / SS")
+
+cscript("r15 twerk tool", [[
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local TOOL_NAME = "shake dat ass"
+local ANIMATION_ID = "rbxassetid://12874447851"
+
+local function giveTool()
+	local backpack = LocalPlayer:WaitForChild("Backpack")
+	if backpack:FindFirstChild(TOOL_NAME) then return nil end
+
+	local tool = Instance.new("Tool")
+	tool.Name = TOOL_NAME
+	tool.RequiresHandle = false
+	tool.CanBeDropped = false
+	tool.Parent = backpack
+
+	return tool
+end
+
+local function setupTool(tool)
+	if not tool then return end
+
+	local animTrack = nil
+	local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+	local humanoid = character:WaitForChild("Humanoid")
+	local animator = humanoid:FindFirstChildOfClass("Animator") or Instance.new("Animator", humanoid)
+
+	local animation = Instance.new("Animation")
+	animation.AnimationId = ANIMATION_ID
+
+	tool.Equipped:Connect(function()
+		if animTrack then
+			animTrack:Stop()
+		end
+
+		animTrack = animator:LoadAnimation(animation)
+		animTrack.Priority = Enum.AnimationPriority.Action
+        while true do
+        animTrack:Play()
+		animTrack.TimePosition = 4.2
+        task.wait(0.49)
+        end
+	end)
+
+	tool.Unequipped:Connect(function()
+		if animTrack then
+			animTrack:Stop()
+			animTrack = nil
+		end
+	end)
 end
 
 local tool = giveTool()
