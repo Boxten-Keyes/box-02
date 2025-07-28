@@ -15089,6 +15089,8 @@ end)
 
 local commandList = {
 	"kill [target]",
+	"strollerkill, skill [target]",
+	"strollerbring, sbring [target]",
 	"health [target] [number]",
 	"bodyfling, bfling [target]",
 	"walkfling, wfling",
