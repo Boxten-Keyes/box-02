@@ -12234,7 +12234,6 @@ end
 if LocalPlayer.Character then
 	onCharacterAdded(LocalPlayer.Character)
 end
-LocalPlayer.CharacterAdded:Connect(onCharacterAdded)
 ]], "CS / SS")
 
 cscript("r6 jerk off tool", [[
@@ -12320,8 +12319,6 @@ end
 
 local tool = giveTool()
 setupTool(tool)
-
-LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 end)
 
 task.spawn(function()
@@ -12406,8 +12403,6 @@ end
 
 local tool = giveTool()
 setupTool(tool)
-
-LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 end)
 ]], "CS / SS")
 
@@ -12457,8 +12452,6 @@ end
 
 local tool = giveTool()
 setupTool(tool)
-
-LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 dab tool", [[
@@ -12505,8 +12498,6 @@ end
 
 local tool = giveTool()
 setupTool(tool)
-
-LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 arm helicopter tool", [[
@@ -12554,8 +12545,6 @@ end
 
 local tool = giveTool()
 setupTool(tool)
-
-LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 lay down tool", [[
@@ -12603,8 +12592,6 @@ end
 
 local tool = giveTool()
 setupTool(tool)
-
-LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 t pose tool", [[
@@ -12652,8 +12639,6 @@ end
 
 local tool = giveTool()
 setupTool(tool)
-
-LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 hands up tool", [[
@@ -12701,8 +12686,6 @@ end
 
 local tool = giveTool()
 setupTool(tool)
-
-LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 dance tool", [[
@@ -12775,8 +12758,6 @@ end
 
 local tool = giveTool()
 setupTool(tool)
-
-LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 the charleston tool", [[
@@ -12823,8 +12804,6 @@ end
 
 local tool = giveTool()
 setupTool(tool)
-
-LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 kneel down tool", [[
@@ -12872,8 +12851,6 @@ end
 
 local tool = giveTool()
 setupTool(tool)
-
-LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 cradle tool", [[
@@ -12922,8 +12899,6 @@ end
 
 local tool = giveTool()
 setupTool(tool)
-
-LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 jumping jacks tool", [[
@@ -12970,8 +12945,6 @@ end
 
 local tool = giveTool()
 setupTool(tool)
-
-LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 frantic tool", [[
@@ -13018,8 +12991,6 @@ end
 
 local tool = giveTool()
 setupTool(tool)
-
-LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 shocked tool", [[
@@ -13068,8 +13039,6 @@ end
 
 local tool = giveTool()
 setupTool(tool)
-
-LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 spin dance tool", [[
@@ -13116,8 +13085,6 @@ end
 
 local tool = giveTool()
 setupTool(tool)
-
-LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 look right tool", [[
@@ -13164,8 +13131,6 @@ end
 
 local tool = giveTool()
 setupTool(tool)
-
-LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 bow down tool", [[
@@ -13214,8 +13179,6 @@ end
 
 local tool = giveTool()
 setupTool(tool)
-
-LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 the thinker tool", [[
@@ -13289,8 +13252,6 @@ end
 
 local tool = giveTool()
 setupTool(tool)
-
-LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 imitate sucking tool", [[
@@ -13352,8 +13313,6 @@ end
 
 local tool = giveTool()
 setupTool(tool)
-
-LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 kneel suck tool", [[
@@ -13422,8 +13381,6 @@ end
 
 local tool = giveTool()
 setupTool(tool)
-
-LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r15 twerk tool", [[
@@ -13481,8 +13438,6 @@ end
 
 local tool = giveTool()
 setupTool(tool)
-
-LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r15 drift tool", [[
@@ -13600,8 +13555,6 @@ end
 
 local tool = giveTool()
 setupTool(tool)
-
-LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("aquamatrix", [[
