@@ -12111,18 +12111,6 @@ cscript("betterbypasser", [[
 loadstring(game:HttpGet("https://github.com/Synergy-Networks/products/raw/main/BetterBypasser/loader.lua"))()
 ]], "LS")
 
-cscript("NDS launch rocket", [[
-for _, model in ipairs(workspace:FindFirstChild("Structure"):GetChildren()) do
-	if model:IsA("Model") then
-		for _, descendant in ipairs(model:GetDescendants()) do
-			if descendant:IsA("ClickDetector") and descendant.Parent then
-				fireclickdetector(descendant, 0)
-			end
-		end
-	end
-end
-]], "CS / SS")
-
 cscript("nullfire", [[ 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/InfernusScripts/Null-Fire/main/Loader"))()
 ]], "LS")
@@ -15234,14 +15222,25 @@ end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-local commandList = 
-  "┌ game commands",
-  "└ this game is not supported.",
-  "",
+local gameSpecificCommands = {
+	[189707] = { -- nds
+		"├ launchrocket, lr",
+	},
+	[1662219031] = { -- lip
+		"├ strollerkill, skill [target]",
+		"├ strollerbring, sbring [target]",
+	},
+}
+
+local commandList = {
+	"┌ game commands",
+	"├───",
+	"├ this game is not supported.",
+	"└───",
+	"",
 	"┌ universal commands",
+	"├───",
 	"├ kill [target]",
-	"├ strollerkill, skill [target]",
-	"├ strollerbring, sbring [target]",
 	"├ health [target] [number]",
 	"├ bodyfling, bfling [target]",
 	"├ walkfling, wfling",
@@ -15323,9 +15322,11 @@ local commandList =
 	"├ message [text]",
 	"├ closemessages, nomsgs",
 	"├ closeunlabeledmessages, noulmsgs",
-	"└ closelabeledmessages, nolmsgs",
-  "",
-  "┌ backdoor commands",
+	"├ closelabeledmessages, nolmsgs",
+	"└───",
+	"",
+	"┌ backdoor commands",
+	"├───",
 	"├ guns [target]",
 	"├ btools, f3x [target]",
 	"├ tools [target]",
@@ -15336,7 +15337,8 @@ local commandList =
 	"├ eggdog [target]",
 	"├ kick [target] [text]",
 	"├ ban [target]",
-	"└ kazotskykick, kk [target]",
+	"├ kazotskykick, kk [target]",
+	"└───",
 	-- "",
 	-- "dance1 [target]",
 	-- "undance1 [target]",
@@ -15356,16 +15358,26 @@ local commandList =
 	-- "stopanim [target]",
 	-- "reanim [target]",
 	-- "headthrow [target]",
-  "",
-  "┌ tabs",
+	"",
+	"┌ tabs",
+	"├───",
 	"├ opendonuttab, donut",
 	"├ openbinarytab, binary",
 	"├ openheadcanongeneratortab, hcgen",
 	"├ opengaydartab, gaydar",
 	"├ openvideotab, video",
 	"├ openmessagereversertab, msgreverser",
-	"└ opennoxsecencoderanddecodertab, noxsec",
+	"├ opennoxsecencoderanddecodertab, noxsec",
+	"└───",
 }
+
+local specificCommands = gameSpecificCommands[game.PlaceId]
+if specificCommands then
+	table.remove(commandList, 3)
+	for i, line in ipairs(specificCommands) do
+		table.insert(commandList, 2 + i, line)
+	end
+end
 
 populateList(uwu["list of commands"], commandList)
 
@@ -15749,9 +15761,25 @@ end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
+addcommand("launchrocket", "lr", function()
+	if game.PlaceId ~= 189707 then return end
+	for _, model in ipairs(workspace:FindFirstChild("Structure"):GetChildren()) do
+		if model:IsA("Model") then
+			for _, descendant in ipairs(model:GetDescendants()) do
+				if descendant:IsA("ClickDetector") and descendant.Parent then
+					fireclickdetector(descendant, 0)
+				end
+			end
+		end
+	end
+end)
+
+-------------------------------------------------------------------------------------------------------------------------------
+
 strollerkilling = false
 
 addcommand("strollerkill", "skill", function(target)
+	if game.PlaceId ~= 1662219031 then return end
 	local function getTargetPlayer(partial)
 		partial = partial:lower()
 
@@ -15860,6 +15888,7 @@ end)
 strollerbringing = false
 
 addcommand("strollerbring", "sbring", function(target)
+	if game.PlaceId ~= 1662219031 then return end
 	local function getTargetPlayer(partial)
 		partial = partial:lower()
 
