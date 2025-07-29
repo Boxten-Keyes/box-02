@@ -1150,7 +1150,6 @@ local buttonConfigs = {
 				uwu["main frame 3"].Visible = false
 				uwu["main frame 4"].Visible = true
 				lastVisibleFrame = "main frame 4"
-				task.spawn(updcols)
 			end
 		end
 	},
@@ -1170,7 +1169,6 @@ local buttonConfigs = {
 				uwu["main frame 3"].Visible = false
 				uwu["main frame 4"].Visible = false
 				lastVisibleFrame = "main frame 2"
-				task.spawn(updcols)
 			end
 		end
 	},
@@ -1190,7 +1188,6 @@ local buttonConfigs = {
 				uwu["main frame 3"].Visible = false
 				uwu["main frame 4"].Visible = false
 				lastVisibleFrame = "main frame 1"
-				task.spawn(updcols)
 			end
 		end
 	},
@@ -1210,7 +1207,6 @@ local buttonConfigs = {
 				uwu["main frame 3"].Visible = true
 				uwu["main frame 4"].Visible = false
 				lastVisibleFrame = "main frame 3"
-				task.spawn(updcols)
 			end
 		end
 	}
@@ -1282,7 +1278,6 @@ local hideOffsets = {
 }
 
 uwu["toggle interface visibility button"].MouseButton1Click:Connect(function()
-	spawn(updcols)
 
 	if not canpress then return end
 	if not canpress2 then return end
@@ -1699,7 +1694,6 @@ uwu["donut tab top bar minimize button"].MouseButton1Click:Connect(function()
 
 		donuttabreallyminimized = true
 		uwu["donut tab block main frame"].Visible = false
-		updcols()
 	else
 		uwu["donut tab top bar minimize button"].Text = "-"
 		uwu["donut tab block main frame"].Visible = true
@@ -1718,7 +1712,6 @@ uwu["donut tab top bar minimize button"].MouseButton1Click:Connect(function()
 
 		donuttabreallyminimized = false
 		uwu["donut tab block main frame"].Visible = false
-		updcols()
 	end
 
 	donuttabcanminimize = true
@@ -1979,7 +1972,6 @@ uwu["binary tab top bar minimize button"].MouseButton1Click:Connect(function()
 
 		binarytabreallyminimized = true
 		uwu["binary tab block main frame"].Visible = false
-		updcols()
 	else
 		uwu["binary tab top bar minimize button"].Text = "-"
 		uwu["binary tab block main frame"].Visible = true
@@ -1998,7 +1990,6 @@ uwu["binary tab top bar minimize button"].MouseButton1Click:Connect(function()
 
 		binarytabreallyminimized = false
 		uwu["binary tab block main frame"].Visible = false
-		updcols()
 	end
 
 	binarytabcanminimize = true
@@ -2273,7 +2264,6 @@ uwu["video tab top bar minimize button"].MouseButton1Click:Connect(function()
 
 		videotabreallyminimized = true
 		uwu["video tab block main frame"].Visible = false
-		updcols()
 	else
 		uwu["video tab top bar minimize button"].Text = "-"
 		uwu["video tab block main frame"].Visible = true
@@ -2292,7 +2282,6 @@ uwu["video tab top bar minimize button"].MouseButton1Click:Connect(function()
 
 		videotabreallyminimized = false
 		uwu["video tab block main frame"].Visible = false
-		updcols()
 	end
 
 	videotabcanminimize = true
@@ -2573,7 +2562,6 @@ uwu["gaydar tab top bar minimize button"].MouseButton1Click:Connect(function()
 
 		gaydartabreallyminimized = true
 		uwu["gaydar tab block main frame"].Visible = false
-		updcols()
 	else
 		uwu["gaydar tab top bar minimize button"].Text = "-"
 		uwu["gaydar tab block main frame"].Visible = true
@@ -2592,7 +2580,6 @@ uwu["gaydar tab top bar minimize button"].MouseButton1Click:Connect(function()
 
 		gaydartabreallyminimized = false
 		uwu["gaydar tab block main frame"].Visible = false
-		updcols()
 	end
 
 	gaydartabcanminimize = true
@@ -3019,7 +3006,6 @@ uwu["headcanon generator tab top bar minimize button"].MouseButton1Click:Connect
 
 		hcgentabreallyminimized = true
 		uwu["headcanon generator tab block main frame"].Visible = false
-		updcols()
 	else
 		uwu["headcanon generator tab top bar minimize button"].Text = "-"
 		uwu["headcanon generator tab block main frame"].Visible = true
@@ -3038,7 +3024,6 @@ uwu["headcanon generator tab top bar minimize button"].MouseButton1Click:Connect
 
 		hcgentabreallyminimized = false
 		uwu["headcanon generator tab block main frame"].Visible = false
-		updcols()
 	end
 
 	hcgentabcanminimize = true
@@ -3915,7 +3900,6 @@ uwu["message reverser tab top bar minimize button"].MouseButton1Click:Connect(fu
 
 		msgrevtabreallyminimized = true
 		uwu["message reverser tab block main frame"].Visible = false
-		updcols()
 	else
 		uwu["message reverser tab top bar minimize button"].Text = "-"
 		uwu["message reverser tab block main frame"].Visible = true
@@ -3934,7 +3918,6 @@ uwu["message reverser tab top bar minimize button"].MouseButton1Click:Connect(fu
 
 		msgrevtabreallyminimized = false
 		uwu["message reverser tab block main frame"].Visible = false
-		updcols()
 	end
 
 	msgrevcanminimize = true
@@ -4303,7 +4286,6 @@ uwu["noxsec encoder and decoder tab top bar minimize button"].MouseButton1Click:
 
 		noxsectabreallyminimized = true
 		uwu["noxsec encoder and decoder tab block main frame"].Visible = false
-		updcols()
 	else
 		uwu["noxsec encoder and decoder tab top bar minimize button"].Text = "-"
 		uwu["noxsec encoder and decoder tab block main frame"].Visible = true
@@ -4322,7 +4304,6 @@ uwu["noxsec encoder and decoder tab top bar minimize button"].MouseButton1Click:
 
 		noxsectabreallyminimized = false
 		uwu["noxsec encoder and decoder tab block main frame"].Visible = false
-		updcols()
 	end
 
 	noxseccanminimize = true
@@ -21695,7 +21676,6 @@ addcommand("opendonuttab", "donut", function()
 		0.5
 	)
 	tweenIn.Completed:Wait()
-	updcols()
 
 	uwu["donut tab top bar"].Visible = true
 	uwu["donut tab top bar"].BackgroundTransparency = 0
@@ -21772,7 +21752,6 @@ addcommand("openbinarytab", "binary", function()
 		0.5
 	)
 	tweenIn.Completed:Wait()
-	updcols()
 
 	uwu["binary tab top bar"].Visible = true
 	uwu["binary tab top bar"].BackgroundTransparency = 0
@@ -21841,7 +21820,6 @@ addcommand("openheadcanongeneratortab", "hcgen", function()
 		0.5
 	)
 	tweenIn.Completed:Wait()
-	updcols()
 
 	uwu["headcanon generator tab top bar"].Visible = true
 	uwu["headcanon generator tab top bar"].BackgroundTransparency = 0
@@ -21916,7 +21894,6 @@ addcommand("opengaydartab", "gaydar", function()
 		0.5
 	)
 	tweenIn.Completed:Wait()
-	updcols()
 
 	uwu["gaydar tab top bar"].Visible = true
 	uwu["gaydar tab top bar"].BackgroundTransparency = 0
@@ -21990,7 +21967,6 @@ addcommand("openvideotab", "video", function()
 		0.5
 	)
 	tweenIn.Completed:Wait()
-	updcols()
 
 	uwu["video tab top bar"].Visible = true
 	uwu["video tab top bar"].BackgroundTransparency = 0
@@ -22061,7 +22037,6 @@ addcommand("openmessagereversertab", "msgreverser", function()
 		0.5
 	)
 	tweenIn.Completed:Wait()
-	updcols()
 
 	uwu["message reverser tab top bar"].Visible = true
 	uwu["message reverser tab top bar"].BackgroundTransparency = 0
@@ -22136,7 +22111,6 @@ addcommand("opennoxsecencoderanddecodertab", "noxsec", function()
 		0.5
 	)
 	tweenIn.Completed:Wait()
-	updcols()
 
 	uwu["noxsec encoder and decoder tab top bar"].Visible = true
 	uwu["noxsec encoder and decoder tab top bar"].BackgroundTransparency = 0
