@@ -21558,21 +21558,30 @@ end)
 -------------------------------------------------------------------------------------------------------------------------------
 
 local ringPartsEnabled = false
+local config = {
+	radius = 50,
+	height = 100,
+	rotationSpeed = 10,
+	attractionStrength = 3000,
+}
 
-addcommand("partring", "pring", function(radius)
+addcommand("partring", "pring", function(radius, speed)
 	if not ringPartsEnabled then execcmd("unpring") end
 	ringPartsEnabled = true
 
+	if radius then
+		config.radius = tonumber(radius) or config.radius
+	end
+	if speed then
+		config.rotationSpeed = tonumber(speed) or config.rotationSpeed
+	end
+
 	local Players = game:GetService("Players")
 	local RunService = game:GetService("RunService")
-	local UserInputService = game:GetService("UserInputService")
 	local SoundService = game:GetService("SoundService")
-	local StarterGui = game:GetService("StarterGui")
-	local TextChatService = game:GetService("TextChatService")
 
 	local LocalPlayer = Players.LocalPlayer
 
-	-- Ring Parts Logic
 	if not getgenv().Network then
 		getgenv().Network = {
 			BaseParts = {},
@@ -21585,8 +21594,8 @@ addcommand("partring", "pring", function(radius)
 				Part.CanCollide = false
 			end
 		end
+
 		local function EnablePartControl()
-			--LocalPlayer.ReplicationFocus = workspace Yep, this caused the script to be undetectable, now you can freely exploit on those heavy anticheat servers, (lol have fun)
 			RunService.Heartbeat:Connect(function()
 				sethiddenproperty(LocalPlayer, "SimulationRadius", math.huge)
 				for _, Part in pairs(Network.BaseParts) do
@@ -21599,13 +21608,38 @@ addcommand("partring", "pring", function(radius)
 		EnablePartControl()
 	end
 
-	local radius = radius or 50
-	local height = 100
-	local rotationSpeed = 10
-	local attractionStrength = 1000
+	local function ForcePart(v)
+		if v:IsA("Part") and not v.Anchored and not v.Parent:FindFirstChild("Humanoid") and not v.Parent:FindFirstChild("Head") and v.Name ~= "Handle" then
+			for _, x in next, v:GetChildren() do
+				if x:IsA("BodyAngularVelocity") or x:IsA("BodyForce") or x:IsA("BodyGyro") or x:IsA("BodyPosition") or x:IsA("BodyThrust") or x:IsA("BodyVelocity") or x:IsA("RocketPropulsion") then
+					x:Destroy()
+				end
+			end
+			if v:FindFirstChild("Attachment") then
+				v:FindFirstChild("Attachment"):Destroy()
+			end
+			if v:FindFirstChild("AlignPosition") then
+				v:FindFirstChild("AlignPosition"):Destroy()
+			end
+			if v:FindFirstChild("Torque") then
+				v:FindFirstChild("Torque"):Destroy()
+			end
+			v.CanCollide = false
+			local Torque = Instance.new("Torque", v)
+			Torque.Torque = Vector3.new(100000, 100000, 100000)
+			local AlignPosition = Instance.new("AlignPosition", v)
+			local Attachment2 = Instance.new("Attachment", v)
+			Torque.Attachment0 = Attachment2
+			AlignPosition.MaxForce = 9e9
+			AlignPosition.MaxVelocity = math.huge
+			AlignPosition.Responsiveness = 200
+			AlignPosition.Attachment0 = Attachment2
+			AlignPosition.Attachment1 = Attachment1
+		end
+	end
 
 	local function RetainPart(Part)
-		if Part:IsA("BasePart") and not Part.Anchored and Part:IsDescendantOf(workspace) and not Part:IsGrounded() then
+		if Part:IsA("BasePart") and not Part.Anchored and Part:IsDescendantOf(workspace) then
 			if Part.Parent == LocalPlayer.Character or Part:IsDescendantOf(LocalPlayer.Character) then
 				return false
 			end
@@ -21651,14 +21685,14 @@ addcommand("partring", "pring", function(radius)
 					local pos = part.Position
 					local distance = (Vector3.new(pos.X, tornadoCenter.Y, pos.Z) - tornadoCenter).Magnitude
 					local angle = math.atan2(pos.Z - tornadoCenter.Z, pos.X - tornadoCenter.X)
-					local newAngle = angle + math.rad(rotationSpeed)
+					local newAngle = angle + math.rad(config.rotationSpeed)
 					local targetPos = Vector3.new(
-						tornadoCenter.X + math.cos(newAngle) * math.min(radius, distance),
-						tornadoCenter.Y + (height * (math.abs(math.sin((pos.Y - tornadoCenter.Y) / height)))),
-						tornadoCenter.Z + math.sin(newAngle) * math.min(radius, distance)
+						tornadoCenter.X + math.cos(newAngle) * math.min(config.radius, distance),
+						tornadoCenter.Y + (config.height * (math.abs(math.sin((pos.Y - tornadoCenter.Y) / config.height)))),
+						tornadoCenter.Z + math.sin(newAngle) * math.min(config.radius, distance)
 					)
 					local directionToTarget = (targetPos - part.Position).unit
-					part.Velocity = directionToTarget * attractionStrength
+					part.Velocity = directionToTarget * config.attractionStrength
 				end
 			end
 		end
