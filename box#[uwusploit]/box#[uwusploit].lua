@@ -12234,6 +12234,7 @@ end
 if LocalPlayer.Character then
 	onCharacterAdded(LocalPlayer.Character)
 end
+LocalPlayer.CharacterAdded:Connect(onCharacterAdded)
 ]], "CS / SS")
 
 cscript("r6 jerk off tool", [[
@@ -13443,6 +13444,7 @@ setupTool(tool)
 cscript("r15 drift tool", [[
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
+local Workspace = game:GetService("Workspace")
 
 local LocalPlayer = Players.LocalPlayer
 local TOOL_NAME = "drift"
@@ -13480,6 +13482,44 @@ local function setupTool(tool)
 	local active = false
 	local slipperyParts = {}
 	local originalProperties = {}
+	local newPartConnection = nil
+	local walkSpeedConnection = nil
+
+	local function makePartSlippery(part)
+		if part:IsA("BasePart") and not part:IsDescendantOf(character) and not originalProperties[part] then
+			local props = part.CustomPhysicalProperties
+			if props then
+				originalProperties[part] = PhysicalProperties.new(
+					props.Density,
+					props.Friction,
+					props.Elasticity,
+					props.FrictionWeight,
+					props.ElasticityWeight
+				)
+			else
+				-- If no CustomPhysicalProperties set, use default
+				originalProperties[part] = PhysicalProperties.new(0.7, 0.3, 0.5) 
+			end
+
+			part.CustomPhysicalProperties = PhysicalProperties.new(1, 0, 1, 10, 1)
+		end
+	end
+
+	local function makeAllSlippery()
+		for _, part in ipairs(Workspace:GetDescendants()) do
+			makePartSlippery(part)
+		end
+	end
+
+	local function restoreParts()
+		for part, props in pairs(originalProperties) do
+			if part and part:IsA("BasePart") and part.Parent then
+				part.CustomPhysicalProperties = props
+			end
+		end
+
+		table.clear(originalProperties)
+	end
 
 	local function playAnimationAtTime(time)
 		if animTrack.IsPlaying then
@@ -13489,32 +13529,21 @@ local function setupTool(tool)
 		animTrack.TimePosition = time or 0
 	end
 
-	local function makePartsSlippery()
-		for _, part in ipairs(workspace:GetDescendants()) do
-			if part:IsA("BasePart") and not part.Anchored and not part:IsDescendantOf(character) then
-				if not originalProperties[part] then
-					originalProperties[part] = part.CustomPhysicalProperties
-					part.CustomPhysicalProperties = PhysicalProperties.new(1,0,1,10,1)
-					table.insert(slipperyParts, part)
-				end
-			end
-		end
-	end
-
-	local function restoreParts()
-		for _, part in ipairs(slipperyParts) do
-			if part and part:IsA("BasePart") and originalProperties[part] then
-				part.CustomPhysicalProperties = originalProperties[part]
-			end
-		end
-		slipperyParts = {}
-		originalProperties = {}
-	end
-
 	tool.Equipped:Connect(function()
 		active = true
 		humanoid.WalkSpeed = 16
-		makePartsSlippery()
+
+		makeAllSlippery()
+
+		newPartConnection = Workspace.DescendantAdded:Connect(makePartSlippery)
+
+		if not walkSpeedConnection then
+			walkSpeedConnection = humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+				if active and humanoid.WalkSpeed ~= 65 then
+					humanoid.WalkSpeed = 65
+				end
+			end)
+		end
 
 		playAnimationAtTime(0)
 
@@ -13522,7 +13551,7 @@ local function setupTool(tool)
 			if not active then return end
 			if not speedcon then
 				speedcon = RunService.Heartbeat:Connect(function()
-					humanoid.WalkSpeed = 90
+					humanoid.WalkSpeed = 50
 				end)
 			end
 
@@ -13547,6 +13576,16 @@ local function setupTool(tool)
 		if speedcon then
 			speedcon:Disconnect()
 			speedcon = nil
+		end
+
+		if newPartConnection then
+			newPartConnection:Disconnect()
+			newPartConnection = nil
+		end
+
+		if walkSpeedConnection then
+			walkSpeedConnection:Disconnect()
+			walkSpeedConnection = nil
 		end
 
 		restoreParts()
