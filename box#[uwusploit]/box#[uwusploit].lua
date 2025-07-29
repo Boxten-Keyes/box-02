@@ -13817,6 +13817,10 @@ cscript("dandy's world nametags", [[
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bmiscellaneous%5D/music%23%5Bdandy's%20world%20nametags%5D.lua"))()
 ]], "LS")
 
+cscript("super ring parts", [[
+loadstring(game:HttpGet("https://raw.githubusercontent.com/chesslovers69/Super-ring-parts-v6/refs/heads/main/Bylukaslol"))()
+]], "LS")
+
 -------------------------------------------------------------------------------------------------------------------------------
 
 uwu["commands tab"].Size = UDim2.new(0, 100, 0, 26)
@@ -15268,8 +15272,6 @@ local commandList = {
 	-- "unpunish [target]",
 	"spin [target] [speed]",
 	"unspin [target]",
-	"partring, pring [radius]",
-	"unpring",
 	-- "orbit [target] [speed] [offset]",
 	-- "unorbit",
 	-- "follow [target]",
@@ -21553,154 +21555,6 @@ addcommand("airstriketools", "ast", function(target)
 	local bckd = getbckd(target, actionScript)
 
 	runbackdoor(backdoor, bckd)
-end)
-
--------------------------------------------------------------------------------------------------------------------------------
-
-local ringPartsEnabled = false
-local config = {
-	radius = 50,
-	height = 100,
-	rotationSpeed = 10,
-	attractionStrength = 3000,
-}
-
-addcommand("partring", "pring", function(radius, speed)
-	if not ringPartsEnabled then execcmd("unpring") end
-	ringPartsEnabled = true
-
-	if radius then
-		config.radius = tonumber(radius) or config.radius
-	end
-	if speed then
-		config.rotationSpeed = tonumber(speed) or config.rotationSpeed
-	end
-
-	local Players = game:GetService("Players")
-	local RunService = game:GetService("RunService")
-	local SoundService = game:GetService("SoundService")
-
-	local LocalPlayer = Players.LocalPlayer
-
-	if not getgenv().Network then
-		getgenv().Network = {
-			BaseParts = {},
-			Velocity = Vector3.new(14.46262424, 14.46262424, 14.46262424)
-		}
-		Network.RetainPart = function(Part)
-			if typeof(Part) == "Instance" and Part:IsA("BasePart") and Part:IsDescendantOf(workspace) then
-				table.insert(Network.BaseParts, Part)
-				Part.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0, 0, 0)
-				Part.CanCollide = false
-			end
-		end
-
-		local function EnablePartControl()
-			RunService.Heartbeat:Connect(function()
-				sethiddenproperty(LocalPlayer, "SimulationRadius", math.huge)
-				for _, Part in pairs(Network.BaseParts) do
-					if Part:IsDescendantOf(workspace) then
-						Part.Velocity = Network.Velocity
-					end
-				end
-			end)
-		end
-		EnablePartControl()
-	end
-
-	local function ForcePart(v)
-		if v:IsA("Part") and not v.Anchored and not v.Parent:FindFirstChild("Humanoid") and not v.Parent:FindFirstChild("Head") and v.Name ~= "Handle" then
-			for _, x in next, v:GetChildren() do
-				if x:IsA("BodyAngularVelocity") or x:IsA("BodyForce") or x:IsA("BodyGyro") or x:IsA("BodyPosition") or x:IsA("BodyThrust") or x:IsA("BodyVelocity") or x:IsA("RocketPropulsion") then
-					x:Destroy()
-				end
-			end
-			if v:FindFirstChild("Attachment") then
-				v:FindFirstChild("Attachment"):Destroy()
-			end
-			if v:FindFirstChild("AlignPosition") then
-				v:FindFirstChild("AlignPosition"):Destroy()
-			end
-			if v:FindFirstChild("Torque") then
-				v:FindFirstChild("Torque"):Destroy()
-			end
-			v.CanCollide = false
-			local Torque = Instance.new("Torque", v)
-			Torque.Torque = Vector3.new(100000, 100000, 100000)
-			local AlignPosition = Instance.new("AlignPosition", v)
-			local Attachment2 = Instance.new("Attachment", v)
-			Torque.Attachment0 = Attachment2
-			AlignPosition.MaxForce = 9e9
-			AlignPosition.MaxVelocity = math.huge
-			AlignPosition.Responsiveness = 200
-			AlignPosition.Attachment0 = Attachment2
-			AlignPosition.Attachment1 = Attachment1
-		end
-	end
-
-	local function RetainPart(Part)
-		if Part:IsA("BasePart") and not Part.Anchored and Part:IsDescendantOf(workspace) then
-			if Part.Parent == LocalPlayer.Character or Part:IsDescendantOf(LocalPlayer.Character) then
-				return false
-			end
-
-			Part.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0, 0, 0)
-			Part.CanCollide = false
-			return true
-		end
-		return false
-	end
-
-	local parts = {}
-	local function addPart(part)
-		if RetainPart(part) then
-			if not table.find(parts, part) then
-				table.insert(parts, part)
-			end
-		end
-	end
-
-	local function removePart(part)
-		local index = table.find(parts, part)
-		if index then
-			table.remove(parts, index)
-		end
-	end
-
-	for _, part in pairs(workspace:GetDescendants()) do
-		addPart(part)
-	end
-
-	workspace.DescendantAdded:Connect(addPart)
-	workspace.DescendantRemoving:Connect(removePart)
-
-	RunService.Heartbeat:Connect(function()
-		if not ringPartsEnabled then return end
-
-		local humanoidRootPart = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
-		if humanoidRootPart then
-			local tornadoCenter = humanoidRootPart.Position
-			for _, part in pairs(parts) do
-				if part.Parent and not part.Anchored then
-					local pos = part.Position
-					local distance = (Vector3.new(pos.X, tornadoCenter.Y, pos.Z) - tornadoCenter).Magnitude
-					local angle = math.atan2(pos.Z - tornadoCenter.Z, pos.X - tornadoCenter.X)
-					local newAngle = angle + math.rad(config.rotationSpeed)
-					local targetPos = Vector3.new(
-						tornadoCenter.X + math.cos(newAngle) * math.min(config.radius, distance),
-						tornadoCenter.Y + (config.height * (math.abs(math.sin((pos.Y - tornadoCenter.Y) / config.height)))),
-						tornadoCenter.Z + math.sin(newAngle) * math.min(config.radius, distance)
-					)
-					local directionToTarget = (targetPos - part.Position).unit
-					part.Velocity = directionToTarget * config.attractionStrength
-				end
-			end
-		end
-	end)
-end)
-
-addcommand("unpartring", "unpring", function()
-	ringPartsEnabled = false
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
