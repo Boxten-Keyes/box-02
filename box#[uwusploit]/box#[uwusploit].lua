@@ -5,7 +5,7 @@
   \ \_____\  \ \__/".~\_\  \ \_____\  \/\_____\  \ \_\    \ \_____\  \ \_____\  \ \_\    \ \_\ 
    \/_____/   \/_/   \/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/   \/_/     \/_/ 
                                                                                                        
-   Made by Team Noxious, Team Occulence & Team Symphysis -- uwusploit [version 4]
+   Made by Team Noxious, Team Occulence & Team Symphysis -- uwusploit [version 5]
    
 ---------------------------------------------------------------------------------------------------------------------------]]--
 
@@ -13,11 +13,11 @@ if _G.uwuloaded == true then return end _G.uwuloaded = true
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-wait(0.2) uwu = {} -- 7/28/2025: now open sourced!!! yay!!! skidders rejoice!!!
+wait(0.2) uwu = {} -- 7/28/2025: now open sourced!!! yay!!! skidders rejoice!!! (friendly fire)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["version"] = "4"
+uwu["version"] = "5"
 uwu["workspace"] = game.Workspace
 uwu["user input service"] = game:GetService("UserInputService")
 uwu["players"] = game:GetService("Players")
@@ -15234,44 +15234,44 @@ end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-local commandList = {
-	"kill [target]",
-	"strollerkill, skill [target]",
-	"strollerbring, sbring [target]",
-	"health [target] [number]",
-	"bodyfling, bfling [target]",
-	"walkfling, wfling",
-	"unwalkfling, unwfling",
-	"fly [speed]",
-	"unfly",
-	"notify, n [text]",
-	"freeze, ice [target]",
-	"unfreeze, thaw [target]",
-	"kick [target] [text]",
-	"ban [target]",
-	"accountdelete, terminate [target]",
-	"kazotskykick, kk [target]",
-	"explode [target]",
+local commandList = 
+  "┌ game commands",
+  "└ this game is not supported.",
+  "",
+	"┌ universal commands",
+	"├ kill [target]",
+	"├ strollerkill, skill [target]",
+	"├ strollerbring, sbring [target]",
+	"├ health [target] [number]",
+	"├ bodyfling, bfling [target]",
+	"├ walkfling, wfling",
+	"├ unwalkfling, unwfling",
+	"├ fly [speed]",
+	"├ unfly",
+	"├ notify, n [text]",
+	"├ freeze, ice [target]",
+	"├ unfreeze, thaw [target]",
+	"├ explode [target]",
 	-- "bang [target] [speed]",
 	-- "unbang",
 	-- "carpet [target]",
 	-- "uncarpet",
-	"spectate, view [target]",
-	"unspectate, unview",
+	"├ spectate, view [target]",
+	"├ unspectate, unview",
 	-- "facebang [target]",
 	-- "unfacebang",
-	"jumpscare, js [target] [image id] [sound id]",
+	"├ jumpscare, js [target] [image id] [sound id]",
 	-- "popup [target] [image id]",
 	-- "unpopup [target]",
 	-- "playaudio [target] [sound id]",
-	"headbillboard, headbb [target] [image id]",
-	"unheadbillboard, unheadbb [target]",
+	"├ headbillboard, headbb [target] [image id]",
+	"├ unheadbillboard, unheadbb [target]",
 	-- "torsobillboard [target] [image id]",
 	-- "untorsobillboard [target]",
 	-- "punish [target]",
 	-- "unpunish [target]",
-	"spin [target] [speed]",
-	"unspin [target]",
+	"├ spin [target] [speed]",
+	"├ unspin [target]",
 	-- "orbit [target] [speed] [offset]",
 	-- "unorbit",
 	-- "follow [target]",
@@ -15282,56 +15282,61 @@ local commandList = {
 	-- "unheadless [target]",
 	-- "hairless [target]",
 	-- "unhairless [target]",
-	"accessoryless, aless [target]",
-	"unaccessoryless, unaless [target]",
+	"├ accessoryless, aless [target]",
+	"├ unaccessoryless, unaless [target]",
 	-- "forceplace [target] [game id]",
-	"chickenarms, carms [target]",
-	"discoavatar, davi [target]",
-	"headslide, hslide [target]",
-	"meshdisco, mdisco [target]",
-	"fire [target]",
-	"chat, talk [target] [text]",
-	"particle [target] [image id]",
-	"unparticle [target]",
-	"screenimage, simage [target] [image id]",
-	"unscreenimage, unsimage [target]",
-	"r6 [target]",
-	"r15 [target]",
-	"respawn, re [target]",
-	"eggdog [target]",
-	"decalspam, dspam [image id]",
-	"billboardspam, bbspam [image id]",
-	"replaceskybox, sky [image id]",
+	"├ chickenarms, carms [target]",
+	"├ discoavatar, davi [target]",
+	"├ headslide, hslide [target]",
+	"├ meshdisco, mdisco [target]",
+	"├ fire [target]",
+	"├ chat, talk [target] [text]",
+	"├ particle [target] [image id]",
+	"├ unparticle [target]",
+	"├ screenimage, simage [target] [image id]",
+	"├ unscreenimage, unsimage [target]",
+	"├ decalspam, dspam [image id]",
+	"├ billboardspam, bbspam [image id]",
+	"├ replaceskybox, sky [image id]",
 	-- "billboardspray [image id]",
 	-- "unbillboardspray",
-	"disco",
-	"undisco",
-	"fullbright, fb",
-	"unfullbright, unfb",
-	"music [sound id]",
-	"unmusic",
-	"volume [number]",
-	"pitch [number]",
-	"console",
-	"esp",
-	"unesp",
-	"dynamic9007, dyn9007",
-	"antifling, afling",
-	"unantifling, uafling",
-	"walkonwalls, wallwalk",
+	"├ disco",
+	"├ undisco",
+	"├ fullbright, fb",
+	"├ unfullbright, unfb",
+	"├ music [sound id]",
+	"├ unmusic",
+	"├ volume [number]",
+	"├ pitch [number]",
+	"├ console",
+	"├ esp",
+	"├ unesp",
+	"├ dynamic9007, dyn9007",
+	"├ antifling, afling",
+	"├ unantifling, uafling",
+	"├ walkonwalls, wallwalk",
 	-- "restoremap",
-	"hint [text]",
-	"closehints, nohints",
-	"closeunlabeledhints, noulhints",
-	"closelabeledhints, nolhints",
-	"message [text]",
-	"closemessages, nomsgs",
-	"closeunlabeledmessages, noulmsgs",
-	"closelabeledmessages, nolmsgs",
-	"guns [target]",
-	"btools, f3x [target]",
-	"tools [target]",
-	"airstriketools, ast [target]",
+	"├ hint [text]",
+	"├ closehints, nohints",
+	"├ closeunlabeledhints, noulhints",
+	"├ closelabeledhints, nolhints",
+	"├ message [text]",
+	"├ closemessages, nomsgs",
+	"├ closeunlabeledmessages, noulmsgs",
+	"└ closelabeledmessages, nolmsgs",
+  "",
+  "┌ backdoor commands",
+	"├ guns [target]",
+	"├ btools, f3x [target]",
+	"├ tools [target]",
+	"├ airstriketools, ast [target]",
+	"├ r6 [target]",
+	"├ r15 [target]",
+	"├ respawn, re [target]",
+	"├ eggdog [target]",
+	"├ kick [target] [text]",
+	"├ ban [target]",
+	"└ kazotskykick, kk [target]",
 	-- "",
 	-- "dance1 [target]",
 	-- "undance1 [target]",
@@ -15351,13 +15356,15 @@ local commandList = {
 	-- "stopanim [target]",
 	-- "reanim [target]",
 	-- "headthrow [target]",
-	"opendonuttab, donut",
-	"openbinarytab, binary",
-	"openheadcanongeneratortab, hcgen",
-	"opengaydartab, gaydar",
-	"openvideotab, video",
-	"openmessagereversertab, msgreverser",
-	"opennoxsecencoderanddecodertab, noxsec",
+  "",
+  "┌ tabs",
+	"├ opendonuttab, donut",
+	"├ openbinarytab, binary",
+	"├ openheadcanongeneratortab, hcgen",
+	"├ opengaydartab, gaydar",
+	"├ openvideotab, video",
+	"├ openmessagereversertab, msgreverser",
+	"└ opennoxsecencoderanddecodertab, noxsec",
 }
 
 populateList(uwu["list of commands"], commandList)
@@ -16846,103 +16853,6 @@ addcommand("ban", "ban", function(target, reason)
 						end
 					end
 				]], player.Name, reason or "banned :<")
-				break
-			end
-		end
-	end
-
-	getout(bckd, reason)
-end)
-
--------------------------------------------------------------------------------------------------------------------------------
-
-addcommand("accountdelete", "terminate", function(target, reason)
-	local players = game:GetService("Players"):GetPlayers()
-
-	local function getout(bckd, kickReason)
-		if backdoor ~= nil then
-			local updatedScript = string.gsub(bckd, "%%username%%", game:GetService("Players").LocalPlayer.Name)
-			updatedScript = string.gsub(updatedScript, "%%reason%%", kickReason or "what have you done")
-			runbackdoor(backdoor, updatedScript)
-		else
-			if not target or target == "" or target == "me" then
-				local localPlayer = game.Players.LocalPlayer
-				if localPlayer then
-					fakekick(localPlayer, kickReason)
-				end
-			elseif target == "random" then
-				local randomPlayer = players[math.random(1, #players)]
-				if randomPlayer then
-					fakekick(randomPlayer, kickReason)
-				end
-			elseif target == "others" then
-				local localPlayer = game.Players.LocalPlayer
-				for _, player in ipairs(players) do
-					if player ~= localPlayer then
-						fakekick(player, kickReason)
-					end
-				end
-			elseif target == "all" then
-				for _, player in ipairs(players) do
-					fakekick(player, kickReason)
-				end
-			else
-				for _, player in ipairs(players) do
-					if string.find(string.lower(player.Name), string.lower(target)) then
-						fakekick(player, kickReason)
-						break
-					end
-				end
-			end
-		end
-	end
-
-	local bckd
-	if not target or target == "" or target == "me" then
-		bckd = [[
-			for i,v in pairs(game:GetService("Players"):GetChildren()) do 
-				if v:IsA("Player") and v.Name == "%username%" then
-					v:Kick("]] .. (reason or "what have you done") .. [[")
-				end
-			end
-		]]
-	elseif target == "random" then
-		local randomPlayer = players[math.random(1, #players)]
-		if randomPlayer then
-			bckd = string.format([[
-				for i,v in pairs(game:GetService("Players"):GetChildren()) do 
-					if v:IsA("Player") and v.Name == "%s" then
-						v:Kick("%s")
-					end
-				end
-			]], randomPlayer.Name, reason or "what have you done")
-		end
-	elseif target == "others" then
-		bckd = [[
-			for i,v in pairs(game:GetService("Players"):GetChildren()) do 
-				if v:IsA("Player") and v.Name ~= "%username%" then
-					v:Kick("]] .. (reason or "what have you done") .. [[")
-				end
-			end
-		]]
-	elseif target == "all" then
-		bckd = [[
-			for i,v in pairs(game:GetService("Players"):GetChildren()) do 
-				if v:IsA("Player") then
-					v:Kick("]] .. (reason or "what have you done") .. [[")
-				end
-			end
-		]]
-	else
-		for _, player in ipairs(players) do
-			if string.find(string.lower(player.Name), string.lower(target)) then
-				bckd = string.format([[
-					for i,v in pairs(game:GetService("Players"):GetChildren()) do 
-						if v:IsA("Player") and v.Name == "%s" then
-							v:Kick("%s")
-						end
-					end
-				]], player.Name, reason or "what have you done")
 				break
 			end
 		end
