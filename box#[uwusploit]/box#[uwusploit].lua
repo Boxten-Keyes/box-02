@@ -12320,6 +12320,8 @@ end
 
 local tool = giveTool()
 setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 end)
 
 task.spawn(function()
@@ -12404,6 +12406,8 @@ end
 
 local tool = giveTool()
 setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 end)
 ]], "CS / SS")
 
@@ -12453,6 +12457,8 @@ end
 
 local tool = giveTool()
 setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 dab tool", [[
@@ -12499,6 +12505,8 @@ end
 
 local tool = giveTool()
 setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 arm helicopter tool", [[
@@ -12546,6 +12554,8 @@ end
 
 local tool = giveTool()
 setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 lay down tool", [[
@@ -12593,6 +12603,8 @@ end
 
 local tool = giveTool()
 setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 t pose tool", [[
@@ -12640,6 +12652,8 @@ end
 
 local tool = giveTool()
 setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 hands up tool", [[
@@ -12687,6 +12701,8 @@ end
 
 local tool = giveTool()
 setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 dance tool", [[
@@ -12759,6 +12775,8 @@ end
 
 local tool = giveTool()
 setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 the charleston tool", [[
@@ -12805,6 +12823,8 @@ end
 
 local tool = giveTool()
 setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 kneel down tool", [[
@@ -12852,6 +12872,8 @@ end
 
 local tool = giveTool()
 setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 cradle tool", [[
@@ -12900,6 +12922,8 @@ end
 
 local tool = giveTool()
 setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 jumping jacks tool", [[
@@ -12946,6 +12970,8 @@ end
 
 local tool = giveTool()
 setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 frantic tool", [[
@@ -12992,6 +13018,8 @@ end
 
 local tool = giveTool()
 setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 shocked tool", [[
@@ -13040,6 +13068,8 @@ end
 
 local tool = giveTool()
 setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 spin dance tool", [[
@@ -13086,6 +13116,8 @@ end
 
 local tool = giveTool()
 setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 look right tool", [[
@@ -13132,6 +13164,8 @@ end
 
 local tool = giveTool()
 setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 bow down tool", [[
@@ -13180,6 +13214,8 @@ end
 
 local tool = giveTool()
 setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 the thinker tool", [[
@@ -13253,6 +13289,8 @@ end
 
 local tool = giveTool()
 setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 imitate sucking tool", [[
@@ -13314,6 +13352,8 @@ end
 
 local tool = giveTool()
 setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r6 kneel suck tool", [[
@@ -13382,6 +13422,8 @@ end
 
 local tool = giveTool()
 setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r15 twerk tool", [[
@@ -13439,12 +13481,13 @@ end
 
 local tool = giveTool()
 setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("r15 drift tool", [[
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
-local Workspace = game:GetService("Workspace")
 
 local LocalPlayer = Players.LocalPlayer
 local TOOL_NAME = "drift"
@@ -13482,44 +13525,6 @@ local function setupTool(tool)
 	local active = false
 	local slipperyParts = {}
 	local originalProperties = {}
-	local newPartConnection = nil
-	local walkSpeedConnection = nil
-
-local function makePartSlippery(part)
-	if part:IsA("BasePart") and not part:IsDescendantOf(character) and not originalProperties[part] then
-		local props = part.CustomPhysicalProperties
-		if props then
-			originalProperties[part] = PhysicalProperties.new(
-				props.Density,
-				props.Friction,
-				props.Elasticity,
-				props.FrictionWeight,
-				props.ElasticityWeight
-			)
-		else
-			-- If no CustomPhysicalProperties set, use default
-			originalProperties[part] = PhysicalProperties.new(0.7, 0.3, 0.5) 
-		end
-
-		part.CustomPhysicalProperties = PhysicalProperties.new(1, 0, 1, 10, 1)
-	end
-end
-
-	local function makeAllSlippery()
-		for _, part in ipairs(Workspace:GetDescendants()) do
-			makePartSlippery(part)
-		end
-	end
-
-local function restoreParts()
-	for part, props in pairs(originalProperties) do
-		if part and part:IsA("BasePart") and part.Parent then
-			part.CustomPhysicalProperties = props
-		end
-	end
-
-	table.clear(originalProperties)
-end
 
 	local function playAnimationAtTime(time)
 		if animTrack.IsPlaying then
@@ -13529,21 +13534,32 @@ end
 		animTrack.TimePosition = time or 0
 	end
 
+	local function makePartsSlippery()
+		for _, part in ipairs(workspace:GetDescendants()) do
+			if part:IsA("BasePart") and not part.Anchored and not part:IsDescendantOf(character) then
+				if not originalProperties[part] then
+					originalProperties[part] = part.CustomPhysicalProperties
+					part.CustomPhysicalProperties = PhysicalProperties.new(1,0,1,10,1)
+					table.insert(slipperyParts, part)
+				end
+			end
+		end
+	end
+
+	local function restoreParts()
+		for _, part in ipairs(slipperyParts) do
+			if part and part:IsA("BasePart") and originalProperties[part] then
+				part.CustomPhysicalProperties = originalProperties[part]
+			end
+		end
+		slipperyParts = {}
+		originalProperties = {}
+	end
+
 	tool.Equipped:Connect(function()
 		active = true
 		humanoid.WalkSpeed = 16
-
-		makeAllSlippery()
-
-		newPartConnection = Workspace.DescendantAdded:Connect(makePartSlippery)
-
-		if not walkSpeedConnection then
-			walkSpeedConnection = humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
-				if active and humanoid.WalkSpeed ~= 65 then
-					humanoid.WalkSpeed = 65
-				end
-			end)
-		end
+		makePartsSlippery()
 
 		playAnimationAtTime(0)
 
@@ -13551,7 +13567,7 @@ end
 			if not active then return end
 			if not speedcon then
 				speedcon = RunService.Heartbeat:Connect(function()
-					humanoid.WalkSpeed = 50
+					humanoid.WalkSpeed = 90
 				end)
 			end
 
@@ -13578,22 +13594,14 @@ end
 			speedcon = nil
 		end
 
-		if newPartConnection then
-			newPartConnection:Disconnect()
-			newPartConnection = nil
-		end
-
-		if walkSpeedConnection then
-			walkSpeedConnection:Disconnect()
-			walkSpeedConnection = nil
-		end
-
 		restoreParts()
 	end)
 end
 
 local tool = giveTool()
 setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function() setupTool(tool) end)
 ]], "CS / SS")
 
 cscript("aquamatrix", [[
