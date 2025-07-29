@@ -13492,7 +13492,7 @@ local function setupTool(tool)
 
 	local function makePartsSlippery()
 		for _, part in ipairs(workspace:GetDescendants()) do
-			if part:IsA("BasePart") and not part.Anchored and not part:IsDescendantOf(character) then
+			if part:IsA("BasePart") and not part:IsDescendantOf(character) then
 				if not originalProperties[part] then
 					originalProperties[part] = part.CustomPhysicalProperties
 					part.CustomPhysicalProperties = PhysicalProperties.new(1,0,1,10,1)
