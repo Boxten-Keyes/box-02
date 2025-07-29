@@ -13485,15 +13485,22 @@ local function setupTool(tool)
 	local newPartConnection = nil
 	local walkSpeedConnection = nil
 
-	local function makePartSlippery(part)
-		if part:IsA("BasePart") and not part:IsDescendantOf(character) then
-			if not originalProperties[part] then
-				originalProperties[part] = part.CustomPhysicalProperties
-				part.CustomPhysicalProperties = PhysicalProperties.new(1, 0, 1, 10, 1)
-				table.insert(slipperyParts, part)
-			end
+local function makePartSlippery(part)
+	if part:IsA("BasePart") and not part:IsDescendantOf(character) and not originalProperties[part] then
+		local props = part.CustomPhysicalProperties
+		if props then
+			originalProperties[part] = PhysicalProperties.new(
+				props.Density,
+				props.Friction,
+				props.Elasticity,
+				props.FrictionWeight,
+				props.ElasticityWeight
+			)
 		end
+		part.CustomPhysicalProperties = PhysicalProperties.new(1, 0, 1, 10, 1)
+		table.insert(slipperyParts, part)
 	end
+end
 
 	local function makeAllSlippery()
 		for _, part in ipairs(Workspace:GetDescendants()) do
@@ -13501,15 +13508,16 @@ local function setupTool(tool)
 		end
 	end
 
-	local function restoreParts()
-		for _, part in ipairs(slipperyParts) do
-			if part and part:IsA("BasePart") and originalProperties[part] then
-				part.CustomPhysicalProperties = originalProperties[part]
-			end
+local function restoreParts()
+	for part, originalProps in pairs(originalProperties) do
+		if part and part:IsA("BasePart") and part.Parent then
+			part.CustomPhysicalProperties = originalProps
 		end
-		slipperyParts = {}
-		originalProperties = {}
 	end
+
+	table.clear(slipperyParts)
+	table.clear(originalProperties)
+end
 
 	local function playAnimationAtTime(time)
 		if animTrack.IsPlaying then
