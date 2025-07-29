@@ -13496,9 +13496,12 @@ local function makePartSlippery(part)
 				props.FrictionWeight,
 				props.ElasticityWeight
 			)
+		else
+			-- If no CustomPhysicalProperties set, use default
+			originalProperties[part] = PhysicalProperties.new(0.7, 0.3, 0.5) 
 		end
+
 		part.CustomPhysicalProperties = PhysicalProperties.new(1, 0, 1, 10, 1)
-		table.insert(slipperyParts, part)
 	end
 end
 
@@ -13509,13 +13512,12 @@ end
 	end
 
 local function restoreParts()
-	for part, originalProps in pairs(originalProperties) do
+	for part, props in pairs(originalProperties) do
 		if part and part:IsA("BasePart") and part.Parent then
-			part.CustomPhysicalProperties = originalProps
+			part.CustomPhysicalProperties = props
 		end
 	end
 
-	table.clear(slipperyParts)
 	table.clear(originalProperties)
 end
 
