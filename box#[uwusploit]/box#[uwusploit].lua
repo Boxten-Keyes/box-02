@@ -13442,11 +13442,8 @@ setupTool(tool)
 ]], "CS / SS")
 
 cscript("r15 drift tool", [[
-task.wait(0.5)
-
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
-local Debris = game:GetService("Debris")
 
 local LocalPlayer = Players.LocalPlayer
 local TOOL_NAME = "drift"
@@ -13480,9 +13477,10 @@ local function setupTool(tool)
 	animTrack.Priority = Enum.AnimationPriority.Action
 	animTrack.Looped = false
 
-	local iceConnection = nil
 	local speedcon = nil
 	local active = false
+	local slipperyParts = {}
+	local originalProperties = {}
 
 	local function playAnimationAtTime(time)
 		if animTrack.IsPlaying then
@@ -13492,103 +13490,42 @@ local function setupTool(tool)
 		animTrack.TimePosition = time or 0
 	end
 
+	local function makePartsSlippery()
+		for _, part in ipairs(workspace:GetDescendants()) do
+			if part:IsA("BasePart") and not part.Anchored and not part:IsDescendantOf(character) then
+				if not originalProperties[part] then
+					originalProperties[part] = part.CustomPhysicalProperties
+					part.CustomPhysicalProperties = PhysicalProperties.new(1,0,1,10,1)
+					table.insert(slipperyParts, part)
+				end
+			end
+		end
+	end
+
+	local function restoreParts()
+		for _, part in ipairs(slipperyParts) do
+			if part and part:IsA("BasePart") and originalProperties[part] then
+				part.CustomPhysicalProperties = originalProperties[part]
+			end
+		end
+		slipperyParts = {}
+		originalProperties = {}
+	end
+
 	tool.Equipped:Connect(function()
 		active = true
-		humanoid.WalkSpeed = 16 -- reset early
-
+		humanoid.WalkSpeed = 16
+		makePartsSlippery()
 
 		playAnimationAtTime(0)
 
-		-- After 1 second, apply speed boost and drift
 		task.delay(1, function()
 			if not active then return end
 			if not speedcon then
 				speedcon = RunService.Heartbeat:Connect(function()
-					humanoid.WalkSpeed = 90 -- reset early
+					humanoid.WalkSpeed = 90
 				end)
 			end
-
-			local DRIFT_ACCELERATION = 80
-			local DRIFT_DECELERATION = 20
-			local MAX_DRIFT_SPEED = 120
-			local TURN_RATE = 0.15 -- How quickly you turn (0-1, higher = faster turns)
-			local DRIFT_FRICTION = 0.82
-			local MIN_DRIFT_SPEED = 30
-			local TURN_CONTROL = 2.5
-
-			-- Add these at the top with other variables
-			local currentDriftDirection = Vector3.new()
-			local lastInputDirection = Vector3.new()
-
-			iceConnection = RunService.Heartbeat:Connect(function(dt)
-				local moveDir = humanoid.MoveDirection
-				local currentSpeed = hrp.Velocity.Magnitude
-
-				if active and moveDir.Magnitude > 0.1 then
-					-- Calculate desired direction from input
-					local desiredDirection = (hrp.CFrame.LookVector * moveDir.Z + hrp.CFrame.RightVector * moveDir.X).Unit
-
-					-- Store last input direction for smoothing
-					if moveDir.Magnitude > 0.5 then
-						lastInputDirection = desiredDirection
-					end
-
-					-- Only apply drift physics if moving fast enough
-					if currentSpeed > MIN_DRIFT_SPEED then
-						-- Gradually adjust drift direction toward input direction
-						if currentDriftDirection.Magnitude == 0 then
-							currentDriftDirection = hrp.Velocity.Unit
-						else
-							-- Smoothly interpolate between current and desired direction
-							currentDriftDirection = currentDriftDirection:Lerp(
-								lastInputDirection, 
-								TURN_RATE * dt * 60 -- Normalize for framerate
-							).Unit
-						end
-
-						-- Calculate current speed in drift direction
-						local forwardSpeed = Vector3.new(hrp.Velocity.X, 0, hrp.Velocity.Z).Dot(currentDriftDirection)
-
-						-- Apply acceleration/deceleration
-						local targetSpeed = math.min(MAX_DRIFT_SPEED, forwardSpeed + DRIFT_ACCELERATION * dt)
-						local newSpeed = math.max(MIN_DRIFT_SPEED, targetSpeed)
-
-						-- Calculate new velocity with directional control
-						local newVelocity = currentDriftDirection * newSpeed
-						newVelocity = Vector3.new(newVelocity.X, hrp.Velocity.Y, newVelocity.Z)
-
-						-- Apply lateral friction for drifting feel
-						local lateralVel = hrp.Velocity - (currentDriftDirection * forwardSpeed)
-						newVelocity = newVelocity + (lateralVel * DRIFT_FRICTION)
-
-						-- Apply the force with control adjustment
-						local bodyVel = Instance.new("BodyVelocity")
-						bodyVel.MaxForce = Vector3.new(1, 0, 1) * 1e5
-						bodyVel.Velocity = newVelocity
-						bodyVel.P = 1250
-						bodyVel.Name = "DriftForce"
-						bodyVel.Parent = hrp
-						Debris:AddItem(bodyVel, dt * 2)
-
-						-- Optional: Add slight visual turn toward drift direction
-						local turnCFrame = CFrame.lookAt(hrp.Position, hrp.Position + currentDriftDirection)
-						hrp.CFrame = hrp.CFrame:Lerp(turnCFrame, 0.1 * dt * 60)
-					end
-				else
-					-- Natural deceleration when not drifting
-					if currentSpeed > 16 then
-						local decelFactor = math.max(0, 1 - (DRIFT_DECELERATION * dt / currentSpeed))
-						local bodyVel = Instance.new("BodyVelocity")
-						bodyVel.MaxForce = Vector3.new(1, 0, 1) * 1e5
-						bodyVel.Velocity = hrp.Velocity * decelFactor
-						bodyVel.P = 1250
-						bodyVel.Name = "DriftForce"
-						bodyVel.Parent = hrp
-						Debris:AddItem(bodyVel, dt * 2)
-					end
-					currentDriftDirection = Vector3.new() -- Reset drift direction
-				end
-			end)
 
 			local function animationLoop()
 				while active do
@@ -13607,16 +13544,13 @@ local function setupTool(tool)
 		if animTrack and animTrack.IsPlaying then
 			animTrack:Stop()
 		end
-		
+
 		if speedcon then
 			speedcon:Disconnect()
 			speedcon = nil
 		end
 
-		if iceConnection then
-			iceConnection:Disconnect()
-			iceConnection = nil
-		end
+		restoreParts()
 	end)
 end
 
