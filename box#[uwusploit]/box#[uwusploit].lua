@@ -13599,12 +13599,12 @@ local function setupTool(tool)
 	animTrack.Priority = Enum.AnimationPriority.Action
 	animTrack.Looped = false
 
-	local speedcon = nil
 	local active = false
 	local slipperyParts = {}
 	local originalProperties = {}
 	local newPartConnection = nil
-	local walkSpeedConnection = nil
+	local speedcon = nil
+	local animationLoopThread = nil
 
 	local function makePartSlippery(part)
 		if part:IsA("BasePart") and not part:IsDescendantOf(character) and not originalProperties[part] then
@@ -13652,51 +13652,53 @@ local function setupTool(tool)
 
 	tool.Equipped:Connect(function()
 		active = true
-		humanoid.WalkSpeed = 16
+		humanoid.WalkSpeed = 10
+		
+		playAnimationAtTime(0)
+		
+		task.wait(1)
 
 		makeAllSlippery()
 
 		newPartConnection = Workspace.DescendantAdded:Connect(makePartSlippery)
 
-		if not walkSpeedConnection then
-			walkSpeedConnection = humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
-				if active and humanoid.WalkSpeed ~= 65 then
-					humanoid.WalkSpeed = 65
+		if not speedcon then
+			humanoid.WalkSpeed = 70
+			speedcon = humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+				if active and humanoid.WalkSpeed ~= 70 then
+					humanoid.WalkSpeed = 70
 				end
 			end)
 		end
 
-		playAnimationAtTime(0)
-
 		task.delay(1, function()
 			if not active then return end
-			if not speedcon then
-				speedcon = RunService.Heartbeat:Connect(function()
-					humanoid.WalkSpeed = 50
-				end)
+
+			if animationLoopThread then
+				coroutine.close(animationLoopThread) -- prevent stacking if somehow not nil
 			end
 
-			local function animationLoop()
+			animationLoopThread = coroutine.create(function()
 				while active do
 					playAnimationAtTime(2.5)
 					task.wait(7.8)
 				end
-			end
-			task.delay(1.45, animationLoop)
+			end)
+
+			coroutine.resume(animationLoopThread)
 		end)
 	end)
 
 	tool.Unequipped:Connect(function()
 		active = false
 		humanoid.WalkSpeed = 16
+		
+		if animationLoopThread then
+			animationLoopThread = nil -- Let the thread end naturally
+		end
 
 		if animTrack and animTrack.IsPlaying then
 			animTrack:Stop()
-		end
-
-		if speedcon then
-			speedcon:Disconnect()
-			speedcon = nil
 		end
 
 		if newPartConnection then
@@ -13704,10 +13706,12 @@ local function setupTool(tool)
 			newPartConnection = nil
 		end
 
-		if walkSpeedConnection then
-			walkSpeedConnection:Disconnect()
-			walkSpeedConnection = nil
+		if speedcon then
+			speedcon:Disconnect()
+			speedcon = nil
 		end
+		
+		task.wait(1)
 
 		restoreParts()
 	end)
