@@ -13600,11 +13600,10 @@ local function setupTool(tool)
 	animTrack.Looped = false
 
 	local active = false
-	local slipperyParts = {}
 	local originalProperties = {}
 	local newPartConnection = nil
 	local speedcon = nil
-	local animationLoopThread = nil
+	local animationLoopTask = nil
 
 	local function makePartSlippery(part)
 		if part:IsA("BasePart") and not part:IsDescendantOf(character) and not originalProperties[part] then
@@ -13618,8 +13617,7 @@ local function setupTool(tool)
 					props.ElasticityWeight
 				)
 			else
-				-- If no CustomPhysicalProperties set, use default
-				originalProperties[part] = PhysicalProperties.new(0.7, 0.3, 0.5) 
+				originalProperties[part] = PhysicalProperties.new(0.7, 0.3, 0.5)
 			end
 
 			part.CustomPhysicalProperties = PhysicalProperties.new(1, 0, 1, 10, 1)
@@ -13643,30 +13641,30 @@ local function setupTool(tool)
 	end
 
 	local function playAnimationAtTime(time)
-		if animTrack.IsPlaying then
-			animTrack:Stop()
+		if not animTrack.IsPlaying then
+			animTrack:Play()
 		end
-		animTrack:Play()
 		animTrack.TimePosition = time or 0
 	end
 
 	tool.Equipped:Connect(function()
+		if active then return end -- Prevent double-activation
 		active = true
+		
 		humanoid.WalkSpeed = 10
-		
+
 		playAnimationAtTime(0)
-		
-		task.wait(1)
 
 		makeAllSlippery()
 
 		newPartConnection = Workspace.DescendantAdded:Connect(makePartSlippery)
 
 		if not speedcon then
-			humanoid.WalkSpeed = 70
+			task.wait(1)
+			humanoid.WalkSpeed = 65
 			speedcon = humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
-				if active and humanoid.WalkSpeed ~= 70 then
-					humanoid.WalkSpeed = 70
+				if active and humanoid.WalkSpeed ~= 65 then
+					humanoid.WalkSpeed = 65
 				end
 			end)
 		end
@@ -13674,31 +13672,35 @@ local function setupTool(tool)
 		task.delay(1, function()
 			if not active then return end
 
-			if animationLoopThread then
-				coroutine.close(animationLoopThread) -- prevent stacking if somehow not nil
+			-- Cancel previous task if somehow still running
+			if animationLoopTask then
+				animationLoopTask:Disconnect()
+				animationLoopTask = nil
 			end
 
-			animationLoopThread = coroutine.create(function()
-				while active do
-					playAnimationAtTime(2.5)
-					task.wait(7.8)
+			local loopBind = RunService.Heartbeat:Connect(function()
+				if not active then return end
+				if animTrack.TimePosition >= 10.3 then -- 2.5 + 7.8
+					animTrack.TimePosition = 2.5
 				end
 			end)
 
-			coroutine.resume(animationLoopThread)
+			animationLoopTask = loopBind
 		end)
 	end)
 
 	tool.Unequipped:Connect(function()
+		if not active then return end
 		active = false
 		humanoid.WalkSpeed = 16
-		
-		if animationLoopThread then
-			animationLoopThread = nil -- Let the thread end naturally
-		end
 
 		if animTrack and animTrack.IsPlaying then
 			animTrack:Stop()
+		end
+
+		if animationLoopTask then
+			animationLoopTask:Disconnect()
+			animationLoopTask = nil
 		end
 
 		if newPartConnection then
@@ -13710,9 +13712,8 @@ local function setupTool(tool)
 			speedcon:Disconnect()
 			speedcon = nil
 		end
-		
-		task.wait(1)
 
+		task.wait(1)
 		restoreParts()
 	end)
 end
