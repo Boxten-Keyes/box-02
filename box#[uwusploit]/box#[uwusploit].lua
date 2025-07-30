@@ -15239,6 +15239,7 @@ local gameSpecificCommands = {
 		"├ tospawn, spawn",
 		"├ resetappearance, rea",
 		"├ antiskintonechanger, astc",
+		"├ crashserver, crash",
 	},
 }
 
@@ -15465,7 +15466,7 @@ addcommand("teleporttool", "tptool", function(...)
 		tool.RequiresHandle = false
 		tool.Parent = uwu["local player"].Backpack
 		tool.Activated:Connect(function()
-			uwu["local player"].Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(maus.Hit.X, maus.Hit.Y + 3, maus.Hit.Z, select(4, noxious["humanoid root part"].CFrame:components()))
+			uwu["local player"].Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(maus.Hit.X, maus.Hit.Y + 3, maus.Hit.Z, select(4, uwu["local player"].Character:FindFirstChild("HumanoidRootPart").CFrame:components()))
 		end)
 		game:GetService"StarterGui":SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
 	end
@@ -22019,8 +22020,6 @@ addcommand("strollerkill", "skill", function(target)
 	end
 end)
 
--------------------------------------------------------------------------------------------------------------------------------
-
 strollerbringing = false
 
 addcommand("strollerbring", "sbring", function(target)
@@ -22129,6 +22128,7 @@ end)
 -------------------------------------------------------------------------------------------------------------------------------
 
 addcommand("kidrole", "kid", function()
+	if game.PlaceId ~= 1662219031 then return end
 	local targetPart = workspace:WaitForChild("SpawnSigns"):WaitForChild("SpawnLocation3")
 	local function getCharacterRoot()
 		local character = uwu["local player"].Character or uwu["local player"].CharacterAdded:Wait()
@@ -22148,6 +22148,7 @@ addcommand("kidrole", "kid", function()
 end)
 
 addcommand("parentrole", "parent", function()
+	if game.PlaceId ~= 1662219031 then return end
 	local targetPart = workspace:WaitForChild("SpawnSigns"):WaitForChild("SpawnLocation1")
 	local function getCharacterRoot()
 		local character = uwu["local player"].Character or uwu["local player"].CharacterAdded:Wait()
@@ -22167,6 +22168,7 @@ addcommand("parentrole", "parent", function()
 end)
 
 addcommand("petrole", "pet", function()
+	if game.PlaceId ~= 1662219031 then return end
 	local targetPart = workspace:WaitForChild("SpawnSigns"):WaitForChild("SpawnLocation2")
 	local function getCharacterRoot()
 		local character = uwu["local player"].Character or uwu["local player"].CharacterAdded:Wait()
@@ -22186,6 +22188,7 @@ addcommand("petrole", "pet", function()
 end)
 
 addcommand("teenrole", "teen", function()
+	if game.PlaceId ~= 1662219031 then return end
 	local targetPart = workspace:WaitForChild("SpawnSigns"):WaitForChild("SpawnLocation4")
 	local function getCharacterRoot()
 		local character = uwu["local player"].Character or uwu["local player"].CharacterAdded:Wait()
@@ -22207,6 +22210,7 @@ end)
 -------------------------------------------------------------------------------------------------------------------------------
 
 addcommand("tospawn", "spawn", function()
+	if game.PlaceId ~= 1662219031 then return end
 	local function getCharacterRoot()
 		local character = uwu["local player"].Character or uwu["local player"].CharacterAdded:Wait()
 		return character:WaitForChild("HumanoidRootPart")
@@ -22227,6 +22231,7 @@ end)
 -------------------------------------------------------------------------------------------------------------------------------
 
 addcommand("resetappearance", "rea", function()
+	if game.PlaceId ~= 1662219031 then return end
 	local targetPart = workspace:WaitForChild("Mall"):WaitForChild("Restore Clothing"):WaitForChild("pole")
 	local function getCharacterRoot()
 		local character = uwu["local player"].Character or uwu["local player"].CharacterAdded:Wait()
@@ -22248,6 +22253,7 @@ end)
 -------------------------------------------------------------------------------------------------------------------------------
 
 addcommand("waterwalker", "jesus", function()
+	if game.PlaceId ~= 1662219031 then return end
 	local point1 = Vector3.new(-359, 30, 188)
 	local point2 = Vector3.new(-578, 29, -82)
 
@@ -22279,6 +22285,7 @@ end)
 -------------------------------------------------------------------------------------------------------------------------------
 
 addcommand("antiskintonechanger", "astc", function()
+	if game.PlaceId ~= 1662219031 then return end
 	local mallPath = workspace:FindFirstChild("Mall")
 	local changeSkinColorFolder = mallPath and mallPath:FindFirstChild("Change Skin Color")
 
@@ -22303,6 +22310,28 @@ addcommand("antiskintonechanger", "astc", function()
 			end
 		end
 	end
+end)
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+addcommand("crashserver", "crash", function()
+	if game.PlaceId ~= 1662219031 then return end
+	game:GetService'RunService'.RenderStepped:Connect(function()
+		task.spawn(function()
+			for i=0, 1000, 1 do
+
+				local args = {
+					[1] = {
+						[1] = "Wear",
+						[2] = "11297746",
+						[3] = "Hats"
+					}
+				}
+
+				game:GetService("ReplicatedStorage").WearItem:FireServer(unpack(args))
+			end
+		end)
+	end)
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
