@@ -15457,7 +15457,7 @@ end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-addcommand("notify", "n", function(...)
+addcommand("teleporttool", "tptool", function(...)
 	local function hi()
 		local maus = uwu["local player"]:GetMouse()
 		local tool = Instance.new("Tool")
