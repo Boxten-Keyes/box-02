@@ -12111,10 +12111,6 @@ cscript("betterbypasser", [[
 loadstring(game:HttpGet("https://github.com/Synergy-Networks/products/raw/main/BetterBypasser/loader.lua"))()
 ]], "LS")
 
-cscript("nullfire", [[ 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/InfernusScripts/Null-Fire/main/Loader"))()
-]], "LS")
-
 cscript("black hole", [[ 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Bac0nHck/Scripts/main/BringFlingPlayers"))("More Scripts: t.me/arceusxscripts")
 ]], "LS")
@@ -12122,6 +12118,10 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Bac0nHck/Scripts/main
 cscript("anti fall damage", [[
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bmiscellaneous%5D/music%23%5Banti%20fall%20damage%5D.lua"))()
 ]], "CS / SS")
+
+cscript("nullfire", [[ 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/InfernusScripts/Null-Fire/main/Loader"))()
+]], "LS")
 
 cscript("r6 crawl tool", [[
 local Players = game:GetService("Players")
@@ -13651,20 +13651,16 @@ local function setupTool(tool)
 		if active then return end -- Prevent double-activation
 		active = true
 		
-		humanoid.WalkSpeed = 10
+		humanoid.WalkSpeed = 8
 
 		playAnimationAtTime(0)
 
-		makeAllSlippery()
-
-		newPartConnection = Workspace.DescendantAdded:Connect(makePartSlippery)
-
 		if not speedcon then
 			task.wait(1)
-			humanoid.WalkSpeed = 65
+			humanoid.WalkSpeed = 75
 			speedcon = humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
-				if active and humanoid.WalkSpeed ~= 65 then
-					humanoid.WalkSpeed = 65
+				if active and humanoid.WalkSpeed ~= 75 then
+					humanoid.WalkSpeed = 75
 				end
 			end)
 		end
@@ -13672,7 +13668,6 @@ local function setupTool(tool)
 		task.delay(1, function()
 			if not active then return end
 
-			-- Cancel previous task if somehow still running
 			if animationLoopTask then
 				animationLoopTask:Disconnect()
 				animationLoopTask = nil
@@ -13687,6 +13682,10 @@ local function setupTool(tool)
 
 			animationLoopTask = loopBind
 		end)
+		
+		makeAllSlippery()
+
+		newPartConnection = Workspace.DescendantAdded:Connect(makePartSlippery)
 	end)
 
 	tool.Unequipped:Connect(function()
