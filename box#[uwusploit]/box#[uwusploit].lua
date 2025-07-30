@@ -13807,6 +13807,10 @@ cscript("super ring parts", [[
 loadstring(game:HttpGet("https://raw.githubusercontent.com/chesslovers69/Super-ring-parts-v6/refs/heads/main/Bylukaslol"))()
 ]], "LS")
 
+cscript("legacy chat", [[
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bmiscellaneous%5D/music%23%5Blegacy%20chat%5D.lua"))()
+]], "LS")
+
 -------------------------------------------------------------------------------------------------------------------------------
 
 uwu["commands tab"].Size = UDim2.new(0, 100, 0, 26)
