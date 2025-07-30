@@ -15227,6 +15227,14 @@ local gameSpecificCommands = {
 	[1662219031] = { -- lip
 		"├ strollerkill, skill [target]",
 		"├ strollerbring, sbring [target]",
+		"├ waterwalker, jesus",
+		"├ kidrole, kid",
+		"├ parentrole, parent",
+		"├ petrole, pet",
+		"├ teenrole, teen",
+		"├ tospawn, spawn",
+		"├ resetappearance, rea",
+		"├ antiskintonechanger, astc",
 	},
 }
 
@@ -15245,6 +15253,9 @@ local commandList = {
 	"├ unwalkfling, unwfling",
 	"├ fly [speed]",
 	"├ unfly",
+	"├ antivoid, av",
+	"├ unantivoid, unav",
+	"├ teleporttool, tptool",
 	"├ notify, n [text]",
 	"├ freeze, ice [target]",
 	"├ unfreeze, thaw [target]",
@@ -15438,6 +15449,24 @@ end)
 addcommand("notify", "n", function(...)
 	text = table.concat({...}, " ")
 	unablenotify(text)
+end)
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+addcommand("notify", "n", function(...)
+	local function hi()
+		local maus = uwu["local player"]:GetMouse()
+		local tool = Instance.new("Tool")
+		tool.Name = "teleport tool"
+		tool.RequiresHandle = false
+		tool.Parent = uwu["local player"].Backpack
+		tool.Activated:Connect(function()
+			uwu["local player"].Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(maus.Hit.X, maus.Hit.Y + 3, maus.Hit.Z, select(4, noxious["humanoid root part"].CFrame:components()))
+		end)
+		game:GetService"StarterGui":SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
+	end
+	hi()
+	uwu["local player"].CharacterAdded:Connect(hi)
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
@@ -15755,237 +15784,6 @@ addcommand("kill", "kill", function(target)
 	end
 
 	keel(bckd)
-end)
-
--------------------------------------------------------------------------------------------------------------------------------
-
-addcommand("launchrocket", "lr", function()
-	if game.PlaceId ~= 189707 then return end
-	for _, model in ipairs(workspace:FindFirstChild("Structure"):GetChildren()) do
-		if model:IsA("Model") then
-			for _, descendant in ipairs(model:GetDescendants()) do
-				if descendant:IsA("ClickDetector") and descendant.Parent then
-					fireclickdetector(descendant, 0)
-				end
-			end
-		end
-	end
-end)
-
--------------------------------------------------------------------------------------------------------------------------------
-
-strollerkilling = false
-
-addcommand("strollerkill", "skill", function(target)
-	if game.PlaceId ~= 1662219031 then return end
-	local function getTargetPlayer(partial)
-		partial = partial:lower()
-
-		if partial == "random" then
-			local candidates = {}
-			for _, player in ipairs(uwu["players"]:GetPlayers()) do
-				if player ~= uwu["local player"] then
-					table.insert(candidates, player)
-				end
-			end
-			if #candidates > 0 then
-				return candidates[math.random(1, #candidates)]
-			else
-				return nil
-			end
-		end
-
-		if partial == "all" or partial == "others" then
-			return partial
-		end
-
-		for _, player in ipairs(uwu["players"]:GetPlayers()) do
-			if player ~= uwu["local player"] and player.DisplayName:lower():find(partial) then
-				return player
-			end
-		end
-
-		for _, player in ipairs(uwu["players"]:GetPlayers()) do
-			if player ~= uwu["local player"] and player.Name:lower():find(partial) then
-				return player
-			end
-		end
-
-		return nil
-	end
-
-	local function yeetPlayer(target)
-		local char = uwu["local player"].Character
-		local hrp = char and char:FindFirstChild("HumanoidRootPart")
-		if not hrp then return end
-		if strollerkilling then return end
-		strollerkilling = true
-
-		local stroller = uwu["local player"].Backpack:FindFirstChild("Stroller") or char:FindFirstChild("Stroller")
-		if not stroller then
-			strollerkilling = false
-			return
-		end
-
-		local targetChar = target.Character
-		if not targetChar then 
-			strollerkilling = false
-			return 
-		end
-
-		local targetHRP = targetChar:FindFirstChild("HumanoidRootPart")
-		if not targetHRP then 
-			strollerkilling = false
-			return 
-		end
-
-		local oldcframe = hrp.CFrame
-
-		stroller.Parent = char
-		task.wait(0.1)
-
-		targetHRP.CFrame = hrp.CFrame * CFrame.new(0, 0, -5)
-		task.wait(0.2)
-
-		game.Workspace.FallenPartsDestroyHeight = 0 / 0
-		targetHRP.CFrame = hrp.CFrame * CFrame.new(0, 0, -5)
-		hrp.CFrame = CFrame.new(0, -3000, 0)
-		task.wait(0.2)
-
-		stroller.Parent = uwu["local player"].Backpack
-		task.wait(0.2)
-
-		hrp.CFrame = oldcframe
-		task.wait(0.1)
-
-		hrp.CFrame = oldcframe
-		strollerkilling = false
-	end
-
-	local input = target
-	local target = getTargetPlayer(input)
-
-	if not target then return end
-
-	if target == "all" or target == "others" then
-		for _, player in ipairs(uwu["players"]:GetPlayers()) do
-			if player ~= uwu["local player"] then
-				local char = player.Character
-				if char and not (char:FindFirstChild("Stroller")) then
-					yeetPlayer(player)
-				end
-			end
-		end
-	else
-		yeetPlayer(target)
-	end
-end)
-
--------------------------------------------------------------------------------------------------------------------------------
-
-strollerbringing = false
-
-addcommand("strollerbring", "sbring", function(target)
-	if game.PlaceId ~= 1662219031 then return end
-	local function getTargetPlayer(partial)
-		partial = partial:lower()
-
-		if partial == "random" then
-			local candidates = {}
-			for _, player in ipairs(uwu["players"]:GetPlayers()) do
-				if player ~= uwu["local player"] then
-					table.insert(candidates, player)
-				end
-			end
-			if #candidates > 0 then
-				return candidates[math.random(1, #candidates)]
-			else
-				return nil
-			end
-		end
-
-		if partial == "all" or partial == "others" then
-			return partial
-		end
-
-		for _, player in ipairs(uwu["players"]:GetPlayers()) do
-			if player ~= uwu["local player"] and player.DisplayName:lower():find(partial) then
-				return player
-			end
-		end
-
-		for _, player in ipairs(uwu["players"]:GetPlayers()) do
-			if player ~= uwu["local player"] and player.Name:lower():find(partial) then
-				return player
-			end
-		end
-
-		return nil
-	end
-
-	local function bringPlayer(target)
-		local char = uwu["local player"].Character
-		local hrp = char and char:FindFirstChild("HumanoidRootPart")
-		if not hrp then return end
-		if strollerbringing then return end
-		strollerbringing = true
-
-		local stroller = uwu["local player"].Backpack:FindFirstChild("Stroller") or char:FindFirstChild("Stroller")
-		if not stroller then
-			strollerbringing = false
-			return
-		end
-
-		local targetChar = target.Character
-		if not targetChar then 
-			strollerbringing = false
-			return 
-		end
-
-		local targetHRP = targetChar:FindFirstChild("HumanoidRootPart")
-		if not targetHRP then 
-			strollerbringing = false
-			return 
-		end
-
-		local oldcframe = hrp.CFrame
-
-		stroller.Parent = char
-		task.wait(0.1)
-
-		targetHRP.CFrame = hrp.CFrame * CFrame.new(0, 0, -5)
-		task.wait(0.2)
-
-		hrp.CFrame = oldcframe
-		targetHRP.CFrame = hrp.CFrame * CFrame.new(0, 0, -5)
-		task.wait(0.1)
-
-		hrp.CFrame = oldcframe
-		stroller.Parent = uwu["local player"].Backpack
-
-		strollerbringing = false
-	end
-
-	local input = target
-	local target = getTargetPlayer(input)
-
-	if not target then
-		return
-	end
-
-	if target == "all" or target == "others" then
-		for _, player in ipairs(uwu["players"]:GetPlayers()) do
-			if player ~= uwu["local player"] then
-				local char = player.Character
-				if char and not (char:FindFirstChild("Stroller")) then
-					bringPlayer(player)
-					task.wait(0.5)
-				end
-			end
-		end
-	else
-		bringPlayer(target)
-	end
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
@@ -17298,6 +17096,23 @@ addcommand("closelabeledhints", "nolhints", function()
 	end
 
 	nohitn()
+end)
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+local antivoiding = false
+local oldfpdh = nil
+
+addcommand("antivoid", "av", function()
+	if antivoiding then return end
+	antivoiding = true
+	oldfpdh = game.Workspace.FallenPartsDestroyHeight
+	game.Workspace.FallenPartsDestroyHeight = 0 / 0
+end)
+
+addcommand("unantivoid", "unav", function()
+	game.Workspace.FallenPartsDestroyHeight = oldfpdh
+	antivoiding = false
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
@@ -22074,6 +21889,416 @@ addcommand("opennoxsecencoderanddecodertab", "noxsec", function()
 	fadeTween.Completed:Wait()
 
 	gui.Visible = false
+end)
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+addcommand("launchrocket", "lr", function()
+	if game.PlaceId ~= 189707 then return end
+	for _, model in ipairs(workspace:FindFirstChild("Structure"):GetChildren()) do
+		if model:IsA("Model") then
+			for _, descendant in ipairs(model:GetDescendants()) do
+				if descendant:IsA("ClickDetector") and descendant.Parent then
+					fireclickdetector(descendant, 0)
+				end
+			end
+		end
+	end
+end)
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+strollerkilling = false
+
+addcommand("strollerkill", "skill", function(target)
+	if game.PlaceId ~= 1662219031 then return end
+	local function getTargetPlayer(partial)
+		partial = partial:lower()
+
+		if partial == "random" then
+			local candidates = {}
+			for _, player in ipairs(uwu["players"]:GetPlayers()) do
+				if player ~= uwu["local player"] then
+					table.insert(candidates, player)
+				end
+			end
+			if #candidates > 0 then
+				return candidates[math.random(1, #candidates)]
+			else
+				return nil
+			end
+		end
+
+		if partial == "all" or partial == "others" then
+			return partial
+		end
+
+		for _, player in ipairs(uwu["players"]:GetPlayers()) do
+			if player ~= uwu["local player"] and player.DisplayName:lower():find(partial) then
+				return player
+			end
+		end
+
+		for _, player in ipairs(uwu["players"]:GetPlayers()) do
+			if player ~= uwu["local player"] and player.Name:lower():find(partial) then
+				return player
+			end
+		end
+
+		return nil
+	end
+
+	local function yeetPlayer(target)
+		local char = uwu["local player"].Character
+		local hrp = char and char:FindFirstChild("HumanoidRootPart")
+		if not hrp then return end
+		if strollerkilling then return end
+		strollerkilling = true
+
+		local stroller = uwu["local player"].Backpack:FindFirstChild("Stroller") or char:FindFirstChild("Stroller")
+		if not stroller then
+			strollerkilling = false
+			return
+		end
+
+		local targetChar = target.Character
+		if not targetChar then 
+			strollerkilling = false
+			return 
+		end
+
+		local targetHRP = targetChar:FindFirstChild("HumanoidRootPart")
+		if not targetHRP then 
+			strollerkilling = false
+			return 
+		end
+
+		local oldcframe = hrp.CFrame
+
+		stroller.Parent = char
+		task.wait(0.1)
+
+		targetHRP.CFrame = hrp.CFrame * CFrame.new(0, 0, -5)
+		task.wait(0.2)
+
+		game.Workspace.FallenPartsDestroyHeight = 0 / 0
+		targetHRP.CFrame = hrp.CFrame * CFrame.new(0, 0, -5)
+		hrp.CFrame = CFrame.new(0, -3000, 0)
+		task.wait(0.2)
+
+		stroller.Parent = uwu["local player"].Backpack
+		task.wait(0.2)
+
+		hrp.CFrame = oldcframe
+		task.wait(0.1)
+
+		hrp.CFrame = oldcframe
+		strollerkilling = false
+	end
+
+	local input = target
+	local target = getTargetPlayer(input)
+
+	if not target then return end
+
+	if target == "all" or target == "others" then
+		for _, player in ipairs(uwu["players"]:GetPlayers()) do
+			if player ~= uwu["local player"] then
+				local char = player.Character
+				if char and not (char:FindFirstChild("Stroller")) then
+					yeetPlayer(player)
+				end
+			end
+		end
+	else
+		yeetPlayer(target)
+	end
+end)
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+strollerbringing = false
+
+addcommand("strollerbring", "sbring", function(target)
+	if game.PlaceId ~= 1662219031 then return end
+	local function getTargetPlayer(partial)
+		partial = partial:lower()
+
+		if partial == "random" then
+			local candidates = {}
+			for _, player in ipairs(uwu["players"]:GetPlayers()) do
+				if player ~= uwu["local player"] then
+					table.insert(candidates, player)
+				end
+			end
+			if #candidates > 0 then
+				return candidates[math.random(1, #candidates)]
+			else
+				return nil
+			end
+		end
+
+		if partial == "all" or partial == "others" then
+			return partial
+		end
+
+		for _, player in ipairs(uwu["players"]:GetPlayers()) do
+			if player ~= uwu["local player"] and player.DisplayName:lower():find(partial) then
+				return player
+			end
+		end
+
+		for _, player in ipairs(uwu["players"]:GetPlayers()) do
+			if player ~= uwu["local player"] and player.Name:lower():find(partial) then
+				return player
+			end
+		end
+
+		return nil
+	end
+
+	local function bringPlayer(target)
+		local char = uwu["local player"].Character
+		local hrp = char and char:FindFirstChild("HumanoidRootPart")
+		if not hrp then return end
+		if strollerbringing then return end
+		strollerbringing = true
+
+		local stroller = uwu["local player"].Backpack:FindFirstChild("Stroller") or char:FindFirstChild("Stroller")
+		if not stroller then
+			strollerbringing = false
+			return
+		end
+
+		local targetChar = target.Character
+		if not targetChar then 
+			strollerbringing = false
+			return 
+		end
+
+		local targetHRP = targetChar:FindFirstChild("HumanoidRootPart")
+		if not targetHRP then 
+			strollerbringing = false
+			return 
+		end
+
+		local oldcframe = hrp.CFrame
+
+		stroller.Parent = char
+		task.wait(0.1)
+
+		targetHRP.CFrame = hrp.CFrame * CFrame.new(0, 0, -5)
+		task.wait(0.2)
+
+		hrp.CFrame = oldcframe
+		targetHRP.CFrame = hrp.CFrame * CFrame.new(0, 0, -5)
+		task.wait(0.1)
+
+		hrp.CFrame = oldcframe
+		stroller.Parent = uwu["local player"].Backpack
+
+		strollerbringing = false
+	end
+
+	local input = target
+	local target = getTargetPlayer(input)
+
+	if not target then
+		return
+	end
+
+	if target == "all" or target == "others" then
+		for _, player in ipairs(uwu["players"]:GetPlayers()) do
+			if player ~= uwu["local player"] then
+				local char = player.Character
+				if char and not (char:FindFirstChild("Stroller")) then
+					bringPlayer(player)
+					task.wait(0.5)
+				end
+			end
+		end
+	else
+		bringPlayer(target)
+	end
+end)
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+addcommand("kidrole", "kid", function()
+	local targetPart = workspace:WaitForChild("SpawnSigns"):WaitForChild("SpawnLocation3")
+	local function getCharacterRoot()
+		local character = uwu["local player"].Character or uwu["local player"].CharacterAdded:Wait()
+		return character:WaitForChild("HumanoidRootPart")
+	end
+
+	local function fireTouch(partA, partB)
+		firetouchinterest(partA, partB, 0)
+		task.wait()
+		firetouchinterest(partA, partB, 1)
+	end
+
+	task.spawn(function()
+		local root = getCharacterRoot()
+		fireTouch(root, targetPart)
+	end)
+end)
+
+addcommand("parentrole", "parent", function()
+	local targetPart = workspace:WaitForChild("SpawnSigns"):WaitForChild("SpawnLocation1")
+	local function getCharacterRoot()
+		local character = uwu["local player"].Character or uwu["local player"].CharacterAdded:Wait()
+		return character:WaitForChild("HumanoidRootPart")
+	end
+
+	local function fireTouch(partA, partB)
+		firetouchinterest(partA, partB, 0)
+		task.wait()
+		firetouchinterest(partA, partB, 1)
+	end
+
+	task.spawn(function()
+		local root = getCharacterRoot()
+		fireTouch(root, targetPart)
+	end)
+end)
+
+addcommand("petrole", "pet", function()
+	local targetPart = workspace:WaitForChild("SpawnSigns"):WaitForChild("SpawnLocation2")
+	local function getCharacterRoot()
+		local character = uwu["local player"].Character or uwu["local player"].CharacterAdded:Wait()
+		return character:WaitForChild("HumanoidRootPart")
+	end
+
+	local function fireTouch(partA, partB)
+		firetouchinterest(partA, partB, 0)
+		task.wait()
+		firetouchinterest(partA, partB, 1)
+	end
+
+	task.spawn(function()
+		local root = getCharacterRoot()
+		fireTouch(root, targetPart)
+	end)
+end)
+
+addcommand("teenrole", "teen", function()
+	local targetPart = workspace:WaitForChild("SpawnSigns"):WaitForChild("SpawnLocation4")
+	local function getCharacterRoot()
+		local character = uwu["local player"].Character or uwu["local player"].CharacterAdded:Wait()
+		return character:WaitForChild("HumanoidRootPart")
+	end
+
+	local function fireTouch(partA, partB)
+		firetouchinterest(partA, partB, 0)
+		task.wait()
+		firetouchinterest(partA, partB, 1)
+	end
+
+	task.spawn(function()
+		local root = getCharacterRoot()
+		fireTouch(root, targetPart)
+	end)
+end)
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+addcommand("tospawn", "spawn", function()
+	local function getCharacterRoot()
+		local character = uwu["local player"].Character or uwu["local player"].CharacterAdded:Wait()
+		return character:WaitForChild("HumanoidRootPart")
+	end
+
+	local spawnPart = workspace:WaitForChild("Spawn")
+
+	local function teleportOnTop()
+		local root = getCharacterRoot()
+		local spawnCFrame = spawnPart.CFrame
+		local yOffset = (spawnPart.Size.Y / 2) - 8
+		root.CFrame = CFrame.new(spawnCFrame.Position + Vector3.new(0, yOffset, 0))
+	end
+
+	teleportOnTop()
+end)
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+addcommand("resetappearance", "rea", function()
+	local targetPart = workspace:WaitForChild("Mall"):WaitForChild("Restore Clothing"):WaitForChild("pole")
+	local function getCharacterRoot()
+		local character = uwu["local player"].Character or uwu["local player"].CharacterAdded:Wait()
+		return character:WaitForChild("HumanoidRootPart")
+	end
+
+	local function fireTouch(partA, partB)
+		firetouchinterest(partA, partB, 0)
+		task.wait()
+		firetouchinterest(partA, partB, 1)
+	end
+
+	task.spawn(function()
+		local root = getCharacterRoot()
+		fireTouch(root, targetPart)
+	end)
+end)
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+addcommand("waterwalker", "jesus", function()
+	local point1 = Vector3.new(-359, 30, 188)
+	local point2 = Vector3.new(-578, 29, -82)
+
+	local size = (point1 - point2).Magnitude
+	local minX = math.min(point1.X, point2.X)
+	local minY = math.min(point1.Y, point2.Y)
+	local minZ = math.min(point1.Z, point2.Z)
+
+	local center = (point1 + point2) / 2
+	local dimensions = Vector3.new(
+		math.abs(point1.X - point2.X),
+		math.abs(point1.Y - point2.Y),
+		math.abs(point1.Z - point2.Z)
+	)
+
+	local part = Instance.new("Part")
+	part.Anchored = true
+	part.Size = dimensions
+	part.Position = center
+	part.Transparency = 1
+	part.Color = Color3.fromRGB(163, 162, 165)
+	part.Material = Enum.Material.SmoothPlastic
+	part.TopSurface = Enum.SurfaceType.Smooth
+	part.BottomSurface = Enum.SurfaceType.Smooth
+	part.Name = "SpanPart"
+	part.Parent = game.Workspace
+end)
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+addcommand("antiskintonechanger", "astc", function()
+	local mallPath = workspace:FindFirstChild("Mall")
+	local changeSkinColorFolder = mallPath and mallPath:FindFirstChild("Change Skin Color")
+
+	for _, obj in ipairs(workspace:GetDescendants()) do
+		if obj.Name == "Smooth Block Model" then
+			for _, descendant in ipairs(obj:GetDescendants()) do
+				if descendant:IsA("TouchTransmitter") then
+					descendant:Destroy()
+				end
+			end
+		end
+	end
+
+	if changeSkinColorFolder then
+		for _, item in ipairs(changeSkinColorFolder:GetDescendants()) do
+			if item:IsA("Part") then
+				for _, child in ipairs(item:GetChildren()) do
+					if child:IsA("TouchTransmitter") then
+						child:Destroy()
+					end
+				end
+			end
+		end
+	end
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
