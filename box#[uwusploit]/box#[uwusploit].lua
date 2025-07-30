@@ -13654,9 +13654,10 @@ local function setupTool(tool)
 		humanoid.WalkSpeed = 8
 
 		playAnimationAtTime(0)
+		
+		task.wait(1)
 
 		if not speedcon then
-			task.wait(1)
 			humanoid.WalkSpeed = 75
 			speedcon = humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
 				if active and humanoid.WalkSpeed ~= 75 then
