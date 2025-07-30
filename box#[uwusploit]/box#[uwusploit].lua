@@ -21325,6 +21325,8 @@ addcommand("opendonuttab", "donut", function()
 	donuttabminimized = false
 	donuttabopen = true
 
+	repos(uwu["donut tab top bar"], 0, 276, 260 + 26)
+
 	if donutrunning then
 		donutrunning:Disconnect()
 		donutrunning = nil
@@ -21464,6 +21466,8 @@ addcommand("openbinarytab", "binary", function()
 	binarytabopen = true
 	binarytabminimized = false
 
+	repos(uwu["binary tab top bar"], 0, 246, 230 + 26)
+
 	if binaryrunning then
 		binaryrunning:Disconnect()
 		binaryrunning = nil
@@ -21539,6 +21543,8 @@ addcommand("openheadcanongeneratortab", "hcgen", function()
 	hcgentabopen = true
 	hcgentabminimized = false
 
+	repos(uwu["gaydar tab top bar"], 0, 376, 230 + 26)
+
 	uwu["headcanon generator tab block main frame"].Size = UDim2.new(0, 446, 0, 141)
 	uwu["headcanon generator tab block main frame"].BackgroundTransparency = 1
 	uwu["headcanon generator tab top bar minimize button"].Text = "-"
@@ -21612,6 +21618,8 @@ addcommand("opengaydartab", "gaydar", function()
 	gaydartabreallyminimized = false
 	gaydartabopen = true
 	gaydartabminimized = false
+	
+	repos(uwu["gaydar tab top bar"], 0, 376, 230 + 26)
 
 	uwu["gaydar tab block main frame"].Size = UDim2.new(0, 376, 0, 203)
 	uwu["gaydar tab block main frame"].BackgroundTransparency = 1
@@ -21687,6 +21695,8 @@ addcommand("openvideotab", "video", function()
 	videotabopen = true
 	videotabminimized = false
 
+	repos(uwu["video tab top bar"], 0, 208, 315 + 26)
+
 	uwu["video tab block main frame"].Size = UDim2.new(0, 208, 0, 288)
 	uwu["video tab block main frame"].BackgroundTransparency = 1
 	uwu["video tab top bar minimize button"].Text = "-"
@@ -21758,6 +21768,8 @@ addcommand("openmessagereversertab", "msgreverser", function()
 	msgrevtabopen = true
 	msgrevtabminimized = false
 
+	repos(uwu["message reverser tab top bar"], 0, 345, 168 + 26)
+
 	uwu["message reverser tab block main frame"].Size = UDim2.new(0, 345, 0, 141)
 	uwu["message reverser tab block main frame"].BackgroundTransparency = 1
 	uwu["message reverser tab top bar minimize button"].Text = "-"
@@ -21827,6 +21839,8 @@ addcommand("opennoxsecencoderanddecodertab", "noxsec", function()
 	noxsectabreallyminimized = false
 	noxsectabopen = true
 	noxsectabminimized = false
+
+	repos(uwu["noxsec encoder and decoder tab top bar"], 0, 545, 268 + 26)
 
 	uwu["noxsec encoder and decoder tab block main frame"].Size = UDim2.new(0, 545, 0, 241)
 	uwu["noxsec encoder and decoder tab block main frame"].BackgroundTransparency = 1
@@ -21939,12 +21953,6 @@ addcommand("strollerkill", "skill", function(target)
 		end
 
 		for _, player in ipairs(uwu["players"]:GetPlayers()) do
-			if player ~= uwu["local player"] and player.DisplayName:lower():find(partial) then
-				return player
-			end
-		end
-
-		for _, player in ipairs(uwu["players"]:GetPlayers()) do
 			if player ~= uwu["local player"] and player.Name:lower():find(partial) then
 				return player
 			end
@@ -22043,12 +22051,6 @@ addcommand("strollerbring", "sbring", function(target)
 
 		if partial == "all" or partial == "others" then
 			return partial
-		end
-
-		for _, player in ipairs(uwu["players"]:GetPlayers()) do
-			if player ~= uwu["local player"] and player.DisplayName:lower():find(partial) then
-				return player
-			end
 		end
 
 		for _, player in ipairs(uwu["players"]:GetPlayers()) do
