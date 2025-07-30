@@ -13771,28 +13771,26 @@ cscript("mute boomboxes", [[
 local players = game:GetService("Players"):GetPlayers()
 
 while true do
-	for _, player in pairs(players:GetPlayers()) do
-		if player ~= game.Players.LocalPlayer then
-			task.spawn(function()
-				if player.Character then
-					for _, sound in player.Character:GetDescendants() do
-						if sound:IsA("Sound") and sound.Playing then
-							sound.Playing = false
-						end
-					end
+	for _, player in pairs(players) do
+	task.spawn(function()
+		if player.Character then
+			for _, sound in next, player.Character:GetDescendants() do
+				if sound:IsA("Sound") and sound.Playing then
+					sound.Playing = false
 				end
-
-				local backpack = player:FindFirstChildOfClass("Backpack")
-				if backpack then
-					for _, sound in backpack:GetDescendants() do
-						if sound:IsA("Sound") and sound.Playing then
-							sound.Playing = false
-						end
-					end
-				end
-			end)
+			end
 		end
-	end
+
+		local backpack = player:FindFirstChildOfClass("Backpack")
+		if backpack then
+			for _, sound in next, backpack:GetDescendants() do
+				if sound:IsA("Sound") and sound.Playing then
+					sound.Playing = false
+				end
+			end
+		end
+	end)
+end
 	task.wait()
 end
 ]], "CS / SS")
