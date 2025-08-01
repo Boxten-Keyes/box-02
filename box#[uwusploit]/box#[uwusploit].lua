@@ -200,7 +200,7 @@ uwu["message reverser tab block all"] = Instance.new("Frame")
 uwu["message reverser tab block main frame"] = Instance.new("Frame")
 uwu["message reverser input"] = Instance.new("TextBox")
 uwu["reverse message"] = Instance.new("TextButton")
-uwu["clear message reverser input"] = Instance.new("TextButton")
+uwu["clear reverse message input"] = Instance.new("TextButton")
 
 -------------------------------------------------------------------------------------------------------------------------------
 
