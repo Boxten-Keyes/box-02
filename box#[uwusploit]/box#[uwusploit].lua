@@ -204,22 +204,22 @@ uwu["clear message reverser input"] = Instance.new("TextButton")
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["noxsec encoder and decoder tab top bar"] = Instance.new("TextLabel")
-uwu["noxsec encoder and decoder tab top bar close button"] = Instance.new("TextButton")
-uwu["noxsec encoder and decoder tab top bar minimize button"] = Instance.new("TextButton")
-uwu["noxsec encoder and decoder tab top bar reposition button"] = Instance.new("TextButton")
-uwu["noxsec encoder and decoder tab top bar"] = Instance.new("TextLabel")
-uwu["noxsec encoder and decoder tab top bar close button"] = Instance.new("TextButton")
-uwu["noxsec encoder and decoder tab top bar minimize button"] = Instance.new("TextButton")
-uwu["noxsec encoder and decoder tab top bar reposition button"] = Instance.new("TextButton")
-uwu["noxsec encoder and decoder tab main frame 1"] = Instance.new("Frame")
-uwu["noxsec encoder and decoder tab block all"] = Instance.new("Frame")
-uwu["noxsec encoder and decoder tab block main frame"] = Instance.new("Frame")
-uwu["noxsec encoder and decoder input"] = Instance.new("TextBox")
-uwu["noxsec encode"] = Instance.new("TextButton")
-uwu["noxsec decode"] = Instance.new("TextButton")
-uwu["clear noxsec encoder and decoder input"] = Instance.new("TextButton")
-uwu["copy noxsec encoder and decoder input"] = Instance.new("TextButton")
+uwu["k12 encoder and decoder tab top bar"] = Instance.new("TextLabel")
+uwu["k12 encoder and decoder tab top bar close button"] = Instance.new("TextButton")
+uwu["k12 encoder and decoder tab top bar minimize button"] = Instance.new("TextButton")
+uwu["k12 encoder and decoder tab top bar reposition button"] = Instance.new("TextButton")
+uwu["k12 encoder and decoder tab top bar"] = Instance.new("TextLabel")
+uwu["k12 encoder and decoder tab top bar close button"] = Instance.new("TextButton")
+uwu["k12 encoder and decoder tab top bar minimize button"] = Instance.new("TextButton")
+uwu["k12 encoder and decoder tab top bar reposition button"] = Instance.new("TextButton")
+uwu["k12 encoder and decoder tab main frame 1"] = Instance.new("Frame")
+uwu["k12 encoder and decoder tab block all"] = Instance.new("Frame")
+uwu["k12 encoder and decoder tab block main frame"] = Instance.new("Frame")
+uwu["k12 encoder and decoder input"] = Instance.new("TextBox")
+uwu["k12 encode"] = Instance.new("TextButton")
+uwu["k12 decode"] = Instance.new("TextButton")
+uwu["clear k12 encoder and decoder input"] = Instance.new("TextButton")
+uwu["copy k12 encoder and decoder input"] = Instance.new("TextButton")
 
 -------------------------------------------------------------------------------------------------------------------------------
 
@@ -389,7 +389,7 @@ hcgentabreallyminimized = false
 gaydartabreallyminimized = false
 videotabreallyminimized = false
 msgrevtabreallyminimized = false
-noxsectabreallyminimized = false
+k12tabreallyminimized = false
 
 function grayscalecols()
 	uwu["default background color"] = grayscale(initialcols.background)
@@ -429,10 +429,10 @@ function grayscalecols()
 	else
 		uwu["message reverser tab top bar"].Text = " message reverser.lua o.o"
 	end
-	if noxsectabreallyminimized then
-		uwu["noxsec encoder and decoder tab top bar"].Text = " noxsec encoder and decoder.lua >.<"
+	if k12tabreallyminimized then
+		uwu["k12 encoder and decoder tab top bar"].Text = " k12 encoder and decoder.lua >.<"
 	else
-		uwu["noxsec encoder and decoder tab top bar"].Text = " noxsec encoder and decoder.lua o.o"
+		uwu["k12 encoder and decoder tab top bar"].Text = " k12 encoder and decoder.lua o.o"
 	end
 end
 
@@ -474,10 +474,10 @@ function noxiouscols()
 	else
 		uwu["message reverser tab top bar"].Text = "  message reverser.lua o.o"
 	end	
-	if noxsectabreallyminimized then
-		uwu["noxsec encoder and decoder tab top bar"].Text = "  noxsec encoder and decoder.lua >.<"
+	if k12tabreallyminimized then
+		uwu["k12 encoder and decoder tab top bar"].Text = "  k12 encoder and decoder.lua >.<"
 	else
-		uwu["noxsec encoder and decoder tab top bar"].Text = "  noxsec encoder and decoder.lua o.o"
+		uwu["k12 encoder and decoder tab top bar"].Text = "  k12 encoder and decoder.lua o.o"
 	end
 end
 
@@ -519,10 +519,10 @@ function polariacols()
 	else
 		uwu["message reverser tab top bar"].Text = "  message reverser.lua o.o"
 	end
-	if noxsectabreallyminimized then
-		uwu["noxsec encoder and decoder tab top bar"].Text = "  noxsec encoder and decoder.lua >.<"
+	if k12tabreallyminimized then
+		uwu["k12 encoder and decoder tab top bar"].Text = "  k12 encoder and decoder.lua >.<"
 	else
-		uwu["noxsec encoder and decoder tab top bar"].Text = "  noxsec encoder and decoder.lua o.o"
+		uwu["k12 encoder and decoder tab top bar"].Text = "  k12 encoder and decoder.lua o.o"
 	end
 end
 
@@ -564,10 +564,10 @@ function c00l2cols()
 	else
 		uwu["message reverser tab top bar"].Text = "   message reverser.lua o.o"
 	end
-	if noxsectabreallyminimized then
-		uwu["noxsec encoder and decoder tab top bar"].Text = "   noxsec encoder and decoder.lua >.<"
+	if k12tabreallyminimized then
+		uwu["k12 encoder and decoder tab top bar"].Text = "   k12 encoder and decoder.lua >.<"
 	else
-		uwu["noxsec encoder and decoder tab top bar"].Text = "   noxsec encoder and decoder.lua o.o"
+		uwu["k12 encoder and decoder tab top bar"].Text = "   k12 encoder and decoder.lua o.o"
 	end
 end
 
@@ -609,10 +609,10 @@ function c00lcols()
 	else
 		uwu["message reverser tab top bar"].Text = "   message reverser.lua o.o"
 	end
-	if noxsectabreallyminimized then
-		uwu["noxsec encoder and decoder tab top bar"].Text = "   noxsec encoder and decoder.lua >.<"
+	if k12tabreallyminimized then
+		uwu["k12 encoder and decoder tab top bar"].Text = "   k12 encoder and decoder.lua >.<"
 	else
-		uwu["noxsec encoder and decoder tab top bar"].Text = "   noxsec encoder and decoder.lua o.o"
+		uwu["k12 encoder and decoder tab top bar"].Text = "   k12 encoder and decoder.lua o.o"
 	end
 end
 
@@ -654,10 +654,10 @@ function lightcols()
 	else
 		uwu["message reverser tab top bar"].Text = " message reverser.lua o.o"
 	end
-	if noxsectabreallyminimized then
-		uwu["noxsec encoder and decoder tab top bar"].Text = " noxsec encoder and decoder.lua >.<"
+	if k12tabreallyminimized then
+		uwu["k12 encoder and decoder tab top bar"].Text = " k12 encoder and decoder.lua >.<"
 	else
-		uwu["noxsec encoder and decoder tab top bar"].Text = " noxsec encoder and decoder.lua o.o"
+		uwu["k12 encoder and decoder tab top bar"].Text = " k12 encoder and decoder.lua o.o"
 	end
 end
 
@@ -699,10 +699,10 @@ function restorecols()
 	else
 		uwu["message reverser tab top bar"].Text = " message reverser.lua o.o"
 	end
-	if noxsectabreallyminimized then
-		uwu["noxsec encoder and decoder tab top bar"].Text = " noxsec encoder and decoder.lua >.<"
+	if k12tabreallyminimized then
+		uwu["k12 encoder and decoder tab top bar"].Text = " k12 encoder and decoder.lua >.<"
 	else
-		uwu["noxsec encoder and decoder tab top bar"].Text = " noxsec encoder and decoder.lua o.o"
+		uwu["k12 encoder and decoder tab top bar"].Text = " k12 encoder and decoder.lua o.o"
 	end
 end
 
@@ -4137,32 +4137,32 @@ uwu["message reverser tab block all"].Visible = false
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["noxsec encoder and decoder tab top bar"].Size = UDim2.new(0, 545, 0, 26)
+uwu["k12 encoder and decoder tab top bar"].Size = UDim2.new(0, 545, 0, 26)
 
-uwu["noxsec encoder and decoder tab top bar"].BackgroundColor3 = uwu["default background color"]
+uwu["k12 encoder and decoder tab top bar"].BackgroundColor3 = uwu["default background color"]
 
-uwu["noxsec encoder and decoder tab top bar"].BorderColor3 = uwu["default border color"]
-uwu["noxsec encoder and decoder tab top bar"].BorderSizePixel = 1
+uwu["k12 encoder and decoder tab top bar"].BorderColor3 = uwu["default border color"]
+uwu["k12 encoder and decoder tab top bar"].BorderSizePixel = 1
 
-uwu["noxsec encoder and decoder tab top bar"].TextColor3 = uwu["default border color"]
-uwu["noxsec encoder and decoder tab top bar"].Font = Enum.Font.RobotoMono
-uwu["noxsec encoder and decoder tab top bar"].TextSize = 15
-uwu["noxsec encoder and decoder tab top bar"].TextScaled = false
-uwu["noxsec encoder and decoder tab top bar"].Text = " noxsec encoder and decoder.lua o.o"
-uwu["noxsec encoder and decoder tab top bar"].TextXAlignment = Enum.TextXAlignment.Left
-uwu["noxsec encoder and decoder tab top bar"].TextYAlignment = Enum.TextYAlignment.Center
+uwu["k12 encoder and decoder tab top bar"].TextColor3 = uwu["default border color"]
+uwu["k12 encoder and decoder tab top bar"].Font = Enum.Font.RobotoMono
+uwu["k12 encoder and decoder tab top bar"].TextSize = 15
+uwu["k12 encoder and decoder tab top bar"].TextScaled = false
+uwu["k12 encoder and decoder tab top bar"].Text = " k12 encoder and decoder.lua o.o"
+uwu["k12 encoder and decoder tab top bar"].TextXAlignment = Enum.TextXAlignment.Left
+uwu["k12 encoder and decoder tab top bar"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["noxsec encoder and decoder top bar text padding"] = Instance.new("UIPadding")
-uwu["noxsec encoder and decoder top bar text padding"].PaddingLeft = UDim.new(0, 0)
-uwu["noxsec encoder and decoder top bar text padding"].PaddingRight = UDim.new(0, 0)
-uwu["noxsec encoder and decoder top bar text padding"].Parent = uwu["noxsec encoder and decoder tab top bar"]
+uwu["k12 encoder and decoder top bar text padding"] = Instance.new("UIPadding")
+uwu["k12 encoder and decoder top bar text padding"].PaddingLeft = UDim.new(0, 0)
+uwu["k12 encoder and decoder top bar text padding"].PaddingRight = UDim.new(0, 0)
+uwu["k12 encoder and decoder top bar text padding"].Parent = uwu["k12 encoder and decoder tab top bar"]
 
-uwu["noxsec encoder and decoder tab top bar"].Parent = uwu["screen gui"]
-uwu["noxsec encoder and decoder tab top bar"].ZIndex = 803
-uwu["noxsec encoder and decoder tab top bar"].Visible = false
+uwu["k12 encoder and decoder tab top bar"].Parent = uwu["screen gui"]
+uwu["k12 encoder and decoder tab top bar"].ZIndex = 803
+uwu["k12 encoder and decoder tab top bar"].Visible = false
 
-function dragnoxsectabtopbar()
-	local frame = uwu["noxsec encoder and decoder tab top bar"]
+function dragk12tabtopbar()
+	local frame = uwu["k12 encoder and decoder tab top bar"]
 	local dragToggle 	
 	local dragSpeed = 0.25
 	local dragStart 	
@@ -4197,289 +4197,289 @@ function dragnoxsectabtopbar()
 	end)
 end
 
-dragnoxsectabtopbar()
+dragk12tabtopbar()
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["noxsec encoder and decoder tab top bar close button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["noxsec encoder and decoder tab top bar close button"].Position = UDim2.new(0, 523, 0, 4.7)
+uwu["k12 encoder and decoder tab top bar close button"].Size = UDim2.new(0, 18, 0, 18)
+uwu["k12 encoder and decoder tab top bar close button"].Position = UDim2.new(0, 523, 0, 4.7)
 
-uwu["noxsec encoder and decoder tab top bar close button"].BackgroundColor3 = uwu["default background color"]
+uwu["k12 encoder and decoder tab top bar close button"].BackgroundColor3 = uwu["default background color"]
 
-uwu["noxsec encoder and decoder tab top bar close button"].BorderColor3 = uwu["default border color"]
-uwu["noxsec encoder and decoder tab top bar close button"].BorderSizePixel = 1
+uwu["k12 encoder and decoder tab top bar close button"].BorderColor3 = uwu["default border color"]
+uwu["k12 encoder and decoder tab top bar close button"].BorderSizePixel = 1
 
-uwu["noxsec encoder and decoder tab top bar close button"].TextColor3 = uwu["default border color"]
-uwu["noxsec encoder and decoder tab top bar close button"].Font = Enum.Font.RobotoMono
-uwu["noxsec encoder and decoder tab top bar close button"].TextSize = 16
-uwu["noxsec encoder and decoder tab top bar close button"].TextScaled = false
-uwu["noxsec encoder and decoder tab top bar close button"].Text = "X"
-uwu["noxsec encoder and decoder tab top bar close button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["noxsec encoder and decoder tab top bar close button"].TextYAlignment = Enum.TextYAlignment.Center
+uwu["k12 encoder and decoder tab top bar close button"].TextColor3 = uwu["default border color"]
+uwu["k12 encoder and decoder tab top bar close button"].Font = Enum.Font.RobotoMono
+uwu["k12 encoder and decoder tab top bar close button"].TextSize = 16
+uwu["k12 encoder and decoder tab top bar close button"].TextScaled = false
+uwu["k12 encoder and decoder tab top bar close button"].Text = "X"
+uwu["k12 encoder and decoder tab top bar close button"].TextXAlignment = Enum.TextXAlignment.Center
+uwu["k12 encoder and decoder tab top bar close button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["noxsec encoder and decoder tab top bar close button"].Parent = uwu["noxsec encoder and decoder tab top bar"]
-uwu["noxsec encoder and decoder tab top bar close button"].ZIndex = 804
+uwu["k12 encoder and decoder tab top bar close button"].Parent = uwu["k12 encoder and decoder tab top bar"]
+uwu["k12 encoder and decoder tab top bar close button"].ZIndex = 804
 
-uwu["noxsec encoder and decoder tab top bar close button text padding"] = Instance.new("UIPadding")
-uwu["noxsec encoder and decoder tab top bar close button text padding"].PaddingTop = UDim.new(0, -1)
-uwu["noxsec encoder and decoder tab top bar close button text padding"].Parent = uwu["noxsec encoder and decoder tab top bar close button"]
+uwu["k12 encoder and decoder tab top bar close button text padding"] = Instance.new("UIPadding")
+uwu["k12 encoder and decoder tab top bar close button text padding"].PaddingTop = UDim.new(0, -1)
+uwu["k12 encoder and decoder tab top bar close button text padding"].Parent = uwu["k12 encoder and decoder tab top bar close button"]
 
-uwu["noxsec encoder and decoder tab top bar close button"].MouseButton1Click:Connect(function()
-	if not noxseccanminimize then return end
-	noxsectabopen = false
-	noxsectabminimized = false
+uwu["k12 encoder and decoder tab top bar close button"].MouseButton1Click:Connect(function()
+	if not k12canminimize then return end
+	k12tabopen = false
+	k12tabminimized = false
 	playclicksound()
-	uwu["noxsec encoder and decoder tab top bar"].Visible = false
-	repos(uwu["noxsec encoder and decoder tab top bar"], 0, 545, 268 + 26)
+	uwu["k12 encoder and decoder tab top bar"].Visible = false
+	repos(uwu["k12 encoder and decoder tab top bar"], 0, 545, 268 + 26)
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["noxsec encoder and decoder tab top bar minimize button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["noxsec encoder and decoder tab top bar minimize button"].Position = UDim2.new(0, 499, 0, 4.7)
+uwu["k12 encoder and decoder tab top bar minimize button"].Size = UDim2.new(0, 18, 0, 18)
+uwu["k12 encoder and decoder tab top bar minimize button"].Position = UDim2.new(0, 499, 0, 4.7)
 
-uwu["noxsec encoder and decoder tab top bar minimize button"].BackgroundColor3 = uwu["default background color"]
+uwu["k12 encoder and decoder tab top bar minimize button"].BackgroundColor3 = uwu["default background color"]
 
-uwu["noxsec encoder and decoder tab top bar minimize button"].BorderColor3 = uwu["default border color"]
-uwu["noxsec encoder and decoder tab top bar minimize button"].BorderSizePixel = 1
+uwu["k12 encoder and decoder tab top bar minimize button"].BorderColor3 = uwu["default border color"]
+uwu["k12 encoder and decoder tab top bar minimize button"].BorderSizePixel = 1
 
-uwu["noxsec encoder and decoder tab top bar minimize button"].TextColor3 = uwu["default border color"]
-uwu["noxsec encoder and decoder tab top bar minimize button"].Font = Enum.Font.RobotoMono
-uwu["noxsec encoder and decoder tab top bar minimize button"].TextSize = 16
-uwu["noxsec encoder and decoder tab top bar minimize button"].TextScaled = false
-uwu["noxsec encoder and decoder tab top bar minimize button"].Visible = true
-uwu["noxsec encoder and decoder tab top bar minimize button"].Text = "-"
-uwu["noxsec encoder and decoder tab top bar minimize button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["noxsec encoder and decoder tab top bar minimize button"].TextYAlignment = Enum.TextYAlignment.Center
+uwu["k12 encoder and decoder tab top bar minimize button"].TextColor3 = uwu["default border color"]
+uwu["k12 encoder and decoder tab top bar minimize button"].Font = Enum.Font.RobotoMono
+uwu["k12 encoder and decoder tab top bar minimize button"].TextSize = 16
+uwu["k12 encoder and decoder tab top bar minimize button"].TextScaled = false
+uwu["k12 encoder and decoder tab top bar minimize button"].Visible = true
+uwu["k12 encoder and decoder tab top bar minimize button"].Text = "-"
+uwu["k12 encoder and decoder tab top bar minimize button"].TextXAlignment = Enum.TextXAlignment.Center
+uwu["k12 encoder and decoder tab top bar minimize button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["noxsec encoder and decoder tab top bar minimize button"].Parent = uwu["noxsec encoder and decoder tab top bar"]
-uwu["noxsec encoder and decoder tab top bar minimize button"].ZIndex = 804
+uwu["k12 encoder and decoder tab top bar minimize button"].Parent = uwu["k12 encoder and decoder tab top bar"]
+uwu["k12 encoder and decoder tab top bar minimize button"].ZIndex = 804
 
-uwu["noxsec encoder and decoder tab top bar minimize button text padding"] = Instance.new("UIPadding")
-uwu["noxsec encoder and decoder tab top bar minimize button text padding"].PaddingTop = UDim.new(0, -2)
-uwu["noxsec encoder and decoder tab top bar minimize button text padding"].Parent = uwu["noxsec encoder and decoder tab top bar minimize button"]
+uwu["k12 encoder and decoder tab top bar minimize button text padding"] = Instance.new("UIPadding")
+uwu["k12 encoder and decoder tab top bar minimize button text padding"].PaddingTop = UDim.new(0, -2)
+uwu["k12 encoder and decoder tab top bar minimize button text padding"].Parent = uwu["k12 encoder and decoder tab top bar minimize button"]
 
-noxsectabminimized = false
-noxseccanminimize = true
+k12tabminimized = false
+k12canminimize = true
 
-uwu["noxsec encoder and decoder tab top bar minimize button"].MouseButton1Click:Connect(function()
-	if not noxseccanminimize then return end
+uwu["k12 encoder and decoder tab top bar minimize button"].MouseButton1Click:Connect(function()
+	if not k12canminimize then return end
 	spawn(playclicksound)
-	noxseccanminimize = false
+	k12canminimize = false
 
-	noxsectabminimized = not noxsectabminimized
+	k12tabminimized = not k12tabminimized
 
-	if noxsectabminimized then
-		uwu["noxsec encoder and decoder tab top bar minimize button"].Text = "+"
-		uwu["noxsec encoder and decoder tab block main frame"].Visible = true
+	if k12tabminimized then
+		uwu["k12 encoder and decoder tab top bar minimize button"].Text = "+"
+		uwu["k12 encoder and decoder tab block main frame"].Visible = true
 
-		local fadeTween = fade(uwu["noxsec encoder and decoder tab block main frame"], 0, 0.2)
+		local fadeTween = fade(uwu["k12 encoder and decoder tab block main frame"], 0, 0.2)
 		fadeTween.Completed:Wait()
-		uwu["noxsec encoder and decoder tab main frame 1"].Visible = false
+		uwu["k12 encoder and decoder tab main frame 1"].Visible = false
 
 		local tween = tweenSizePosition(
-			uwu["noxsec encoder and decoder tab block main frame"],
+			uwu["k12 encoder and decoder tab block main frame"],
 			UDim2.new(0, 545, 0, 0),
 			UDim2.new(0, 0, 1, 1),
 			0.5
 		)
 		tween.Completed:Wait()
 
-		noxsectabreallyminimized = true
-		uwu["noxsec encoder and decoder tab block main frame"].Visible = false
+		k12tabreallyminimized = true
+		uwu["k12 encoder and decoder tab block main frame"].Visible = false
 	else
-		uwu["noxsec encoder and decoder tab top bar minimize button"].Text = "-"
-		uwu["noxsec encoder and decoder tab block main frame"].Visible = true
+		uwu["k12 encoder and decoder tab top bar minimize button"].Text = "-"
+		uwu["k12 encoder and decoder tab block main frame"].Visible = true
 
 		local tween = tweenSizePosition(
-			uwu["noxsec encoder and decoder tab block main frame"],
+			uwu["k12 encoder and decoder tab block main frame"],
 			UDim2.new(0, 545, 0, 241),
 			UDim2.new(0, 0, 1, 1),
 			0.5
 		)
 		tween.Completed:Wait()
-		uwu["noxsec encoder and decoder tab main frame 1"].Visible = true
+		uwu["k12 encoder and decoder tab main frame 1"].Visible = true
 
-		local fadeTween = fade(uwu["noxsec encoder and decoder tab block main frame"], 1, 0.2)
+		local fadeTween = fade(uwu["k12 encoder and decoder tab block main frame"], 1, 0.2)
 		fadeTween.Completed:Wait()
 
-		noxsectabreallyminimized = false
-		uwu["noxsec encoder and decoder tab block main frame"].Visible = false
+		k12tabreallyminimized = false
+		uwu["k12 encoder and decoder tab block main frame"].Visible = false
 	end
 
-	noxseccanminimize = true
+	k12canminimize = true
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["noxsec encoder and decoder tab top bar reposition button"].Size = UDim2.new(0, 18, 0, 18)
-uwu["noxsec encoder and decoder tab top bar reposition button"].Position = UDim2.new(0, 475, 0, 4.7)
+uwu["k12 encoder and decoder tab top bar reposition button"].Size = UDim2.new(0, 18, 0, 18)
+uwu["k12 encoder and decoder tab top bar reposition button"].Position = UDim2.new(0, 475, 0, 4.7)
 
-uwu["noxsec encoder and decoder tab top bar reposition button"].BackgroundColor3 = uwu["default background color"]
+uwu["k12 encoder and decoder tab top bar reposition button"].BackgroundColor3 = uwu["default background color"]
 
-uwu["noxsec encoder and decoder tab top bar reposition button"].BorderColor3 = uwu["default border color"]
-uwu["noxsec encoder and decoder tab top bar reposition button"].BorderSizePixel = 1
+uwu["k12 encoder and decoder tab top bar reposition button"].BorderColor3 = uwu["default border color"]
+uwu["k12 encoder and decoder tab top bar reposition button"].BorderSizePixel = 1
 
-uwu["noxsec encoder and decoder tab top bar reposition button"].TextColor3 = uwu["default border color"]
-uwu["noxsec encoder and decoder tab top bar reposition button"].Font = Enum.Font.RobotoMono
-uwu["noxsec encoder and decoder tab top bar reposition button"].TextSize = 16
-uwu["noxsec encoder and decoder tab top bar reposition button"].TextScaled = false
-uwu["noxsec encoder and decoder tab top bar reposition button"].Text = "R"
-uwu["noxsec encoder and decoder tab top bar reposition button"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["noxsec encoder and decoder tab top bar reposition button"].TextYAlignment = Enum.TextYAlignment.Center
+uwu["k12 encoder and decoder tab top bar reposition button"].TextColor3 = uwu["default border color"]
+uwu["k12 encoder and decoder tab top bar reposition button"].Font = Enum.Font.RobotoMono
+uwu["k12 encoder and decoder tab top bar reposition button"].TextSize = 16
+uwu["k12 encoder and decoder tab top bar reposition button"].TextScaled = false
+uwu["k12 encoder and decoder tab top bar reposition button"].Text = "R"
+uwu["k12 encoder and decoder tab top bar reposition button"].TextXAlignment = Enum.TextXAlignment.Center
+uwu["k12 encoder and decoder tab top bar reposition button"].TextYAlignment = Enum.TextYAlignment.Center
 
-uwu["noxsec encoder and decoder tab top bar reposition button"].Parent = uwu["noxsec encoder and decoder tab top bar"]
-uwu["noxsec encoder and decoder tab top bar reposition button"].ZIndex = 804
+uwu["k12 encoder and decoder tab top bar reposition button"].Parent = uwu["k12 encoder and decoder tab top bar"]
+uwu["k12 encoder and decoder tab top bar reposition button"].ZIndex = 804
 
-uwu["noxsec encoder and decoder tab top bar reposition button text padding"] = Instance.new("UIPadding")
-uwu["noxsec encoder and decoder tab top bar reposition button text padding"].PaddingTop = UDim.new(0, -1)
-uwu["noxsec encoder and decoder tab top bar reposition button text padding"].Parent = uwu["noxsec encoder and decoder tab top bar reposition button"]
+uwu["k12 encoder and decoder tab top bar reposition button text padding"] = Instance.new("UIPadding")
+uwu["k12 encoder and decoder tab top bar reposition button text padding"].PaddingTop = UDim.new(0, -1)
+uwu["k12 encoder and decoder tab top bar reposition button text padding"].Parent = uwu["k12 encoder and decoder tab top bar reposition button"]
 
-uwu["noxsec encoder and decoder tab top bar reposition button"].MouseButton1Click:Connect(function()
+uwu["k12 encoder and decoder tab top bar reposition button"].MouseButton1Click:Connect(function()
 	playclicksound()
-	repos(uwu["noxsec encoder and decoder tab top bar"], 0.5, 545, 268 + 26)
+	repos(uwu["k12 encoder and decoder tab top bar"], 0.5, 545, 268 + 26)
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["noxsec encoder and decoder tab main frame 1"].Size = UDim2.new(0, 545, 0, 242)
-uwu["noxsec encoder and decoder tab main frame 1"].Position = UDim2.new(0, 0, 1, 0)
+uwu["k12 encoder and decoder tab main frame 1"].Size = UDim2.new(0, 545, 0, 242)
+uwu["k12 encoder and decoder tab main frame 1"].Position = UDim2.new(0, 0, 1, 0)
 
-uwu["noxsec encoder and decoder tab main frame 1"].BackgroundColor3 = uwu["default background color"]
+uwu["k12 encoder and decoder tab main frame 1"].BackgroundColor3 = uwu["default background color"]
 
-uwu["noxsec encoder and decoder tab main frame 1"].BorderColor3 = uwu["default border color"]
-uwu["noxsec encoder and decoder tab main frame 1"].BorderSizePixel = 1
+uwu["k12 encoder and decoder tab main frame 1"].BorderColor3 = uwu["default border color"]
+uwu["k12 encoder and decoder tab main frame 1"].BorderSizePixel = 1
 
-uwu["noxsec encoder and decoder tab main frame 1"].Parent = uwu["noxsec encoder and decoder tab top bar"]
-uwu["noxsec encoder and decoder tab main frame 1"].ZIndex = 802
+uwu["k12 encoder and decoder tab main frame 1"].Parent = uwu["k12 encoder and decoder tab top bar"]
+uwu["k12 encoder and decoder tab main frame 1"].ZIndex = 802
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["noxsec encoder and decoder input"].Size = UDim2.new(0, 537, 0, 187)
-uwu["noxsec encoder and decoder input"].Position = UDim2.new(0, 4, 0, 5)
+uwu["k12 encoder and decoder input"].Size = UDim2.new(0, 537, 0, 187)
+uwu["k12 encoder and decoder input"].Position = UDim2.new(0, 4, 0, 5)
 
-uwu["noxsec encoder and decoder input"].BackgroundColor3 = uwu["default background color"]
+uwu["k12 encoder and decoder input"].BackgroundColor3 = uwu["default background color"]
 
-uwu["noxsec encoder and decoder input"].BorderColor3 = uwu["default border color"]
-uwu["noxsec encoder and decoder input"].BorderSizePixel = 1
+uwu["k12 encoder and decoder input"].BorderColor3 = uwu["default border color"]
+uwu["k12 encoder and decoder input"].BorderSizePixel = 1
 
-uwu["noxsec encoder and decoder input"].Parent = uwu["noxsec encoder and decoder tab main frame 1"]
-uwu["noxsec encoder and decoder input"].ZIndex = 803
+uwu["k12 encoder and decoder input"].Parent = uwu["k12 encoder and decoder tab main frame 1"]
+uwu["k12 encoder and decoder input"].ZIndex = 803
 
-uwu["noxsec encoder and decoder input"].Font = Enum.Font.RobotoMono
-uwu["noxsec encoder and decoder input"].TextColor3 = Color3.new(1, 1, 1)
-uwu["noxsec encoder and decoder input"].TextSize = 15
-uwu["noxsec encoder and decoder input"].Text = ""
-uwu["noxsec encoder and decoder input"].PlaceholderText = "input message"
-uwu["noxsec encoder and decoder input"].PlaceholderColor3 = uwu["default 1/2 color"]
-uwu["noxsec encoder and decoder input"].TextWrapped = true
-uwu["noxsec encoder and decoder input"].ClearTextOnFocus = false
-uwu["noxsec encoder and decoder input"].TextXAlignment = Enum.TextXAlignment.Left
-uwu["noxsec encoder and decoder input"].TextYAlignment = Enum.TextYAlignment.Top
-uwu["noxsec encoder and decoder input"].ClipsDescendants = true
+uwu["k12 encoder and decoder input"].Font = Enum.Font.RobotoMono
+uwu["k12 encoder and decoder input"].TextColor3 = Color3.new(1, 1, 1)
+uwu["k12 encoder and decoder input"].TextSize = 15
+uwu["k12 encoder and decoder input"].Text = ""
+uwu["k12 encoder and decoder input"].PlaceholderText = "input message"
+uwu["k12 encoder and decoder input"].PlaceholderColor3 = uwu["default 1/2 color"]
+uwu["k12 encoder and decoder input"].TextWrapped = true
+uwu["k12 encoder and decoder input"].ClearTextOnFocus = false
+uwu["k12 encoder and decoder input"].TextXAlignment = Enum.TextXAlignment.Left
+uwu["k12 encoder and decoder input"].TextYAlignment = Enum.TextYAlignment.Top
+uwu["k12 encoder and decoder input"].ClipsDescendants = true
 
-uwu["noxsec encoder and decoder input text padding"] = Instance.new("UIPadding")
-uwu["noxsec encoder and decoder input text padding"].PaddingBottom = UDim.new(0, 4)
-uwu["noxsec encoder and decoder input text padding"].PaddingLeft = UDim.new(0, 4)
-uwu["noxsec encoder and decoder input text padding"].PaddingRight = UDim.new(0, 4)
-uwu["noxsec encoder and decoder input text padding"].PaddingTop = UDim.new(0, 4)
-uwu["noxsec encoder and decoder input text padding"].Parent = uwu["noxsec encoder and decoder input"]
+uwu["k12 encoder and decoder input text padding"] = Instance.new("UIPadding")
+uwu["k12 encoder and decoder input text padding"].PaddingBottom = UDim.new(0, 4)
+uwu["k12 encoder and decoder input text padding"].PaddingLeft = UDim.new(0, 4)
+uwu["k12 encoder and decoder input text padding"].PaddingRight = UDim.new(0, 4)
+uwu["k12 encoder and decoder input text padding"].PaddingTop = UDim.new(0, 4)
+uwu["k12 encoder and decoder input text padding"].Parent = uwu["k12 encoder and decoder input"]
 
-uwu["noxsec encode"].Size = UDim2.new(0, 160, 0, 41)
-uwu["noxsec encode"].Position = UDim2.new(0, 4, 0, 197)
+uwu["k12 encode"].Size = UDim2.new(0, 160, 0, 41)
+uwu["k12 encode"].Position = UDim2.new(0, 4, 0, 197)
 
-uwu["noxsec encode"].BackgroundColor3 = uwu["default background color"]
+uwu["k12 encode"].BackgroundColor3 = uwu["default background color"]
 
-uwu["noxsec encode"].BorderColor3 = uwu["default border color"]
-uwu["noxsec encode"].BorderSizePixel = 1
+uwu["k12 encode"].BorderColor3 = uwu["default border color"]
+uwu["k12 encode"].BorderSizePixel = 1
 
-uwu["noxsec encode"].Parent = uwu["noxsec encoder and decoder tab main frame 1"]
-uwu["noxsec encode"].ZIndex = 803
+uwu["k12 encode"].Parent = uwu["k12 encoder and decoder tab main frame 1"]
+uwu["k12 encode"].ZIndex = 803
 
-uwu["noxsec encode"].Font = Enum.Font.RobotoMono
-uwu["noxsec encode"].TextColor3 = Color3.new(1, 1, 1)
-uwu["noxsec encode"].TextSize = 15
-uwu["noxsec encode"].Text = "encode"
-uwu["noxsec encode"].TextWrapped = true
-uwu["noxsec encode"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["noxsec encode"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["noxsec encode"].ClipsDescendants = true
+uwu["k12 encode"].Font = Enum.Font.RobotoMono
+uwu["k12 encode"].TextColor3 = Color3.new(1, 1, 1)
+uwu["k12 encode"].TextSize = 15
+uwu["k12 encode"].Text = "encode"
+uwu["k12 encode"].TextWrapped = true
+uwu["k12 encode"].TextXAlignment = Enum.TextXAlignment.Center
+uwu["k12 encode"].TextYAlignment = Enum.TextYAlignment.Center
+uwu["k12 encode"].ClipsDescendants = true
 
-uwu["noxsec encode text padding"] = Instance.new("UIPadding")
-uwu["noxsec encode text padding"].PaddingBottom = UDim.new(0, 0)
-uwu["noxsec encode text padding"].Parent = uwu["reverse message"]
+uwu["k12 encode text padding"] = Instance.new("UIPadding")
+uwu["k12 encode text padding"].PaddingBottom = UDim.new(0, 0)
+uwu["k12 encode text padding"].Parent = uwu["reverse message"]
 
-uwu["noxsec decode"].Size = UDim2.new(0, 160, 0, 41)
-uwu["noxsec decode"].Position = UDim2.new(0, 169, 0, 197)
+uwu["k12 decode"].Size = UDim2.new(0, 160, 0, 41)
+uwu["k12 decode"].Position = UDim2.new(0, 169, 0, 197)
 
-uwu["noxsec decode"].BackgroundColor3 = uwu["default background color"]
+uwu["k12 decode"].BackgroundColor3 = uwu["default background color"]
 
-uwu["noxsec decode"].BorderColor3 = uwu["default border color"]
-uwu["noxsec decode"].BorderSizePixel = 1
+uwu["k12 decode"].BorderColor3 = uwu["default border color"]
+uwu["k12 decode"].BorderSizePixel = 1
 
-uwu["noxsec decode"].Parent = uwu["noxsec encoder and decoder tab main frame 1"]
-uwu["noxsec decode"].ZIndex = 803
+uwu["k12 decode"].Parent = uwu["k12 encoder and decoder tab main frame 1"]
+uwu["k12 decode"].ZIndex = 803
 
-uwu["noxsec decode"].Font = Enum.Font.RobotoMono
-uwu["noxsec decode"].TextColor3 = Color3.new(1, 1, 1)
-uwu["noxsec decode"].TextSize = 15
-uwu["noxsec decode"].Text = "decode"
-uwu["noxsec decode"].TextWrapped = true
-uwu["noxsec decode"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["noxsec decode"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["noxsec decode"].ClipsDescendants = true
+uwu["k12 decode"].Font = Enum.Font.RobotoMono
+uwu["k12 decode"].TextColor3 = Color3.new(1, 1, 1)
+uwu["k12 decode"].TextSize = 15
+uwu["k12 decode"].Text = "decode"
+uwu["k12 decode"].TextWrapped = true
+uwu["k12 decode"].TextXAlignment = Enum.TextXAlignment.Center
+uwu["k12 decode"].TextYAlignment = Enum.TextYAlignment.Center
+uwu["k12 decode"].ClipsDescendants = true
 
-uwu["noxsec decode text padding"] = Instance.new("UIPadding")
-uwu["noxsec decode text padding"].PaddingBottom = UDim.new(0, 0)
-uwu["noxsec decode text padding"].Parent = uwu["reverse message"]
+uwu["k12 decode text padding"] = Instance.new("UIPadding")
+uwu["k12 decode text padding"].PaddingBottom = UDim.new(0, 0)
+uwu["k12 decode text padding"].Parent = uwu["reverse message"]
 
-uwu["clear noxsec encoder and decoder input"].Size = UDim2.new(0, 101, 0, 41)
-uwu["clear noxsec encoder and decoder input"].Position = UDim2.new(0, 334, 0, 197)
+uwu["clear k12 encoder and decoder input"].Size = UDim2.new(0, 101, 0, 41)
+uwu["clear k12 encoder and decoder input"].Position = UDim2.new(0, 334, 0, 197)
 
-uwu["clear noxsec encoder and decoder input"].BackgroundColor3 = uwu["default background color"]
+uwu["clear k12 encoder and decoder input"].BackgroundColor3 = uwu["default background color"]
 
-uwu["clear noxsec encoder and decoder input"].BorderColor3 = uwu["default border color"]
-uwu["clear noxsec encoder and decoder input"].BorderSizePixel = 1
+uwu["clear k12 encoder and decoder input"].BorderColor3 = uwu["default border color"]
+uwu["clear k12 encoder and decoder input"].BorderSizePixel = 1
 
-uwu["clear noxsec encoder and decoder input"].Parent = uwu["noxsec encoder and decoder tab main frame 1"]
-uwu["clear noxsec encoder and decoder input"].ZIndex = 803
+uwu["clear k12 encoder and decoder input"].Parent = uwu["k12 encoder and decoder tab main frame 1"]
+uwu["clear k12 encoder and decoder input"].ZIndex = 803
 
-uwu["clear noxsec encoder and decoder input"].Font = Enum.Font.RobotoMono
-uwu["clear noxsec encoder and decoder input"].TextColor3 = Color3.new(1, 1, 1)
-uwu["clear noxsec encoder and decoder input"].TextSize = 15
-uwu["clear noxsec encoder and decoder input"].Text = "clear"
-uwu["clear noxsec encoder and decoder input"].TextWrapped = true
-uwu["clear noxsec encoder and decoder input"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["clear noxsec encoder and decoder input"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["clear noxsec encoder and decoder input"].ClipsDescendants = true
+uwu["clear k12 encoder and decoder input"].Font = Enum.Font.RobotoMono
+uwu["clear k12 encoder and decoder input"].TextColor3 = Color3.new(1, 1, 1)
+uwu["clear k12 encoder and decoder input"].TextSize = 15
+uwu["clear k12 encoder and decoder input"].Text = "clear"
+uwu["clear k12 encoder and decoder input"].TextWrapped = true
+uwu["clear k12 encoder and decoder input"].TextXAlignment = Enum.TextXAlignment.Center
+uwu["clear k12 encoder and decoder input"].TextYAlignment = Enum.TextYAlignment.Center
+uwu["clear k12 encoder and decoder input"].ClipsDescendants = true
 
-uwu["clear noxsec encoder and decoder input text padding"] = Instance.new("UIPadding")
-uwu["clear noxsec encoder and decoder input text padding"].PaddingBottom = UDim.new(0, 0)
-uwu["clear noxsec encoder and decoder input text padding"].Parent = uwu["clear noxsec encoder and decoder input"]
+uwu["clear k12 encoder and decoder input text padding"] = Instance.new("UIPadding")
+uwu["clear k12 encoder and decoder input text padding"].PaddingBottom = UDim.new(0, 0)
+uwu["clear k12 encoder and decoder input text padding"].Parent = uwu["clear k12 encoder and decoder input"]
 
-uwu["copy noxsec encoder and decoder input"].Size = UDim2.new(0, 101, 0, 41)
-uwu["copy noxsec encoder and decoder input"].Position = UDim2.new(0, 440, 0, 197)
+uwu["copy k12 encoder and decoder input"].Size = UDim2.new(0, 101, 0, 41)
+uwu["copy k12 encoder and decoder input"].Position = UDim2.new(0, 440, 0, 197)
 
-uwu["copy noxsec encoder and decoder input"].BackgroundColor3 = uwu["default background color"]
+uwu["copy k12 encoder and decoder input"].BackgroundColor3 = uwu["default background color"]
 
-uwu["copy noxsec encoder and decoder input"].BorderColor3 = uwu["default border color"]
-uwu["copy noxsec encoder and decoder input"].BorderSizePixel = 1
+uwu["copy k12 encoder and decoder input"].BorderColor3 = uwu["default border color"]
+uwu["copy k12 encoder and decoder input"].BorderSizePixel = 1
 
-uwu["copy noxsec encoder and decoder input"].Parent = uwu["noxsec encoder and decoder tab main frame 1"]
-uwu["copy noxsec encoder and decoder input"].ZIndex = 803
+uwu["copy k12 encoder and decoder input"].Parent = uwu["k12 encoder and decoder tab main frame 1"]
+uwu["copy k12 encoder and decoder input"].ZIndex = 803
 
-uwu["copy noxsec encoder and decoder input"].Font = Enum.Font.RobotoMono
-uwu["copy noxsec encoder and decoder input"].TextColor3 = Color3.new(1, 1, 1)
-uwu["copy noxsec encoder and decoder input"].TextSize = 15
-uwu["copy noxsec encoder and decoder input"].Text = "copy"
-uwu["copy noxsec encoder and decoder input"].TextWrapped = true
-uwu["copy noxsec encoder and decoder input"].TextXAlignment = Enum.TextXAlignment.Center
-uwu["copy noxsec encoder and decoder input"].TextYAlignment = Enum.TextYAlignment.Center
-uwu["copy noxsec encoder and decoder input"].ClipsDescendants = true
+uwu["copy k12 encoder and decoder input"].Font = Enum.Font.RobotoMono
+uwu["copy k12 encoder and decoder input"].TextColor3 = Color3.new(1, 1, 1)
+uwu["copy k12 encoder and decoder input"].TextSize = 15
+uwu["copy k12 encoder and decoder input"].Text = "copy"
+uwu["copy k12 encoder and decoder input"].TextWrapped = true
+uwu["copy k12 encoder and decoder input"].TextXAlignment = Enum.TextXAlignment.Center
+uwu["copy k12 encoder and decoder input"].TextYAlignment = Enum.TextYAlignment.Center
+uwu["copy k12 encoder and decoder input"].ClipsDescendants = true
 
-uwu["copy noxsec encoder and decoder input text padding"] = Instance.new("UIPadding")
-uwu["copy noxsec encoder and decoder input text padding"].PaddingBottom = UDim.new(0, 0)
-uwu["copy noxsec encoder and decoder input text padding"].Parent = uwu["copy noxsec encoder and decoder input"]
+uwu["copy k12 encoder and decoder input text padding"] = Instance.new("UIPadding")
+uwu["copy k12 encoder and decoder input text padding"].PaddingBottom = UDim.new(0, 0)
+uwu["copy k12 encoder and decoder input text padding"].Parent = uwu["copy k12 encoder and decoder input"]
 
 function charToA1Z26(c)
 	if c == " " then
@@ -4590,12 +4590,12 @@ function decodeInput(encoded)
 	return string.reverse(decodedString)
 end
 
-uwu["clear noxsec encoder and decoder input"].MouseButton1Click:Connect(function()
+uwu["clear k12 encoder and decoder input"].MouseButton1Click:Connect(function()
 	playclicksound()
-	uwu["noxsec encoder and decoder input"].Text = ""
+	uwu["k12 encoder and decoder input"].Text = ""
 end)
 
-uwu["copy noxsec encoder and decoder input"].MouseButton1Click:Connect(function()
+uwu["copy k12 encoder and decoder input"].MouseButton1Click:Connect(function()
 	playclicksound()
 	local everyClipboard = setclipboard or toclipboard or set_clipboard or (Clipboard and Clipboard.set)
 
@@ -4607,48 +4607,48 @@ uwu["copy noxsec encoder and decoder input"].MouseButton1Click:Connect(function(
 			unablenotify("unable to access clipboard.")
 		end
 	end
-	copytoclipboard(uwu["noxsec encoder and decoder input"].Text)
+	copytoclipboard(uwu["k12 encoder and decoder input"].Text)
 end)
 
-uwu["noxsec encode"].MouseButton1Click:Connect(function()
+uwu["k12 encode"].MouseButton1Click:Connect(function()
 	playclicksound()
-	uwu["noxsec encoder and decoder input"].Text = encodeInput(uwu["noxsec encoder and decoder input"].Text)
+	uwu["k12 encoder and decoder input"].Text = encodeInput(uwu["k12 encoder and decoder input"].Text)
 end)
 
-uwu["noxsec decode"].MouseButton1Click:Connect(function()
+uwu["k12 decode"].MouseButton1Click:Connect(function()
 	playclicksound()
-	uwu["noxsec encoder and decoder input"].Text = decodeInput(uwu["noxsec encoder and decoder input"].Text)
+	uwu["k12 encoder and decoder input"].Text = decodeInput(uwu["k12 encoder and decoder input"].Text)
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["noxsec encoder and decoder tab block main frame"].Size = UDim2.new(0, 575, 0, 268)
-uwu["noxsec encoder and decoder tab block main frame"].Position = UDim2.new(0, 0, 1, 1)
+uwu["k12 encoder and decoder tab block main frame"].Size = UDim2.new(0, 575, 0, 268)
+uwu["k12 encoder and decoder tab block main frame"].Position = UDim2.new(0, 0, 1, 1)
 
-uwu["noxsec encoder and decoder tab block main frame"].BackgroundColor3 = uwu["default background color"]
+uwu["k12 encoder and decoder tab block main frame"].BackgroundColor3 = uwu["default background color"]
 
-uwu["noxsec encoder and decoder tab block main frame"].BorderColor3 = uwu["default border color"]
-uwu["noxsec encoder and decoder tab block main frame"].BorderSizePixel = 1
-uwu["noxsec encoder and decoder tab block main frame"].BackgroundTransparency = 1
+uwu["k12 encoder and decoder tab block main frame"].BorderColor3 = uwu["default border color"]
+uwu["k12 encoder and decoder tab block main frame"].BorderSizePixel = 1
+uwu["k12 encoder and decoder tab block main frame"].BackgroundTransparency = 1
 
-uwu["noxsec encoder and decoder tab block main frame"].Parent = uwu["noxsec encoder and decoder tab top bar"]
-uwu["noxsec encoder and decoder tab block main frame"].ZIndex = 804
-uwu["noxsec encoder and decoder tab block main frame"].Visible = false
+uwu["k12 encoder and decoder tab block main frame"].Parent = uwu["k12 encoder and decoder tab top bar"]
+uwu["k12 encoder and decoder tab block main frame"].ZIndex = 804
+uwu["k12 encoder and decoder tab block main frame"].Visible = false
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-uwu["noxsec encoder and decoder tab block all"].Size = UDim2.new(0, 545, 0, 270)
-uwu["noxsec encoder and decoder tab block all"].Position = UDim2.new(0, 0, 0, 0)
+uwu["k12 encoder and decoder tab block all"].Size = UDim2.new(0, 545, 0, 270)
+uwu["k12 encoder and decoder tab block all"].Position = UDim2.new(0, 0, 0, 0)
 
-uwu["noxsec encoder and decoder tab block all"].BackgroundColor3 = uwu["default background color"]
+uwu["k12 encoder and decoder tab block all"].BackgroundColor3 = uwu["default background color"]
 
-uwu["noxsec encoder and decoder tab block all"].BorderColor3 = uwu["default border color"]
-uwu["noxsec encoder and decoder tab block all"].BorderSizePixel = 1
-uwu["noxsec encoder and decoder tab block all"].BackgroundTransparency = 0
+uwu["k12 encoder and decoder tab block all"].BorderColor3 = uwu["default border color"]
+uwu["k12 encoder and decoder tab block all"].BorderSizePixel = 1
+uwu["k12 encoder and decoder tab block all"].BackgroundTransparency = 0
 
-uwu["noxsec encoder and decoder tab block all"].Parent = uwu["noxsec encoder and decoder tab top bar"]
-uwu["noxsec encoder and decoder tab block all"].ZIndex = 805
-uwu["noxsec encoder and decoder tab block all"].Visible = false
+uwu["k12 encoder and decoder tab block all"].Parent = uwu["k12 encoder and decoder tab top bar"]
+uwu["k12 encoder and decoder tab block all"].ZIndex = 805
+uwu["k12 encoder and decoder tab block all"].Visible = false
 
 -------------------------------------------------------------------------------------------------------------------------------
 
@@ -15389,7 +15389,7 @@ local commandList = {
 	"├ opengaydartab, gaydar",
 	"├ openvideotab, video",
 	"├ openmessagereversertab, msgreverser",
-	"├ opennoxsecencoderanddecodertab, noxsec",
+	"├ openk12encoderanddecodertab, k12",
 	"└───",
 }
 
@@ -21840,42 +21840,42 @@ end)
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-noxsectabopen = false
+k12tabopen = false
 
-addcommand("opennoxsecencoderanddecodertab", "noxsec", function()
-	if noxsectabopen then return end
-	noxsectabreallyminimized = false
-	noxsectabopen = true
-	noxsectabminimized = false
+addcommand("openk12encoderanddecodertab", "k12", function()
+	if k12tabopen then return end
+	k12tabreallyminimized = false
+	k12tabopen = true
+	k12tabminimized = false
 
-	repos(uwu["noxsec encoder and decoder tab top bar"], 0, 545, 268 + 26)
+	repos(uwu["k12 encoder and decoder tab top bar"], 0, 545, 268 + 26)
 
-	uwu["noxsec encoder and decoder tab block main frame"].Size = UDim2.new(0, 545, 0, 241)
-	uwu["noxsec encoder and decoder tab block main frame"].BackgroundTransparency = 1
-	uwu["noxsec encoder and decoder tab top bar minimize button"].Text = "-"
-	uwu["noxsec encoder and decoder tab main frame 1"].Visible = true
-	local gui = uwu["noxsec encoder and decoder tab block all"]
-	uwu["noxsec encoder and decoder tab top bar"].Visible = true
-	uwu["noxsec encoder and decoder tab top bar"].TextTransparency = 1
-	uwu["noxsec encoder and decoder tab top bar"].BackgroundTransparency = 1
-	uwu["noxsec encoder and decoder tab main frame 1"].BackgroundTransparency = 1
-	uwu["noxsec encoder and decoder tab top bar close button"].BackgroundTransparency = 1
-	uwu["noxsec encoder and decoder tab top bar minimize button"].BackgroundTransparency = 1
-	uwu["noxsec encoder and decoder tab top bar reposition button"].BackgroundTransparency = 1
-	uwu["noxsec encoder and decoder tab top bar close button"].TextTransparency = 1
-	uwu["noxsec encoder and decoder tab top bar minimize button"].TextTransparency = 1
-	uwu["noxsec encoder and decoder tab top bar reposition button"].TextTransparency = 1
-	uwu["noxsec encoder and decoder tab main frame 1"].BackgroundTransparency = 1
-	uwu["noxsec encoder and decoder input"].BackgroundTransparency = 1
-	uwu["noxsec encoder and decoder input"].TextTransparency = 1
-	uwu["noxsec decode"].BackgroundTransparency = 1
-	uwu["noxsec decode"].TextTransparency = 1
-	uwu["noxsec encode"].BackgroundTransparency = 1
-	uwu["noxsec encode"].TextTransparency = 1
-	uwu["clear noxsec encoder and decoder input"].BackgroundTransparency = 1
-	uwu["clear noxsec encoder and decoder input"].TextTransparency = 1
-	uwu["copy noxsec encoder and decoder input"].BackgroundTransparency = 1
-	uwu["copy noxsec encoder and decoder input"].TextTransparency = 1
+	uwu["k12 encoder and decoder tab block main frame"].Size = UDim2.new(0, 545, 0, 241)
+	uwu["k12 encoder and decoder tab block main frame"].BackgroundTransparency = 1
+	uwu["k12 encoder and decoder tab top bar minimize button"].Text = "-"
+	uwu["k12 encoder and decoder tab main frame 1"].Visible = true
+	local gui = uwu["k12 encoder and decoder tab block all"]
+	uwu["k12 encoder and decoder tab top bar"].Visible = true
+	uwu["k12 encoder and decoder tab top bar"].TextTransparency = 1
+	uwu["k12 encoder and decoder tab top bar"].BackgroundTransparency = 1
+	uwu["k12 encoder and decoder tab main frame 1"].BackgroundTransparency = 1
+	uwu["k12 encoder and decoder tab top bar close button"].BackgroundTransparency = 1
+	uwu["k12 encoder and decoder tab top bar minimize button"].BackgroundTransparency = 1
+	uwu["k12 encoder and decoder tab top bar reposition button"].BackgroundTransparency = 1
+	uwu["k12 encoder and decoder tab top bar close button"].TextTransparency = 1
+	uwu["k12 encoder and decoder tab top bar minimize button"].TextTransparency = 1
+	uwu["k12 encoder and decoder tab top bar reposition button"].TextTransparency = 1
+	uwu["k12 encoder and decoder tab main frame 1"].BackgroundTransparency = 1
+	uwu["k12 encoder and decoder input"].BackgroundTransparency = 1
+	uwu["k12 encoder and decoder input"].TextTransparency = 1
+	uwu["k12 decode"].BackgroundTransparency = 1
+	uwu["k12 decode"].TextTransparency = 1
+	uwu["k12 encode"].BackgroundTransparency = 1
+	uwu["k12 encode"].TextTransparency = 1
+	uwu["clear k12 encoder and decoder input"].BackgroundTransparency = 1
+	uwu["clear k12 encoder and decoder input"].TextTransparency = 1
+	uwu["copy k12 encoder and decoder input"].BackgroundTransparency = 1
+	uwu["copy k12 encoder and decoder input"].TextTransparency = 1
 
 	gui.BackgroundTransparency = 0
 	gui.Size = UDim2.new(0, 545, 0, 0)
@@ -21890,27 +21890,27 @@ addcommand("opennoxsecencoderanddecodertab", "noxsec", function()
 	)
 	tweenIn.Completed:Wait()
 
-	uwu["noxsec encoder and decoder tab top bar"].Visible = true
-	uwu["noxsec encoder and decoder tab top bar"].BackgroundTransparency = 0
-	uwu["noxsec encoder and decoder tab main frame 1"].BackgroundTransparency = 0
-	uwu["noxsec encoder and decoder tab top bar close button"].BackgroundTransparency = 0
-	uwu["noxsec encoder and decoder tab top bar minimize button"].BackgroundTransparency = 0
-	uwu["noxsec encoder and decoder tab top bar reposition button"].BackgroundTransparency = 0
-	uwu["noxsec encoder and decoder tab top bar close button"].TextTransparency = 0
-	uwu["noxsec encoder and decoder tab top bar minimize button"].TextTransparency = 0
-	uwu["noxsec encoder and decoder tab top bar reposition button"].TextTransparency = 0
-	uwu["noxsec encoder and decoder tab top bar"].TextTransparency = 0
-	uwu["noxsec encoder and decoder tab main frame 1"].BackgroundTransparency = 0
-	uwu["noxsec encoder and decoder input"].BackgroundTransparency = 0
-	uwu["noxsec encoder and decoder input"].TextTransparency = 0
-	uwu["noxsec decode"].BackgroundTransparency = 0
-	uwu["noxsec decode"].TextTransparency = 0
-	uwu["noxsec encode"].BackgroundTransparency = 0
-	uwu["noxsec encode"].TextTransparency = 0
-	uwu["clear noxsec encoder and decoder input"].BackgroundTransparency = 0
-	uwu["clear noxsec encoder and decoder input"].TextTransparency = 0
-	uwu["copy noxsec encoder and decoder input"].BackgroundTransparency = 0
-	uwu["copy noxsec encoder and decoder input"].TextTransparency = 0
+	uwu["k12 encoder and decoder tab top bar"].Visible = true
+	uwu["k12 encoder and decoder tab top bar"].BackgroundTransparency = 0
+	uwu["k12 encoder and decoder tab main frame 1"].BackgroundTransparency = 0
+	uwu["k12 encoder and decoder tab top bar close button"].BackgroundTransparency = 0
+	uwu["k12 encoder and decoder tab top bar minimize button"].BackgroundTransparency = 0
+	uwu["k12 encoder and decoder tab top bar reposition button"].BackgroundTransparency = 0
+	uwu["k12 encoder and decoder tab top bar close button"].TextTransparency = 0
+	uwu["k12 encoder and decoder tab top bar minimize button"].TextTransparency = 0
+	uwu["k12 encoder and decoder tab top bar reposition button"].TextTransparency = 0
+	uwu["k12 encoder and decoder tab top bar"].TextTransparency = 0
+	uwu["k12 encoder and decoder tab main frame 1"].BackgroundTransparency = 0
+	uwu["k12 encoder and decoder input"].BackgroundTransparency = 0
+	uwu["k12 encoder and decoder input"].TextTransparency = 0
+	uwu["k12 decode"].BackgroundTransparency = 0
+	uwu["k12 decode"].TextTransparency = 0
+	uwu["k12 encode"].BackgroundTransparency = 0
+	uwu["k12 encode"].TextTransparency = 0
+	uwu["clear k12 encoder and decoder input"].BackgroundTransparency = 0
+	uwu["clear k12 encoder and decoder input"].TextTransparency = 0
+	uwu["copy k12 encoder and decoder input"].BackgroundTransparency = 0
+	uwu["copy k12 encoder and decoder input"].TextTransparency = 0
 
 	local fadeTween = fade(gui, 1, 0.2)
 	fadeTween.Completed:Wait()
@@ -22352,7 +22352,7 @@ task.spawn(function()
 	repos(uwu["gaydar tab top bar"], 0, 376, 230 + 26)
 	repos(uwu["headcanon generator tab top bar"], 0, 446, 168 + 26)
 	repos(uwu["message reverser tab top bar"], 0, 345, 168 + 26)
-	repos(uwu["noxsec encoder and decoder tab top bar"], 0, 545, 268 + 26)
+	repos(uwu["k12 encoder and decoder tab top bar"], 0, 545, 268 + 26)
 	repos(uwu["top bar"], 0, 401, 250 + 26)
 	repos(uwu["binary tab top bar"], 0, 246, 230 + 26)
 end)
