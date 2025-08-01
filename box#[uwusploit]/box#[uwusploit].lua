@@ -6584,6 +6584,10 @@ uwu["change theme setting"].MouseButton1Click:Connect(function()
 		playclicksound()
 	end
 	cycleTheme()
+	if usingesp then
+		execcmd("unesp")
+		execcmd("esp")
+	end
 end)
 
 updthemedisplay()
@@ -13951,7 +13955,7 @@ local function parsecmds(input)
 	return cmdgroups
 end
 
-local function execcmd(input)
+function execcmd(input)
 	local now = tick()
 	if now - lastCommandTime < commandCooldown then
 		return false
@@ -20680,7 +20684,7 @@ function billbord(parent, modelName, textColor)
 	label.Size = UDim2.new(1, 0, 1, 0)
 	label.BackgroundTransparency = 1
 	label.Text = modelName
-	label.Font = Enum.Font.RobotoMono
+	label.Font = uwu["default text font"]
 	label.TextColor3 = textColor
 	label.TextStrokeTransparency = 0.5
 	label.TextStrokeColor3 = Color3.new(1, 1, 1)
@@ -20824,11 +20828,15 @@ function disableAllEsp()
 	stopHighlightLoop()
 end
 
+usingesp = false
+
 addcommand("esp", "esp", function()
+	usingesp = true
 	enableEsp("Players")
 end)
 
 addcommand("unesp", "unesp", function()
+	usingesp = false
 	disableEsp("Players")
 end)
 
