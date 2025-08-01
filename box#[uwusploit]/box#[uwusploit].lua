@@ -3988,6 +3988,7 @@ uwu["message reverser input"].PlaceholderColor3 = uwu["default 1/2 color"]
 uwu["message reverser input"].TextWrapped = true
 uwu["message reverser input"].TextXAlignment = Enum.TextXAlignment.Left
 uwu["message reverser input"].TextYAlignment = Enum.TextYAlignment.Top
+uwu["message reverser input"].ClearTextOnFocus = false
 uwu["message reverser input"].ClipsDescendants = true
 
 uwu["message reverser input max chars"] = 200
@@ -4372,6 +4373,7 @@ uwu["noxsec encoder and decoder input"].Text = ""
 uwu["noxsec encoder and decoder input"].PlaceholderText = "input message"
 uwu["noxsec encoder and decoder input"].PlaceholderColor3 = uwu["default 1/2 color"]
 uwu["noxsec encoder and decoder input"].TextWrapped = true
+uwu["noxsec encoder and decoder input"].ClearTextOnFocus = false
 uwu["noxsec encoder and decoder input"].TextXAlignment = Enum.TextXAlignment.Left
 uwu["noxsec encoder and decoder input"].TextYAlignment = Enum.TextYAlignment.Top
 uwu["noxsec encoder and decoder input"].ClipsDescendants = true
@@ -6259,7 +6261,7 @@ uwu["change fps cap"].TextColor3 = uwu["default border color"]
 uwu["change fps cap"].Font = Enum.Font.RobotoMono
 uwu["change fps cap"].TextScaled = false
 uwu["change fps cap"].TextSize = 15
-uwu["change fps cap"].Text = "fps cap: " .. getServerFPS()
+uwu["change fps cap"].Text = "fps cap: 120"
 uwu["change fps cap"].TextXAlignment = Enum.TextXAlignment.Center
 uwu["change fps cap"].TextYAlignment = Enum.TextYAlignment.Center
 uwu["change fps cap"].BackgroundColor3 = uwu["default background color"]
@@ -6306,6 +6308,7 @@ uwu["change fps cap setting"].MouseButton1Click:Connect(function()
 	if fpscap and fpscap ~= "" then
 		fpscap = math.clamp(fpscap, 1, 240)
 		uwu["change fps cap"].Text = "fps cap: " .. fpscap
+		if setfpscap then setfpscap(fpscap) end
 	end
 	uwu["change fps cap textbox"].Text = ""
 end)
