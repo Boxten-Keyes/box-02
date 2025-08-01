@@ -6586,6 +6586,7 @@ uwu["change theme setting"].MouseButton1Click:Connect(function()
 	cycleTheme()
 	if usingesp then
 		task.spawn(function() execcmd("unesp") end)
+		task.wait(0.5)
 		task.spawn(function() execcmd("esp") end)
 	end
 end)
