@@ -20687,7 +20687,7 @@ function billbord(parent, modelName, textColor)
 	label.Text = modelName
 	label.Font = uwu["default text font"]
 	label.TextColor3 = textColor
-	label.TextStrokeTransparency = 0.5
+	label.TextStrokeTransparency = 0
 	label.TextStrokeColor3 = Color3.new(1, 1, 1)
 	label.TextSize = 16
 	label.Visible = billboardTextVisible
@@ -20725,6 +20725,9 @@ function addHighlights()
 				if not highlight then
 					highlight = Instance.new("Highlight")
 					highlight.FillColor = uwu["default border color"]
+					if noxioustheme then
+						highlight.FillColor = uwu["default background color"]
+					end
 					highlight.OutlineColor = Color3.fromRGB(255, 255, 255)
 					highlight.Enabled = highlightVisible
 					highlight.Parent = player.Character
