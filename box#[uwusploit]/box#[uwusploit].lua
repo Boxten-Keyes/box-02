@@ -14579,8 +14579,8 @@ local assetData = {
 		{id = "86471321003271", name = "hardstyle with static"},
 		{id = "79744099014827", name = "foreign with static"},
 
-		{id = "77505226120358", name = "sex scene 1"},
-		{id = "83877924327587", name = "sex scene 2"},
+		{id = "388272473827264", name = "trablabla - wxchsxn (external"},
+		{id = "1948276163758582", name = "trablabla - wxchsxn (slowed) (external)"},
 		{id = "04440404404040440", name = "reality - axius link (external)"},
 
 		{id = "88723844725910", name = "cooking with kya"},
@@ -19653,7 +19653,9 @@ addcommand("music", "music", function(soundId)
 			["1947282747182747"] = {file = "lbfunk.mp3", url = "https://files.catbox.moe/thoo1v.mp3"},
 			["1636291836383658"] = {file = "onlyfans.mp3", url = "https://files.catbox.moe/e0skbl.mp3"},
 			["193648262648483626"] = {file = "felicidade.mp3", url = "https://files.catbox.moe/j0y274.mp3"},
-			["2847278264727"] = {file = "bloodpop.mp3", url = "https://files.catbox.moe/jhc0te.mp3"}
+			["2847278264727"] = {file = "bloodpop.mp3", url = "https://files.catbox.moe/jhc0te.mp3"},
+			["388272473827264"] = {file = "trablabla.mp3", url = "https://files.catbox.moe/2fm2ds.mp3"},
+			["1948276163758582"] = {file = "traablaablaa.mp3", url = "https://files.catbox.moe/9jq3gj.mp3"}
 		}
 
 		local soundInfo = soundMap[soundId]
