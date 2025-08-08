@@ -13913,6 +13913,7 @@ local function setupTool(tool)
 		animTrack.Priority = Enum.AnimationPriority.Action
 		animTrack:Play()
 		animTrack:AdjustSpeed(1.3)
+    animTrack.Looped = true
 	end)
 
 	tool.Unequipped:Connect(function()
@@ -14536,6 +14537,7 @@ local function setupTool(tool)
 		animTrack = animator:LoadAnimation(animation)
 		animTrack.Priority = Enum.AnimationPriority.Action
 		animTrack:Play()
+    animTrack:AdjustSpeed(0)
 	end)
 
 	tool.Unequipped:Connect(function()
@@ -14588,6 +14590,7 @@ local function setupTool(tool)
 		animTrack = animator:LoadAnimation(animation)
 		animTrack.Priority = Enum.AnimationPriority.Action
 		animTrack:Play()
+    animTrack:AdjustSpeed(0)
 	end)
 
 	tool.Unequipped:Connect(function()
