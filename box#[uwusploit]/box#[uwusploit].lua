@@ -14663,6 +14663,266 @@ LocalPlayer.CharacterAdded:Connect(function()
 end)
 ]], "CS / SS")
 
+cscript("r15 caramelldansen tool", [[
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local TOOL_NAME = "caramelldansen"
+local ANIMATION_ID = "rbxassetid://88315693621494"
+
+local function giveTool()
+	if LocalPlayer:FindFirstChildOfClass("Backpack"):FindFirstChild(TOOL_NAME) then return end
+
+	local tool = Instance.new("Tool")
+	tool.Name = TOOL_NAME
+	tool.RequiresHandle = false
+	tool.CanBeDropped = false
+	tool.Parent = LocalPlayer:WaitForChild("Backpack")
+
+	return tool
+end
+
+local function setupTool(tool)
+	local animTrack = nil
+	local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+	local humanoid = character:WaitForChild("Humanoid")
+	local animator = humanoid:FindFirstChildOfClass("Animator") or Instance.new("Animator", humanoid)
+
+	local animation = Instance.new("Animation")
+	animation.AnimationId = ANIMATION_ID
+
+	tool.Equipped:Connect(function()
+		if animTrack then animTrack:Stop() end
+		animTrack = animator:LoadAnimation(animation)
+		animTrack.Priority = Enum.AnimationPriority.Action
+		animTrack:Play()
+	end)
+
+	tool.Unequipped:Connect(function()
+		if animTrack then
+			animTrack:Stop()
+			animTrack = nil
+		end
+	end)
+end
+
+local tool = giveTool()
+setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function()
+	task.wait(0.5)
+	local tool = giveTool()
+	setupTool(tool)
+end)
+]], "CS / SS")
+
+cscript("r15 gangnam style tool", [[
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local TOOL_NAME = "gangnam style"
+local ANIMATION_ID = "rbxassetid://100531289776679"
+
+local function giveTool()
+	if LocalPlayer:FindFirstChildOfClass("Backpack"):FindFirstChild(TOOL_NAME) then return end
+
+	local tool = Instance.new("Tool")
+	tool.Name = TOOL_NAME
+	tool.RequiresHandle = false
+	tool.CanBeDropped = false
+	tool.Parent = LocalPlayer:WaitForChild("Backpack")
+
+	return tool
+end
+
+local function setupTool(tool)
+	local animTrack = nil
+	local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+	local humanoid = character:WaitForChild("Humanoid")
+	local animator = humanoid:FindFirstChildOfClass("Animator") or Instance.new("Animator", humanoid)
+
+	local animation = Instance.new("Animation")
+	animation.AnimationId = ANIMATION_ID
+
+	tool.Equipped:Connect(function()
+		if animTrack then animTrack:Stop() end
+		animTrack = animator:LoadAnimation(animation)
+		animTrack.Priority = Enum.AnimationPriority.Action
+		animTrack:Play()
+	end)
+
+	tool.Unequipped:Connect(function()
+		if animTrack then
+			animTrack:Stop()
+			animTrack = nil
+		end
+	end)
+end
+
+local tool = giveTool()
+setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function()
+	task.wait(0.5)
+	local tool = giveTool()
+	setupTool(tool)
+end)
+]], "CS / SS")
+
+cscript("r15 flopping fish tool", [[
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local TOOL_NAME = "flopping fish"
+local ANIMATION_ID = "rbxassetid://79075971527754"
+
+local function giveTool()
+	if LocalPlayer:FindFirstChildOfClass("Backpack"):FindFirstChild(TOOL_NAME) then return end
+
+	local tool = Instance.new("Tool")
+	tool.Name = TOOL_NAME
+	tool.RequiresHandle = false
+	tool.CanBeDropped = false
+	tool.Parent = LocalPlayer:WaitForChild("Backpack")
+
+	return tool
+end
+
+local function setupTool(tool)
+	local animTrack = nil
+	local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+	local humanoid = character:WaitForChild("Humanoid")
+	local animator = humanoid:FindFirstChildOfClass("Animator") or Instance.new("Animator", humanoid)
+
+	local animation = Instance.new("Animation")
+	animation.AnimationId = ANIMATION_ID
+
+	tool.Equipped:Connect(function()
+		if animTrack then animTrack:Stop() end
+		animTrack = animator:LoadAnimation(animation)
+		animTrack.Priority = Enum.AnimationPriority.Action
+		animTrack:Play()
+	end)
+
+	tool.Unequipped:Connect(function()
+		if animTrack then
+			animTrack:Stop()
+			animTrack = nil
+		end
+	end)
+end
+
+local tool = giveTool()
+setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function()
+	task.wait(0.5)
+	local tool = giveTool()
+	setupTool(tool)
+end)
+]], "CS / SS")
+
+cscript("r15 da hood dance tool", [[
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local TOOL_NAME = "da hood dance"
+local ANIMATION_ID = "rbxassetid://108171959207138"
+
+local function giveTool()
+	if LocalPlayer:FindFirstChildOfClass("Backpack"):FindFirstChild(TOOL_NAME) then return end
+
+	local tool = Instance.new("Tool")
+	tool.Name = TOOL_NAME
+	tool.RequiresHandle = false
+	tool.CanBeDropped = false
+	tool.Parent = LocalPlayer:WaitForChild("Backpack")
+
+	return tool
+end
+
+local function setupTool(tool)
+	local animTrack = nil
+	local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+	local humanoid = character:WaitForChild("Humanoid")
+	local animator = humanoid:FindFirstChildOfClass("Animator") or Instance.new("Animator", humanoid)
+
+	local animation = Instance.new("Animation")
+	animation.AnimationId = ANIMATION_ID
+
+	tool.Equipped:Connect(function()
+		if animTrack then animTrack:Stop() end
+		animTrack = animator:LoadAnimation(animation)
+		animTrack.Priority = Enum.AnimationPriority.Action
+		animTrack:Play()
+	end)
+
+	tool.Unequipped:Connect(function()
+		if animTrack then
+			animTrack:Stop()
+			animTrack = nil
+		end
+	end)
+end
+
+local tool = giveTool()
+setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function()
+	task.wait(0.5)
+	local tool = giveTool()
+	setupTool(tool)
+end)
+]], "CS / SS")
+
+cscript("r15 helicopter 3 tool", [[
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local TOOL_NAME = "helicopter 3"
+local ANIMATION_ID = "rbxassetid://95301257497525"
+
+local function giveTool()
+	if LocalPlayer:FindFirstChildOfClass("Backpack"):FindFirstChild(TOOL_NAME) then return end
+
+	local tool = Instance.new("Tool")
+	tool.Name = TOOL_NAME
+	tool.RequiresHandle = false
+	tool.CanBeDropped = false
+	tool.Parent = LocalPlayer:WaitForChild("Backpack")
+
+	return tool
+end
+
+local function setupTool(tool)
+	local animTrack = nil
+	local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+	local humanoid = character:WaitForChild("Humanoid")
+	local animator = humanoid:FindFirstChildOfClass("Animator") or Instance.new("Animator", humanoid)
+
+	local animation = Instance.new("Animation")
+	animation.AnimationId = ANIMATION_ID
+
+	tool.Equipped:Connect(function()
+		if animTrack then animTrack:Stop() end
+		animTrack = animator:LoadAnimation(animation)
+		animTrack.Priority = Enum.AnimationPriority.Action
+		animTrack:Play()
+	end)
+
+	tool.Unequipped:Connect(function()
+		if animTrack then
+			animTrack:Stop()
+			animTrack = nil
+		end
+	end)
+end
+
+local tool = giveTool()
+setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function()
+	task.wait(0.5)
+	local tool = giveTool()
+	setupTool(tool)
+end)
+]], "CS / SS")
+
 -------------------------------------------------------------------------------------------------------------------------------
 
 uwu["commands tab"].Size = UDim2.new(0, 100, 0, 26)
