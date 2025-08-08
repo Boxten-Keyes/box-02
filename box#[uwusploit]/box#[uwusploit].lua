@@ -14195,6 +14195,155 @@ LocalPlayer.CharacterAdded:Connect(function()
 end)
 ]], "CS / SS")
 
+cscript("r15 67 tool", [[
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local TOOL_NAME = "67"
+local ANIMATION_ID = "rbxassetid://115439144505157"
+
+local function giveTool()
+	if LocalPlayer:FindFirstChildOfClass("Backpack"):FindFirstChild(TOOL_NAME) then return end
+
+	local tool = Instance.new("Tool")
+	tool.Name = TOOL_NAME
+	tool.RequiresHandle = false
+	tool.CanBeDropped = false
+	tool.Parent = LocalPlayer:WaitForChild("Backpack")
+
+	return tool
+end
+
+local function setupTool(tool)
+	local animTrack = nil
+	local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+	local humanoid = character:WaitForChild("Humanoid")
+	local animator = humanoid:FindFirstChildOfClass("Animator") or Instance.new("Animator", humanoid)
+
+	local animation = Instance.new("Animation")
+	animation.AnimationId = ANIMATION_ID
+
+	tool.Equipped:Connect(function()
+		if animTrack then animTrack:Stop() end
+		animTrack = animator:LoadAnimation(animation)
+		animTrack.Priority = Enum.AnimationPriority.Action
+		animTrack:Play()
+	end)
+
+	tool.Unequipped:Connect(function()
+		if animTrack then
+			animTrack:Stop()
+			animTrack = nil
+		end
+	end)
+end
+
+local tool = giveTool()
+setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function()
+	task.wait(0.5)
+	local tool = giveTool()
+	setupTool(tool)
+end)
+]], "CS / SS")
+
+cscript("r15 dog tool", [[
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local TOOL_NAME = "dog"
+local ANIMATION_ID = "rbxassetid://78195344190486"
+
+local function giveTool()
+	if LocalPlayer:FindFirstChildOfClass("Backpack"):FindFirstChild(TOOL_NAME) then return end
+
+	local tool = Instance.new("Tool")
+	tool.Name = TOOL_NAME
+	tool.RequiresHandle = false
+	tool.CanBeDropped = false
+	tool.Parent = LocalPlayer:WaitForChild("Backpack")
+
+	return tool
+end
+
+local function setupTool(tool)
+	local animTrack = nil
+	local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+	local humanoid = character:WaitForChild("Humanoid")
+	local animator = humanoid:FindFirstChildOfClass("Animator") or Instance.new("Animator", humanoid)
+
+	local animation = Instance.new("Animation")
+	animation.AnimationId = ANIMATION_ID
+
+	tool.Equipped:Connect(function()
+		if animTrack then animTrack:Stop() end
+		animTrack = animator:LoadAnimation(animation)
+		animTrack.Priority = Enum.AnimationPriority.Action
+		animTrack:Play()
+	end)
+
+	tool.Unequipped:Connect(function()
+		if animTrack then
+			animTrack:Stop()
+			animTrack = nil
+		end
+	end)
+end
+
+local tool = giveTool()
+setupTool(tool)
+
+LocalPlayer.CharacterAdded:Connect(function()
+	task.wait(0.5)
+	local tool = giveTool()
+	setupTool(tool)
+end)
+]], "CS / SS")
+
+cscript("r15 tuff idle", [[
+local Players = game:GetService("Players")
+
+local IDLE_ANIMATION_ID = "rbxassetid://112627003252867"
+local player = Players.LocalPlayer
+
+local function applyIdleAnimation(character)
+	local humanoid = character:WaitForChild("Humanoid")
+	local animator = humanoid:WaitForChild("Animator")
+
+	local idleAnim = Instance.new("Animation")
+	idleAnim.AnimationId = IDLE_ANIMATION_ID
+	local idleTrack = animator:LoadAnimation(idleAnim)
+
+	local isIdle = false
+
+	local function updateIdleState(speed)
+		if speed < 0.1 then
+			if not isIdle then
+				isIdle = true
+				if not idleTrack.IsPlaying then
+					idleTrack:Play()
+				end
+			end
+		else
+			if isIdle then
+				isIdle = false
+				if idleTrack.IsPlaying then
+					idleTrack:Stop()
+				end
+			end
+		end
+	end
+
+	humanoid.Running:Connect(updateIdleState)
+	updateIdleState(0)
+end
+
+-- Handle current and future characters
+player.CharacterAdded:Connect(applyIdleAnimation)
+if player.Character then
+	applyIdleAnimation(player.Character)
+end
+]], "CS / SS")
+
 -------------------------------------------------------------------------------------------------------------------------------
 
 uwu["commands tab"].Size = UDim2.new(0, 100, 0, 26)
