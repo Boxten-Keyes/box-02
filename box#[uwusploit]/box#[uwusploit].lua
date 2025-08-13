@@ -15727,7 +15727,7 @@ local assetData = {
 		{id = "79744099014827", name = "foreign with static"},
 
 		{id = "388272473827264", name = "trablabla - wxchsxn (external"},
-		{id = "1948276163758582", name = "trablabla - wxchsxn (slowed) (external)"},
+		{id = "1948276163758582", name = "grow a garden funk (external)"},
 		{id = "04440404404040440", name = "reality - axius link (external)"},
 
 		{id = "88723844725910", name = "cooking with kya"},
@@ -15756,7 +15756,7 @@ local assetData = {
 
 		{id = "91922658560009", name = "bodypartz instrumental"},
 		{id = "18841888868", name = "love bomb - d3r"},
-		{id = "92086395940466", name = "yes king"},
+		{id = "2351874728164", name = "funk do elevator (external)"},
 
 		{id = "19374822837282737", name = "piano tiles - armani west (external)"},
 		{id = "79494113906358", name = "toby smiles"},
@@ -20802,7 +20802,8 @@ addcommand("music", "music", function(soundId)
 			["193648262648483626"] = {file = "felicidade.mp3", url = "https://files.catbox.moe/j0y274.mp3"},
 			["2847278264727"] = {file = "bloodpop.mp3", url = "https://files.catbox.moe/jhc0te.mp3"},
 			["388272473827264"] = {file = "trablabla.mp3", url = "https://files.catbox.moe/2fm2ds.mp3"},
-			["1948276163758582"] = {file = "traablaablaa.mp3", url = "https://files.catbox.moe/9jq3gj.mp3"}
+			["1948276163758582"] = {file = "letsgag.mp3", url = "https://files.catbox.moe/5wglww.mp3"}
+			["2351874728164"] = {file = "elevatorfunk.mp3", url = "https://files.catbox.moe/sjrxnh.mp3"}
 		}
 
 		local soundInfo = soundMap[soundId]
