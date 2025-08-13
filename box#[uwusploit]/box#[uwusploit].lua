@@ -20802,7 +20802,7 @@ addcommand("music", "music", function(soundId)
 			["193648262648483626"] = {file = "felicidade.mp3", url = "https://files.catbox.moe/j0y274.mp3"},
 			["2847278264727"] = {file = "bloodpop.mp3", url = "https://files.catbox.moe/jhc0te.mp3"},
 			["388272473827264"] = {file = "trablabla.mp3", url = "https://files.catbox.moe/2fm2ds.mp3"},
-			["1948276163758582"] = {file = "letsgag.mp3", url = "https://files.catbox.moe/5wglww.mp3"}
+			["1948276163758582"] = {file = "letsgag.mp3", url = "https://files.catbox.moe/5wglww.mp3"},
 			["2351874728164"] = {file = "elevatorfunk.mp3", url = "https://files.catbox.moe/sjrxnh.mp3"}
 		}
 
