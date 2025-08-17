@@ -15726,7 +15726,7 @@ local assetData = {
 		{id = "86471321003271", name = "hardstyle with static"},
 		{id = "79744099014827", name = "foreign with static"},
 
-		{id = "388272473827264", name = "trablabla - wxchsxn (external"},
+		{id = "388272473827264", name = "trablabla - wxchsxn (external)"},
 		{id = "1948276163758582", name = "grow a garden funk (external)"},
 		{id = "04440404404040440", name = "reality - axius link (external)"},
 
@@ -15763,7 +15763,7 @@ local assetData = {
 		{id = "118898127559047", name = "WHO IS GOD!?!?!"},
 
 		{id = "90124981325233", name = "clapping noises???"},
-		{id = "110733237958023", name = "fuck me"},
+		{id = "10374729384729", name = "montagem succao neural - dj zenite (external)"},
 		{id = "94356638905764", name = "ambasing"},
 
 		{id = "18599504383", name = "bumpin that"},
@@ -20803,7 +20803,8 @@ addcommand("music", "music", function(soundId)
 			["2847278264727"] = {file = "bloodpop.mp3", url = "https://files.catbox.moe/jhc0te.mp3"},
 			["388272473827264"] = {file = "trablabla.mp3", url = "https://files.catbox.moe/2fm2ds.mp3"},
 			["1948276163758582"] = {file = "letsgag.mp3", url = "https://files.catbox.moe/5wglww.mp3"},
-			["2351874728164"] = {file = "elevatorfunk.mp3", url = "https://files.catbox.moe/sjrxnh.mp3"}
+			["2351874728164"] = {file = "elevatorfunk.mp3", url = "https://files.catbox.moe/sjrxnh.mp3"},
+      ["10374729384729"] = {file = "succao.mp3", url = "https://files.catbox.moe/l8ng77.mp3"},
 		}
 
 		local soundInfo = soundMap[soundId]
