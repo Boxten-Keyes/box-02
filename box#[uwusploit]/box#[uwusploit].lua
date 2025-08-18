@@ -15815,7 +15815,7 @@ local assetData = {
 		{id = "93599174452421", name = "around the school"},
 
 		{id = "102216494740042", name = "gangsters"},
-		{id = "136280519605481", name = "charli xcx song idk"},
+		{id = "29474729374792", name = "montagem lunar rally (slowed) (external)"},
 		{id = "193462927464828", name = "krug - dj stonik 1917 (external)"},
 
 		{id = "196634818253957", name = "vanished - crystal castles (external)"},
@@ -20805,6 +20805,7 @@ addcommand("music", "music", function(soundId)
 			["1948276163758582"] = {file = "letsgag.mp3", url = "https://files.catbox.moe/5wglww.mp3"},
 			["2351874728164"] = {file = "elevatorfunk.mp3", url = "https://files.catbox.moe/sjrxnh.mp3"},
       ["10374729384729"] = {file = "succao.mp3", url = "https://files.catbox.moe/l8ng77.mp3"},
+      ["29474729374792"] = {file = "lunarrally.mp3", url = "https://files.catbox.moe/w4lubq.mp3"},
 		}
 
 		local soundInfo = soundMap[soundId]
