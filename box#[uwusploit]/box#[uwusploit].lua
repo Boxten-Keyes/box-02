@@ -15715,8 +15715,8 @@ local assetData = {
 		{id = "98238687813546", name = "teach me"},
 
 		{id = "133848133672814", name = "fire ass rap"},
-		{id = "127524384782205", name = "fire ass rap 2"},
-		{id = "70972281874046", name = "fire ass rap 3"},
+		{id = "1937472828744", name = "fenix ritmada - dj ryan no beat (external)"},
+		{id = "2481818374839183", name = "nova - krezus (external)"},
 
 		{id = "1937462828462817367", name = "ela joga na hora (slowed) (external)"},
 		{id = "194728264781726473", name = "baile de coquiero 7 (external)"},
@@ -20806,6 +20806,8 @@ addcommand("music", "music", function(soundId)
 			["2351874728164"] = {file = "elevatorfunk.mp3", url = "https://files.catbox.moe/sjrxnh.mp3"},
       ["10374729384729"] = {file = "succao.mp3", url = "https://files.catbox.moe/l8ng77.mp3"},
       ["29474729374792"] = {file = "lunarrally.mp3", url = "https://files.catbox.moe/w4lubq.mp3"},
+      ["2481818374839183"] = {file = "nova.mp3", url = "https://files.catbox.moe/i4snzk.mp3"},
+      ["1937472828744"] = {file = "fenixritmada.mp3", url = "https://pomf2.lain.la/f/h2l0l1l.mp3"},
 		}
 
 		local soundInfo = soundMap[soundId]
