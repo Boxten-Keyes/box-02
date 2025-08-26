@@ -15714,7 +15714,7 @@ local assetData = {
 		{id = "81044979151859", name = "burger king plane incident"},
 		{id = "98238687813546", name = "teach me"},
 
-		{id = "133848133672814", name = "fire ass rap"},
+		{id = "192746282847987", name = "foreign - vampviolence (external)"},
 		{id = "1937472828744", name = "fenix ritmada - dj ryan no beat (external)"},
 		{id = "2481818374839183", name = "nova - krezus (external)"},
 
@@ -20808,6 +20808,7 @@ addcommand("music", "music", function(soundId)
       ["29474729374792"] = {file = "lunarrally.mp3", url = "https://files.catbox.moe/w4lubq.mp3"},
       ["2481818374839183"] = {file = "nova.mp3", url = "https://files.catbox.moe/i4snzk.mp3"},
       ["1937472828744"] = {file = "fenixritmada.mp3", url = "https://pomf2.lain.la/f/h2l0l1l.mp3"},
+      ["192746282847987"] = {file = "foreign.mp3", url = "https://pomf2.lain.la/f/dhlcm9sd.mp3"},
 		}
 
 		local soundInfo = soundMap[soundId]
