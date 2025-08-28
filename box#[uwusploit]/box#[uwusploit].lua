@@ -15680,7 +15680,7 @@ local assetData = {
 
 		{id = "16190757458", name = "skibidi fanum tax"},
 		{id = "2847278264727", name = "#brooklynbloodpop! - syko (external)"},
-		{id = "113568851878579", name = "mangos funk (pitch 0.15)"},
+		{id = "194747292744928", name = "hypnosaes espectral 2 remix - dj gr11 / dj igeeks (external)"},
 
 		{id = "7999878400", name = "phonk 1"},
 		{id = "7601924770", name = "phonk 2"},
@@ -20810,6 +20810,7 @@ addcommand("music", "music", function(soundId)
 			["1937472828744"] = {file = "fenixritmada.mp3", url = "https://pomf2.lain.la/f/h2l0l1l.mp3"},
 			["192746282847987"] = {file = "foreign.mp3", url = "https://pomf2.lain.la/f/dhlcm9sd.mp3"},
 			["1249827348923757"] = {file = "amioverreacting.mp3", url = "https://files.catbox.moe/omvmbi.mp3"},
+      ["194747292744928"] = {file = "igeeks.mp3", url = "https://pomf2.lain.la/f/3zvza64.mp3"},
 		}
 
 		local soundInfo = soundMap[soundId]
