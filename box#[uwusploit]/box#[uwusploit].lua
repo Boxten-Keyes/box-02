@@ -15788,7 +15788,7 @@ local assetData = {
 
 		{id = "9774647115329", name = "comet"},
 		{id = "124176387786425", name = "teach me full"},
-		{id = "18246618364758572", name = "montagem tabo (super slowed) (external)"},
+		{id = "18246618364758572", name = "АсТuГmАтNзМ.. - av3rn1x (external)"},
 
 		{id = "130262136847701", name = "chicken jockey"},
 		{id = "1249827348923757", name = "am i overreacting - hkmori (external)"},
@@ -20783,7 +20783,7 @@ addcommand("music", "music", function(soundId)
 			["19374728438288577"] = {file = "climalindo.mp3", url = "https://pomf2.lain.la/f/2z9s751.mp3"},
 			["194728274626264857"] = {file = "angelical.mp3", url = "https://pomf2.lain.la/f/n3ih2zia.mp3"},
 			["3727154382186353"] = {file = "fragment.mp3", url = "https://pomf2.lain.la/f/8vrhzyia.mp3"},
-			["18246618364758572"] = {file = "tabo.mp3", url = "https://pomf2.lain.la/f/68568y.mp3"},
+			["18246618364758572"] = {file = "jumpstyle.mp3", url = "https://files.catbox.moe/byyj8g.mp3"},
 			["1937462828462817367"] = {file = "elajoga.mp3", url = "https://pomf2.lain.la/f/63qpt243.mp3"},
 			["194728264781726473"] = {file = "bailedecoq.mp3", url = "https://pomf2.lain.la/f/49twlnnj.mp3"},
 			["19374822837282737"] = {file = "pianotiles.mp3", url = "https://pomf2.lain.la/f/kxqg58t.mp3"},
